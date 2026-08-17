@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+.wrangler/
+_scrape/
+_*.js
+_*.cjs
+_*.json
+_img-log.txt
+.DS_Store
+*.log

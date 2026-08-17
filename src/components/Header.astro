@@ -1,0 +1,50 @@
+---
+import { nav, site } from "../data/site";
+---
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <img src="/images/ming_logo-full-7UbV6e2W5oyjr2Ir.png" alt="Yin Yang CMC" />
+      <span class="brand-text">
+        <strong>Yin Yang CMC</strong>
+        <span>UK Clinic</span>
+      </span>
+    </a>
+    <button class="burger" type="button" id="navToggle" aria-label="Menu">☰</button>
+    <nav class="nav" id="mainNav">
+      <details class="drop">
+        <summary>Clinical Services</summary>
+        <div class="menu">
+          <a href="/clinical-services">All clinical services</a>
+          {nav.services.map((i) => <a href={i.href}>{i.label}</a>)}
+        </div>
+      </details>
+      <details class="drop">
+        <summary>Condition Treats</summary>
+        <div class="menu">
+          <a href="/conditions">All conditions</a>
+          {nav.conditions.map((i) => <a href={i.href}>{i.label}</a>)}
+        </div>
+      </details>
+      <details class="drop">
+        <summary>Our Locations</summary>
+        <div class="menu">
+          <a href="/locations">All locations</a>
+          {nav.locations.map((i) => <a href={i.href}>{i.label}</a>)}
+        </div>
+      </details>
+      <a href="/pricing-and-insurance">Pricing and Insurance</a>
+      <a href="/course">Course</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="phone" href={`tel:${site.phoneIntl}`}>Call Us {site.phoneDisplay}</a>
+      <a class="btn btn-gold" href="/#booknowform">Book Now</a>
+    </div>
+  </div>
+</header>
+<script>
+  const toggle = document.getElementById("navToggle");
+  const nav = document.getElementById("mainNav");
+  toggle?.addEventListener("click", () => nav?.classList.toggle("open"));
+</script>

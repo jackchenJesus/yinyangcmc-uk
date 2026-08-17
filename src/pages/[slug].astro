@@ -1,0 +1,53 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import pages from "../data/pages.json";
+
+export function getStaticPaths() {
+  const skip = new Set(["home", "contact", "pricing-and-insurance"]);
+  return Object.keys(pages)
+    .filter((slug) => !skip.has(slug))
+    .map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const page = (pages as Record<string, { title: string; desc: string; headings: string[]; paras: string[] }>)[slug!];
+const headings = page.headings.filter((h) => !["Contact", "BOOK NOW", "01", "02", "03", "04", "05", "06", "WH", "AL"].includes(h));
+const paras = page.paras.filter((p) => !p.startsWith("Acupuncture Tui Na Massage") && !p.includes("All rights reserved") && p !== "yinyangcmcuk@gmail.com" && p !== "Privacy | Terms and Conditions" && p !== "Reach us anytime — we usually respond within the hour.");
+const hero = headings[0] || page.title;
+const lede = headings[1] && headings[1].length > 40 ? headings[1] : paras[0]?.slice(0, 280);
+const images: Record<string, string> = {
+  acupuncture: "/images/label_acupuncture_white-sVIFuDil6Vi0omnp.png",
+  "tui-na-massage": "/images/tui-na-massage-8YKIYR6VTwdVMTdx.webp",
+  "herbal-consultation": "/images/chinese-herbal-medicine-6MuZIXMBnlhegCyU.webp",
+  "bone-setting": "/images/bone-setting-orthopaedic-care-o6PPJu9WdXDef1r7.webp",
+  "clinical-services": "/images/conditions-we-treat-OWrWp19D0BpU3xPw.webp",
+  conditions: "/images/conditions-we-treat-OWrWp19D0BpU3xPw.webp",
+  "back-pain": "/images/back_pain_treatment-vMLmusxJIAVKmYK5.png",
+  "sciatica-treatment": "/images/sciatica-lower-back-pain-CiEnhdaob4WbteY2.png",
+  "frozen-shoulder": "/images/acupuncture_for_frozen_shoulder-LYlyaUQ7GqsYzZB5.webp",
+  "shoulder-pain": "/images/acupuncture-for-shoulder-pain-k9uul1g0Hqlp9Qaa.webp",
+  "sports-injuries": "/images/sports-injuries-orthopaedics-7F9Mh61pjr43DjEH.png",
+  "reading-clinic": "/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg",
+  "wimbledon-clinic": "/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg",
+  locations: "/images/img_6058-eVlfhKuykGV6M98J.jpg",
+  course: "/images/lesson-1-sqDt7CzsVqOfjk8h.jpg",
+  "other-treatment": "/images/label_other_white-ilyOGIeZEF3BJ6hg.png",
+};
+---
+<Base title={page.title} description={page.desc}>
+  <PageHero title={hero} lede={lede} />
+  <section class="section">
+    <div class="wrap grid-2">
+      <div class="prose">
+        {paras.map((p) => <p>{p}</p>)}
+        {headings.slice(2, 18).length > 0 && (
+          <ul>
+            {headings.slice(2, 18).map((h) => <li>{h}</li>)}
+          </ul>
+        )}
+      </div>
+      {images[slug!] && <img src={images[slug!]} alt="" style="border-radius:18px;object-fit:cover;width:100%" />}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string;
+  lede?: string;
+}
+const { title, lede } = Astro.props;
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Yin Yang CMC · UK</p>
+    <h1>{title}</h1>
+    {lede && <p>{lede}</p>}
+    <div class="actions">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a consultation</a>
+      <a class="btn btn-ghost" href="/clinical-services">View all services</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import { clinics, site } from "../data/site";
+---
+<Base title="Contact TCM Clinic Wimbledon & Reading | Yin-Yang Clinic | yin yang uk" description="Need to contact TCM clinic Wimbledon or contact TCM clinic Reading? Get our phone numbers, clinic addresses, map routes, opening hours, and booking details.">
+  <PageHero title="Contact Us" lede="Reach out anytime—our team at Yin Yang UK is here to help you." />
+  <section class="section">
+    <div class="wrap grid-2">
+      <div>
+        <h2>Visit Us</h2>
+        <h3>Reading</h3>
+        <p>Yinyangcmc (Only by appointment)</p>
+        <p>{clinics.reading.address}<br />{clinics.reading.hours}</p>
+        <h3>Wimbledon</h3>
+        <p>Yinyangcmc X Osteoperformance Clinic (Only by appointment)</p>
+        <p>{clinics.wimbledon.address}<br />{clinics.wimbledon.hours}</p>
+        <p><a class="btn btn-gold" href={site.whatsapp}>WhatsApp {site.phoneDisplay}</a></p>
+      </div>
+      <form class="form" action={`mailto:${site.email}`} method="post" enctype="text/plain">
+        <input name="name" placeholder="Full name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" rows="6" placeholder="Message" required></textarea>
+        <button class="btn btn-gold" type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+</Base>
