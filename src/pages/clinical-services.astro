@@ -13,8 +13,8 @@ const faqItems = [
     a: "Fully conducted in English, Cantonese, or Mandarin. UK patients receive clear, jargon-free explanations of their diagnosis and treatment plan. Cantonese- or Mandarin-speaking patients can describe symptoms in their first language and share previous medical notes directly — no translation loss, full clinical precision.",
   },
   {
-    q: "How many sessions will I need to see results?",
-    a: "Acute conditions (recent sports injuries, acute pain): 3–5 sessions typically show measurable improvement. Chronic conditions (long-standing back pain, hormonal imbalances, skin disorders): usually 6–10 sessions to address the root cause and stabilise the condition. Your practitioner will give you a clear treatment timeline at your first consultation — we do not prescribe a fixed number of sessions in advance.",
+    q: "How many sessions will I need?",
+    a: "Treatment frequency varies depending on the condition, how long symptoms have been present, your general health, and your individual response to treatment. Your practitioner will discuss a recommended review period after your initial assessment and adjust the plan according to your progress. We do not prescribe a fixed number of sessions in advance.",
   },
   {
     q: "Is TCM safe alongside Western medicine?",
@@ -31,7 +31,7 @@ const faqItems = [
 ];
 ---
 <Base
-  title="Chinese Medicine Clinic UK | TCM Services Wimbledon & Reading | yin yang uk"
+  title="Chinese Medicine Clinic in Reading & Wimbledon | Yin Yang CMC"
   description="Professional Chinese Medicine in Reading & Wimbledon. British Acupuncture Council registered, 15+ years' experience. Acupuncture, Tui Na, Bone Setting and Herbal Medicine."
 >
 
@@ -102,12 +102,10 @@ const faqItems = [
 
         <ul style="list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:0.5rem">
           {[
-            "British Acupuncture Council (MBAcC) registered practitioners",
-            "ATCM professional members",
-            "15+ years' clinical experience",
-            "Recognised by AXA Health, Vitality, Aviva and WPA",
+            "Clear explanation of your diagnosis and treatment plan at every session",
             "Bilingual consultations — English, Cantonese & Mandarin",
-            "Same-week appointments — no GP referral needed",
+            "Recognised by major UK health insurers — no GP referral needed",
+            "Same-week appointments at Reading and Wimbledon",
           ].map((item) => (
             <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:0.92rem">
               <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.05em">✓</span>
@@ -163,9 +161,9 @@ const faqItems = [
         <div class="spec-icon">🪡</div>
         <h3>Acupuncture</h3>
         <p>
-          Stimulates specific anatomical points to regulate pain signalling, reduce inflammation,
-          and support systemic balance. Effective for chronic tension, musculoskeletal pain,
-          headaches, insomnia, menstrual irregularity, and post-operative recovery.
+          Fine needles stimulate specific anatomical points to support pain management
+          and systemic balance. Commonly used as part of care for musculoskeletal pain,
+          headaches, insomnia, menstrual irregularity, and stress-related conditions.
         </p>
         <a class="spec-link" href="/acupuncture">Explore Acupuncture</a>
       </div>
@@ -175,9 +173,9 @@ const faqItems = [
         <div class="spec-icon">👐</div>
         <h3>Tui Na Therapeutic Massage</h3>
         <p>
-          A structured manual therapy system using kneading, rolling, pressing, and joint
-          mobilisation to address soft tissue dysfunction and restricted range of motion.
-          The clinical application is closer to physiotherapy than sports massage.
+          A structured manual therapy system — kneading, pressing, and joint mobilisation
+          to address soft tissue and range-of-motion concerns. Closer in application to
+          physiotherapy than general sports massage.
         </p>
         <a class="spec-link" href="/tui-na-massage">Explore Tui Na</a>
       </div>
@@ -187,9 +185,9 @@ const faqItems = [
         <div class="spec-icon">🦴</div>
         <h3>Bone Setting &amp; Orthopaedic Care</h3>
         <p>
-          Zheng Gu (正骨) — a classical orthopaedic system involving manual realignment of
-          joints and vertebrae, applied within a modern biomechanical assessment framework.
-          Treats disc herniation, postural issues, cervical nerve impingement, and joint injuries.
+          Zheng Gu (正骨) — a classical orthopaedic approach involving manual joint and
+          vertebral realignment, applied within a modern biomechanical assessment framework.
+          May be considered for spinal, postural, and joint concerns.
         </p>
         <a class="spec-link" href="/bone-setting">Explore Bone Setting</a>
       </div>
@@ -199,10 +197,9 @@ const faqItems = [
         <div class="spec-icon">🌿</div>
         <h3>Herbal Medicine &amp; Internal Consultation</h3>
         <p>
-          Begins with a full internal consultation — pulse diagnosis, tongue observation, and
-          detailed case history. Every prescription is individually tailored using GMP-certified
-          materials. Covers digestive disorders, fatigue, hormonal imbalance, skin conditions,
-          and anxiety with sleep disruption.
+          Full internal consultation — pulse diagnosis, tongue observation, detailed case
+          history — followed by an individually tailored herbal prescription using
+          GMP-certified materials. Often used alongside acupuncture for internal health concerns.
         </p>
         <a class="spec-link" href="/herbal-consultation">Explore Herbal Medicine</a>
       </div>
@@ -423,10 +420,10 @@ const faqItems = [
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:var(--r-lg);overflow:hidden">
           {[
-            { val: "4.9★", label: "Google Reviews" },
-            { val: "15+",  label: "Years of practice" },
-            { val: "2",    label: "UK clinic locations" },
+            { val: "4.9★",  label: "Google Reviews" },
+            { val: "2",     label: "UK clinic locations" },
             { val: "EN/粵", label: "Bilingual care" },
+            { val: "No GP", label: "referral needed" },
           ].map(({ val, label }) => (
             <div style="background:var(--white);padding:1.5rem;text-align:center">
               <span style="display:block;font-family:var(--serif);font-size:2rem;color:var(--navy);line-height:1;margin-bottom:0.35rem">{val}</span>
@@ -464,8 +461,8 @@ const faqItems = [
       <p class="eyebrow">Conditions We Treat</p>
       <h2>Where Our Expertise Makes the Most Difference</h2>
       <p>
-        Our clinical focus is deliberately narrow — conditions where acupuncture, manual
-        therapy, and herbal medicine work together for consistent, verifiable outcomes.
+        Our clinical focus is deliberately narrow — areas where acupuncture, manual
+        therapy, and herbal medicine are most commonly used together as part of patient care.
       </p>
     </div>
 
@@ -475,8 +472,7 @@ const faqItems = [
         <h3 style="font-size:1.05rem">Chronic Pain &amp; Spinal Problems</h3>
         <p style="font-size:0.9rem;color:var(--muted)">
           Lumbar disc herniation, sciatica, cervical spondylosis, and sacroiliac dysfunction.
-          Our combined acupuncture and bone-setting protocol addresses neurological pain,
-          structural alignment, and muscle tension simultaneously.
+          Acupuncture and bone-setting are often used together as part of care for these conditions.
         </p>
         <a class="more-link" href="/back-pain">Back Pain &amp; Sciatica</a>
       </div>
@@ -484,9 +480,9 @@ const faqItems = [
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🌸</p>
         <h3 style="font-size:1.05rem">Women's Health &amp; Hormonal Balance</h3>
         <p style="font-size:0.9rem;color:var(--muted)">
-          Postnatal recovery, menstrual irregularity, PCOS, endometriosis, fertility support
-          alongside IVF, perimenopause management. Integrated acupuncture and individually
-          prescribed herbal formulae.
+          Postnatal recovery, menstrual irregularity, PCOS, perimenopause, and fertility support.
+          Your practitioner will assess whether acupuncture or herbal medicine may be appropriate
+          for your individual circumstances.
         </p>
         <a class="more-link" href="/contact">Enquire about Women's Health</a>
       </div>
@@ -494,9 +490,9 @@ const faqItems = [
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🏃</p>
         <h3 style="font-size:1.05rem">Sports Injuries &amp; Recovery</h3>
         <p style="font-size:0.9rem;color:var(--muted)">
-          Ligament sprains, tendinopathy, muscle tears, and RSI respond well to our combined
-          Tui Na and acupuncture rehabilitation protocol. Session-by-session recovery
-          programmes for recreational and competitive athletes.
+          Ligament sprains, tendinopathy, muscle tears, and repetitive strain. Tui Na and
+          acupuncture are commonly used as part of rehabilitation programmes for recreational
+          and competitive athletes.
         </p>
         <a class="more-link" href="/sports-injuries">Sports Injuries</a>
       </div>
@@ -602,27 +598,24 @@ const faqItems = [
         <div class="j-num">01</div>
         <h3>Clinical Consultation</h3>
         <p>
-          Comprehensive 1-on-1 assessment combining pulse and tongue diagnosis with your
-          full medical history. We identify the root systemic pattern — not just the
-          presenting symptom.
+          A structured 1-on-1 assessment combining pulse and tongue diagnosis with your
+          full medical history and presenting symptoms.
         </p>
       </div>
       <div class="journey-step">
         <div class="j-num">02</div>
         <h3>Personalised Treatment Plan</h3>
         <p>
-          Your practitioner explains the proposed protocol in plain language. Treatment may
-          combine acupuncture, Tui Na, bone setting, or a tailored herbal prescription —
-          determined by your assessment, not a fixed package.
+          Your practitioner explains the proposed approach in plain language. Treatment
+          is determined by your assessment — not a fixed package.
         </p>
       </div>
       <div class="journey-step">
         <div class="j-num">03</div>
         <h3>Ongoing Clinical Review</h3>
         <p>
-          We review your progress at every follow-up, refining your point selection or
-          herbal formula to match your shifting recovery phase and accelerate long-term
-          resolution.
+          Progress is reviewed at every follow-up. Your treatment plan is adjusted
+          according to your response and evolving clinical picture.
         </p>
       </div>
     </div>

@@ -1014,7 +1014,7 @@ p  { margin: 0 0 1em; }
 .cta-section p  { color: rgba(240,234,226,0.8); max-width: 52ch; margin: 0 auto 2rem; font-size: 1.05rem; }
 
 /* ─── FOOTER ─────────────────────────────────────────── */
-.site-footer { background: #111b26; color: #d8d2c8; padding: 2.2rem 0 0.75rem; }
+.site-footer { background: #111b26; color: #d8d2c8; padding: 1.8rem 0 0.75rem; }
 .site-footer h5 {
   color: rgba(238,232,222,0.55);
   font-family: var(--sans);
