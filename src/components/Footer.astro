@@ -1,39 +1,54 @@
 ---
-import { clinics, nav, site } from "../data/site";
+import { site } from "../data/site";
 ---
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-grid">
 
+      <!-- Col 1: Brand -->
       <div class="foot-brand">
         <img src="/images/ming_logo-full-7UbV6e2W5oyjr2Ir.png" alt="Yin Yang CMC" />
-        <p>Modern TCM &amp; Wellness Centre.<br />Hong Kong clinical standards in Wimbledon &amp; Reading.</p>
-        <p>
-          <a href={`mailto:${site.email}`}>{site.email}</a><br />
+        <p class="foot-tagline">Professional Chinese Medicine<br />in Wimbledon &amp; Reading</p>
+        <nav class="foot-contact" aria-label="Contact">
           <a href={`tel:${site.phoneIntl}`}>{site.phoneDisplay}</a>
-        </p>
-      </div>
-
-      <div>
-        <h4>Services</h4>
-        <nav class="foot-links" aria-label="Footer services">
-          <a href="/clinical-services">All Clinical Services</a>
-          {nav.services.map((i) => <a href={i.href}>{i.label}</a>)}
-          <a href="/conditions" style="margin-top:0.4rem">All Conditions</a>
-          {nav.conditions.map((i) => <a href={i.href}>{i.label}</a>)}
+          <a href={`mailto:${site.email}`}>{site.email}</a>
         </nav>
       </div>
 
+      <!-- Col 2: Services -->
       <div>
-        <h4>Reading Clinic</h4>
-        <p>{clinics.reading.address}<br />{clinics.reading.hours}</p>
-        <h4 style="margin-top:1.2rem">Wimbledon Clinic</h4>
-        <p>{clinics.wimbledon.address}<br />{clinics.wimbledon.hours}</p>
-        <div style="margin-top:1rem;display:grid;gap:0.4rem">
+        <h5>Services</h5>
+        <nav class="foot-links" aria-label="Footer services">
+          <a href="/clinical-services">All Clinical Services</a>
+          <a href="/acupuncture">Acupuncture</a>
+          <a href="/tui-na-massage">Tui Na Massage</a>
+          <a href="/bone-setting">Bone Setting</a>
+          <a href="/herbal-consultation">Herbal Medicine</a>
+        </nav>
+      </div>
+
+      <!-- Col 3: Conditions -->
+      <div>
+        <h5>Conditions</h5>
+        <nav class="foot-links" aria-label="Footer conditions">
+          <a href="/back-pain">Back Pain &amp; Sciatica</a>
+          <a href="/shoulder-pain">Shoulder Pain</a>
+          <a href="/frozen-shoulder">Frozen Shoulder</a>
+          <a href="/sports-injuries">Sports Injuries</a>
+          <a href="/conditions">All Conditions</a>
+        </nav>
+      </div>
+
+      <!-- Col 4: Clinics & Info -->
+      <div>
+        <h5>Clinics</h5>
+        <nav class="foot-links" aria-label="Footer clinics">
+          <a href="/reading-clinic">Reading Clinic</a>
+          <a href="/wimbledon-clinic">Wimbledon Clinic</a>
           <a href="/pricing-and-insurance">Pricing &amp; Insurance</a>
+          <a href="/contact">Contact Us</a>
           <a href="/locations">All Locations</a>
-          <a href="/contact">Contact</a>
-        </div>
+        </nav>
       </div>
 
     </div>
