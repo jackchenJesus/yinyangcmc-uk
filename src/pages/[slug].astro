@@ -4,7 +4,12 @@ import PageHero from "../components/PageHero.astro";
 import pages from "../data/pages.json";
 
 export function getStaticPaths() {
-  const skip = new Set(["home", "contact", "pricing-and-insurance"]);
+  const skip = new Set([
+    "home",
+    "contact",
+    "pricing-and-insurance",
+    "clinical-services",
+  ]);
   return Object.keys(pages)
     .filter((slug) => !skip.has(slug))
     .map((slug) => ({ params: { slug } }));

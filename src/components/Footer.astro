@@ -1,25 +1,43 @@
 ---
-import { clinics, site } from "../data/site";
+import { clinics, nav, site } from "../data/site";
 ---
 <footer class="site-footer">
-  <div class="wrap foot-grid">
-    <div>
-      <h3>Yin Yang CMC</h3>
-      <p>Modern TCM & Wellness Centre. Hong Kong clinical standards in Wimbledon and Reading.</p>
-      <p><a href={`mailto:${site.email}`}>{site.email}</a><br />
-      <a href={`tel:${site.phoneIntl}`}>+44 {site.phoneDisplay}</a></p>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="/images/ming_logo-full-7UbV6e2W5oyjr2Ir.png" alt="Yin Yang CMC" />
+        <p>Modern TCM &amp; Wellness Centre.<br />Hong Kong clinical standards in Wimbledon &amp; Reading.</p>
+        <p style="margin-top:0.8rem">
+          <a href={`mailto:${site.email}`}>{site.email}</a><br />
+          <a href={`tel:${site.phoneIntl}`}>{site.phoneDisplay}</a>
+        </p>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <nav class="foot-links">
+          <a href="/clinical-services">All Clinical Services</a>
+          {nav.services.map((i) => <a href={i.href}>{i.label}</a>)}
+        </nav>
+      </div>
+
+      <div>
+        <h4>Reading Clinic</h4>
+        <p style="font-size:0.9rem;line-height:1.6">
+          {clinics.reading.address}<br />
+          {clinics.reading.hours}
+        </p>
+        <h4 style="margin-top:1.2rem">Wimbledon Clinic</h4>
+        <p style="font-size:0.9rem;line-height:1.6">
+          {clinics.wimbledon.address}<br />
+          {clinics.wimbledon.hours}
+        </p>
+      </div>
     </div>
-    <div>
-      <h4>Reading</h4>
-      <p>{clinics.reading.address}<br />{clinics.reading.hours}</p>
+
+    <div class="foot-legal">
+      <span>© {site.year} Yin Yang CMC · All rights reserved.</span>
+      <a href="/privacy-terms-and-conditions">Privacy &amp; Terms</a>
     </div>
-    <div>
-      <h4>Wimbledon</h4>
-      <p>{clinics.wimbledon.address}<br />{clinics.wimbledon.hours}</p>
-    </div>
-  </div>
-  <div class="wrap legal">
-    <span>© {site.year}. Yin Yang CMC All rights reserved.</span>
-    <a href="/privacy-terms-and-conditions">Privacy | Terms and Conditions</a>
   </div>
 </footer>

@@ -4,47 +4,126 @@ import { nav, site } from "../data/site";
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="/">
-      <img src="/images/ming_logo-full-7UbV6e2W5oyjr2Ir.png" alt="Yin Yang CMC" />
+      <img src="/images/ming_logo-full-7UbV6e2W5oyjr2Ir.png" alt="Yin Yang CMC logo" width="52" height="52" />
       <span class="brand-text">
         <strong>Yin Yang CMC</strong>
         <span>UK Clinic</span>
       </span>
     </a>
-    <button class="burger" type="button" id="navToggle" aria-label="Menu">☰</button>
-    <nav class="nav" id="mainNav">
-      <details class="drop">
-        <summary>Clinical Services</summary>
-        <div class="menu">
-          <a href="/clinical-services">All clinical services</a>
-          {nav.services.map((i) => <a href={i.href}>{i.label}</a>)}
-        </div>
-      </details>
-      <details class="drop">
-        <summary>Condition Treats</summary>
-        <div class="menu">
-          <a href="/conditions">All conditions</a>
-          {nav.conditions.map((i) => <a href={i.href}>{i.label}</a>)}
-        </div>
-      </details>
-      <details class="drop">
-        <summary>Our Locations</summary>
-        <div class="menu">
-          <a href="/locations">All locations</a>
-          {nav.locations.map((i) => <a href={i.href}>{i.label}</a>)}
-        </div>
-      </details>
-      <a href="/pricing-and-insurance">Pricing and Insurance</a>
-      <a href="/course">Course</a>
-      <a href="/contact">Contact</a>
+
+    <!-- Desktop nav -->
+    <nav aria-label="Main navigation">
+      <ul class="main-nav" id="mainNav">
+        <li class="drop-wrap" id="drop-services">
+          <button aria-expanded="false" aria-haspopup="true">
+            Clinical Services
+            <svg class="drop-arrow" viewBox="0 0 10 6"><polyline points="1 1 5 5 9 1"/></svg>
+          </button>
+          <div class="drop-menu" role="menu">
+            <a class="top-link" href="/clinical-services">All clinical services</a>
+            {nav.services.map((i) => <a href={i.href} role="menuitem">{i.label}</a>)}
+          </div>
+        </li>
+        <li class="drop-wrap" id="drop-conditions">
+          <button aria-expanded="false" aria-haspopup="true">
+            Condition Treatments
+            <svg class="drop-arrow" viewBox="0 0 10 6"><polyline points="1 1 5 5 9 1"/></svg>
+          </button>
+          <div class="drop-menu" role="menu">
+            <a class="top-link" href="/conditions">All conditions</a>
+            {nav.conditions.map((i) => <a href={i.href} role="menuitem">{i.label}</a>)}
+          </div>
+        </li>
+        <li class="drop-wrap" id="drop-locations">
+          <button aria-expanded="false" aria-haspopup="true">
+            Our Locations
+            <svg class="drop-arrow" viewBox="0 0 10 6"><polyline points="1 1 5 5 9 1"/></svg>
+          </button>
+          <div class="drop-menu" role="menu">
+            <a class="top-link" href="/locations">All locations</a>
+            {nav.locations.map((i) => <a href={i.href} role="menuitem">{i.label}</a>)}
+          </div>
+        </li>
+        <li><a href="/pricing-and-insurance">Pricing & Insurance</a></li>
+        <li><a href="/course">Course</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
     </nav>
+
     <div class="header-cta">
-      <a class="phone" href={`tel:${site.phoneIntl}`}>Call Us {site.phoneDisplay}</a>
-      <a class="btn btn-gold" href="/#booknowform">Book Now</a>
+      <a class="phone-link" href={`tel:${site.phoneIntl}`}>{site.phoneDisplay}</a>
+      <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book Now</a>
     </div>
+
+    <!-- Burger -->
+    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<!-- Mobile overlay nav -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+  <p class="mob-section">Clinical Services</p>
+  <a href="/clinical-services">All Clinical Services</a>
+  {nav.services.map((i) => <a href={i.href}>{i.label}</a>)}
+
+  <p class="mob-section">Condition Treatments</p>
+  <a href="/conditions">All Conditions</a>
+  {nav.conditions.map((i) => <a href={i.href}>{i.label}</a>)}
+
+  <p class="mob-section">Our Locations</p>
+  <a href="/locations">All Locations</a>
+  {nav.locations.map((i) => <a href={i.href}>{i.label}</a>)}
+
+  <p class="mob-section">More</p>
+  <a href="/pricing-and-insurance">Pricing & Insurance</a>
+  <a href="/course">Course</a>
+  <a href="/contact">Contact</a>
+
+  <div class="mobile-cta">
+    <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book Now on WhatsApp</a>
+    <a class="btn btn-outline" href={`tel:${site.phoneIntl}`}>Call {site.phoneDisplay}</a>
+  </div>
+</nav>
+
 <script>
-  const toggle = document.getElementById("navToggle");
-  const nav = document.getElementById("mainNav");
-  toggle?.addEventListener("click", () => nav?.classList.toggle("open"));
+  const burger  = document.getElementById("burgerBtn")!;
+  const mobileNav = document.getElementById("mobileNav")!;
+
+  burger.addEventListener("click", () => {
+    const open = mobileNav.classList.toggle("open");
+    burger.setAttribute("aria-expanded", String(open));
+    mobileNav.setAttribute("aria-hidden", String(!open));
+    document.body.style.overflow = open ? "hidden" : "";
+  });
+
+  // Close on link click
+  mobileNav.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => {
+      mobileNav.classList.remove("open");
+      burger.setAttribute("aria-expanded", "false");
+      mobileNav.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    })
+  );
+
+  // Desktop dropdowns via keyboard/button
+  document.querySelectorAll<HTMLElement>(".drop-wrap").forEach((wrap) => {
+    const btn = wrap.querySelector("button");
+    btn?.addEventListener("click", () => {
+      const isOpen = wrap.classList.toggle("open");
+      btn.setAttribute("aria-expanded", String(isOpen));
+    });
+  });
+
+  // Close dropdowns on outside click
+  document.addEventListener("click", (e) => {
+    document.querySelectorAll<HTMLElement>(".drop-wrap.open").forEach((wrap) => {
+      if (!wrap.contains(e.target as Node)) {
+        wrap.classList.remove("open");
+        wrap.querySelector("button")?.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
 </script>
