@@ -12,10 +12,10 @@ interface Props {
 const {
   title,
   lede,
-  eyebrow = "Yin Yang CMC · UK",
-  bgImage = "/images/webbanner-eQwGJSc8Re6udP6z.jpg",
-  ctaLabel = "Book a consultation",
-  ctaHref  = "https://wa.me/447301949686",
+  eyebrow    = "Yin Yang CMC · UK",
+  bgImage    = "/images/webbanner-eQwGJSc8Re6udP6z.jpg",
+  ctaLabel   = "Book a Consultation",
+  ctaHref    = "https://wa.me/447301949686",
   ctaSecLabel,
   ctaSecHref,
 } = Astro.props;
@@ -26,10 +26,13 @@ const {
     <p class="eyebrow">{eyebrow}</p>
     <h1>{title}</h1>
     {lede && <p class="lede">{lede}</p>}
-    <div class="actions">
-      <a class="btn btn-gold" href={ctaHref} target={ctaHref.startsWith("http") ? "_blank" : undefined} rel={ctaHref.startsWith("http") ? "noreferrer" : undefined}>
-        {ctaLabel}
-      </a>
+    <div class="actions" style="margin-top:1.4rem">
+      <a
+        class="btn btn-gold"
+        href={ctaHref}
+        target={ctaHref.startsWith("http") ? "_blank" : undefined}
+        rel={ctaHref.startsWith("http") ? "noreferrer" : undefined}
+      >{ctaLabel}</a>
       {ctaSecLabel && ctaSecHref && (
         <a class="btn btn-ghost" href={ctaSecHref}>{ctaSecLabel}</a>
       )}

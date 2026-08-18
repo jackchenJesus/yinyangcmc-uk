@@ -1,498 +1,628 @@
 ---
 import Base from "../layouts/Base.astro";
 import CTASection from "../components/CTASection.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+
+const faqItems = [
+  {
+    q: "Are your practitioners registered in the UK?",
+    a: "Yes, fully registered. All our practitioners hold professional degrees and are registered with recognised UK regulatory bodies including BAcC and ATCM. This guarantees we meet strict UK standards for safety, hygiene, and insurance. We also hold original registrations as Certified Chinese Medicine Practitioners in Hong Kong — dual-qualified credentials that are rare in the UK market.",
+  },
+  {
+    q: "What languages are consultations conducted in?",
+    a: "Fully conducted in English, Cantonese, or Mandarin. UK patients receive clear, jargon-free explanations. HK patients can describe symptoms in their native language and share HK medical notes directly — no translation needed. Describing the quality, location, and pattern of symptoms accurately is diagnostically critical in TCM, and that precision is much harder to achieve in a second language.",
+  },
+  {
+    q: "How many sessions will I need to see results?",
+    a: "Acute conditions (recent sports injuries, acute pain): 3–5 sessions typically show measurable improvement. Chronic conditions (long-standing back pain, hormonal imbalances, skin disorders): usually 6–10 sessions to address the root cause and stabilise the condition. Your practitioner will give you a clear treatment timeline at your first consultation — we do not prescribe a fixed number of sessions in advance.",
+  },
+  {
+    q: "Is TCM safe alongside Western medicine?",
+    a: "Yes, in the vast majority of cases. Your safety is our priority. During your initial consultation we thoroughly review your current medications and ongoing treatments to avoid any interactions. We will advise you to consult your GP if there is any clinical uncertainty.",
+  },
+  {
+    q: "Do you offer consultations in Cantonese?",
+    a: "Yes. All practitioners are fluent in Cantonese and Mandarin. Describe your symptoms exactly as you feel them — no translation loss, full clinical precision. If you have previous medical records or TCM case notes in Chinese, we can review these directly.",
+  },
+];
 ---
 <Base
   title="Chinese Medicine Clinic UK | TCM Services Wimbledon & Reading | yin yang uk"
-  description="Expert TCM Clinical Services in Wimbledon & Reading. Hong Kong-registered practitioners. Acupuncture, Tui Na, Bone Setting and Herbal Medicine."
+  description="Expert TCM clinical services in Wimbledon & Reading. Hong Kong-registered practitioners with Master's in TCM. Acupuncture, Tui Na, Bone Setting and Herbal Medicine. Bilingual consultations."
 >
 
-  <!-- ═══════════════════════════════════════
-       HERO
-  ═══════════════════════════════════════ -->
-  <section class="page-hero" style="padding-bottom:5rem">
-    <img
-      class="page-hero-bg"
-      src="/images/conditions-we-treat-OWrWp19D0BpU3xPw.webp"
-      alt="TCM clinic interior"
-      loading="eager"
-      fetchpriority="high"
-    />
-    <div class="wrap">
-      <p class="eyebrow">Yin Yang CMC · UK Clinics</p>
-      <h1>TCM Clinical Services in Wimbledon &amp; Reading</h1>
-      <p class="lede">
-        Back Pain · Sciatica · Neck Pain · Women's Health · Sleep Disorders<br />
-        Hong Kong-registered practitioners. Master's in TCM. Bilingual consultations.
-      </p>
-      <div class="hero-badges" style="justify-content:flex-start;margin-bottom:1.4rem">
-        <span class="badge badge-dark">★★★★★ 4.9 Google Reviews</span>
-        <span class="badge badge-dark">Hospital-Trained Practitioners</span>
-        <span class="badge badge-dark">📍 Wimbledon SW19 &amp; Reading</span>
-      </div>
-      <div class="actions">
-        <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">WhatsApp Us — We Reply Fast</a>
-        <a class="btn btn-ghost" href="#specialisms">Our Four Specialisms</a>
-      </div>
+<!-- ═══════════════════════════════════════════════
+     §1 HERO
+═══════════════════════════════════════════════ -->
+<section class="page-hero" style="min-height:72vh;display:grid;place-items:center">
+  <img
+    class="page-hero-bg"
+    src="/images/webbanner-eQwGJSc8Re6udP6z.jpg"
+    alt="Yin Yang CMC clinical environment"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="wrap" style="padding:5.5rem 0 4rem">
+    <p class="eyebrow">Yin Yang CMC · Wimbledon &amp; Reading</p>
+    <h1>TCM Clinical Services<br>in Wimbledon &amp; Reading</h1>
+    <p class="lede">
+      Hospital-trained practitioners. Master's qualified. HK-registered.<br>
+      Back pain · Sciatica · Women's health · Sleep disorders · Sports injuries.
+    </p>
+    <div class="actions" style="margin-top:1.6rem">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-ghost" href="#specialisms">Explore Our Treatments</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ═══════════════════════════════════════
-       TRUST BAR
-  ═══════════════════════════════════════ -->
-  <div class="trust-bar">
+
+<!-- ═══════════════════════════════════════════════
+     §2 TRUST / CREDENTIAL STRIP
+═══════════════════════════════════════════════ -->
+<div class="trust-strip">
+  <div class="wrap trust-inner">
     <div class="trust-item">
       <div class="trust-icon">🎓</div>
       <div class="trust-text">
-        <strong>Master's in TCM</strong>
-        <span>Accredited Hong Kong university</span>
+        <strong>Master's Qualified</strong>
+        <span>Advanced TCM postgraduate degree, CUHK</span>
       </div>
     </div>
     <div class="trust-item">
       <div class="trust-icon">🏥</div>
       <div class="trust-text">
-        <strong>Hospital-Trained</strong>
-        <span>Verified clinical internship hours</span>
+        <strong>Hospital Trained</strong>
+        <span>Clinical internship at HK public hospitals</span>
       </div>
     </div>
     <div class="trust-item">
       <div class="trust-icon">🇭🇰</div>
       <div class="trust-text">
-        <strong>HK Registered CMPs</strong>
-        <span>Chinese Medicine Council of HK</span>
+        <strong>HK Registered CMP</strong>
+        <span>Chinese Medicine Council of Hong Kong</span>
       </div>
     </div>
     <div class="trust-item">
       <div class="trust-icon">💬</div>
       <div class="trust-text">
-        <strong>English &amp; Cantonese</strong>
-        <span>No translation loss</span>
+        <strong>Bilingual Care</strong>
+        <span>Consultations in English &amp; Cantonese</span>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- ═══════════════════════════════════════
-       WHY PATIENTS TRUST US
-  ═══════════════════════════════════════ -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-heading">
-        <p class="eyebrow">Our Clinical Approach</p>
-        <h2>Why patients trust us</h2>
+
+<!-- ═══════════════════════════════════════════════
+     §3 INTRODUCTION — Clinical Standard
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-al" style="gap:4rem">
+
+      <!-- Left: editorial copy -->
+      <div>
+        <p class="eyebrow">Our Clinical Standard</p>
+        <h2>Hong Kong Clinical Standards.<br>Now Practising in the UK.</h2>
         <p>
-          Yin-Yang CMC was built on a distinct clinical standard — deeply rooted in Hong Kong's
-          rigorous system of registration and hospital-based medical training.
+          Yin-Yang CMC was established on a clinical standard deeply rooted in Hong Kong's
+          exceptionally rigorous system of registration and hospital-based medical training.
+          Our practitioners brought these regulated credentials and clinical habits to the UK,
+          ensuring our medical settings maintain the same high-volume, high-accountability
+          environment they practised in back home.
         </p>
+        <p>
+          Whether you are a long-term UK resident seeking evidence-grounded complementary care,
+          or a family recently relocated from Hong Kong looking for the standard of TCM you know,
+          our clinical approach is built to meet both expectations.
+        </p>
+
+        <!-- Credential checklist -->
+        <ul style="list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:0.5rem">
+          {[
+            "ATCM & MBAcC registered practitioners",
+            "AXA Health, Vitality, Aviva and WPA recognised",
+            "Master of Science in Chinese Medicine (CUHK)",
+            "Hospital clinical training — not just private practice hours",
+            "Bilingual consultations — no translation loss",
+          ].map((item) => (
+            <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:0.92rem">
+              <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.05em">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div class="actions" style="margin-top:1.8rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+          <a class="btn btn-outline" href="/contact">Contact Us</a>
+        </div>
       </div>
 
-      <div class="grid-2 equal" style="margin-bottom:3rem">
-        <div class="feat-card">
-          <div class="feat-num">01</div>
-          <h3>Regulated Standards, UK-Based Clinics</h3>
-          <p>
-            Every member of our clinical team holds a Master of TCM degree backed by verified
-            hospital clinical hours — a strictly regulated licence from the Chinese Medicine Council
-            of Hong Kong. We chose to build our UK clinics around this standard because our
-            patients deserve care at this elite clinical level.
-          </p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-num">02</div>
-          <h3>Bridging Traditional Wisdom with Modern Anatomy</h3>
-          <p>
-            Classical TCM theory provides a comprehensive diagnostic framework; modern
-            musculoskeletal anatomy provides targeted precision. When you present with lumbar
-            disc compression, your treatment maps traditional holistic balance alongside relevant
-            anatomical structures — ensuring optimal long-term outcomes.
-          </p>
+      <!-- Right: image + credential panel -->
+      <div class="img-wrap" style="position:relative">
+        <img
+          src="/images/img_6058-eVlfhKuykGV6M98J.jpg"
+          alt="Yin Yang CMC clinic interior"
+          style="width:100%;height:480px;object-fit:cover;border-radius:var(--r-lg)"
+          loading="lazy"
+        />
+        <div class="cred-panel">
+          <div class="cred-row"><span class="cred-check">✓</span> HK Registered CMPs</div>
+          <div class="cred-row"><span class="cred-check">✓</span> MSc Chinese Medicine</div>
+          <div class="cred-row"><span class="cred-check">✓</span> ATCM &amp; MBAcC</div>
+          <div class="cred-row"><span class="cred-check">✓</span> Insurance Recognised</div>
         </div>
       </div>
 
-      <div class="grid-2 equal">
-        <div class="feat-card">
-          <div class="feat-num">03</div>
-          <h3>Seamless Bilingual Consultations</h3>
-          <p>
-            Describing chronic pain in a second language directly compromises diagnostic accuracy.
-            Our clinics offer fully uncompromised consultations in English and Cantonese. You
-            describe your symptoms exactly as you feel them — your practitioner understands both
-            the clinical detail and the cultural context.
-          </p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-num">04</div>
-          <h3>Dual-Clinic Continuity of Care</h3>
-          <p>
-            Both our Wimbledon (SW19) and Reading (Castle Street) clinics operate under the same
-            practitioner rotation, matching herbal formularies, and synchronised diagnostic
-            protocols. Patients requiring multi-session treatments can seamlessly transition between
-            locations without any drop in clinical continuity.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════
-       STATS STRIP
-  ═══════════════════════════════════════ -->
-  <div class="stat-strip">
-    <div class="wrap">
-      <div class="stat-grid">
-        <div class="stat-item">
-          <span class="stat-val">4.9★</span>
-          <span class="stat-label">Google Reviews</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-val">UK Reg.</span>
-          <span class="stat-label">Certified practitioners</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-val">2</span>
-          <span class="stat-label">UK clinic locations</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-val">Bilingual</span>
-          <span class="stat-label">EN &amp; Cantonese</span>
-        </div>
-      </div>
     </div>
   </div>
+</section>
 
-  <!-- ═══════════════════════════════════════
-       FOUR CLINICAL SPECIALISMS
-  ═══════════════════════════════════════ -->
-  <section class="section-soft" id="specialisms">
-    <div class="wrap">
-      <div class="section-heading">
-        <p class="eyebrow">Core Therapies</p>
-        <h2>Our Four Clinical Specialisms</h2>
-        <p>
-          Each therapy is delivered by a practitioner with dedicated training in that modality —
-          not a generalist offering everything. Your treatment is targeted, protocol-driven, and
-          adapted at each session.
-        </p>
-      </div>
 
-      <div class="grid-2 equal">
-        <div class="service-card">
-          <div class="service-icon">🪡</div>
-          <h3>Acupuncture Treatment</h3>
-          <p>
-            Stimulates specific anatomical points to regulate pain signalling, reduce local
-            inflammation, and support systemic homeostasis. Ideal for chronic tension, acute
-            musculoskeletal pain, headaches, insomnia, menstrual irregularity, and post-operative
-            recovery. Single-use sterile needles. Retention typically 20–30 minutes.
-          </p>
-          <a class="more-link" href="/acupuncture">Full service details</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">👐</div>
-          <h3>Tui Na Therapeutic Massage</h3>
-          <p>
-            A structured manual therapy system — not a relaxation massage. Uses precise
-            manipulation techniques to address soft tissue dysfunction and restricted joint range
-            of motion. Clinically closer to physiotherapy than sports massage. Frequently combined
-            with acupuncture in pain management protocols.
-          </p>
-          <a class="more-link" href="/tui-na-massage">Full service details</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🦴</div>
-          <h3>Bone Setting &amp; Orthopaedic Care</h3>
-          <p>
-            Zheng Gu (正骨) — classical orthopaedic system involving manual realignment of joints
-            and vertebrae. Applied within a modern biomechanical assessment framework. Treats disc
-            herniation, postural kyphosis, cervical nerve impingement, and acute sports injuries.
-            Particularly sought after by patients who have not found relief through physiotherapy alone.
-          </p>
-          <a class="more-link" href="/bone-setting">Full service details</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🌿</div>
-          <h3>Herbal Medicine &amp; Internal Consultation</h3>
-          <p>
-            Begins with full internal consultation — pulse diagnosis, tongue observation, and
-            detailed case history. No formula is prescribed without this assessment. GMP-certified
-            materials, fully tailored prescriptions. Covers digestive disorders, fatigue, hormonal
-            imbalance, skin conditions, and anxiety with sleep disruption.
-          </p>
-          <a class="more-link" href="/herbal-consultation">Full service details</a>
-        </div>
-      </div>
-
-      <p style="margin-top:2rem;font-size:0.9rem;color:var(--muted);max-width:60ch">
-        Treatments can be combined — your practitioner decides the optimal protocol at assessment, not a fixed package.
+<!-- ═══════════════════════════════════════════════
+     §4 FOUR CLINICAL SPECIALISMS
+═══════════════════════════════════════════════ -->
+<section class="section" id="specialisms">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Core Therapies</p>
+      <h2>Four Clinical Specialisms</h2>
+      <p>
+        Each therapy is delivered by a practitioner with dedicated training in that modality.
+        Your treatment is targeted, protocol-driven, and adapted at each session based on
+        your clinical response.
       </p>
     </div>
-  </section>
 
-  <!-- ═══════════════════════════════════════
-       CONDITIONS / CLINICAL FOCUS AREAS
-  ═══════════════════════════════════════ -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-heading">
-        <p class="eyebrow">Conditions We Treat</p>
-        <h2>Where our clinical expertise makes the most difference</h2>
+    <div class="spec-grid">
+
+      <div class="spec-card">
+        <span class="spec-num" aria-hidden="true">01</span>
+        <div class="spec-icon">🪡</div>
+        <h3>Acupuncture</h3>
         <p>
-          Our clinical focus is deliberately narrow. We specialise in high-impact areas where our
-          integrated combination of acupuncture, manual therapy, and herbal medicine produces
-          consistent, verifiable outcomes.
+          Stimulates specific anatomical points to regulate pain signalling, reduce local
+          inflammation, and support systemic homeostasis. Ideal for chronic tension, acute
+          musculoskeletal pain, headaches, insomnia, menstrual irregularity, and post-operative
+          recovery. Single-use sterile needles. Needle retention typically 20–30 minutes.
         </p>
+        <a class="spec-link" href="/acupuncture">Explore Acupuncture</a>
       </div>
 
-      <div class="grid-3">
-        <div class="spec-card">
-          <div class="spec-icon">🦴</div>
-          <h3>Chronic Pain &amp; Spinal Problems</h3>
-          <p>
-            Lumbar disc herniation, sciatica, cervical spondylosis, and sacroiliac joint dysfunction.
-            Our combined acupuncture and bone-setting protocol addresses the neurological pain
-            component, structural misalignment, and associated muscle tension simultaneously.
-          </p>
-          <a class="more-link" href="/back-pain">Back Pain &amp; Sciatica</a>
-        </div>
-
-        <div class="spec-card">
-          <div class="spec-icon">🌸</div>
-          <h3>Women's Health &amp; Hormonal Balance</h3>
-          <p>
-            Postnatal recovery, menstrual irregularity (including PCOS and endometriosis), fertility
-            support alongside IVF cycles, perimenopause management, and postpartum recomposition.
-            Treatment integrates medical acupuncture with individually prescribed herbal formulae.
-          </p>
-          <a class="more-link" href="/contact">Enquire about Women's Health</a>
-        </div>
-
-        <div class="spec-card">
-          <div class="spec-icon">🏃</div>
-          <h3>Sports Injuries &amp; Recovery</h3>
-          <p>
-            Ligament sprains, tendinopathy, muscle tears, and RSI respond exceptionally well to
-            our combined Tui Na and acupuncture rehabilitation protocol. We design session-by-session
-            rehabilitation programmes and communicate directly with your physiotherapist where appropriate.
-          </p>
-          <a class="more-link" href="/sports-injuries">Sports Injuries</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════
-       TWO CLINICS
-  ═══════════════════════════════════════ -->
-  <section class="section-soft">
-    <div class="wrap">
-      <div class="section-heading">
-        <p class="eyebrow">Our Clinics</p>
-        <h2>Two Clinics. One Standard of Care.</h2>
+      <div class="spec-card">
+        <span class="spec-num" aria-hidden="true">02</span>
+        <div class="spec-icon">👐</div>
+        <h3>Tui Na Therapeutic Massage</h3>
         <p>
-          Both Yin-Yang locations operate under the same clinical team rotation, matching herbal
-          formularies, and synchronised appointment protocols.
+          A structured manual therapy system — not a relaxation massage. Uses precise
+          manipulation techniques including kneading, rolling, pressing, and joint mobilisation
+          to address soft tissue dysfunction and restricted joint range of motion. The clinical
+          application is closer to physiotherapy than sports massage.
         </p>
+        <a class="spec-link" href="/tui-na-massage">Explore Tui Na</a>
       </div>
 
-      <div class="grid-2 equal">
-        <div class="loc-card">
-          <img
-            src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg"
-            alt="Wimbledon clinic"
-            loading="lazy"
-          />
-          <div class="loc-body">
-            <p class="loc-sub">South West London · SW19</p>
-            <h3>Wimbledon Clinic</h3>
-            <div class="loc-row"><strong>Address</strong><span>2 Saint Mark's Place, Wimbledon, London SW19 7ND</span></div>
-            <div class="loc-row"><strong>Hours</strong><span>Saturday 9:00 am – 5:00 pm</span></div>
-            <div class="loc-row"><strong>Languages</strong><span>Cantonese · Mandarin · English</span></div>
-            <div class="loc-row"><strong>Nearest</strong><span>Wimbledon Station (District Line &amp; National Rail)</span></div>
-            <a class="btn btn-outline btn-sm" style="margin-top:1.2rem" href="/wimbledon-clinic">Directions &amp; Clinic Info</a>
-          </div>
-        </div>
-
-        <div class="loc-card">
-          <img
-            src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg"
-            alt="Reading clinic"
-            loading="lazy"
-          />
-          <div class="loc-body">
-            <p class="loc-sub">Berkshire · Castle Street</p>
-            <h3>Reading Clinic</h3>
-            <div class="loc-row"><strong>Address</strong><span>Reading Health Centre, 61 Castle St, Reading RG1 7SN</span></div>
-            <div class="loc-row"><strong>Hours</strong><span>Mon / Wed / Fri 9:00 am – 6:00 pm</span></div>
-            <div class="loc-row"><strong>Languages</strong><span>Cantonese · Mandarin · English</span></div>
-            <div class="loc-row"><strong>Nearest</strong><span>Reading Station (Elizabeth Line &amp; GWR)</span></div>
-            <a class="btn btn-outline btn-sm" style="margin-top:1.2rem" href="/reading-clinic">Directions &amp; Clinic Info</a>
-          </div>
-        </div>
+      <div class="spec-card">
+        <span class="spec-num" aria-hidden="true">03</span>
+        <div class="spec-icon">🦴</div>
+        <h3>Bone Setting &amp; Orthopaedic Care</h3>
+        <p>
+          Zheng Gu (正骨) — a classical orthopaedic system involving manual realignment of
+          joints and vertebrae. Applied within a modern biomechanical assessment framework.
+          Treats disc herniation, postural kyphosis, cervical nerve impingement, and acute
+          sports-related joint injuries.
+        </p>
+        <a class="spec-link" href="/bone-setting">Explore Bone Setting</a>
       </div>
+
+      <div class="spec-card">
+        <span class="spec-num" aria-hidden="true">04</span>
+        <div class="spec-icon">🌿</div>
+        <h3>Herbal Medicine &amp; Internal Consultation</h3>
+        <p>
+          Begins with a full internal consultation — pulse diagnosis, tongue observation, and
+          detailed case history. Every prescription is individually tailored. GMP-certified
+          materials sourced from verified suppliers. Covers digestive disorders, fatigue,
+          hormonal imbalance, skin conditions, and anxiety with sleep disruption.
+        </p>
+        <a class="spec-link" href="/herbal-consultation">Explore Herbal Medicine</a>
+      </div>
+
     </div>
-  </section>
 
-  <!-- ═══════════════════════════════════════
-       WHAT TO EXPECT
-  ═══════════════════════════════════════ -->
-  <section class="section">
-    <div class="wrap">
-      <div class="grid-2">
-        <div>
-          <p class="eyebrow">What to Expect</p>
-          <h2>What is a consultation like?</h2>
+    <p style="margin-top:1.5rem;font-size:0.88rem;color:var(--muted)">
+      Treatments can be combined — your practitioner determines the optimal protocol at assessment, not a fixed package.
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §5 WHY PATIENTS CHOOSE YIN YANG — dark section
+═══════════════════════════════════════════════ -->
+<section class="section-dark">
+  <div class="wrap">
+    <div class="grid-2-al" style="gap:4rem">
+
+      <!-- Left: heading + intro -->
+      <div>
+        <p class="eyebrow eyebrow-dark">Our Clinical Approach</p>
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem)">
+          Why patients<br>choose Yin Yang
+        </h2>
+        <p style="max-width:38ch;margin-top:0.8rem">
+          Built on Hong Kong's most rigorous clinical standards — delivered in Wimbledon
+          and Reading.
+        </p>
+        <div class="actions" style="margin-top:2rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+        </div>
+      </div>
+
+      <!-- Right: 2×2 benefit grid -->
+      <div class="ben-grid">
+        <div class="ben-item">
+          <span class="ben-num">01</span>
+          <h3>Regulated Clinical Standards</h3>
           <p>
-            New patients often arrive uncertain about what TCM assessment involves. Here is exactly
-            what happens — from the moment you book to the end of your first treatment session.
+            Every practitioner holds a Master of TCM with verified hospital clinical hours —
+            a strictly regulated licence from the Chinese Medicine Council of Hong Kong.
           </p>
-          <div class="actions" style="margin-top:1.5rem">
-            <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Free Consultation</a>
-          </div>
         </div>
-
-        <div class="step-list">
-          <div class="step-item">
-            <div class="step-num">1</div>
-            <div>
-              <h3>Clinical Consultation</h3>
-              <p>
-                Comprehensive 1-on-1 assessment. Pulse and tongue diagnosis combined with your
-                Western medical history, lifestyle factors, and symptoms to identify the root
-                systemic pattern.
-              </p>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-num">2</div>
-            <div>
-              <h3>Tailored Treatment</h3>
-              <p>
-                A personalised combination of modalities during your session — acupuncture for
-                neurological regulation, targeted Tui Na or bone setting, or a bespoke prescription
-                of GMP-certified herbal medicine.
-              </p>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-num">3</div>
-            <div>
-              <h3>Protocol Review</h3>
-              <p>
-                Chronic conditions rarely resolve in a single session. We systematically review
-                your symptomatic progress at every follow-up, refining your treatment to match
-                your body's current recovery phase.
-              </p>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-num">4</div>
-            <div>
-              <h3>Long-Term Resilience</h3>
-              <p>
-                Once acute symptoms stabilise, we transition your protocol toward preventative
-                care — strengthening long-term resilience and providing lifestyle guidance to
-                prevent re-injury.
-              </p>
-            </div>
-          </div>
+        <div class="ben-item">
+          <span class="ben-num">02</span>
+          <h3>Traditional Wisdom + Modern Anatomy</h3>
+          <p>
+            Classical TCM diagnostics combined with modern musculoskeletal anatomy, for
+            complex conditions like lumbar disc compression, sciatica, and nerve impingement.
+          </p>
         </div>
-      </div>
-
-      <!-- Frequency guide -->
-      <div style="margin-top:3.5rem">
-        <p class="eyebrow">Recommended Treatment Frequency</p>
-        <div class="grid-2 equal" style="margin-top:1rem">
-          <div style="display:grid;gap:0.5rem">
-            {[
-              ["Acute pain or injury", "2–3× per week for 2 weeks, then reassess"],
-              ["Chronic musculoskeletal", "Weekly for 4–6 weeks, then bi-weekly"],
-              ["Women's health", "Weekly, timed to menstrual cycle phase"],
-              ["Skin conditions", "Weekly 6–8 weeks; herbal review every 2 weeks"],
-            ].map(([cond, freq]) => (
-              <div style="display:flex;gap:1rem;align-items:flex-start;padding:0.8rem;border-bottom:1px solid var(--line);font-size:0.93rem">
-                <span style="min-width:0;flex:1;font-weight:600">{cond}</span>
-                <span style="color:var(--muted);flex:1;text-align:right">{freq}</span>
-              </div>
-            ))}
-          </div>
-          <p style="color:var(--muted);font-size:0.9rem;align-self:center">
-            These are indicative benchmarks based on typical clinical trajectories. Your practitioner
-            will adjust frequency based on your response at each session — we do not prescribe a
-            fixed number of sessions in advance.
+        <div class="ben-item">
+          <span class="ben-num">03</span>
+          <h3>Seamless Bilingual Consultations</h3>
+          <p>
+            Describe your symptoms exactly as you feel them. Full clinical consultations in
+            English and Cantonese — no translation loss, no precision lost.
+          </p>
+        </div>
+        <div class="ben-item">
+          <span class="ben-num">04</span>
+          <h3>Dual-Clinic Continuity of Care</h3>
+          <p>
+            Same practitioners, protocols and herbal formularies across Wimbledon SW19 and
+            Reading Castle Street. Seamless continuity between locations.
           </p>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ═══════════════════════════════════════
-       FAQ
-  ═══════════════════════════════════════ -->
-  <section class="section-soft">
-    <div class="wrap">
-      <div class="grid-2">
-        <div>
-          <p class="eyebrow">Frequently Asked Questions</p>
-          <h2>Questions patients ask before their first booking</h2>
-          <p style="color:var(--muted)">
-            These are the questions our reception team hears most often from new patients —
-            particularly those unfamiliar with how TCM works within the UK healthcare context.
-          </p>
+
+<!-- ═══════════════════════════════════════════════
+     §6 CLINICAL APPROACH — readable editorial section
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+
+      <div>
+        <p class="eyebrow">Our Approach</p>
+        <h2>How We Work</h2>
+
+        <div class="pull-quote">
+          <p>"Built on Hong Kong's exceptionally rigorous system of clinical registration and
+          intensive, hospital-based training — practised here in the UK."</p>
         </div>
 
-        <div class="faq-list">
+        <h3>Diagnosis before treatment</h3>
+        <p>
+          Every patient interaction begins with a structured clinical assessment — combining
+          traditional pulse and tongue diagnosis with a thorough review of your Western medical
+          history, lifestyle factors, and presenting symptoms. We do not prescribe a treatment
+          plan before completing this assessment.
+        </p>
+
+        <h3>Session-by-session adaptation</h3>
+        <p>
+          We do not apply a fixed protocol across multiple sessions. Your acupuncture point
+          selection, manual therapy techniques, and herbal prescription are reassessed at
+          every appointment and adjusted to match your current clinical picture. This
+          session-by-session responsiveness is central to how TCM achieves lasting results
+          rather than temporary relief.
+        </p>
+
+        <h3>Integrated protocols where appropriate</h3>
+        <p>
+          When clinically indicated, we combine modalities within a single session — for
+          example, medical acupuncture for neurological pain regulation combined with Tui Na
+          for soft tissue and joint work. Every combination is determined by your practitioner's
+          assessment, not by a fixed package offering.
+        </p>
+
+        <!-- Frequency reference -->
+        <div style="margin-top:2rem;border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden">
+          <div style="padding:0.8rem 1.2rem;background:var(--cream);border-bottom:1px solid var(--border)">
+            <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:0">Typical Treatment Frequency</p>
+          </div>
           {[
-            {
-              q: "Are your practitioners registered in the UK?",
-              a: "Yes, fully registered. All our practitioners hold professional degrees and are registered with recognised UK regulatory bodies including BAcC and ATCM. This guarantees we meet strict UK standards for safety, hygiene, and insurance. We also hold original registrations as Certified CMPs in Hong Kong.",
-            },
-            {
-              q: "What languages are consultations conducted in?",
-              a: "Fully conducted in English, Cantonese, or Mandarin. UK patients receive clear, jargon-free explanations. HK patients can describe symptoms in their native language and share HK medical notes directly — no translation needed.",
-            },
-            {
-              q: "How many sessions will I need to see results?",
-              a: "Acute conditions (recent sports injuries, acute pain): 3–5 sessions typically show measurable improvement. Chronic conditions (long-standing back pain, hormonal imbalances, skin disorders): usually 6–10 sessions to address the root cause and stabilise the condition.",
-            },
-            {
-              q: "Is TCM safe alongside Western medicine?",
-              a: "Yes, in the vast majority of cases. Your safety is our priority. During your initial consultation we thoroughly review your current medications and ongoing treatments to avoid any interactions. We will advise you to consult your GP if there is any clinical uncertainty.",
-            },
-            {
-              q: "Do you offer consultations in Cantonese?",
-              a: "Yes. All practitioners are fluent in Cantonese and Mandarin. Describe your symptoms exactly as you feel them — no translation loss, full clinical precision.",
-            },
-          ].map(({ q, a }) => (
-            <details class="faq-item">
-              <summary>
-                {q}
-                <span class="faq-chevron">+</span>
-              </summary>
-              <p class="faq-answer">{a}</p>
-            </details>
+            ["Acute pain or injury", "2–3× per week for 2 weeks, then reassess"],
+            ["Chronic musculoskeletal", "Weekly for 4–6 weeks, then bi-weekly"],
+            ["Women's health", "Weekly, timed to menstrual cycle phase"],
+            ["Skin conditions", "Weekly 6–8 weeks; herbal review every 2 weeks"],
+          ].map(([cond, freq], i) => (
+            <div style={`display:flex;justify-content:space-between;gap:1rem;padding:0.8rem 1.2rem;font-size:0.88rem;${i < 3 ? "border-bottom:1px solid var(--border)" : ""}`}>
+              <span style="font-weight:600;color:var(--navy)">{cond}</span>
+              <span style="color:var(--muted);text-align:right">{freq}</span>
+            </div>
+          ))}
+          <div style="padding:0.6rem 1.2rem;font-size:0.78rem;color:var(--muted);background:var(--cream)">
+            Indicative benchmarks only. Your practitioner adjusts based on your clinical response.
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: stats + image -->
+      <div style="display:grid;gap:1.5rem;align-content:start">
+
+        <!-- Stat column -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:var(--r-lg);overflow:hidden">
+          {[
+            { val: "4.9★", label: "Google Reviews" },
+            { val: "15+", label: "Years of practice" },
+            { val: "2", label: "UK clinic locations" },
+            { val: "EN/粵", label: "Bilingual care" },
+          ].map(({ val, label }) => (
+            <div style="background:var(--white);padding:1.5rem;text-align:center">
+              <span style="display:block;font-family:var(--serif);font-size:2rem;color:var(--navy);line-height:1;margin-bottom:0.35rem">{val}</span>
+              <span style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em">{label}</span>
+            </div>
           ))}
         </div>
+
+        <img
+          src="/images/adobestock_88537046-low-My8DbSswqH0l0J9t.jpg"
+          alt="Chinese medicine clinical treatment"
+          style="width:100%;height:280px;object-fit:cover;border-radius:var(--r-lg)"
+          loading="lazy"
+        />
+
+        <div style="background:var(--navy);border-radius:var(--r-md);padding:1.4rem">
+          <p style="font-family:var(--serif);font-size:1.05rem;font-style:italic;color:#f0ece2;line-height:1.6;margin:0">
+            "Same-week appointments available. New patients welcome — no referral needed."
+          </p>
+          <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer" style="margin-top:1rem">WhatsApp Us Now</a>
+        </div>
+
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ═══════════════════════════════════════
-       CTA SECTION
-  ═══════════════════════════════════════ -->
-  <CTASection
-    heading="Ready to Start Your Treatment?"
-    sub="Same-week appointments available at our Wimbledon and Reading clinics. New patients welcome. No referral needed."
-  />
+
+<!-- ═══════════════════════════════════════════════
+     §7 CONDITIONS WE TREAT
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Conditions We Treat</p>
+      <h2>Where Our Expertise Makes the Most Difference</h2>
+      <p>
+        Our clinical focus is deliberately narrow. We specialise in high-impact areas where our
+        integrated combination of acupuncture, manual therapy, and herbal medicine produces
+        consistent, verifiable outcomes.
+      </p>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:2.5rem">
+      <div style="padding:1.8rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.5rem;margin-bottom:0.6rem">🦴</p>
+        <h3 style="font-size:1.05rem">Chronic Pain &amp; Spinal Problems</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Lumbar disc herniation, sciatica, cervical spondylosis, and sacroiliac joint
+          dysfunction. Our combined acupuncture and bone-setting protocol addresses the
+          neurological pain component, structural misalignment, and muscle tension simultaneously.
+        </p>
+        <a class="more-link" href="/back-pain">Back Pain &amp; Sciatica</a>
+      </div>
+      <div style="padding:1.8rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.5rem;margin-bottom:0.6rem">🌸</p>
+        <h3 style="font-size:1.05rem">Women's Health &amp; Hormonal Balance</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Postnatal recovery, menstrual irregularity (including PCOS and endometriosis),
+          fertility support alongside IVF cycles, perimenopause management, and postpartum
+          body recomposition. Integrated acupuncture and individually prescribed herbal formulae.
+        </p>
+        <a class="more-link" href="/contact">Enquire about Women's Health</a>
+      </div>
+      <div style="padding:1.8rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.5rem;margin-bottom:0.6rem">🏃</p>
+        <h3 style="font-size:1.05rem">Sports Injuries &amp; Recovery</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Ligament sprains, tendinopathy, muscle tears, and RSI respond exceptionally well to
+          our combined Tui Na and acupuncture rehabilitation protocol. We design
+          session-by-session recovery programmes for recreational and competitive athletes.
+        </p>
+        <a class="more-link" href="/sports-injuries">Sports Injuries</a>
+      </div>
+    </div>
+
+    <!-- Condition chips for internal linking -->
+    <p style="font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.8rem">Also treated at our clinics:</p>
+    <div class="cond-grid">
+      {[
+        { label: "Back Pain",         href: "/back-pain" },
+        { label: "Sciatica",          href: "/sciatica-treatment" },
+        { label: "Shoulder Pain",     href: "/shoulder-pain" },
+        { label: "Frozen Shoulder",   href: "/frozen-shoulder" },
+        { label: "Sports Injuries",   href: "/sports-injuries" },
+        { label: "Neck Pain",         href: "/conditions" },
+        { label: "Headaches",         href: "/conditions" },
+        { label: "Anxiety & Stress",  href: "/conditions" },
+        { label: "Sleep Disorders",   href: "/conditions" },
+        { label: "Digestive Health",  href: "/conditions" },
+        { label: "Skin Conditions",   href: "/conditions" },
+        { label: "Fertility Support", href: "/contact" },
+        { label: "Fatigue",           href: "/conditions" },
+        { label: "Post-natal Care",   href: "/contact" },
+      ].map(({ label, href }) => (
+        <a class="cond-chip" href={href}>{label}</a>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §8 LOCATIONS
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our Clinics</p>
+      <h2>Two Clinics. One Standard of Care.</h2>
+      <p>
+        Both locations operate under the same clinical team rotation, matching herbal
+        formularies, and synchronised diagnostic protocols. Attending either clinic gives you
+        seamless access to the full depth of our medical expertise.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="loc-card">
+        <img
+          src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg"
+          alt="Yin Yang CMC Wimbledon clinic"
+          loading="lazy"
+        />
+        <div class="loc-body">
+          <span class="loc-tag">South West London · SW19</span>
+          <h3>Wimbledon Clinic</h3>
+          <div class="loc-row"><strong>Address</strong><span>2 Saint Mark's Place, Wimbledon, London SW19 7ND</span></div>
+          <div class="loc-row"><strong>Hours</strong><span>Saturday 9:00 am – 5:00 pm</span></div>
+          <div class="loc-row"><strong>Languages</strong><span>Cantonese · Mandarin · English</span></div>
+          <div class="loc-row"><strong>Nearest</strong><span>Wimbledon Station — District Line &amp; National Rail</span></div>
+          <div class="loc-actions">
+            <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic Info &amp; Map</a>
+            <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-card">
+        <img
+          src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg"
+          alt="Yin Yang CMC Reading clinic"
+          loading="lazy"
+        />
+        <div class="loc-body">
+          <span class="loc-tag">Berkshire · Castle Street</span>
+          <h3>Reading Clinic</h3>
+          <div class="loc-row"><strong>Address</strong><span>Reading Health Centre, 61 Castle St, Reading RG1 7SN</span></div>
+          <div class="loc-row"><strong>Hours</strong><span>Mon / Wed / Fri 9:00 am – 6:00 pm</span></div>
+          <div class="loc-row"><strong>Languages</strong><span>Cantonese · Mandarin · English</span></div>
+          <div class="loc-row"><strong>Nearest</strong><span>Reading Station — Elizabeth Line &amp; GWR</span></div>
+          <div class="loc-actions">
+            <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic Info &amp; Map</a>
+            <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §9 PATIENT JOURNEY — 3 steps
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow">What to Expect</p>
+      <h2>Your Clinical Journey</h2>
+      <p>From the moment you book to the end of your first session — here is exactly what happens.</p>
+    </div>
+
+    <div class="journey-grid">
+      <div class="journey-step">
+        <div class="j-num">01</div>
+        <h3>Clinical Consultation</h3>
+        <p>
+          Comprehensive 1-on-1 assessment combining pulse and tongue diagnosis with your full
+          Western medical history. We identify the root systemic pattern — not just the
+          presenting symptom.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">02</div>
+        <h3>Personalised Treatment Plan</h3>
+        <p>
+          Your practitioner explains the proposed protocol in plain language. Treatment may
+          combine acupuncture, Tui Na, bone setting, or a tailored herbal prescription —
+          determined by your assessment, not a fixed package.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">03</div>
+        <h3>Ongoing Clinical Review</h3>
+        <p>
+          We systematically review your progress at every follow-up, refining your point
+          selection or herbal formula to match your shifting recovery phase and accelerate
+          long-term resolution.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §10 FAQ
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+      <div>
+        <p class="eyebrow">Common Questions</p>
+        <h2>Questions Patients Ask Before Their First Booking</h2>
+        <p style="color:var(--muted)">
+          These are the questions our practitioners hear most often from new patients —
+          particularly those unfamiliar with how TCM works within the UK healthcare context.
+        </p>
+        <div class="actions" style="margin-top:1.5rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Ask Us Directly</a>
+        </div>
+      </div>
+      <FAQAccordion items={faqItems} />
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §11 FINAL CTA
+═══════════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="wrap container-narrow" style="text-align:center">
+    <p class="eyebrow" style="color:var(--gold)">Book Your Consultation</p>
+    <h2>Start With a Clinical Consultation</h2>
+    <p>
+      Same-week appointments available at both our Wimbledon and Reading clinics.
+      New patients welcome — no referral needed.
+    </p>
+    <div class="actions actions-c">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book Now on WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+447301949686">Call 07301 949 686</a>
+    </div>
+    <p style="margin-top:1.5rem;font-size:0.85rem;color:rgba(240,234,226,0.5)">
+      Or email us at <a href="mailto:yinyangcmcuk@gmail.com" style="color:rgba(192,152,90,0.8);text-decoration:none">yinyangcmcuk@gmail.com</a>
+    </p>
+  </div>
+</section>
+
 </Base>
-
-<script>
-  // FAQ toggle icon
-  document.querySelectorAll<HTMLDetailsElement>(".faq-item").forEach((item) => {
-    item.addEventListener("toggle", () => {
-      const chevron = item.querySelector(".faq-chevron");
-      if (chevron) chevron.textContent = item.open ? "−" : "+";
-    });
-  });
-</script>

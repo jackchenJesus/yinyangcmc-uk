@@ -1,0 +1,42 @@
+---
+interface FAQItem {
+  q: string;
+  a: string;
+}
+interface Props {
+  items: FAQItem[];
+}
+const { items } = Astro.props;
+---
+<div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+  {items.map(({ q, a }) => (
+    <details
+      class="faq-item"
+      itemscope
+      itemprop="mainEntity"
+      itemtype="https://schema.org/Question"
+    >
+      <summary>
+        <span itemprop="name">{q}</span>
+        <em class="faq-chevron" aria-hidden="true">+</em>
+      </summary>
+      <div
+        class="faq-answer"
+        itemscope
+        itemprop="acceptedAnswer"
+        itemtype="https://schema.org/Answer"
+      >
+        <p itemprop="text">{a}</p>
+      </div>
+    </details>
+  ))}
+</div>
+
+<script>
+  document.querySelectorAll<HTMLDetailsElement>(".faq-item").forEach((item) => {
+    item.addEventListener("toggle", () => {
+      const chevron = item.querySelector<HTMLElement>(".faq-chevron");
+      if (chevron) chevron.textContent = item.open ? "−" : "+";
+    });
+  });
+</script>

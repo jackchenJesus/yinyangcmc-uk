@@ -8,10 +8,10 @@ interface Props {
   secondaryHref?: string;
 }
 const {
-  heading      = "Ready to Start Your Treatment?",
-  sub          = "Same-week appointments are available at both our Wimbledon and Reading clinics. New patients welcome — no referral needed.",
-  primaryLabel = "WhatsApp Us Now",
-  primaryHref  = "https://wa.me/447301949686",
+  heading        = "Ready to Start Your Treatment?",
+  sub            = "Same-week appointments available at our Wimbledon and Reading clinics. New patients welcome — no referral needed.",
+  primaryLabel   = "Book Now on WhatsApp",
+  primaryHref    = "https://wa.me/447301949686",
   secondaryLabel = "Call Us",
   secondaryHref  = "tel:+447301949686",
 } = Astro.props;
@@ -21,9 +21,14 @@ const {
     <p class="eyebrow" style="color:var(--gold)">Book Your Appointment</p>
     <h2>{heading}</h2>
     <p>{sub}</p>
-    <div class="actions actions-center">
-      <a class="btn btn-gold" href={primaryHref} target="_blank" rel="noreferrer">{primaryLabel}</a>
-      <a class="btn btn-outline-gold" href={secondaryHref}>{secondaryLabel}</a>
+    <div class="actions actions-c">
+      <a
+        class="btn btn-gold"
+        href={primaryHref}
+        target={primaryHref.startsWith("http") ? "_blank" : undefined}
+        rel={primaryHref.startsWith("http") ? "noreferrer" : undefined}
+      >{primaryLabel}</a>
+      <a class="btn btn-ghost" href={secondaryHref}>{secondaryLabel}</a>
     </div>
   </div>
 </section>

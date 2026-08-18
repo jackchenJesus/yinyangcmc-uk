@@ -4,10 +4,11 @@ import { clinics, nav, site } from "../data/site";
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-grid">
+
       <div class="foot-brand">
         <img src="/images/ming_logo-full-7UbV6e2W5oyjr2Ir.png" alt="Yin Yang CMC" />
         <p>Modern TCM &amp; Wellness Centre.<br />Hong Kong clinical standards in Wimbledon &amp; Reading.</p>
-        <p style="margin-top:0.8rem">
+        <p>
           <a href={`mailto:${site.email}`}>{site.email}</a><br />
           <a href={`tel:${site.phoneIntl}`}>{site.phoneDisplay}</a>
         </p>
@@ -15,24 +16,26 @@ import { clinics, nav, site } from "../data/site";
 
       <div>
         <h4>Services</h4>
-        <nav class="foot-links">
+        <nav class="foot-links" aria-label="Footer services">
           <a href="/clinical-services">All Clinical Services</a>
           {nav.services.map((i) => <a href={i.href}>{i.label}</a>)}
+          <a href="/conditions" style="margin-top:0.4rem">All Conditions</a>
+          {nav.conditions.map((i) => <a href={i.href}>{i.label}</a>)}
         </nav>
       </div>
 
       <div>
         <h4>Reading Clinic</h4>
-        <p style="font-size:0.9rem;line-height:1.6">
-          {clinics.reading.address}<br />
-          {clinics.reading.hours}
-        </p>
+        <p>{clinics.reading.address}<br />{clinics.reading.hours}</p>
         <h4 style="margin-top:1.2rem">Wimbledon Clinic</h4>
-        <p style="font-size:0.9rem;line-height:1.6">
-          {clinics.wimbledon.address}<br />
-          {clinics.wimbledon.hours}
-        </p>
+        <p>{clinics.wimbledon.address}<br />{clinics.wimbledon.hours}</p>
+        <div style="margin-top:1rem;display:grid;gap:0.4rem">
+          <a href="/pricing-and-insurance">Pricing &amp; Insurance</a>
+          <a href="/locations">All Locations</a>
+          <a href="/contact">Contact</a>
+        </div>
       </div>
+
     </div>
 
     <div class="foot-legal">

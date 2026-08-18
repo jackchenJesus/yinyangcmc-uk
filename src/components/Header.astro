@@ -1,57 +1,61 @@
 ---
 import { nav, site } from "../data/site";
 ---
-<header class="site-header">
+<header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
+
+    <!-- Brand -->
     <a class="brand" href="/">
-      <img src="/images/ming_logo-full-7UbV6e2W5oyjr2Ir.png" alt="Yin Yang CMC logo" width="52" height="52" />
-      <span class="brand-text">
-        <strong>Yin Yang CMC</strong>
-        <span>UK Clinic</span>
+      <img src="/images/ming_logo-full-7UbV6e2W5oyjr2Ir.png" alt="Yin Yang CMC" width="48" height="48" />
+      <span>
+        <span class="brand-name">Yin Yang CMC</span>
+        <span class="brand-sub">UK Clinic</span>
       </span>
     </a>
 
-    <!-- Desktop nav -->
+    <!-- Desktop navigation -->
     <nav aria-label="Main navigation">
-      <ul class="main-nav" id="mainNav">
-        <li class="drop-wrap" id="drop-services">
-          <button aria-expanded="false" aria-haspopup="true">
+      <ul class="main-nav">
+        <li class="drop-wrap">
+          <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
             Clinical Services
-            <svg class="drop-arrow" viewBox="0 0 10 6"><polyline points="1 1 5 5 9 1"/></svg>
+            <svg class="drop-svg" viewBox="0 0 10 6" aria-hidden="true"><polyline points="1 1 5 5 9 1"/></svg>
           </button>
           <div class="drop-menu" role="menu">
-            <a class="top-link" href="/clinical-services">All clinical services</a>
+            <a class="drop-top" href="/clinical-services" role="menuitem">All Clinical Services</a>
             {nav.services.map((i) => <a href={i.href} role="menuitem">{i.label}</a>)}
           </div>
         </li>
-        <li class="drop-wrap" id="drop-conditions">
-          <button aria-expanded="false" aria-haspopup="true">
+        <li class="drop-wrap">
+          <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
             Condition Treatments
-            <svg class="drop-arrow" viewBox="0 0 10 6"><polyline points="1 1 5 5 9 1"/></svg>
+            <svg class="drop-svg" viewBox="0 0 10 6" aria-hidden="true"><polyline points="1 1 5 5 9 1"/></svg>
           </button>
           <div class="drop-menu" role="menu">
-            <a class="top-link" href="/conditions">All conditions</a>
+            <a class="drop-top" href="/conditions" role="menuitem">All Conditions</a>
             {nav.conditions.map((i) => <a href={i.href} role="menuitem">{i.label}</a>)}
           </div>
         </li>
-        <li class="drop-wrap" id="drop-locations">
-          <button aria-expanded="false" aria-haspopup="true">
+        <li class="drop-wrap">
+          <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
             Our Locations
-            <svg class="drop-arrow" viewBox="0 0 10 6"><polyline points="1 1 5 5 9 1"/></svg>
+            <svg class="drop-svg" viewBox="0 0 10 6" aria-hidden="true"><polyline points="1 1 5 5 9 1"/></svg>
           </button>
           <div class="drop-menu" role="menu">
-            <a class="top-link" href="/locations">All locations</a>
+            <a class="drop-top" href="/locations" role="menuitem">All Locations</a>
             {nav.locations.map((i) => <a href={i.href} role="menuitem">{i.label}</a>)}
           </div>
         </li>
-        <li><a href="/pricing-and-insurance">Pricing & Insurance</a></li>
-        <li><a href="/course">Course</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a class="nav-link" href="/pricing-and-insurance">Pricing &amp; Insurance</a></li>
+        <li><a class="nav-link" href="/course">Course</a></li>
+        <li><a class="nav-link" href="/contact">Contact</a></li>
       </ul>
     </nav>
 
-    <div class="header-cta">
-      <a class="phone-link" href={`tel:${site.phoneIntl}`}>{site.phoneDisplay}</a>
+    <!-- Desktop CTA -->
+    <div class="header-right">
+      <a class="hdr-phone" href={`tel:${site.phoneIntl}`}>{site.phoneDisplay}</a>
+      <div class="hdr-divider" aria-hidden="true"></div>
       <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book Now</a>
     </div>
 
@@ -59,46 +63,55 @@ import { nav, site } from "../data/site";
     <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
       <span></span><span></span><span></span>
     </button>
+
   </div>
 </header>
 
-<!-- Mobile overlay nav -->
+<!-- Mobile navigation overlay -->
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
-  <p class="mob-section">Clinical Services</p>
-  <a href="/clinical-services">All Clinical Services</a>
-  {nav.services.map((i) => <a href={i.href}>{i.label}</a>)}
-
-  <p class="mob-section">Condition Treatments</p>
-  <a href="/conditions">All Conditions</a>
-  {nav.conditions.map((i) => <a href={i.href}>{i.label}</a>)}
-
-  <p class="mob-section">Our Locations</p>
-  <a href="/locations">All Locations</a>
-  {nav.locations.map((i) => <a href={i.href}>{i.label}</a>)}
-
-  <p class="mob-section">More</p>
-  <a href="/pricing-and-insurance">Pricing & Insurance</a>
-  <a href="/course">Course</a>
-  <a href="/contact">Contact</a>
-
-  <div class="mobile-cta">
+  <div class="mob-group">
+    <span class="mob-label">Clinical Services</span>
+    <a href="/clinical-services">All Clinical Services</a>
+    {nav.services.map((i) => <a href={i.href}>{i.label}</a>)}
+  </div>
+  <div class="mob-group">
+    <span class="mob-label">Condition Treatments</span>
+    <a href="/conditions">All Conditions</a>
+    {nav.conditions.map((i) => <a href={i.href}>{i.label}</a>)}
+  </div>
+  <div class="mob-group">
+    <span class="mob-label">Our Locations</span>
+    <a href="/locations">All Locations</a>
+    {nav.locations.map((i) => <a href={i.href}>{i.label}</a>)}
+  </div>
+  <div class="mob-group">
+    <span class="mob-label">More</span>
+    <a href="/pricing-and-insurance">Pricing &amp; Insurance</a>
+    <a href="/course">Course</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="mob-ctas">
     <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book Now on WhatsApp</a>
     <a class="btn btn-outline" href={`tel:${site.phoneIntl}`}>Call {site.phoneDisplay}</a>
   </div>
 </nav>
 
 <script>
-  const burger  = document.getElementById("burgerBtn")!;
-  const mobileNav = document.getElementById("mobileNav")!;
+  // Scroll shadow
+  const header = document.getElementById("siteHeader")!;
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 10);
+  }, { passive: true });
 
+  // Burger / mobile menu
+  const burger    = document.getElementById("burgerBtn")!;
+  const mobileNav = document.getElementById("mobileNav")!;
   burger.addEventListener("click", () => {
     const open = mobileNav.classList.toggle("open");
     burger.setAttribute("aria-expanded", String(open));
-    mobileNav.setAttribute("aria-hidden", String(!open));
+    mobileNav.setAttribute("aria-hidden",  String(!open));
     document.body.style.overflow = open ? "hidden" : "";
   });
-
-  // Close on link click
   mobileNav.querySelectorAll("a").forEach((a) =>
     a.addEventListener("click", () => {
       mobileNav.classList.remove("open");
@@ -108,22 +121,44 @@ import { nav, site } from "../data/site";
     })
   );
 
-  // Desktop dropdowns via keyboard/button
+  // Desktop dropdown toggle (button click)
   document.querySelectorAll<HTMLElement>(".drop-wrap").forEach((wrap) => {
     const btn = wrap.querySelector("button");
-    btn?.addEventListener("click", () => {
+    if (!btn) return;
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
       const isOpen = wrap.classList.toggle("open");
       btn.setAttribute("aria-expanded", String(isOpen));
+      // Close siblings
+      document.querySelectorAll<HTMLElement>(".drop-wrap.open").forEach((other) => {
+        if (other !== wrap) {
+          other.classList.remove("open");
+          other.querySelector("button")?.setAttribute("aria-expanded", "false");
+        }
+      });
     });
   });
 
-  // Close dropdowns on outside click
-  document.addEventListener("click", (e) => {
+  // Close dropdowns when clicking outside
+  document.addEventListener("click", () => {
     document.querySelectorAll<HTMLElement>(".drop-wrap.open").forEach((wrap) => {
-      if (!wrap.contains(e.target as Node)) {
-        wrap.classList.remove("open");
-        wrap.querySelector("button")?.setAttribute("aria-expanded", "false");
-      }
+      wrap.classList.remove("open");
+      wrap.querySelector("button")?.setAttribute("aria-expanded", "false");
     });
+  });
+
+  // Keyboard: close on Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    document.querySelectorAll<HTMLElement>(".drop-wrap.open").forEach((w) => {
+      w.classList.remove("open");
+      w.querySelector("button")?.setAttribute("aria-expanded", "false");
+    });
+    if (mobileNav.classList.contains("open")) {
+      mobileNav.classList.remove("open");
+      burger.setAttribute("aria-expanded", "false");
+      mobileNav.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
   });
 </script>
