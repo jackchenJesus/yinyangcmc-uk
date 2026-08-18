@@ -1,0 +1,520 @@
+---
+import Base from "../layouts/Base.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import CTASection from "../components/CTASection.astro";
+
+const faqItems = [
+  {
+    q: "Is Chinese herbal medicine safe in the UK?",
+    a: "When prescribed by a qualified practitioner, yes. All herbal formulas at Yin Yang CMC use pharmaceutical-grade granules from GMP-certified, licensed suppliers. We screen for herb-drug interactions at every consultation and follow RCHM safety guidelines. We will inform you of any significant interactions and recommend you inform your GP where relevant.",
+  },
+  {
+    q: "How long does a first herbal consultation take?",
+    a: "Your first consultation is 60 minutes. This includes a full clinical history, pulse and tongue diagnosis, lifestyle and dietary review, and pattern identification. Follow-up appointments are typically 30 minutes. Most patients see meaningful change within 4–8 weeks, depending on the condition and duration.",
+  },
+  {
+    q: "Can I take herbal medicine alongside my GP prescription?",
+    a: "In most cases, yes — but this is assessed individually. We flag all known herb-drug interactions at your initial consultation and, where necessary, recommend you inform your GP. We will not prescribe anything that creates a conflict without explicit discussion.",
+  },
+  {
+    q: "Do you offer Cantonese-speaking consultations?",
+    a: "Yes. All practitioners at Yin Yang CMC are native Cantonese speakers. If you have been managing a treatment plan from Hong Kong, you can continue that conversation in the same language and to the same clinical standard.",
+  },
+  {
+    q: "What is the difference between herbal granules and decoctions?",
+    a: "Decoctions are raw herbs boiled into a tea — the traditional method. Granules are concentrated extracts dissolved in hot water. We prescribe granules as the default: more convenient, hygienic, and consistent in potency without compromising clinical effectiveness.",
+  },
+  {
+    q: "Do you treat eczema with Chinese herbal medicine?",
+    a: "Yes. Eczema is one of the most frequently treated conditions at our clinics. Our approach combines internal herbal prescriptions targeting the root pattern with dietary and lifestyle guidance. Results vary by severity and duration — we give you a realistic assessment at your first appointment.",
+  },
+];
+---
+<Base
+  title="Herbal Medicine Wimbledon & Reading | Chinese Herbal Consultation | Yin Yang CMC"
+  description="Professional Chinese herbal medicine consultations in Wimbledon & Reading. GMP-certified herbal materials. Tailored prescriptions for internal medicine, women's health, skin conditions and more."
+>
+
+
+<!-- ═══════════════════════════════════════════════
+     §1 HERO
+═══════════════════════════════════════════════ -->
+<section class="page-hero" style="min-height:68vh;display:grid;place-items:center">
+  <img
+    class="page-hero-bg"
+    src="/images/chinese-herbal-medicine-6MuZIXMBnlhegCyU.webp"
+    alt="Chinese herbal medicine consultation at Yin Yang CMC"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="wrap" style="padding:5rem 0 3.5rem">
+    <p class="eyebrow">Herbal Medicine · Reading &amp; Wimbledon</p>
+    <h1>Chinese Herbal Medicine<br>in Wimbledon &amp; Reading</h1>
+    <p class="lede">
+      Individually tailored herbal prescriptions following a full internal consultation.
+      GMP-certified herbal materials. No formula prescribed without assessment.
+    </p>
+
+    <div class="hero-exp-stat">
+      <span class="hero-exp-num">15+</span>
+      <span class="hero-exp-label">Years'<br>Clinical Experience</span>
+    </div>
+
+    <div class="actions" style="margin-top:0">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-ghost" href="/clinical-services">All Clinical Services</a>
+    </div>
+
+    <div class="hero-trust-row">
+      <span><span class="htc">✓</span> British Acupuncture Council Member</span>
+      <span><span class="htc">✓</span> GMP-Certified Herbal Materials</span>
+      <span><span class="htc">✓</span> Insurance Recognised</span>
+      <span><span class="htc">✓</span> No Referral Needed</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §2 WHAT IS HERBAL MEDICINE
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-al" style="gap:4rem">
+
+      <div>
+        <p class="eyebrow">About the Treatment</p>
+        <h2>What Is Chinese Herbal Medicine?</h2>
+        <p>
+          Chinese herbal medicine is a 2,000-year-old clinical system that uses plant,
+          mineral, and animal-derived substances to regulate the body's internal environment.
+          At Yin Yang CMC, each prescription is a compound formula — typically 8 to 15
+          ingredients — calibrated to your specific pattern of disharmony as identified
+          through pulse diagnosis, tongue observation, and clinical history.
+        </p>
+        <p>
+          The goal is not to suppress symptoms in isolation. It is to address the underlying
+          physiological imbalance driving them. No formula is prescribed without completing
+          a full internal consultation first.
+        </p>
+
+        <ul style="list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:0.5rem">
+          {[
+            "First consultation: 60 minutes — full diagnostic assessment",
+            "GMP-certified granule formulas — convenient, hygienic, consistent potency",
+            "Follow-up every 2–4 weeks — formula adjusted based on your response",
+            "Treatment is time-bound — realistic timeline discussed at outset",
+          ].map((item) => (
+            <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:0.92rem">
+              <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.05em">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div class="actions" style="margin-top:1.8rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+          <a class="btn btn-outline" href="/pricing-and-insurance">Pricing &amp; Insurance</a>
+        </div>
+      </div>
+
+      <div class="img-wrap" style="position:relative">
+        <img
+          src="/images/img_6058-eVlfhKuykGV6M98J.jpg"
+          alt="Yin Yang CMC clinic interior"
+          style="width:100%;height:460px;object-fit:cover;border-radius:var(--r-lg)"
+          loading="lazy"
+        />
+        <div class="cred-panel">
+          <div class="cred-row"><span class="cred-check">✓</span> MBAcC · Nos. 963087 &amp; 963093</div>
+          <div class="cred-row"><span class="cred-check">✓</span> ATCM Professional Member</div>
+          <div class="cred-row"><span class="cred-check">✓</span> GMP-certified materials</div>
+          <div class="cred-row"><span class="cred-check">✓</span> RCHM safety guidelines</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §3 CONDITIONS / APPLICATIONS
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Applications</p>
+      <h2>Conditions Addressed Through Herbal Medicine</h2>
+      <p>
+        Herbal medicine consultations at Yin Yang CMC address a broad range of internal
+        and chronic conditions. Below are the areas where clinical outcomes are strongest.
+        Your practitioner will assess whether herbal medicine is appropriate for your
+        individual presentation.
+      </p>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:2.5rem">
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🌸</p>
+        <h3 style="font-size:1.05rem">Women's Health</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Irregular cycles, painful periods, PCOS, perimenopause, and postpartum recovery.
+          Often combined with acupuncture. Your practitioner will assess suitability
+          for fertility support at consultation.
+        </p>
+        <a class="more-link" href="/contact">Enquire About Women's Health</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🌿</p>
+        <h3 style="font-size:1.05rem">Skin Conditions</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Eczema, acne, and chronic urticaria — addressed as internal Heat, Dampness, or
+          Blood deficiency patterns rather than surface symptoms only. Systemic approach
+          targeting the root cause.
+        </p>
+        <a class="more-link" href="/contact">Enquire About Skin Conditions</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">😴</p>
+        <h3 style="font-size:1.05rem">Stress &amp; Sleep</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Chronic stress, poor sleep architecture, and fatigue. Herbal formulas targeting
+          the nervous system with measurable anxiolytic effects — used alongside or
+          independently from acupuncture.
+        </p>
+        <a class="more-link" href="/contact">Enquire About Stress &amp; Sleep</a>
+      </div>
+    </div>
+
+    <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Also addressed at our clinics:</p>
+    <div class="cond-grid">
+      {[
+        { label: "Digestive Disorders",  href: "/conditions" },
+        { label: "IBS & Bloating",       href: "/conditions" },
+        { label: "Hormonal Imbalance",   href: "/conditions" },
+        { label: "Fatigue Syndromes",    href: "/conditions" },
+        { label: "Skin Conditions",      href: "/conditions" },
+        { label: "Anxiety & Stress",     href: "/conditions" },
+        { label: "Sleep Disorders",      href: "/conditions" },
+        { label: "Eczema",               href: "/conditions" },
+        { label: "Postnatal Recovery",   href: "/contact" },
+        { label: "Perimenopause",        href: "/contact" },
+      ].map(({ label, href }) => (
+        <a class="cond-chip" href={href}>{label}</a>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §4 CONSULTATION PROCESS — dark
+═══════════════════════════════════════════════ -->
+<section class="section-dark">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow eyebrow-dark">Your Consultation</p>
+      <h2>How the Herbal Consultation Works</h2>
+      <p style="color:rgba(240,234,226,0.75)">Full assessment before any prescription. Formula adjusted at every follow-up.</p>
+    </div>
+
+    <div class="journey-grid" style="grid-template-columns:repeat(4,1fr)">
+      <div class="journey-step">
+        <div class="j-num">01</div>
+        <h3>Initial Assessment</h3>
+        <p>
+          60-minute consultation: full clinical history, pulse and tongue diagnosis,
+          lifestyle and dietary review.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">02</div>
+        <h3>Pattern Diagnosis</h3>
+        <p>
+          Your TCM pattern is identified and mapped to your presenting symptoms and
+          measurable physiological indicators.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">03</div>
+        <h3>Formula Prescription</h3>
+        <p>
+          A compound herbal formula prescribed in granule form — individually tailored,
+          not a pre-packaged supplement.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">04</div>
+        <h3>Follow-Up &amp; Discharge</h3>
+        <p>
+          Formula reviewed and adjusted every 2–4 weeks. Treatment is time-bound
+          with a realistic timeline agreed at the outset.
+        </p>
+      </div>
+    </div>
+
+    <p style="margin-top:2.5rem;text-align:center">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book Your Herbal Consultation</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §5 CLINICAL APPROACH
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+
+      <div>
+        <p class="eyebrow">Our Approach</p>
+        <h2>Herbal Medicine at Yin Yang CMC</h2>
+
+        <div class="pull-quote">
+          <p>"No formula prescribed without completing a full internal consultation.
+          Every prescription tailored to your specific pattern — not a pre-packaged
+          supplement."</p>
+        </div>
+
+        <p>
+          Formulae are drawn from the classical canon and adjusted based on your
+          constitution, your current condition, and any concurrent Western medication
+          you are taking. We do not use pre-packaged supplements. We screen for
+          herb-drug interactions at every consultation.
+        </p>
+
+        <p>
+          All herbal materials are sourced from GMP-certified suppliers and comply with
+          UK regulatory standards. Follow-up consultations are scheduled every two to four
+          weeks to review your response and adjust the formula accordingly.
+        </p>
+
+        <details class="expand-detail">
+          <summary class="expand-summary">
+            How herbal medicine differs from Western pharmaceuticals
+            <span class="expand-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="expand-body">
+            <h3>Systemic rather than targeted</h3>
+            <p>
+              Western pharmaceuticals target specific receptor pathways. Chinese herbal
+              medicine works systemically — modulating multiple physiological pathways
+              simultaneously. This makes it particularly applicable for chronic,
+              multi-symptom conditions where a single-target drug may produce limited results.
+            </p>
+            <h3>Adjunct, not replacement</h3>
+            <p>
+              Herbal medicine is not a replacement for emergency care or for conditions
+              requiring pharmaceutical management. We are transparent about where each
+              approach applies, and will advise you honestly if your condition is better
+              managed through your GP.
+            </p>
+            <h3>Formula adaptation</h3>
+            <p>
+              Unlike a fixed pharmaceutical dose, a herbal formula is reviewed and adjusted
+              at every follow-up based on your body's response. Your prescription at week
+              four may differ meaningfully from your prescription at week one.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div style="display:grid;gap:1.5rem;align-content:start">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:var(--r-lg);overflow:hidden">
+          {[
+            { val: "GMP",    label: "Certified Materials" },
+            { val: "60m",    label: "First Consultation" },
+            { val: "EN/粵",  label: "Bilingual Care" },
+            { val: "15+",    label: "Years' Experience" },
+          ].map(({ val, label }) => (
+            <div style="background:var(--white);padding:1.5rem;text-align:center">
+              <span style="display:block;font-family:var(--serif);font-size:2rem;color:var(--navy);line-height:1;margin-bottom:0.35rem">{val}</span>
+              <span style="font-size:0.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em">{label}</span>
+            </div>
+          ))}
+        </div>
+
+        <div style="background:var(--cream);border-radius:var(--r-lg);padding:1.4rem 1.6rem;border:1px solid rgba(192,152,90,0.2)">
+          <p style="font-size:0.76rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.7rem">Related Treatments</p>
+          <div style="display:grid;gap:0.4rem">
+            {[
+              { label: "Acupuncture", href: "/acupuncture" },
+              { label: "Tui Na Therapeutic Massage", href: "/tui-na-massage" },
+              { label: "Bone Setting & Orthopaedic Care", href: "/bone-setting" },
+              { label: "All Clinical Services", href: "/clinical-services" },
+            ].map(({ label, href }) => (
+              <a
+                href={href}
+                style="display:flex;align-items:center;gap:0.4rem;font-size:0.9rem;font-weight:600;color:var(--teal);text-decoration:none;padding:0.3rem 0"
+              >
+                → {label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div style="background:var(--navy);border-radius:var(--r-md);padding:1.3rem">
+          <p style="font-family:var(--serif);font-size:1.02rem;font-style:italic;color:#f0ece2;line-height:1.6;margin:0">
+            "Cantonese-speaking consultations available at both locations. Continue your Hong Kong treatment plan in the same language."
+          </p>
+          <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer" style="margin-top:0.9rem">WhatsApp Us Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §6 CREDENTIALS
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow">Credentials &amp; Standards</p>
+      <h2>Professional Memberships &amp; Accreditations</h2>
+      <p>
+        Both practitioners hold active UK professional registrations. Andrea Li specialises
+        in women's health, dermatology, and internal medicine. All herbal materials comply
+        with UK regulatory standards from GMP-certified suppliers.
+      </p>
+    </div>
+
+    <div class="accred-grid">
+      <div class="accred-card">
+        <div class="accred-stat">15+</div>
+        <p class="accred-name">Years' Clinical<br>Experience</p>
+        <p class="accred-role">Hong Kong &amp; UK practice</p>
+      </div>
+      <div class="accred-card">
+        <div class="accred-badge">MBAcC</div>
+        <p class="accred-name">British Acupuncture<br>Council</p>
+        <p class="accred-role">Registered Member<br>Nos. 963087 &amp; 963093</p>
+      </div>
+      <div class="accred-card">
+        <div class="accred-badge">ATCM</div>
+        <p class="accred-name">Association of TCM<br>&amp; Acupuncture</p>
+        <p class="accred-role">Professional Member<br>FM0250004 &amp; FM0250005</p>
+      </div>
+      <div class="accred-card">
+        <img
+          class="accred-logo"
+          src="/images/psa-logo-7Gbuzq9tXIGQIaKt.png"
+          alt="Professional Standards Authority"
+          loading="lazy"
+        />
+        <p class="accred-name">Professional Standards<br>Authority</p>
+        <p class="accred-role">Accredited Register<br>relationship via BAcC</p>
+      </div>
+    </div>
+
+    <div class="accred-divider">
+      <p class="accred-divider-label">Also recognised by UK health insurers</p>
+      <div class="insurer-strip">
+        <img src="/images/axa-pgrbfCYpRRoo1New.png" alt="AXA Health" style="height:36px" loading="lazy" />
+        <img src="/images/pru-health-vitalty-insurance-london-canada-water-se16-stratford-e15-e20-canary-wharf-e14-london-bridge-se1-rDAt2VDOOdmYgqEM.webp" alt="Vitality Health" style="height:36px" loading="lazy" />
+        <img src="/images/wpa-sbHlIPUxP3aHSfe4.png" alt="WPA" style="height:36px" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §7 LOCATIONS
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our Clinics</p>
+      <h2>Herbal Medicine in Reading &amp; Wimbledon</h2>
+      <p>Same clinical team, same herbal formularies and standards at both locations.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="loc-card">
+        <img
+          src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg"
+          alt="Yin Yang CMC Reading clinic"
+          loading="lazy"
+        />
+        <div class="loc-body">
+          <span class="loc-tag">Berkshire · Castle Street</span>
+          <h3>Reading Clinic</h3>
+          <div class="loc-row"><strong>Address</strong><span>Reading Health Centre, 61 Castle St, Reading RG1 7SN</span></div>
+          <div class="loc-row"><strong>Hours</strong><span>Mon / Wed / Fri 9:00 am – 6:00 pm</span></div>
+          <div class="loc-row"><strong>Transport</strong><span>Reading Station — Elizabeth Line &amp; GWR</span></div>
+          <div class="loc-actions">
+            <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic Details</a>
+            <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-card">
+        <img
+          src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg"
+          alt="Yin Yang CMC Wimbledon clinic"
+          loading="lazy"
+        />
+        <div class="loc-body">
+          <span class="loc-tag">South West London · SW19</span>
+          <h3>Wimbledon Clinic</h3>
+          <div class="loc-row"><strong>Address</strong><span>2 Saint Mark's Place, Wimbledon, London SW19 7ND</span></div>
+          <div class="loc-row"><strong>Hours</strong><span>Saturday 9:00 am – 5:00 pm</span></div>
+          <div class="loc-row"><strong>Transport</strong><span>Wimbledon Station — District Line &amp; National Rail</span></div>
+          <div class="loc-actions">
+            <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic Details</a>
+            <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §8 FAQ
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+      <div>
+        <p class="eyebrow">Common Questions</p>
+        <h2>Questions About Herbal Medicine</h2>
+        <p style="color:var(--muted)">
+          Answers to the questions our practitioners hear most — particularly those new
+          to Chinese herbal medicine or returning patients from Hong Kong continuing
+          their care in the UK.
+        </p>
+        <div class="actions" style="margin-top:1.5rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Ask Us Directly</a>
+        </div>
+        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
+          <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related services:</p>
+          <div style="display:grid;gap:0.3rem">
+            <a href="/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
+            <a href="/tui-na-massage" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Tui Na Therapeutic Massage</a>
+            <a href="/clinical-services" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ All Clinical Services</a>
+          </div>
+        </div>
+      </div>
+      <FAQAccordion items={faqItems} />
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §9 FINAL CTA
+═══════════════════════════════════════════════ -->
+<CTASection
+  heading="Book Your Herbal Consultation"
+  sub="Same-week appointments available at both our Reading and Wimbledon clinics. Cantonese & English consultations available. No referral needed."
+/>
+
+</Base>

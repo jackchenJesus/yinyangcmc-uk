@@ -1,0 +1,508 @@
+---
+import Base from "../layouts/Base.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import CTASection from "../components/CTASection.astro";
+
+const faqItems = [
+  {
+    q: "Is acupuncture painful?",
+    a: "The needles used are extremely fine — typically 0.25 mm diameter, far thinner than a hypodermic needle. Most patients describe a mild aching or warmth at the insertion point rather than pain. All sessions are conducted by a licensed practitioner throughout.",
+  },
+  {
+    q: "How many sessions will I need?",
+    a: "This depends on the condition, how long symptoms have been present, and your individual response. Acute conditions may show improvement within 2–4 sessions. Chronic or regulatory conditions are typically assessed over a 6–8 session course. Your practitioner will discuss a realistic timeline at your initial assessment and will not prescribe a fixed number of sessions in advance.",
+  },
+  {
+    q: "Are your practitioners registered in the UK?",
+    a: "Yes. Both practitioners are registered members of the British Acupuncture Council (MBAcC), which is listed on the Professional Standards Authority's Accredited Register — providing independent assurance of professional standards in health and care. They are also registered with the Association of Traditional Chinese Medicine & Acupuncture (ATCM). Member nos: 963087 & 963093.",
+  },
+  {
+    q: "Do you accept health insurance?",
+    a: "Yes. We are recognised by AXA Health, Vitality, Aviva and WPA. Please check your individual policy terms, as coverage levels vary. We recommend contacting your insurer before your first appointment to confirm your entitlement.",
+  },
+  {
+    q: "Can I receive acupuncture alongside my NHS or GP treatment?",
+    a: "In the vast majority of cases, yes. During your initial consultation we review your current medications and ongoing treatments to identify any clinical considerations. We will advise you to consult your GP if there is any clinical uncertainty.",
+  },
+  {
+    q: "Do you offer consultations in Cantonese or Mandarin?",
+    a: "Yes. All practitioners are fluent in Cantonese and Mandarin. If you have previous medical records or TCM case notes in Chinese, we can review these directly — no translation loss, full clinical precision.",
+  },
+];
+---
+<Base
+  title="Acupuncture Wimbledon & Reading | Expert Pain Relief Clinic | Yin Yang CMC"
+  description="Professional acupuncture in Wimbledon & Reading. British Acupuncture Council registered practitioners with 15+ years' experience. No referral needed."
+>
+
+
+<!-- ═══════════════════════════════════════════════
+     §1 HERO
+═══════════════════════════════════════════════ -->
+<section class="page-hero" style="min-height:68vh;display:grid;place-items:center">
+  <img
+    class="page-hero-bg"
+    src="/images/webbanner-eQwGJSc8Re6udP6z.jpg"
+    alt="Yin Yang CMC acupuncture clinic"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="wrap" style="padding:5rem 0 3.5rem">
+    <p class="eyebrow">Acupuncture · Reading &amp; Wimbledon</p>
+    <h1>Acupuncture in<br>Wimbledon &amp; Reading</h1>
+    <p class="lede">
+      Evidence-conscious acupuncture for pain, stress, and systemic health —
+      delivered by British Acupuncture Council registered practitioners.
+    </p>
+
+    <div class="hero-exp-stat">
+      <span class="hero-exp-num">15+</span>
+      <span class="hero-exp-label">Years'<br>Clinical Experience</span>
+    </div>
+
+    <div class="actions" style="margin-top:0">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-ghost" href="/clinical-services">All Clinical Services</a>
+    </div>
+
+    <div class="hero-trust-row">
+      <span><span class="htc">✓</span> British Acupuncture Council Member</span>
+      <span><span class="htc">✓</span> PSA Accredited Register</span>
+      <span><span class="htc">✓</span> Insurance Recognised</span>
+      <span><span class="htc">✓</span> No Referral Needed</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §2 WHAT IS ACUPUNCTURE
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-al" style="gap:4rem">
+
+      <div>
+        <p class="eyebrow">About the Treatment</p>
+        <h2>What Is Acupuncture?</h2>
+        <p>
+          Acupuncture involves the precise insertion of ultra-fine sterile needles into
+          specific anatomical points on the body. Needle stimulation activates nerve fibres,
+          supporting the regulation of pain signals, the autonomic nervous system, and
+          local tissue response.
+        </p>
+        <p>
+          At Yin Yang CMC, every session begins with a reassessment of your presenting symptoms.
+          Point selection is not fixed between appointments — it responds to your current
+          clinical picture, combining traditional pulse and tongue diagnosis with modern
+          musculoskeletal assessment.
+        </p>
+
+        <ul style="list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:0.5rem">
+          {[
+            "Ultra-fine single-use sterile needles throughout",
+            "Needle retention typically 20–30 minutes per session",
+            "No GP referral required",
+            "Same-week appointments at Reading and Wimbledon",
+          ].map((item) => (
+            <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:0.92rem">
+              <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.05em">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div class="actions" style="margin-top:1.8rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+          <a class="btn btn-outline" href="/pricing-and-insurance">Pricing &amp; Insurance</a>
+        </div>
+      </div>
+
+      <div class="img-wrap" style="position:relative">
+        <img
+          src="/images/adobestock_88537046-low-My8DbSswqH0l0J9t.jpg"
+          alt="Acupuncture treatment at Yin Yang CMC"
+          style="width:100%;height:460px;object-fit:cover;border-radius:var(--r-lg)"
+          loading="lazy"
+        />
+        <div class="cred-panel">
+          <div class="cred-row"><span class="cred-check">✓</span> MBAcC · Nos. 963087 &amp; 963093</div>
+          <div class="cred-row"><span class="cred-check">✓</span> ATCM Professional Member</div>
+          <div class="cred-row"><span class="cred-check">✓</span> PSA Accredited Register</div>
+          <div class="cred-row"><span class="cred-check">✓</span> AXA · Vitality · Aviva · WPA</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §3 CONDITIONS IT MAY HELP WITH
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Conditions</p>
+      <h2>What Acupuncture May Be Used For</h2>
+      <p>
+        Acupuncture is used as part of care for a range of conditions. Your practitioner
+        will assess your individual circumstances at consultation — we do not suggest
+        acupuncture is appropriate for every patient or presentation.
+      </p>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:2.5rem">
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🦴</p>
+        <h3 style="font-size:1.05rem">Musculoskeletal Pain</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Back pain, sciatica, neck and shoulder tension, knee pain, joint conditions,
+          and sports injuries. Commonly used alongside Tui Na and bone setting.
+        </p>
+        <a class="more-link" href="/back-pain">Back Pain &amp; Sciatica</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🌸</p>
+        <h3 style="font-size:1.05rem">Women's Health</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Menstrual irregularity, perimenopause, postnatal recovery, and fertility support.
+          Your practitioner will assess whether acupuncture is appropriate for your circumstances.
+        </p>
+        <a class="more-link" href="/contact">Enquire About Women's Health</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🧘</p>
+        <h3 style="font-size:1.05rem">Stress &amp; Sleep</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Anxiety, insomnia, fatigue, and stress-related conditions. Acupuncture may
+          support autonomic nervous system regulation and sleep quality.
+        </p>
+        <a class="more-link" href="/contact">Enquire About Stress &amp; Sleep</a>
+      </div>
+    </div>
+
+    <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Also commonly treated:</p>
+    <div class="cond-grid">
+      {[
+        { label: "Back Pain",           href: "/back-pain" },
+        { label: "Sciatica",            href: "/sciatica-treatment" },
+        { label: "Shoulder Pain",       href: "/shoulder-pain" },
+        { label: "Frozen Shoulder",     href: "/frozen-shoulder" },
+        { label: "Sports Injuries",     href: "/sports-injuries" },
+        { label: "Neck Pain",           href: "/conditions" },
+        { label: "Headaches",           href: "/conditions" },
+        { label: "Anxiety & Stress",    href: "/conditions" },
+        { label: "Sleep Disorders",     href: "/conditions" },
+        { label: "Digestive Health",    href: "/conditions" },
+        { label: "Skin Conditions",     href: "/conditions" },
+        { label: "Fertility Support",   href: "/contact" },
+      ].map(({ label, href }) => (
+        <a class="cond-chip" href={href}>{label}</a>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §4 HOW TREATMENT WORKS — dark
+═══════════════════════════════════════════════ -->
+<section class="section-dark">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow eyebrow-dark">Your First Visit</p>
+      <h2>How Acupuncture Treatment Works</h2>
+      <p style="color:rgba(240,234,226,0.75)">From your initial booking to the end of your first session.</p>
+    </div>
+
+    <div class="journey-grid">
+      <div class="journey-step">
+        <div class="j-num">01</div>
+        <h3>Clinical Assessment</h3>
+        <p>
+          Structured 60–75 minute first appointment. Full symptom history, pulse and
+          tongue diagnosis, and relevant orthopaedic assessment to establish a complete
+          clinical picture.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">02</div>
+        <h3>Personalised Treatment Plan</h3>
+        <p>
+          Your practitioner explains the proposed point protocol and treatment approach
+          in plain language. Treatment is determined by your assessment — not a fixed
+          package.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">03</div>
+        <h3>Needling &amp; Review</h3>
+        <p>
+          Needle insertion and 20–30 minute retention. Post-treatment guidance on
+          what to expect and when to return based on your clinical response.
+        </p>
+      </div>
+    </div>
+
+    <p style="margin-top:2.5rem;text-align:center">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book Your First Consultation</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §5 CLINICAL APPROACH
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+
+      <div>
+        <p class="eyebrow">Our Approach</p>
+        <h2>Clinical Acupuncture at Yin Yang CMC</h2>
+
+        <div class="pull-quote">
+          <p>"Two diagnostic frameworks, one clinical outcome — classical TCM theory and
+          modern musculoskeletal anatomy, integrated at every session."</p>
+        </div>
+
+        <p>
+          Every diagnosis at Yin Yang CMC combines pulse assessment, tongue observation, and
+          orthopaedic testing with a thorough review of your medical history. Your treatment
+          plan is explained in plain clinical language — not vague terminology.
+        </p>
+
+        <p>
+          Point selection is reassessed at every appointment and adapted to your current
+          clinical picture. This session-by-session responsiveness is central to how
+          acupuncture achieves lasting improvement rather than temporary relief.
+        </p>
+
+        <details class="expand-detail">
+          <summary class="expand-summary">
+            Read about our full diagnostic approach
+            <span class="expand-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="expand-body">
+            <h3>Diagnosis before treatment</h3>
+            <p>
+              We do not prescribe a treatment plan before completing a structured clinical
+              assessment. Traditional pulse and tongue diagnosis is combined with modern
+              orthopaedic testing to identify the root pattern — not just the presenting
+              symptom.
+            </p>
+            <h3>Session-by-session adaptation</h3>
+            <p>
+              Point selection and technique are reviewed at every appointment. What was
+              clinically indicated at your first session may differ from what is appropriate
+              at follow-up, depending on your individual response.
+            </p>
+            <h3>Combined modality protocols where appropriate</h3>
+            <p>
+              When clinically indicated, acupuncture may be combined with Tui Na or bone
+              setting within a single session — for example, acupuncture for neurological
+              pain regulation alongside manual therapy for soft tissue and joint work.
+              Every combination is determined by assessment, not by a package offering.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div style="display:grid;gap:1.5rem;align-content:start">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:var(--r-lg);overflow:hidden">
+          {[
+            { val: "MBAcC",  label: "BAcC Registered" },
+            { val: "15+",    label: "Years' Experience" },
+            { val: "EN/粵",  label: "Bilingual Care" },
+            { val: "4.9★",   label: "Google Reviews" },
+          ].map(({ val, label }) => (
+            <div style="background:var(--white);padding:1.5rem;text-align:center">
+              <span style="display:block;font-family:var(--serif);font-size:2rem;color:var(--navy);line-height:1;margin-bottom:0.35rem">{val}</span>
+              <span style="font-size:0.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em">{label}</span>
+            </div>
+          ))}
+        </div>
+
+        <div style="background:var(--cream);border-radius:var(--r-lg);padding:1.4rem 1.6rem;border:1px solid rgba(192,152,90,0.2)">
+          <p style="font-size:0.76rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.7rem">Related Treatments</p>
+          <div style="display:grid;gap:0.4rem">
+            {[
+              { label: "Tui Na Therapeutic Massage", href: "/tui-na-massage" },
+              { label: "Bone Setting & Orthopaedic Care", href: "/bone-setting" },
+              { label: "Herbal Medicine Consultation", href: "/herbal-consultation" },
+              { label: "All Clinical Services", href: "/clinical-services" },
+            ].map(({ label, href }) => (
+              <a
+                href={href}
+                style="display:flex;align-items:center;gap:0.4rem;font-size:0.9rem;font-weight:600;color:var(--teal);text-decoration:none;padding:0.3rem 0;transition:color 0.18s ease"
+              >
+                → {label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div style="background:var(--navy);border-radius:var(--r-md);padding:1.3rem">
+          <p style="font-family:var(--serif);font-size:1.02rem;font-style:italic;color:#f0ece2;line-height:1.6;margin:0">
+            "Same-week appointments available at Reading and Wimbledon. New patients welcome — no referral needed."
+          </p>
+          <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer" style="margin-top:0.9rem">WhatsApp Us Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §6 WHY CHOOSE YIN YANG
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow">Credentials &amp; Standards</p>
+      <h2>Professional Memberships &amp; Accreditations</h2>
+      <p>
+        Both practitioners hold active UK professional registrations and have practised
+        for over 15 years in clinical settings in Hong Kong and the UK.
+      </p>
+    </div>
+
+    <div class="accred-grid">
+      <div class="accred-card">
+        <div class="accred-stat">15+</div>
+        <p class="accred-name">Years' Clinical<br>Experience</p>
+        <p class="accred-role">Hong Kong &amp; UK practice</p>
+      </div>
+      <div class="accred-card">
+        <div class="accred-badge">MBAcC</div>
+        <p class="accred-name">British Acupuncture<br>Council</p>
+        <p class="accred-role">Registered Member<br>Nos. 963087 &amp; 963093</p>
+      </div>
+      <div class="accred-card">
+        <div class="accred-badge">ATCM</div>
+        <p class="accred-name">Association of TCM<br>&amp; Acupuncture</p>
+        <p class="accred-role">Professional Member<br>FM0250004 &amp; FM0250005</p>
+      </div>
+      <div class="accred-card">
+        <img
+          class="accred-logo"
+          src="/images/psa-logo-7Gbuzq9tXIGQIaKt.png"
+          alt="Professional Standards Authority"
+          loading="lazy"
+        />
+        <p class="accred-name">Professional Standards<br>Authority</p>
+        <p class="accred-role">Accredited Register<br>relationship via BAcC</p>
+      </div>
+    </div>
+
+    <div class="accred-divider">
+      <p class="accred-divider-label">Also recognised by UK health insurers</p>
+      <div class="insurer-strip">
+        <img src="/images/axa-pgrbfCYpRRoo1New.png" alt="AXA Health" style="height:36px" loading="lazy" />
+        <img src="/images/pru-health-vitalty-insurance-london-canada-water-se16-stratford-e15-e20-canary-wharf-e14-london-bridge-se1-rDAt2VDOOdmYgqEM.webp" alt="Vitality Health" style="height:36px" loading="lazy" />
+        <img src="/images/wpa-sbHlIPUxP3aHSfe4.png" alt="WPA" style="height:36px" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §7 LOCATIONS
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our Clinics</p>
+      <h2>Acupuncture in Reading &amp; Wimbledon</h2>
+      <p>Same clinical team, same treatment standards at both locations.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="loc-card">
+        <img
+          src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg"
+          alt="Yin Yang CMC Reading clinic"
+          loading="lazy"
+        />
+        <div class="loc-body">
+          <span class="loc-tag">Berkshire · Castle Street</span>
+          <h3>Reading Clinic</h3>
+          <div class="loc-row"><strong>Address</strong><span>Reading Health Centre, 61 Castle St, Reading RG1 7SN</span></div>
+          <div class="loc-row"><strong>Hours</strong><span>Mon / Wed / Fri 9:00 am – 6:00 pm</span></div>
+          <div class="loc-row"><strong>Transport</strong><span>Reading Station — Elizabeth Line &amp; GWR</span></div>
+          <div class="loc-actions">
+            <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic Details</a>
+            <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-card">
+        <img
+          src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg"
+          alt="Yin Yang CMC Wimbledon clinic"
+          loading="lazy"
+        />
+        <div class="loc-body">
+          <span class="loc-tag">South West London · SW19</span>
+          <h3>Wimbledon Clinic</h3>
+          <div class="loc-row"><strong>Address</strong><span>2 Saint Mark's Place, Wimbledon, London SW19 7ND</span></div>
+          <div class="loc-row"><strong>Hours</strong><span>Saturday 9:00 am – 5:00 pm</span></div>
+          <div class="loc-row"><strong>Transport</strong><span>Wimbledon Station — District Line &amp; National Rail</span></div>
+          <div class="loc-actions">
+            <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic Details</a>
+            <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §8 FAQ
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+      <div>
+        <p class="eyebrow">Common Questions</p>
+        <h2>Questions About Acupuncture</h2>
+        <p style="color:var(--muted)">
+          Answers to the questions our practitioners hear most from new patients —
+          particularly those new to acupuncture or to TCM.
+        </p>
+        <div class="actions" style="margin-top:1.5rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Ask Us Directly</a>
+        </div>
+        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
+          <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related services:</p>
+          <div style="display:grid;gap:0.3rem">
+            <a href="/tui-na-massage" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Tui Na Therapeutic Massage</a>
+            <a href="/bone-setting" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Bone Setting &amp; Orthopaedic Care</a>
+            <a href="/herbal-consultation" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Herbal Medicine Consultation</a>
+          </div>
+        </div>
+      </div>
+      <FAQAccordion items={faqItems} />
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §9 FINAL CTA
+═══════════════════════════════════════════════ -->
+<CTASection
+  heading="Book Your Acupuncture Consultation"
+  sub="Same-week appointments available at both our Reading and Wimbledon clinics. New patients welcome — no referral needed."
+/>
+
+</Base>

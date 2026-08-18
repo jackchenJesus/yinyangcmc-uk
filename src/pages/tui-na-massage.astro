@@ -1,0 +1,508 @@
+---
+import Base from "../layouts/Base.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import CTASection from "../components/CTASection.astro";
+
+const faqItems = [
+  {
+    q: "How many sessions until I see results?",
+    a: "Acute conditions (under 4 weeks onset) typically show measurable improvement within 2–3 sessions. Chronic conditions (3+ months) generally require a 4–6 session course before structural change stabilises. Your practitioner will give a realistic timeline at the first appointment — not an open-ended commitment.",
+  },
+  {
+    q: "Can Tui Na and acupuncture be done in the same session?",
+    a: "Yes, and it is often clinically preferable. Acupuncture addresses the neurological pain signal; Tui Na addresses the mechanical and soft tissue component. Combined sessions may produce faster functional recovery than either modality alone. Your practitioner will advise whether a combined approach is appropriate for your presentation.",
+  },
+  {
+    q: "Is Tui Na suitable for pregnant women or elderly patients?",
+    a: "Pregnancy and advanced age are not contraindications, but they require technique modification. Our practitioners are trained in perinatal TCM. Certain techniques are avoided in the first trimester. Please disclose pregnancy when booking so the appropriate session format can be arranged.",
+  },
+  {
+    q: "What should I bring to my first appointment?",
+    a: "Bring any relevant imaging (X-ray, MRI) if you have it — helpful but not required. Wear loose-fitting clothing that allows access to the back, shoulders, and legs. Arriving 5–10 minutes early allows time to complete the intake form.",
+  },
+  {
+    q: "Are your practitioners registered in the UK?",
+    a: "Yes. Both practitioners are registered members of the British Acupuncture Council (MBAcC), listed on the Professional Standards Authority's Accredited Register, and registered with the Association of Traditional Chinese Medicine & Acupuncture (ATCM). Member nos: 963087 & 963093.",
+  },
+  {
+    q: "Do you accept health insurance for Tui Na?",
+    a: "We are recognised by AXA Health, Vitality, Aviva and WPA. Coverage for Tui Na varies by policy — we recommend contacting your insurer before your first appointment to confirm your entitlement. Our practitioners' insurance provider numbers are available on our Pricing & Insurance page.",
+  },
+];
+---
+<Base
+  title="Tui Na Wimbledon & Reading | Therapeutic Massage Clinic | Yin Yang CMC"
+  description="Professional Tui Na therapeutic massage in Wimbledon & Reading. British Acupuncture Council registered. Clinical Chinese medicine manual therapy for pain and injury."
+>
+
+
+<!-- ═══════════════════════════════════════════════
+     §1 HERO
+═══════════════════════════════════════════════ -->
+<section class="page-hero" style="min-height:68vh;display:grid;place-items:center">
+  <img
+    class="page-hero-bg"
+    src="/images/tui-na-massage-8YKIYR6VTwdVMTdx.webp"
+    alt="Tui Na therapeutic massage at Yin Yang CMC"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="wrap" style="padding:5rem 0 3.5rem">
+    <p class="eyebrow">Tui Na Massage · Reading &amp; Wimbledon</p>
+    <h1>Tui Na Therapeutic<br>Massage in Wimbledon<br>&amp; Reading</h1>
+    <p class="lede">
+      Structured manual therapy grounded in clinical assessment — not a relaxation
+      massage. British Acupuncture Council registered practitioners.
+    </p>
+
+    <div class="hero-exp-stat">
+      <span class="hero-exp-num">15+</span>
+      <span class="hero-exp-label">Years'<br>Clinical Experience</span>
+    </div>
+
+    <div class="actions" style="margin-top:0">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-ghost" href="/clinical-services">All Clinical Services</a>
+    </div>
+
+    <div class="hero-trust-row">
+      <span><span class="htc">✓</span> British Acupuncture Council Member</span>
+      <span><span class="htc">✓</span> PSA Accredited Register</span>
+      <span><span class="htc">✓</span> Insurance Recognised</span>
+      <span><span class="htc">✓</span> No Referral Needed</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §2 WHAT IS TUI NA
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-al" style="gap:4rem">
+
+      <div>
+        <p class="eyebrow">About the Treatment</p>
+        <h2>What Is Tui Na?</h2>
+        <p>
+          Tui Na is a hands-on Chinese medicine manual therapy with over 2,000 years of
+          documented clinical use. The name means to push (推) and to grasp (拿). It applies
+          precisely controlled pressure, rotation, and traction across anatomical points and
+          meridian pathways to restore functional movement and address soft tissue dysfunction.
+        </p>
+        <p>
+          Tui Na at Yin Yang CMC is structured therapeutic work grounded in both classical
+          meridian theory and modern musculoskeletal anatomy. In clinical application it is
+          closer to physiotherapy than to relaxation massage, and is frequently combined with
+          acupuncture in our pain management protocols.
+        </p>
+
+        <ul style="list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:0.5rem">
+          {[
+            "First session: 60 minutes including full clinical assessment",
+            "Follow-up sessions: 45 minutes",
+            "Technique follows diagnosis, not habit or routine",
+            "Same-week appointments at Reading and Wimbledon",
+          ].map((item) => (
+            <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:0.92rem">
+              <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.05em">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div class="actions" style="margin-top:1.8rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+          <a class="btn btn-outline" href="/pricing-and-insurance">Pricing &amp; Insurance</a>
+        </div>
+      </div>
+
+      <div class="img-wrap" style="position:relative">
+        <img
+          src="/images/img_6058-eVlfhKuykGV6M98J.jpg"
+          alt="Yin Yang CMC clinical consultation"
+          style="width:100%;height:460px;object-fit:cover;border-radius:var(--r-lg)"
+          loading="lazy"
+        />
+        <div class="cred-panel">
+          <div class="cred-row"><span class="cred-check">✓</span> MBAcC · Nos. 963087 &amp; 963093</div>
+          <div class="cred-row"><span class="cred-check">✓</span> ATCM Professional Member</div>
+          <div class="cred-row"><span class="cred-check">✓</span> Diagnosis before treatment</div>
+          <div class="cred-row"><span class="cred-check">✓</span> AXA · Vitality · Aviva · WPA</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §3 CONDITIONS / PRESENTATIONS
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Applications</p>
+      <h2>What Tui Na May Be Used For</h2>
+      <p>
+        Your practitioner will assess your individual presentation at consultation.
+        Tui Na is frequently used alongside acupuncture or bone setting depending on
+        the nature of your condition.
+      </p>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:2.5rem">
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🦴</p>
+        <h3 style="font-size:1.05rem">Spinal &amp; Postural</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Cervical spondylosis, lower back pain, sacroiliac joint dysfunction, and
+          postural strain. Often staged alongside bone setting — soft tissue release first,
+          structural realignment second.
+        </p>
+        <a class="more-link" href="/back-pain">Back Pain &amp; Sciatica</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🏃</p>
+        <h3 style="font-size:1.05rem">Sports Injury &amp; Recovery</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Post-acute tissue rehabilitation, tendinopathy, and repetitive strain. Gentle
+          lymphatic techniques in the early phase; deep cross-fibre work in the
+          remodelling phase.
+        </p>
+        <a class="more-link" href="/sports-injuries">Sports Injuries</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🧘</p>
+        <h3 style="font-size:1.05rem">Stress &amp; Tension</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Chronic stress physically contracts the posterior neck, upper back, and diaphragm.
+          Tui Na techniques along the spine may support a measurable parasympathetic
+          response, reducing tension and improving sleep onset.
+        </p>
+        <a class="more-link" href="/contact">Enquire</a>
+      </div>
+    </div>
+
+    <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Commonly treated presentations:</p>
+    <div class="cond-grid">
+      {[
+        { label: "Neck Pain",           href: "/conditions" },
+        { label: "Shoulder Pain",       href: "/shoulder-pain" },
+        { label: "Frozen Shoulder",     href: "/frozen-shoulder" },
+        { label: "Back Pain",           href: "/back-pain" },
+        { label: "Sciatica",            href: "/sciatica-treatment" },
+        { label: "Sports Injuries",     href: "/sports-injuries" },
+        { label: "Knee Pain",           href: "/conditions" },
+        { label: "Trapezius Tension",   href: "/conditions" },
+        { label: "Postural Strain",     href: "/conditions" },
+        { label: "Repetitive Strain",   href: "/conditions" },
+      ].map(({ label, href }) => (
+        <a class="cond-chip" href={href}>{label}</a>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §4 HOW TREATMENT WORKS — dark
+═══════════════════════════════════════════════ -->
+<section class="section-dark">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow eyebrow-dark">Your First Visit</p>
+      <h2>How Tui Na Treatment Works</h2>
+      <p style="color:rgba(240,234,226,0.75)">Diagnosis before treatment at every appointment. Nothing repeated by habit.</p>
+    </div>
+
+    <div class="journey-grid">
+      <div class="journey-step">
+        <div class="j-num">01</div>
+        <h3>Clinical Assessment</h3>
+        <p>
+          20 minutes allocated to full clinical assessment before any hands-on treatment.
+          Chief complaint, orthopaedic movement testing, and TCM pattern identification.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">02</div>
+        <h3>Targeted Treatment</h3>
+        <p>
+          Technique selection is based on your clinical findings — not a routine protocol.
+          Measurable goals are set at the start. Discharge criteria agreed in advance.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">03</div>
+        <h3>Progress Review</h3>
+        <p>
+          Follow-up sessions begin with a brief progress check — what changed since last
+          session? Technique is adjusted accordingly. No sessions on autopilot.
+        </p>
+      </div>
+    </div>
+
+    <p style="margin-top:2.5rem;text-align:center">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book Your First Consultation</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §5 CLINICAL APPROACH
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+
+      <div>
+        <p class="eyebrow">Our Approach</p>
+        <h2>Tui Na at Yin Yang CMC</h2>
+
+        <div class="pull-quote">
+          <p>"Technique follows diagnosis, not habit. Every session adapted to your
+          current clinical picture."</p>
+        </div>
+
+        <p>
+          Our practitioners apply Tui Na using specific technique sequences from the
+          Hong Kong clinical curriculum — not a generalised massage approach. The
+          distinction matters clinically: wrong technique applied to the right area
+          can delay recovery.
+        </p>
+
+        <p>
+          For structural presentations, Tui Na is frequently staged alongside bone
+          setting — soft tissue mobilisation first, then structural realignment. For
+          injury recovery, the technique shifts across the three phases of tissue
+          healing (acute, sub-acute, remodelling).
+        </p>
+
+        <details class="expand-detail">
+          <summary class="expand-summary">
+            Three mechanisms of Tui Na
+            <span class="expand-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="expand-body">
+            <h3>Myofascial release</h3>
+            <p>
+              Directional pressure breaks fascial adhesions and directly restores range of
+              motion in restricted joints. This is distinct from general massage pressure,
+              which targets surface muscle tension rather than the fascial layer.
+            </p>
+            <h3>Neurological regulation</h3>
+            <p>
+              Rhythmic compression activates mechanoreceptors, downregulating the stress
+              response and reducing referred pain. This mechanism explains why Tui Na
+              produces effects beyond the site of manual contact.
+            </p>
+            <h3>Meridian &amp; circulatory support</h3>
+            <p>
+              Restoring meridian flow — a model that maps closely onto microcirculation
+              and lymphatic drainage. Particularly relevant in recovery from acute injury,
+              where local swelling impedes tissue healing.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div style="display:grid;gap:1.5rem;align-content:start">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:var(--r-lg);overflow:hidden">
+          {[
+            { val: "MBAcC",  label: "BAcC Registered" },
+            { val: "15+",    label: "Years' Experience" },
+            { val: "60m",    label: "First Appointment" },
+            { val: "EN/粵",  label: "Bilingual Care" },
+          ].map(({ val, label }) => (
+            <div style="background:var(--white);padding:1.5rem;text-align:center">
+              <span style="display:block;font-family:var(--serif);font-size:2rem;color:var(--navy);line-height:1;margin-bottom:0.35rem">{val}</span>
+              <span style="font-size:0.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em">{label}</span>
+            </div>
+          ))}
+        </div>
+
+        <div style="background:var(--cream);border-radius:var(--r-lg);padding:1.4rem 1.6rem;border:1px solid rgba(192,152,90,0.2)">
+          <p style="font-size:0.76rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.7rem">Related Treatments</p>
+          <div style="display:grid;gap:0.4rem">
+            {[
+              { label: "Acupuncture", href: "/acupuncture" },
+              { label: "Bone Setting & Orthopaedic Care", href: "/bone-setting" },
+              { label: "Herbal Medicine Consultation", href: "/herbal-consultation" },
+              { label: "All Clinical Services", href: "/clinical-services" },
+            ].map(({ label, href }) => (
+              <a
+                href={href}
+                style="display:flex;align-items:center;gap:0.4rem;font-size:0.9rem;font-weight:600;color:var(--teal);text-decoration:none;padding:0.3rem 0"
+              >
+                → {label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div style="background:var(--navy);border-radius:var(--r-md);padding:1.3rem">
+          <p style="font-family:var(--serif);font-size:1.02rem;font-style:italic;color:#f0ece2;line-height:1.6;margin:0">
+            "Same-week appointments available. Bring any imaging you have — helpful but not required."
+          </p>
+          <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer" style="margin-top:0.9rem">WhatsApp Us Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §6 CREDENTIALS
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow">Credentials &amp; Standards</p>
+      <h2>Professional Memberships &amp; Accreditations</h2>
+      <p>
+        Both practitioners hold active UK professional registrations. Winton Hui trained
+        as a Tui Na specialist at Tung Wah Eastern Hospital, one of Hong Kong's largest
+        public hospital networks.
+      </p>
+    </div>
+
+    <div class="accred-grid">
+      <div class="accred-card">
+        <div class="accred-stat">15+</div>
+        <p class="accred-name">Years' Clinical<br>Experience</p>
+        <p class="accred-role">Hong Kong &amp; UK practice</p>
+      </div>
+      <div class="accred-card">
+        <div class="accred-badge">MBAcC</div>
+        <p class="accred-name">British Acupuncture<br>Council</p>
+        <p class="accred-role">Registered Member<br>Nos. 963087 &amp; 963093</p>
+      </div>
+      <div class="accred-card">
+        <div class="accred-badge">ATCM</div>
+        <p class="accred-name">Association of TCM<br>&amp; Acupuncture</p>
+        <p class="accred-role">Professional Member<br>FM0250004 &amp; FM0250005</p>
+      </div>
+      <div class="accred-card">
+        <img
+          class="accred-logo"
+          src="/images/psa-logo-7Gbuzq9tXIGQIaKt.png"
+          alt="Professional Standards Authority"
+          loading="lazy"
+        />
+        <p class="accred-name">Professional Standards<br>Authority</p>
+        <p class="accred-role">Accredited Register<br>relationship via BAcC</p>
+      </div>
+    </div>
+
+    <div class="accred-divider">
+      <p class="accred-divider-label">Also recognised by UK health insurers</p>
+      <div class="insurer-strip">
+        <img src="/images/axa-pgrbfCYpRRoo1New.png" alt="AXA Health" style="height:36px" loading="lazy" />
+        <img src="/images/pru-health-vitalty-insurance-london-canada-water-se16-stratford-e15-e20-canary-wharf-e14-london-bridge-se1-rDAt2VDOOdmYgqEM.webp" alt="Vitality Health" style="height:36px" loading="lazy" />
+        <img src="/images/wpa-sbHlIPUxP3aHSfe4.png" alt="WPA" style="height:36px" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §7 LOCATIONS
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our Clinics</p>
+      <h2>Tui Na in Reading &amp; Wimbledon</h2>
+      <p>Same clinical team, same treatment standards at both locations.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="loc-card">
+        <img
+          src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg"
+          alt="Yin Yang CMC Reading clinic"
+          loading="lazy"
+        />
+        <div class="loc-body">
+          <span class="loc-tag">Berkshire · Castle Street</span>
+          <h3>Reading Clinic</h3>
+          <div class="loc-row"><strong>Address</strong><span>Reading Health Centre, 61 Castle St, Reading RG1 7SN</span></div>
+          <div class="loc-row"><strong>Hours</strong><span>Mon / Wed / Fri 9:00 am – 6:00 pm</span></div>
+          <div class="loc-row"><strong>Transport</strong><span>Reading Station — Elizabeth Line &amp; GWR</span></div>
+          <div class="loc-actions">
+            <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic Details</a>
+            <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-card">
+        <img
+          src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg"
+          alt="Yin Yang CMC Wimbledon clinic"
+          loading="lazy"
+        />
+        <div class="loc-body">
+          <span class="loc-tag">South West London · SW19</span>
+          <h3>Wimbledon Clinic</h3>
+          <div class="loc-row"><strong>Address</strong><span>2 Saint Mark's Place, Wimbledon, London SW19 7ND</span></div>
+          <div class="loc-row"><strong>Hours</strong><span>Saturday 9:00 am – 5:00 pm</span></div>
+          <div class="loc-row"><strong>Transport</strong><span>Wimbledon Station — District Line &amp; National Rail</span></div>
+          <div class="loc-actions">
+            <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic Details</a>
+            <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §8 FAQ
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+      <div>
+        <p class="eyebrow">Common Questions</p>
+        <h2>Questions About Tui Na Massage</h2>
+        <p style="color:var(--muted)">
+          Answers to the questions our practitioners hear most from new patients —
+          particularly those new to Chinese medicine manual therapy.
+        </p>
+        <div class="actions" style="margin-top:1.5rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Ask Us Directly</a>
+        </div>
+        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
+          <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related services:</p>
+          <div style="display:grid;gap:0.3rem">
+            <a href="/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
+            <a href="/bone-setting" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Bone Setting &amp; Orthopaedic Care</a>
+            <a href="/herbal-consultation" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Herbal Medicine Consultation</a>
+          </div>
+        </div>
+      </div>
+      <FAQAccordion items={faqItems} />
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §9 FINAL CTA
+═══════════════════════════════════════════════ -->
+<CTASection
+  heading="Book Your Tui Na Consultation"
+  sub="Same-week appointments available at both our Reading and Wimbledon clinics. New patients welcome — no referral needed."
+/>
+
+</Base>

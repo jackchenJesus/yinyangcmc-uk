@@ -11,6 +11,11 @@ export function getStaticPaths() {
     "contact",
     "pricing-and-insurance",
     "clinical-services",
+    // Batch 1 — dedicated service pages
+    "acupuncture",
+    "tui-na-massage",
+    "bone-setting",
+    "herbal-consultation",
   ]);
   return Object.keys(pages)
     .filter((slug) => !skip.has(slug))
