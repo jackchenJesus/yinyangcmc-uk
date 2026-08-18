@@ -6,7 +6,7 @@ import FAQAccordion from "../components/FAQAccordion.astro";
 const faqItems = [
   {
     q: "Are your practitioners registered in the UK?",
-    a: "Yes. All practitioners hold professional registrations with the Association of Traditional Chinese Medicine (ATCM) and the British Acupuncture Council (BAcC) — the two main voluntary professional bodies for Chinese medicine in the UK. Our practice is recognised by AXA Health, Vitality, Aviva and WPA for insurance purposes. Chinese Medicine is not currently subject to statutory UK government regulation, but our practitioners meet the training, qualification and insurance requirements set by these professional bodies.",
+    a: "Yes. Both practitioners are registered members of the British Acupuncture Council (MBAcC), which is listed on the Professional Standards Authority's Accredited Register — providing independent assurance of professional standards in health and care. They are also registered with the Association of Traditional Chinese Medicine & Acupuncture (ATCM). The practice is recognised by AXA Health, Vitality, Aviva and WPA for insurance purposes.",
   },
   {
     q: "What languages are consultations conducted in?",
@@ -22,13 +22,17 @@ const faqItems = [
   },
   {
     q: "Do you accept health insurance?",
-    a: "Yes. We are recognised by AXA Health, Vitality (Bupa), Aviva and WPA. Please check your individual policy terms, as coverage levels vary. We recommend contacting your insurer before your first appointment to confirm your entitlement.",
+    a: "Yes. We are recognised by AXA Health, Vitality, Aviva and WPA. Please check your individual policy terms, as coverage levels vary. We recommend contacting your insurer before your first appointment to confirm your entitlement.",
+  },
+  {
+    q: "Do you offer consultations in Cantonese or Mandarin?",
+    a: "Yes. All practitioners are fluent in Cantonese and Mandarin. Describe your symptoms exactly as you feel them — no translation loss, full clinical precision. If you have previous medical records or TCM case notes in Chinese, we can review these directly.",
   },
 ];
 ---
 <Base
   title="Chinese Medicine Clinic UK | TCM Services Wimbledon & Reading | yin yang uk"
-  description="Professional Chinese Medicine in Wimbledon & Reading. ATCM & BAcC registered practitioners. Acupuncture, Tui Na, Bone Setting and Herbal Medicine. English, Cantonese and Mandarin consultations."
+  description="Professional Chinese Medicine in Reading & Wimbledon. British Acupuncture Council registered, 15+ years' experience. Acupuncture, Tui Na, Bone Setting and Herbal Medicine."
 >
 
 
@@ -44,22 +48,30 @@ const faqItems = [
     fetchpriority="high"
   />
   <div class="wrap" style="padding:5.5rem 0 4rem">
-    <p class="eyebrow">Professional Chinese Medicine · Wimbledon &amp; Reading</p>
-    <h1>Expert Chinese Medicine<br>Care in the UK</h1>
+    <p class="eyebrow">Professional Chinese Medicine · Reading &amp; Wimbledon</p>
+    <h1>Professional Chinese<br>Medicine in Reading<br>&amp; Wimbledon</h1>
     <p class="lede">
-      Back pain · Sciatica · Shoulder pain · Women's health · Sports injuries.<br>
-      ATCM &amp; BAcC registered. Same-week appointments available.
+      Acupuncture · Tui Na · Bone Setting · Herbal Medicine<br>
+      Back pain · Sports injuries · Women's health · Sleep disorders
     </p>
-    <div class="actions" style="margin-top:1.6rem">
-      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
-      <a class="btn btn-ghost" href="#specialisms">Explore Our Treatments</a>
+
+    <!-- 15+ Years stat — primary trust signal -->
+    <div class="hero-exp-stat">
+      <span class="hero-exp-num">15+</span>
+      <span class="hero-exp-label">Years'<br>Clinical Experience</span>
     </div>
-    <!-- Inline trust signals — compact, secondary -->
+
+    <div class="actions" style="margin-top:0">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-ghost" href="#specialisms">Explore Treatments</a>
+    </div>
+
+    <!-- Compact trust row -->
     <div class="hero-trust-row">
-      <span><span class="htc">✓</span> ATCM &amp; BAcC Registered</span>
-      <span><span class="htc">✓</span> AXA, Vitality &amp; Aviva Recognised</span>
-      <span><span class="htc">✓</span> Wimbledon &amp; Reading</span>
-      <span><span class="htc">✓</span> English, Cantonese &amp; Mandarin</span>
+      <span><span class="htc">✓</span> British Acupuncture Council Member</span>
+      <span><span class="htc">✓</span> PSA Accredited Register</span>
+      <span><span class="htc">✓</span> Reading &amp; Wimbledon</span>
+      <span><span class="htc">✓</span> English &amp; Cantonese</span>
     </div>
   </div>
 </section>
@@ -72,29 +84,30 @@ const faqItems = [
   <div class="wrap">
     <div class="grid-2-al" style="gap:4rem">
 
-      <!-- Left: editorial copy -->
       <div>
         <p class="eyebrow">About Our Practice</p>
-        <h2>Professional Chinese Medicine<br>in Wimbledon &amp; Reading</h2>
+        <h2>Professional Chinese Medicine<br>in Reading &amp; Wimbledon</h2>
         <p>
           Yin Yang CMC offers structured, professional Chinese Medicine at two UK clinic
-          locations — Wimbledon SW19 and Reading town centre. Our practitioners are
-          registered with ATCM and BAcC, and recognised by major UK health insurers.
+          locations — Reading town centre and Wimbledon SW19. Both practitioners are
+          British Acupuncture Council members with over 15 years of clinical experience,
+          recognised by major UK health insurers.
         </p>
         <p>
-          Whether you are seeking evidence-conscious complementary care alongside NHS
-          treatment, or looking for the level of clinical TCM you experienced in
-          Hong Kong, our approach is built to meet both expectations.
+          Master's-qualified with extensive hospital-based clinical training in Hong Kong
+          and long-term UK practice — whether you seek evidence-conscious complementary
+          care alongside NHS treatment, or the level of clinical TCM you know, our approach
+          is built to meet both expectations.
         </p>
 
-        <!-- Credential checklist — UK credentials first -->
         <ul style="list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:0.5rem">
           {[
-            "ATCM & BAcC registered practitioners",
+            "British Acupuncture Council (MBAcC) registered practitioners",
+            "ATCM professional members",
+            "15+ years' clinical experience",
             "Recognised by AXA Health, Vitality, Aviva and WPA",
             "Bilingual consultations — English, Cantonese & Mandarin",
             "Same-week appointments — no GP referral needed",
-            "Postgraduate clinical training including hospital-based internship",
           ].map((item) => (
             <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:0.92rem">
               <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.05em">✓</span>
@@ -109,7 +122,6 @@ const faqItems = [
         </div>
       </div>
 
-      <!-- Right: image + credential panel -->
       <div class="img-wrap" style="position:relative">
         <img
           src="/images/img_6058-eVlfhKuykGV6M98J.jpg"
@@ -118,10 +130,10 @@ const faqItems = [
           loading="lazy"
         />
         <div class="cred-panel">
-          <div class="cred-row"><span class="cred-check">✓</span> ATCM &amp; BAcC Registered</div>
+          <div class="cred-row"><span class="cred-check">✓</span> British Acupuncture Council</div>
+          <div class="cred-row"><span class="cred-check">✓</span> ATCM Professional Member</div>
+          <div class="cred-row"><span class="cred-check">✓</span> PSA Accredited Register</div>
           <div class="cred-row"><span class="cred-check">✓</span> Insurance Recognised</div>
-          <div class="cred-row"><span class="cred-check">✓</span> 15+ Years Clinical Practice</div>
-          <div class="cred-row"><span class="cred-check">✓</span> EN / 粵 / 普 Bilingual</div>
         </div>
       </div>
 
@@ -205,35 +217,33 @@ const faqItems = [
 
 
 <!-- ═══════════════════════════════════════════════
-     §4 WHY PATIENTS CHOOSE YIN YANG — dark section
+     §4 WHY PATIENTS CHOOSE YIN YANG — dark
 ═══════════════════════════════════════════════ -->
 <section class="section-dark">
   <div class="wrap">
     <div class="grid-2-al" style="gap:4rem">
 
-      <!-- Left: heading + intro -->
       <div>
         <p class="eyebrow eyebrow-dark">Why Choose Us</p>
         <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem)">
           Why patients<br>choose Yin Yang
         </h2>
         <p style="max-width:38ch;margin-top:0.8rem">
-          Evidence-conscious, professionally qualified Chinese Medicine —
-          clearly communicated, in Wimbledon and Reading.
+          Professionally accredited, experienced, bilingual — clinical Chinese Medicine
+          in Reading and Wimbledon.
         </p>
         <div class="actions" style="margin-top:2rem">
           <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
         </div>
       </div>
 
-      <!-- Right: 2×2 benefit grid -->
       <div class="ben-grid">
         <div class="ben-item">
           <span class="ben-num">01</span>
-          <h3>UK-Registered Practitioners</h3>
+          <h3>BAcC &amp; ATCM Registered</h3>
           <p>
-            ATCM and BAcC registered, with recognition from major UK health insurers —
-            AXA Health, Vitality, Aviva and WPA. No referral required.
+            British Acupuncture Council members on a PSA Accredited Register. Recognised
+            by major UK health insurers — AXA, Vitality, Aviva and WPA.
           </p>
         </div>
         <div class="ben-item">
@@ -256,8 +266,8 @@ const faqItems = [
           <span class="ben-num">04</span>
           <h3>Two Clinics — One Standard of Care</h3>
           <p>
-            Same practitioners, protocols and herbal formularies across Wimbledon SW19 and
-            Reading Castle Street. Seamless continuity between locations.
+            Same practitioners, protocols and herbal formularies across Reading Castle Street
+            and Wimbledon SW19. Seamless continuity between locations.
           </p>
         </div>
       </div>
@@ -268,7 +278,73 @@ const faqItems = [
 
 
 <!-- ═══════════════════════════════════════════════
-     §5 CLINICAL APPROACH
+     §5 PROFESSIONAL MEMBERSHIPS & STANDARDS
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow">Credentials &amp; Standards</p>
+      <h2>Professional Memberships &amp; Accreditations</h2>
+      <p>
+        Both practitioners hold active UK professional registrations and have practised
+        for over 15 years in clinical settings in Hong Kong and the UK.
+      </p>
+    </div>
+
+    <!-- Accreditation grid — 4 columns -->
+    <div class="accred-grid">
+
+      <!-- 15+ Years -->
+      <div class="accred-card">
+        <div class="accred-stat">15+</div>
+        <p class="accred-name">Years' Clinical<br>Experience</p>
+        <p class="accred-role">Hong Kong &amp; UK practice</p>
+      </div>
+
+      <!-- BAcC -->
+      <div class="accred-card">
+        <div class="accred-badge">MBAcC</div>
+        <p class="accred-name">British Acupuncture<br>Council</p>
+        <p class="accred-role">Registered Member<br>Nos. 963087 &amp; 963093</p>
+      </div>
+
+      <!-- ATCM -->
+      <div class="accred-card">
+        <div class="accred-badge">ATCM</div>
+        <p class="accred-name">Association of TCM<br>&amp; Acupuncture</p>
+        <p class="accred-role">Professional Member<br>FM0250004 &amp; FM0250005</p>
+      </div>
+
+      <!-- PSA -->
+      <div class="accred-card">
+        <img
+          class="accred-logo"
+          src="/images/psa-logo-7Gbuzq9tXIGQIaKt.png"
+          alt="Professional Standards Authority"
+          loading="lazy"
+        />
+        <p class="accred-name">Professional Standards<br>Authority</p>
+        <p class="accred-role">Accredited Register<br>relationship via BAcC</p>
+      </div>
+
+    </div>
+
+    <!-- Insurance logos -->
+    <div class="accred-divider">
+      <p class="accred-divider-label">Also recognised by UK health insurers</p>
+      <div class="insurer-strip">
+        <img src="/images/axa-pgrbfCYpRRoo1New.png" alt="AXA Health" style="height:36px" loading="lazy" />
+        <img src="/images/pru-health-vitalty-insurance-london-canada-water-se16-stratford-e15-e20-canary-wharf-e14-london-bridge-se1-rDAt2VDOOdmYgqEM.webp" alt="Vitality Health" style="height:36px" loading="lazy" />
+        <img src="/images/wpa-sbHlIPUxP3aHSfe4.png" alt="WPA" style="height:36px" loading="lazy" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §6 CLINICAL APPROACH
 ═══════════════════════════════════════════════ -->
 <section class="section-soft">
   <div class="wrap">
@@ -280,10 +356,9 @@ const faqItems = [
 
         <div class="pull-quote">
           <p>"Clear clinical communication, structured assessment, and evidence-conscious
-          treatment — delivered at our Wimbledon and Reading clinics."</p>
+          treatment — delivered at our Reading and Wimbledon clinics."</p>
         </div>
 
-        <!-- Summary always visible — scannable -->
         <p>
           Every patient interaction begins with a structured assessment combining
           traditional pulse and tongue diagnosis with a thorough review of your medical
@@ -346,7 +421,6 @@ const faqItems = [
       <!-- Right: stats + image -->
       <div style="display:grid;gap:1.5rem;align-content:start">
 
-        <!-- Stat grid -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:var(--r-lg);overflow:hidden">
           {[
             { val: "4.9★", label: "Google Reviews" },
@@ -382,7 +456,7 @@ const faqItems = [
 
 
 <!-- ═══════════════════════════════════════════════
-     §6 CONDITIONS WE TREAT
+     §7 CONDITIONS WE TREAT
 ═══════════════════════════════════════════════ -->
 <section class="section">
   <div class="wrap">
@@ -390,8 +464,8 @@ const faqItems = [
       <p class="eyebrow">Conditions We Treat</p>
       <h2>Where Our Expertise Makes the Most Difference</h2>
       <p>
-        Our clinical focus is deliberately narrow. We specialise in high-impact areas where
-        acupuncture, manual therapy, and herbal medicine work together for consistent outcomes.
+        Our clinical focus is deliberately narrow — conditions where acupuncture, manual
+        therapy, and herbal medicine work together for consistent, verifiable outcomes.
       </p>
     </div>
 
@@ -421,14 +495,13 @@ const faqItems = [
         <h3 style="font-size:1.05rem">Sports Injuries &amp; Recovery</h3>
         <p style="font-size:0.9rem;color:var(--muted)">
           Ligament sprains, tendinopathy, muscle tears, and RSI respond well to our combined
-          Tui Na and acupuncture rehabilitation protocol. We design session-by-session
-          recovery programmes for recreational and competitive athletes.
+          Tui Na and acupuncture rehabilitation protocol. Session-by-session recovery
+          programmes for recreational and competitive athletes.
         </p>
         <a class="more-link" href="/sports-injuries">Sports Injuries</a>
       </div>
     </div>
 
-    <!-- Condition chips for internal linking / SEO -->
     <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Also treated at our clinics:</p>
     <div class="cond-grid">
       {[
@@ -455,7 +528,7 @@ const faqItems = [
 
 
 <!-- ═══════════════════════════════════════════════
-     §7 LOCATIONS
+     §8 LOCATIONS
 ═══════════════════════════════════════════════ -->
 <section class="section-soft">
   <div class="wrap">
@@ -464,31 +537,11 @@ const faqItems = [
       <h2>Two Clinics. One Standard of Care.</h2>
       <p>
         Both locations operate under the same clinical team, matched herbal formularies, and
-        synchronised diagnostic protocols — seamless continuity between Wimbledon and Reading.
+        synchronised diagnostic protocols — seamless continuity between Reading and Wimbledon.
       </p>
     </div>
 
     <div class="grid-2">
-      <div class="loc-card">
-        <img
-          src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg"
-          alt="Yin Yang CMC Wimbledon clinic"
-          loading="lazy"
-        />
-        <div class="loc-body">
-          <span class="loc-tag">South West London · SW19</span>
-          <h3>Wimbledon Clinic</h3>
-          <div class="loc-row"><strong>Address</strong><span>2 Saint Mark's Place, Wimbledon, London SW19 7ND</span></div>
-          <div class="loc-row"><strong>Hours</strong><span>Saturday 9:00 am – 5:00 pm</span></div>
-          <div class="loc-row"><strong>Languages</strong><span>Cantonese · Mandarin · English</span></div>
-          <div class="loc-row"><strong>Transport</strong><span>Wimbledon Station — District Line &amp; National Rail</span></div>
-          <div class="loc-actions">
-            <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic Info &amp; Map</a>
-            <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
       <div class="loc-card">
         <img
           src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg"
@@ -500,7 +553,7 @@ const faqItems = [
           <h3>Reading Clinic</h3>
           <div class="loc-row"><strong>Address</strong><span>Reading Health Centre, 61 Castle St, Reading RG1 7SN</span></div>
           <div class="loc-row"><strong>Hours</strong><span>Mon / Wed / Fri 9:00 am – 6:00 pm</span></div>
-          <div class="loc-row"><strong>Languages</strong><span>Cantonese · Mandarin · English</span></div>
+          <div class="loc-row"><strong>Languages</strong><span>English · Cantonese · Mandarin</span></div>
           <div class="loc-row"><strong>Transport</strong><span>Reading Station — Elizabeth Line &amp; GWR</span></div>
           <div class="loc-actions">
             <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic Info &amp; Map</a>
@@ -508,75 +561,26 @@ const faqItems = [
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-
-<!-- ═══════════════════════════════════════════════
-     §8 PROFESSIONAL BACKGROUND — supporting credibility
-     (HK credentials as secondary evidence, lower on page)
-═══════════════════════════════════════════════ -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head" style="max-width:54ch">
-      <p class="eyebrow">Our Practitioners</p>
-      <h2>Professional Background &amp; Clinical Training</h2>
-      <p>
-        Our practitioners hold formal UK professional registrations and bring postgraduate
-        clinical training — including hospital-based internship — to their UK practice.
-      </p>
-    </div>
-
-    <div class="grid-2" style="gap:3rem;align-items:start">
-
-      <!-- UK Professional Registrations -->
-      <div>
-        <h3 style="font-size:1.05rem;margin-bottom:1rem">UK Professional Registrations</h3>
-        <ul style="padding:0;list-style:none;display:grid;gap:0.8rem;margin:0 0 1.2rem">
-          {[
-            { tag: "ATCM",      title: "Association of Traditional Chinese Medicine",  note: "Reg. FM0250004 & FM0250005" },
-            { tag: "BAcC",      title: "British Acupuncture Council",                   note: "Reg. 963087 & 963093" },
-            { tag: "Insurance", title: "Recognised by AXA Health, Vitality, Aviva & WPA", note: "" },
-          ].map(({ tag, title, note }) => (
-            <li style="display:grid;grid-template-columns:auto 1fr;gap:0.5rem 0.8rem;align-items:start">
-              <span style="background:var(--cream);border:1px solid rgba(192,152,90,0.3);border-radius:var(--r-sm);padding:0.18rem 0.55rem;font-size:0.68rem;font-weight:700;color:var(--gold);letter-spacing:0.07em;white-space:nowrap;margin-top:0.12em">{tag}</span>
-              <div>
-                <span style="display:block;font-weight:600;font-size:0.9rem;color:var(--navy);line-height:1.35">{title}</span>
-                {note && <span style="font-size:0.79rem;color:var(--muted)">{note}</span>}
-              </div>
-            </li>
-          ))}
-        </ul>
-        <p style="font-size:0.81rem;color:var(--muted);line-height:1.6">
-          Chinese Medicine is not currently subject to statutory regulation in the UK.
-          Our practitioners hold voluntary professional registrations with established bodies
-          that require evidence of qualifications, clinical training and professional indemnity insurance.
-        </p>
+      <div class="loc-card">
+        <img
+          src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg"
+          alt="Yin Yang CMC Wimbledon clinic"
+          loading="lazy"
+        />
+        <div class="loc-body">
+          <span class="loc-tag">South West London · SW19</span>
+          <h3>Wimbledon Clinic</h3>
+          <div class="loc-row"><strong>Address</strong><span>2 Saint Mark's Place, Wimbledon, London SW19 7ND</span></div>
+          <div class="loc-row"><strong>Hours</strong><span>Saturday 9:00 am – 5:00 pm</span></div>
+          <div class="loc-row"><strong>Languages</strong><span>English · Cantonese · Mandarin</span></div>
+          <div class="loc-row"><strong>Transport</strong><span>Wimbledon Station — District Line &amp; National Rail</span></div>
+          <div class="loc-actions">
+            <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic Info &amp; Map</a>
+            <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
+          </div>
+        </div>
       </div>
-
-      <!-- Postgraduate Training -->
-      <div>
-        <h3 style="font-size:1.05rem;margin-bottom:1rem">Postgraduate Clinical Training</h3>
-        <ul style="padding:0;list-style:none;display:grid;gap:0.65rem;margin:0 0 1.2rem">
-          {[
-            "Master of Science in Chinese Medicine — CUHK (Chinese University of Hong Kong)",
-            "Hospital-based clinical internship — Hong Kong public hospital settings",
-            "Registered Chinese Medicine Practitioner — Chinese Medicine Council of Hong Kong (CMCHK)",
-            "Ongoing CPD — ATCM continued professional development requirements",
-          ].map((item) => (
-            <li style="display:flex;gap:0.5rem;align-items:flex-start;font-size:0.9rem">
-              <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.1em">✓</span>
-              <span style="color:var(--muted)">{item}</span>
-            </li>
-          ))}
-        </ul>
-        <p style="font-size:0.81rem;color:var(--muted);line-height:1.6">
-          Hong Kong clinical credentials provide additional professional background and
-          are recognised as demonstrating a high standard of original training.
-        </p>
-      </div>
-
     </div>
   </div>
 </section>
@@ -661,7 +665,7 @@ const faqItems = [
     <p class="eyebrow" style="color:var(--gold)">Book Your Consultation</p>
     <h2>Start With a Clinical Consultation</h2>
     <p>
-      Same-week appointments available at both our Wimbledon and Reading clinics.
+      Same-week appointments available at both our Reading and Wimbledon clinics.
       New patients welcome — no referral needed.
     </p>
     <div class="actions actions-c">
