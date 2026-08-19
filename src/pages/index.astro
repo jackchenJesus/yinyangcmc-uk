@@ -1,254 +1,129 @@
 ---
 import Base from "../layouts/Base.astro";
-import CTASection from "../components/CTASection.astro";
 import { clinics, site } from "../data/site";
 ---
-<Base
-  title="Chinese Medicine Wimbledon & Reading | Yin-Yang Clinic | yin yang uk"
-  description="Looking for a trusted Chinese medicine Wimbledon or Chinese medicine Reading clinic? Our expert team offers expert acupuncture, bone-setting, and herbal care."
->
-
-  <!-- ═══════════════════════════════════════
-       HERO
-  ═══════════════════════════════════════ -->
+<Base title="Chinese Medicine Wimbledon & Reading | Yin-Yang Clinic | yin yang uk" description="Looking for a trusted Chinese medicine Wimbledon or Chinese medicine Reading clinic? Our expert team offers expert acupuncture, bone-setting, and herbal care.">
   <section class="hero">
-    <img class="hero-bg" src="/images/webbanner-eQwGJSc8Re6udP6z.jpg" alt="Yin Yang CMC clinic" loading="eager" fetchpriority="high" />
+    <img class="bg" src="/images/webbanner-eQwGJSc8Re6udP6z.jpg" alt="" />
     <div class="hero-copy">
       <p class="eyebrow">Yin Yang CMC</p>
-      <h1>Modern TCM &amp; Wellness Centre</h1>
-      <p>Acupuncture · Tui Na · Bone Setting · Herbal Medicine<br />Hong Kong clinical standards in Wimbledon &amp; Reading</p>
-      <div class="hero-badges">
-        <span class="badge badge-dark">★★★★★ 4.9 Google</span>
-        <span class="badge badge-dark">HK Registered CMPs</span>
-        <span class="badge badge-dark">Bilingual EN &amp; Cantonese</span>
-      </div>
-      <div class="actions actions-center">
-        <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book Now on WhatsApp</a>
+      <h1>Modern TCM & Wellness Centre</h1>
+      <p>(include acupuncture, acupressure, massage, manipulation / bone setting)</p>
+      <div class="actions" style="justify-content:center">
+        <a class="btn btn-gold" href="#booknowform">Book Now</a>
         <a class="btn btn-ghost" href="/clinical-services">Clinical Services</a>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       SERVICE ICON CARDS
-  ═══════════════════════════════════════ -->
-  <section class="section" style="padding-top:2.5rem;padding-bottom:2.5rem">
-    <div class="wrap">
-      <div class="grid-4">
-        {[
-          { src: "/images/label_acupuncture_white-sVIFuDil6Vi0omnp.png",      href: "/acupuncture",          label: "Acupuncture" },
-          { src: "/images/label_ipm_white-vMTHbj4InE8W2YbM.png",              href: "/tui-na-massage",       label: "Tui Na & Pain Care" },
-          { src: "/images/label_herbal_medicine_white-Azozow4y5JPdMMVy.png",  href: "/herbal-consultation",  label: "Herbal Medicine" },
-          { src: "/images/label_other_white-ilyOGIeZEF3BJ6hg.png",            href: "/other-treatment",      label: "Other Treatments" },
-        ].map(({ src, href, label }) => (
-          <a class="card" href={href} style="background:var(--navy);display:block;text-align:center;padding:0.4rem;text-decoration:none">
-            <img src={src} alt={label} style="width:100%;height:auto;display:block" />
-          </a>
-        ))}
-      </div>
+  <section class="section">
+    <div class="wrap cards grid-4">
+      {[
+        ["/images/label_acupuncture_white-sVIFuDil6Vi0omnp.png", "/acupuncture", "Acupuncture"],
+        ["/images/label_ipm_white-vMTHbj4InE8W2YbM.png", "/tui-na-massage", "Tui Na & pain care"],
+        ["/images/label_herbal_medicine_white-Azozow4y5JPdMMVy.png", "/herbal-consultation", "Herbal medicine"],
+        ["/images/label_other_white-ilyOGIeZEF3BJ6hg.png", "/other-treatment", "Other treatments"],
+      ].map(([src, href, label]) => (
+        <a class="card" href={href}>
+          <img src={src} alt={label} />
+        </a>
+      ))}
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       UK CLINIC OVERVIEW
-  ═══════════════════════════════════════ -->
-  <section class="section-soft">
+  <section class="section alt" id="ukclinic">
     <div class="wrap">
-      <div class="grid-2">
-        <div>
-          <p class="eyebrow">Our Clinics</p>
-          <h2>United Kingdom</h2>
-          <p>
-            Yin-Yang CMC's UK clinics are open in Wimbledon and Reading, dedicated to providing
-            high-quality Chinese medicine services — especially in pain management and chronic
-            health concerns. Same Hong Kong clinical standards, delivered here in the UK.
-          </p>
-          <h3 style="margin-top:1.5rem">Hong Kong</h3>
-          <p>
-            Yin-Yang CMC currently has clinics in To Kwa Wan and Mei Foo. All resident practitioners
-            hold qualifications recognised by the Chinese Medicine Council of Hong Kong, with
-            Bachelor's, Master's, or higher degrees in Chinese Medicine.
-          </p>
-          <a class="btn btn-outline" href="https://www.yinyangcmc.com" target="_blank" rel="noreferrer" style="margin-top:0.5rem">Hong Kong site</a>
-        </div>
-        <img
-          src="/images/img_6058-eVlfhKuykGV6M98J.jpg"
-          alt="Yin Yang CMC clinic interior"
-          style="border-radius:var(--radius-card);width:100%;height:420px;object-fit:cover"
-          loading="lazy"
-        />
-      </div>
+      <p class="eyebrow">Our Clinics</p>
+      <h2>UNITED KINGDOM</h2>
+      <p>Yin-Yang CMC's overseas clinics are now open in Wimbledon and Reading, dedicated to providing high-quality Chinese medicine services, especially in pain management and chronic health concerns.</p>
+      <h2>HONG KONG</h2>
+      <p>Yin-Yang CMC currently has clinics in To Kwa Wan and Mei Foo. All resident Chinese Medicine Practitioners (CMPs) hold registered qualifications recognised by the Chinese Medicine Council of Hong Kong, possess Bachelor's, Master's, or higher degrees in Chinese Medicine, and have undergone advanced training at public and private medical institutions or at Yin-Yang CMC itself.</p>
+      <a class="btn btn-outline" href="https://www.yinyangcmc.com" target="_blank" rel="noreferrer">Hong Kong site</a>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       ABOUT
-  ═══════════════════════════════════════ -->
   <section class="section">
     <div class="wrap grid-2">
       <div>
         <p class="eyebrow">About Yin Yang UK</p>
         <h2>15+ Years of Trusted Experience</h2>
-        <p>
-          Welcome to Yin-Yang Chinese Medicine Clinic — a trusted provider of high-quality
-          traditional Chinese medicine services. Established in Hong Kong in 2014, our clinic
-          integrates ancient wisdom with modern medical practices. With branches in Hong Kong
-          and now in the UK, we bring professional and personalised care to our patients,
-          addressing pain management, internal medicine, and chronic conditions.
-        </p>
-        <p>
-          Our team of licensed practitioners, trained in Hong Kong and internationally, specialises
-          in acupuncture, Tui Na, and herbal medicine. Whether you are seeking relief from pain,
-          treatment for internal disorders, or holistic wellness solutions, we are here to guide
-          you on your journey to well-being.
-        </p>
-        <div class="actions" style="margin-top:1rem">
-          <a class="btn btn-gold" href="/clinical-services">Our Clinical Services</a>
-        </div>
+        <p>Welcome to Yin-Yang Chinese Medicine Clinic, a trusted provider of high-quality traditional Chinese medicine (TCM) services. Established in Hong Kong in 2014, our clinic is dedicated to promoting the essence of TCM by integrating ancient wisdom with modern medical practices. With branches in Hong Kong and now in the UK, we aim to bring professional and personalized care to our patients, addressing pain management, internal medicine, and various chronic conditions.</p>
+        <p>Our team of licensed practitioners, trained in Hong Kong and internationally, specializes in acupuncture, Tui Na (therapeutic massage), and herbal medicine. Whether you are seeking relief from pain, treatment for internal disorders, or holistic wellness solutions, we are here to help restore balance and harmony to your health. Let us guide you on your journey to well-being, wherever you are.</p>
       </div>
-
-      <!-- Trust items -->
-      <div style="display:grid;gap:1rem;align-content:start">
-        {[
-          { icon: "🎓", title: "Master's in TCM", desc: "Both practitioners hold Master of Science degrees in Chinese Medicine from the Chinese University of Hong Kong." },
-          { icon: "🏥", title: "Hospital Clinical Training", desc: "Tung Wah Eastern Hospital and other public medical institutions — verified clinical hours." },
-          { icon: "🇭🇰", title: "HK Registered CMPs", desc: "Licensed by the Chinese Medicine Council of Hong Kong — the most rigorous TCM standard in Asia." },
-          { icon: "💬", title: "Bilingual Consultations", desc: "Describe your symptoms in English or Cantonese — no translation loss, full clinical precision." },
-        ].map(({ icon, title, desc }) => (
-          <div style="display:flex;gap:0.9rem;align-items:flex-start;padding:1rem;background:var(--white);border:1px solid var(--line);border-radius:var(--radius-card)">
-            <div style="font-size:1.4rem;flex-shrink:0">{icon}</div>
-            <div>
-              <strong style="display:block;font-size:0.97rem;margin-bottom:0.25rem">{title}</strong>
-              <p style="font-size:0.9rem;color:var(--muted);margin:0">{desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+      <img src="/images/img_6058-eVlfhKuykGV6M98J.jpg" alt="Yin Yang CMC clinic" style="border-radius:18px;height:100%;object-fit:cover" />
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       OUR THERAPISTS
-  ═══════════════════════════════════════ -->
-  <section class="section-soft">
+  <section class="section alt">
     <div class="wrap">
-      <div class="section-heading">
-        <p class="eyebrow">Your health, our priority</p>
-        <h2>Our Therapists</h2>
-        <p>Expert care with a personal touch. Both practitioners hold dual registrations in Hong Kong and the UK.</p>
-      </div>
-
-      <div class="grid-2">
-        <article class="prac-card">
-          <img src="/images/e--ae-a-_edited-XhbCA7G3Oou0Mlsq.jpg" alt="Shing Hui (Winton)" loading="lazy" />
-          <div class="prac-body">
+      <p class="eyebrow">Your health, our priority. Expert care with a personal touch.</p>
+      <h2>Our Theraptists</h2>
+      <div class="cards cards-2" style="margin-top:1.5rem">
+        <article class="therapist">
+          <img src="/images/e--ae-a-_edited-XhbCA7G3Oou0Mlsq.jpg" alt="Shing Hui (Winton)" />
+          <div>
             <h3>Shing Hui (Winton)</h3>
-            <p class="prac-role">Chinese Medicine Practitioner</p>
-            <p>
-              Registered Chinese Medicine Practitioner in Hong Kong. Graduated from the School of
-              Chinese Medicine, Chinese University of Hong Kong in 2010 with a Bachelor's degree
-              in TCM and a Master of Science in Chinese Medicine. Previously a Tui Na specialist
-              at Tung Wah Eastern Hospital and orthopaedic consultant for Yin-Yang CMC in Hong
-              Kong. Specialises in acupuncture and Tui Na for soft tissue injuries, joint swelling,
-              restricted movement, and complex pain conditions.
-            </p>
-            <p class="reg">ATCM FM0250005 · MBAcC 963087 · Vitality SP123180</p>
+            <p>Chinese Medicine Practitioner</p>
+            <p>Registered Chinese Medicine Practitioner in Hong Kong. Graduated from the School of Chinese Medicine, Chinese University of Hong Kong in 2010 with a Bachelor's degree in TCM and a Master of Science in Chinese Medicine. Previously a Tui Na specialist at Tung Wah Eastern Hospital (HK) and orthopaedic consultant for Yin-Yang CMC in Hong Kong. Specialises in acupuncture and Tui Na orthopedic techniques for soft tissue injuries, joint swelling, restricted movement, cervical and lumbar spine disorders, and complex pain conditions.</p>
+            <p class="muted">ATCM FM0250005 · MBAcC 963087</p>
           </div>
         </article>
-
-        <article class="prac-card">
-          <img src="/images/aeeppsc-c-e-a-_edited_edited-a6uAksf7EtvBGWTM.jpg" alt="Chui Ying Li (Andrea)" loading="lazy" />
-          <div class="prac-body">
+        <article class="therapist">
+          <img src="/images/aeeppsc-c-e-a-_edited_edited-a6uAksf7EtvBGWTM.jpg" alt="Chui Ying Li (Andrea)" />
+          <div>
             <h3>Chui Ying Li (Andrea)</h3>
-            <p class="prac-role">Chinese Medicine Practitioner</p>
-            <p>
-              Registered Chinese Medicine Practitioner in Hong Kong. Graduated from the School of
-              Chinese Medicine, Chinese University of Hong Kong in 2010 with a Bachelor's degree
-              in TCM and a Master of Science in Chinese Medicine. Consultant practitioner at
-              Yin-Yang CMC in Hong Kong. Specialises in dermatology and gynaecology/paediatrics,
-              including infertility, prenatal and postnatal disorders, postpartum pelvic
-              adjustment, and body sculpting.
-            </p>
-            <p class="reg">ATCM FM0250004 · MBAcC 963093 · Vitality SP123173</p>
+            <p>Chinese Medicine Practitioner</p>
+            <p>Registered Chinese Medicine Practitioner in Hong Kong. Graduated from the School of Chinese Medicine, Chinese University of Hong Kong in 2010 with a Bachelor's degree in TCM and a Master of Science in Chinese Medicine. Consultant practitioner at Yin-Yang CMC in Hong Kong. Specialises in dermatology and gynaecology/paediatrics, including infertility, prenatal and postnatal disorders, postpartum pelvic adjustment, and body sculpting, with additional expertise in acupuncture and Tui Na orthopedics.</p>
+            <p class="muted">ATCM FM0250004 · MBAcC 963093</p>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       CLINIC LOCATION CARDS
-  ═══════════════════════════════════════ -->
   <section class="section">
-    <div class="wrap">
-      <div class="section-heading">
-        <p class="eyebrow">Visit Us</p>
-        <h2>Two Convenient Locations</h2>
-      </div>
-      <div class="grid-2 equal">
-        <article class="loc-card">
-          <img src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg" alt="Reading clinic" loading="lazy" />
-          <div class="loc-body">
-            <p class="loc-sub">Berkshire · Castle Street</p>
-            <h3>Reading</h3>
-            <div class="loc-row"><strong>Address</strong><span>{clinics.reading.address}</span></div>
-            <div class="loc-row"><strong>Hours</strong><span>{clinics.reading.hours}</span></div>
-            <div class="loc-row"><strong>Note</strong><span>{clinics.reading.subtitle}</span></div>
-            <a class="more-link" href="/reading-clinic" style="margin-top:0.8rem">Clinic detail</a>
-          </div>
-        </article>
-
-        <article class="loc-card">
-          <img src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg" alt="Wimbledon clinic" loading="lazy" />
-          <div class="loc-body">
-            <p class="loc-sub">South West London · SW19</p>
-            <h3>Wimbledon</h3>
-            <div class="loc-row"><strong>Address</strong><span>{clinics.wimbledon.address}</span></div>
-            <div class="loc-row"><strong>Hours</strong><span>{clinics.wimbledon.hours}</span></div>
-            <div class="loc-row"><strong>Note</strong><span>{clinics.wimbledon.subtitle}</span></div>
-            <a class="more-link" href="/wimbledon-clinic" style="margin-top:0.8rem">Clinic detail</a>
-          </div>
-        </article>
-      </div>
+    <div class="wrap cards cards-2">
+      <article class="card">
+        <img src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg" alt="Reading clinic" />
+        <div class="card-body">
+          <h3>Reading</h3>
+          <p>{clinics.reading.subtitle}</p>
+          <p>{clinics.reading.address}</p>
+          <p>{clinics.reading.hours}</p>
+          <a class="more" href="/reading-clinic">Detail</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg" alt="Wimbledon clinic" />
+        <div class="card-body">
+          <h3>Wimbledon</h3>
+          <p>{clinics.wimbledon.subtitle}</p>
+          <p>{clinics.wimbledon.address}</p>
+          <p>{clinics.wimbledon.hours}</p>
+          <a class="more" href="/wimbledon-clinic">Detail</a>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       BOOK NOW FORM
-  ═══════════════════════════════════════ -->
-  <section class="section-soft" id="booknowform">
+  <section class="section alt" id="booknowform">
     <div class="wrap grid-2">
       <div>
-        <p class="eyebrow">Book Your Appointment</p>
-        <h2>Book Now</h2>
+        <h2>BOOK NOW</h2>
         <p>Reach us anytime — we usually respond within the hour.</p>
-        <div style="display:grid;gap:0.8rem;margin-top:1.2rem">
-          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer" style="justify-content:flex-start">
-            💬 WhatsApp UK Clinic — {site.phoneDisplay}
-          </a>
-          <a class="btn btn-outline" href={`mailto:${site.email}`} style="justify-content:flex-start">
-            ✉️ {site.email}
-          </a>
-        </div>
+        <p><strong>WhatsApp UK Clinic:</strong> <a href={site.whatsapp}>{site.phoneDisplay}</a></p>
+        <p><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></p>
       </div>
       <form class="form" action={`mailto:${site.email}`} method="post" enctype="text/plain">
         <input name="name" placeholder="Full name" required />
-        <input type="email" name="email" placeholder="Email address" required />
+        <input type="email" name="email" placeholder="Email" required />
         <select name="clinic">
           <option>Reading clinic</option>
           <option>Wimbledon clinic</option>
         </select>
-        <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
-        <button class="btn btn-gold" type="submit">Submit Enquiry</button>
+        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        <button class="btn btn-gold" type="submit">Submit</button>
       </form>
     </div>
   </section>
-
-  <CTASection
-    heading="Same-week appointments available"
-    sub="Both Wimbledon and Reading clinics have availability this week. New patients welcome — no referral needed."
-    primaryLabel="WhatsApp Us Now"
-    secondaryLabel="View all services"
-    secondaryHref="/clinical-services"
-  />
 </Base>
