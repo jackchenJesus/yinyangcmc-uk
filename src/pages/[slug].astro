@@ -45,6 +45,10 @@ const { slug } = Astro.params;
 const condition = getLiveCondition(slug!);
 const page = (pages as Record<string, { title: string; desc: string; headings: string[]; paras: string[] }>)[slug!];
 
+if (!condition && !page) {
+  throw new Error(`Unknown slug: ${slug}`);
+}
+
 // Filter out navigation/footer/internal artefacts from scraped content
 const SKIP_HEADS = new Set([
   "Contact", "BOOK NOW", "01", "02", "03", "04", "05", "06",
@@ -96,7 +100,7 @@ const courseImages = slug === "course"
     <ConditionDetail condition={condition} />
   </Base>
 ) : (
-<Base title={page.title} description={page.desc}>
+<Base title={page!.title} description={page!.desc}>
   <PageHero
     title={hero}
     lede={lede}

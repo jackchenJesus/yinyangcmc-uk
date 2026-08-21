@@ -1797,6 +1797,11 @@ p  { margin: 0 0 1em; }
   color: var(--teal);
   font-weight: 600;
 }
+.cond-photo {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
 
 .key-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.75rem; }
 .key-chip {
@@ -1897,6 +1902,7 @@ p  { margin: 0 0 1em; }
   .journey-grid { grid-template-columns: 1fr; }
   .cond-dir { grid-template-columns: 1fr; }
   .pseo-tx-grid { grid-template-columns: 1fr; }
+  .cond-photo { height: 220px; }
   .journey-step:not(:last-child)::after { display: none; }
   .journey-step { padding: 1.5rem 1rem; }
   .grid-4 { grid-template-columns: 1fr 1fr; }
