@@ -16,83 +16,116 @@ import { clinics, site } from "../data/site";
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap grid-4">
-      {[
-        ["/images/label_acupuncture_white-sVIFuDil6Vi0omnp.png", "/acupuncture", "Acupuncture"],
-        ["/images/label_ipm_white-vMTHbj4InE8W2YbM.png", "/tui-na-massage", "Tui Na & pain care"],
-        ["/images/label_herbal_medicine_white-Azozow4y5JPdMMVy.png", "/herbal-consultation", "Herbal medicine"],
-        ["/images/label_other_white-ilyOGIeZEF3BJ6hg.png", "/other-treatment", "Other treatments"],
-      ].map(([src, href, label]) => (
-        <a class="home-svc" href={href}>
-          <img src={src} alt={label} />
-        </a>
-      ))}
+  <section class="home-facts" aria-label="Clinic at a glance">
+    <div class="wrap home-facts-inner">
+      <div class="home-fact">
+        <strong>2014</strong>
+        <span>Founded in Hong Kong</span>
+      </div>
+      <div class="home-fact">
+        <strong>2</strong>
+        <span>UK clinics</span>
+      </div>
+      <div class="home-fact">
+        <strong>MSc</strong>
+        <span>Qualified practitioners</span>
+      </div>
+      <div class="home-fact">
+        <strong>4.9</strong>
+        <span>Google reviews</span>
+      </div>
     </div>
   </section>
 
   <section class="section-soft">
-    <div class="wrap grid-2-al" style="gap:4rem">
+    <div class="wrap grid-2-al home-intro">
       <div>
-        <div class="rating-row">
-          <span class="rating-stars" aria-hidden="true">★★★★★</span>
-          <span>4.9 · 15 Google reviews</span>
-        </div>
-        <p class="cred-line">MSc-qualified practitioners · UK registered (ATCM &amp; MBAcC) · Reading Health Centre, 61 Castle Street</p>
-        <p>
-          Welcome to Yin-Yang Chinese Medicine Clinic, a trusted provider of high-quality traditional Chinese medicine (TCM) services. Established in Hong Kong in 2014, our clinic is dedicated to promoting the essence of TCM by integrating ancient wisdom with modern medical practices. With branches in Hong Kong and now in the UK, we aim to bring professional and personalized care to our patients, addressing pain management, internal medicine, and various chronic conditions.
+        <p class="eyebrow">Our clinic</p>
+        <h2>Hong Kong roots.<br>UK care.</h2>
+        <p class="lead">
+          Established in 2014. Now in Reading and Wimbledon — registered Chinese medicine in a calm, modern clinic.
         </p>
-        <p>
-          Our team of licensed practitioners, trained in Hong Kong and internationally, specializes in acupuncture, Tui Na (therapeutic massage), and herbal medicine. Winton Hui focuses on acupuncture and Tui Na orthopaedic techniques for soft-tissue injuries, joint restriction, and spinal pain. Andrea Li specialises in dermatology, gynaecology and paediatrics, including postnatal recovery and fertility support.
-        </p>
-        <div class="actions" style="margin-top:1.4rem">
+        <ul class="home-intro-points">
+          <li>UK registered · ATCM &amp; MBAcC</li>
+          <li>English, Cantonese &amp; Mandarin</li>
+          <li>By appointment at both clinics</li>
+        </ul>
+        <div class="actions" style="margin-top:1.5rem">
           <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
           <a class="btn btn-outline" href="/clinical-services">Explore Services</a>
         </div>
       </div>
-      <img
-        class="rounded-photo"
-        src="/images/img_6058-eVlfhKuykGV6M98J.jpg"
-        alt="Yin Yang CMC clinic interior"
-      />
+      <div class="home-intro-photo">
+        <img
+          class="rounded-photo"
+          src="/images/img_6058-eVlfhKuykGV6M98J.jpg"
+          alt="Treatment room at Yin Yang CMC"
+        />
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <p class="eyebrow">Our Clinics</p>
-      <h2>United Kingdom</h2>
-      <p class="lead" style="max-width:68ch">
-        Yin-Yang CMC's overseas clinics are now open in Wimbledon and Reading, dedicated to providing high-quality Chinese medicine services, especially in pain management and chronic health concerns.
-      </p>
-      <h2 style="margin-top:2.2rem">Hong Kong</h2>
-      <p style="max-width:68ch">
-        Yin-Yang CMC currently has clinics in To Kwa Wan and Mei Foo. All resident Chinese Medicine Practitioners (CMPs) hold registered qualifications recognised by the Chinese Medicine Council of Hong Kong, possess Bachelor's, Master's, or higher degrees in Chinese Medicine, and have undergone advanced training at public and private medical institutions or at Yin-Yang CMC itself.
-      </p>
-      <a class="btn btn-outline" href="https://www.yinyangcmc.com" target="_blank" rel="noreferrer">Hong Kong site</a>
+      <div class="section-head">
+        <p class="eyebrow">Our Clinics</p>
+        <h2>One practice. Two countries.</h2>
+      </div>
+      <div class="origin-grid">
+        <article class="origin-card origin-uk">
+          <img src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi_2-M3Nk8jihE1285fVW.jpg" alt="Yin Yang CMC Reading clinic" />
+          <div class="origin-copy">
+            <span class="loc-tag">United Kingdom</span>
+            <h3>Wimbledon &amp; Reading</h3>
+            <p>Chinese medicine for pain, recovery, and long-term health — same clinical standard at both UK sites.</p>
+          </div>
+        </article>
+        <article class="origin-card origin-hk">
+          <span class="origin-mark" aria-hidden="true">香港</span>
+          <div class="origin-copy">
+            <span class="loc-tag">Est. 2014</span>
+            <h3>Hong Kong</h3>
+            <p class="origin-locs">To Kwa Wan · Mei Foo</p>
+            <p>Registered CMPs with recognised qualifications and advanced clinical training.</p>
+          </div>
+          <a class="btn btn-ghost btn-sm" href="https://www.yinyangcmc.com" target="_blank" rel="noreferrer">Hong Kong site</a>
+        </article>
+      </div>
     </div>
   </section>
 
   <section class="section-soft">
     <div class="wrap">
-      <p class="eyebrow">Your health, our priority</p>
-      <h2>Our Practitioners</h2>
-      <div class="grid-2" style="margin-top:1.6rem">
-        <article class="prac-card">
+      <div class="section-head">
+        <p class="eyebrow">Your health, our priority</p>
+        <h2>Our Practitioners</h2>
+      </div>
+      <div class="home-prac-grid">
+        <article class="prac-portrait">
           <img src="/images/e--ae-a-_edited-XhbCA7G3Oou0Mlsq.jpg" alt="Shing Hui (Winton)" />
           <div class="prac-body">
             <h3>Shing Hui (Winton)</h3>
-            <span class="prac-role">Chinese Medicine Practitioner</span>
-            <p>Registered Chinese Medicine Practitioner in Hong Kong. Graduated from the School of Chinese Medicine, Chinese University of Hong Kong in 2010 with a Bachelor's degree in TCM and a Master of Science in Chinese Medicine. Previously a Tui Na specialist at Tung Wah Eastern Hospital (HK) and orthopaedic consultant for Yin-Yang CMC in Hong Kong. Specialises in acupuncture and Tui Na orthopedic techniques for soft tissue injuries, joint swelling, restricted movement, cervical and lumbar spine disorders, and complex pain conditions.</p>
+            <span class="prac-role">Musculoskeletal &amp; pain</span>
+            <p>MSc Chinese Medicine, CUHK. Acupuncture and Tui Na for joints, spine, and soft-tissue injury.</p>
+            <div class="prac-tags">
+              <span>Acupuncture</span>
+              <span>Tui Na</span>
+              <span>Spine &amp; joints</span>
+            </div>
             <p class="prac-reg">ATCM FM0250005 · MBAcC 963087</p>
           </div>
         </article>
-        <article class="prac-card">
+        <article class="prac-portrait">
           <img src="/images/aeeppsc-c-e-a-_edited_edited-a6uAksf7EtvBGWTM.jpg" alt="Chui Ying Li (Andrea)" />
           <div class="prac-body">
             <h3>Chui Ying Li (Andrea)</h3>
-            <span class="prac-role">Chinese Medicine Practitioner</span>
-            <p>Registered Chinese Medicine Practitioner in Hong Kong. Graduated from the School of Chinese Medicine, Chinese University of Hong Kong in 2010 with a Bachelor's degree in TCM and a Master of Science in Chinese Medicine. Consultant practitioner at Yin-Yang CMC in Hong Kong. Specialises in dermatology and gynaecology/paediatrics, including infertility, prenatal and postnatal disorders, postpartum pelvic adjustment, and body sculpting, with additional expertise in acupuncture and Tui Na orthopedics.</p>
+            <span class="prac-role">Women's health &amp; dermatology</span>
+            <p>MSc Chinese Medicine, CUHK. Fertility, postnatal care, paediatrics, and skin conditions.</p>
+            <div class="prac-tags">
+              <span>Women's health</span>
+              <span>Dermatology</span>
+              <span>Paediatrics</span>
+            </div>
             <p class="prac-reg">ATCM FM0250004 · MBAcC 963093</p>
           </div>
         </article>
@@ -106,15 +139,13 @@ import { clinics, site } from "../data/site";
         <p class="eyebrow">Visit Us</p>
         <h2>Two Clinics. One Standard of Care.</h2>
       </div>
-      <div class="grid-2">
+      <div class="home-loc-grid">
         <article class="loc-card">
           <img src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg" alt="Reading clinic" />
           <div class="loc-body">
             <span class="loc-tag">Berkshire · Castle Street</span>
             <h3>Reading</h3>
-            <div class="loc-row"><strong>Clinic</strong><span>{clinics.reading.subtitle}</span></div>
-            <div class="loc-row"><strong>Address</strong><span>{clinics.reading.address}</span></div>
-            <div class="loc-row"><strong>Hours</strong><span>{clinics.reading.hours}</span></div>
+            <p class="loc-meta">{clinics.reading.address}<br>{clinics.reading.hours} · By appointment</p>
             <div class="loc-actions">
               <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic details</a>
               <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book</a>
@@ -126,9 +157,7 @@ import { clinics, site } from "../data/site";
           <div class="loc-body">
             <span class="loc-tag">South West London · SW19</span>
             <h3>Wimbledon</h3>
-            <div class="loc-row"><strong>Clinic</strong><span>{clinics.wimbledon.subtitle}</span></div>
-            <div class="loc-row"><strong>Address</strong><span>{clinics.wimbledon.address}</span></div>
-            <div class="loc-row"><strong>Hours</strong><span>{clinics.wimbledon.hours}</span></div>
+            <p class="loc-meta">{clinics.wimbledon.address}<br>{clinics.wimbledon.hours} · By appointment</p>
             <div class="loc-actions">
               <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic details</a>
               <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book</a>
