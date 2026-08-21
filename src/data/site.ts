@@ -126,7 +126,7 @@ export const practitioners = [
   {
     name: "Shing Hui (Winton)",
     role: "Musculoskeletal & pain",
-    image: "/images/e--ae-a-_edited-XhbCA7G3Oou0Mlsq.jpg",
+    image: "/images/shing-hui-practitioner.webp",
     summary: "Acupuncture and Tui Na for back pain, sports injury, joints and spine.",
     bio: "British Acupuncture Council and ATCM registered. Treats back pain, sports injuries, joint restriction and spinal conditions at our Reading and Wimbledon clinics. MSc in Chinese Medicine from the Chinese University of Hong Kong (2010). Previously a Tui Na specialist at Tung Wah Eastern Hospital, Hong Kong.",
     focus: [
@@ -141,7 +141,7 @@ export const practitioners = [
   {
     name: "Chui Ying Li (Andrea)",
     role: "Women's health & dermatology",
-    image: "/images/aeeppsc-c-e-a-_edited_edited-a6uAksf7EtvBGWTM.jpg",
+    image: "/images/chui-ying-li-practitioner.webp",
     summary: "Women's health, fertility support, postnatal care and skin conditions.",
     bio: "British Acupuncture Council and ATCM registered. Lead for women's health, fertility support, postnatal recovery, paediatrics and dermatology across both UK clinics. MSc in Chinese Medicine from the Chinese University of Hong Kong (2010). Consultations in English, Cantonese and Mandarin.",
     focus: [

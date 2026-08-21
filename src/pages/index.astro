@@ -4,7 +4,7 @@ import { clinics, homeConditions, homeServices, practitioners, reviews, site } f
 ---
 <Base title="Chinese Medicine Wimbledon & Reading | Yin-Yang Clinic | yin yang uk" description="Chinese medicine clinic in Reading and Wimbledon. British Acupuncture Council registered. Acupuncture, Tui Na, bone-setting and Chinese herbal medicine consultation. No GP referral needed.">
   <section class="hero">
-    <img class="hero-bg" src="/images/webbanner-eQwGJSc8Re6udP6z.jpg" alt="" />
+    <img class="hero-bg" src="/images/acupuncture-back-treatment.webp" alt="" width="1600" height="1067" loading="eager" fetchpriority="high" />
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="hero-inner">
       <p class="eyebrow" style="color:var(--gold)">Reading &amp; Wimbledon</p>
@@ -58,8 +58,11 @@ import { clinics, homeConditions, homeServices, practitioners, reviews, site } f
       <div class="home-intro-photo">
         <img
           class="rounded-photo"
-          src="/images/img_6058-eVlfhKuykGV6M98J.jpg"
-          alt="Treatment room at Yin Yang CMC"
+          src="/images/reading-clinic-treatment-room.webp"
+          alt="Treatment room at Yin Yang CMC in Reading"
+          width="1600"
+          height="1202"
+          loading="lazy"
         />
       </div>
     </div>
@@ -152,7 +155,7 @@ import { clinics, homeConditions, homeServices, practitioners, reviews, site } f
       <div class="home-prac-grid home-prac-teaser">
         {practitioners.map((p) => (
           <a class="prac-portrait prac-teaser" href="/our-practitioners">
-            <img src={p.image} alt={p.name} />
+            <img src={p.image} alt={`Portrait of ${p.name}`} width="800" height="882" loading="lazy" />
             <div class="prac-body">
               <h3>{p.name}</h3>
               <span class="prac-role">{p.role}</span>
@@ -175,7 +178,7 @@ import { clinics, homeConditions, homeServices, practitioners, reviews, site } f
       </div>
       <div class="home-loc-grid">
         <article class="loc-card">
-          <img src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg" alt="Reading clinic" />
+          <img src="/images/reading-clinic-interior.webp" alt="Reception and hallway at the Reading clinic" width="1600" height="1010" loading="lazy" />
           <div class="loc-body">
             <span class="loc-tag">Berkshire · Castle Street</span>
             <h3>Reading</h3>
@@ -187,7 +190,7 @@ import { clinics, homeConditions, homeServices, practitioners, reviews, site } f
           </div>
         </article>
         <article class="loc-card">
-          <img src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg" alt="Wimbledon clinic" />
+          <img src="/images/wimbledon-clinic-interior.webp" alt="Reception area at the Wimbledon clinic" width="1600" height="869" loading="lazy" />
           <div class="loc-body">
             <span class="loc-tag">South West London · SW19</span>
             <h3>Wimbledon</h3>

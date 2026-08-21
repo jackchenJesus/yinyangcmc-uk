@@ -21,7 +21,7 @@ import { practitioners } from "../data/site";
     <div class="wrap prac-page-list">
       {practitioners.map((p) => (
         <article class="prac-page-card">
-          <img src={p.image} alt={p.name} />
+          <img src={p.image} alt={`Portrait of ${p.name}`} width="800" height="882" loading="lazy" />
           <div class="prac-page-body">
             <h2>{p.name}</h2>
             <span class="prac-role">{p.role}</span>

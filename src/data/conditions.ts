@@ -37,6 +37,7 @@ export type LiveCondition = {
   ogDescription?: string;
   expect?: { title: string; body: string }[];
   safety?: { intro: string; items: string[] };
+  ctaHeading?: string;
 };
 
 export type ListedCondition = {
@@ -66,7 +67,8 @@ export const conditions: Condition[] = [
     h1: "Back Pain Treatment in Wimbledon & Reading",
     eyebrow: "Conditions · Back Pain",
     lede: "Painkillers manage the sensation. We assess the musculoskeletal picture — then provide acupuncture and manual therapy for back pain, tailored to your presentation.",
-    image: "/images/back_pain_treatment-vMLmusxJIAVKmYK5.png",
+    image: "/images/back-assessment-treatment.webp",
+    imageAlt: "Practitioner assessing a patient's back in clinic",
     intro: [
       "Back pain is one of the most common reasons people in the UK reduce activity, take time off work, or live with daily discomfort that gradually wears them down. It is a symptom with many drivers — not a single diagnosis.",
       "Whether the pain sits in the lower back, mid-spine, or radiates into the hips, our practitioners combine classical TCM diagnosis with modern musculoskeletal assessment. Treatment is typically a combination of acupuncture, Tui Na and bone-setting, calibrated to your presentation — not a fixed package. If pain travels into a leg, we also assess for <a href=\"/sciatica-treatment\">sciatica</a>, a <a href=\"/herniated-disc\">herniated disc</a>, or a <a href=\"/pinched-nerve\">pinched nerve</a>. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
@@ -157,7 +159,8 @@ export const conditions: Condition[] = [
     h1: "Sciatica Treatment in Wimbledon & Reading",
     eyebrow: "Conditions · Sciatica",
     lede: "Sciatica is not just back pain. It is nerve pain travelling from the lower back through the buttock and down the leg. We provide acupuncture and traditional Chinese medicine approaches for sciatica symptoms.",
-    image: "/images/sciatica-lower-back-pain-CiEnhdaob4WbteY2.png",
+    image: "/images/sciatica-nerve-illustration.webp",
+    imageAlt: "Illustration of sciatic nerve pain with manual therapy and herbal medicine",
     intro: [
       "Sciatica describes pain from compression or irritation of the sciatic nerve — the longest nerve in the body, running from the lumbar spine through the buttock and down each leg to the foot. When compressed, pain signals can fire anywhere along that path.",
       "People often describe this as a <a href=\"/trapped-nerve\">trapped nerve</a> or <a href=\"/pinched-nerve\">pinched nerve</a>. Treatment depends on which structure is irritating the nerve — <a href=\"/herniated-disc\">disc</a>, canal, facet, or <a href=\"/piriformis-syndrome\">piriformis</a> — and on the TCM pattern maintaining the presentation. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
@@ -253,7 +256,8 @@ export const conditions: Condition[] = [
     h1: "Shoulder Pain Treatment in Wimbledon & Reading",
     eyebrow: "Conditions · Shoulder Pain",
     lede: "Pain lifting the arm, reaching overhead, or lying on that side is rarely 'just stiffness'. We identify whether the source is the cuff, the joint, or the neck — then treat that.",
-    image: "/images/acupuncture-for-shoulder-pain-k9uul1g0Hqlp9Qaa.webp",
+    image: "/images/shoulder-pain-symptom.webp",
+    imageAlt: "Woman holding her shoulder, with the joint highlighted to show pain",
     intro: [
       "The shoulder is the most mobile joint in the body — held by the rotator cuff, tendons and ligaments rather than a deep bony socket. That mobility makes it prone to strain, inflammation and restriction from posture, overuse, sport and gym training.",
       "Shoulder pain can also be referred from the <a href=\"/neck-pain\">neck</a>, or signal <a href=\"/frozen-shoulder\">frozen shoulder</a> or impingement. A <a href=\"/trapped-nerve\">trapped nerve</a> in the neck can be felt across the shoulder. Identifying the likely source is essential before treatment begins. Painkillers manage discomfort; they do not address how the joint is moving.",
@@ -349,7 +353,8 @@ export const conditions: Condition[] = [
     h1: "Frozen Shoulder Treatment in Wimbledon & Reading",
     eyebrow: "Conditions · Frozen Shoulder",
     lede: "The joint locks gradually — first with sharp pain, then with stiffness that makes lifting, reaching and sleeping difficult. We treat both the inflammation and the adhesion.",
-    image: "/images/acupuncture_for_frozen_shoulder-LYlyaUQ7GqsYzZB5.webp",
+    image: "/images/shoulder-pain-holding-shoulder.webp",
+    imageAlt: "Woman holding her left shoulder, with a highlight showing pain",
     intro: [
       "Frozen shoulder — adhesive capsulitis — occurs when the joint capsule becomes inflamed, then thickens and tightens. Range of motion is restricted in all directions. Most patients cannot lift the arm, reach behind the back, or dress without pain. It is a different picture from ordinary <a href=\"/shoulder-pain\">shoulder pain</a> or stiffness that mainly sits in the <a href=\"/neck-pain\">neck</a>.",
       "Night pain that disrupts sleep is a hallmark. Without treatment, the natural course can take 18 months to 3 years. Early care is aimed at supporting usable range sooner. Painkillers manage symptoms; they do not restore range of motion on their own.",
@@ -445,7 +450,8 @@ export const conditions: Condition[] = [
     h1: "Sports Injury Treatment in Wimbledon & Reading",
     eyebrow: "Conditions · Sports Injuries",
     lede: "You trained. Now the knee catches on the stairs, the shoulder pulls overhead, or the lower back seizes after a run. We treat the tissue and the compensation pattern — not only the sore spot.",
-    image: "/images/sports-injuries-orthopaedics-7F9Mh61pjr43DjEH.png",
+    image: "/images/knee-assessment-clinic.webp",
+    imageAlt: "Practitioner examining a patient's knee in clinic",
     intro: [
       "Sports injuries range from acute trauma to cumulative overuse. Rest and anti-inflammatories often settle symptoms without restoring full biomechanical function. That gap is where TCM is used as a parallel clinical system — tissue care, pain modulation and joint mobility — not as a replacement for sports medicine or imaging where those are needed.",
       "Plans are built around your sport, training volume and recovery window. <a href=\"/knee-pain\">Knee pain</a>, <a href=\"/hip-pain\">hip pain</a> and <a href=\"/back-pain\">lower-back pain</a> are assessed as part of the same chain, not as isolated sore spots.",
@@ -538,11 +544,12 @@ export const conditions: Condition[] = [
     ogTitle: "Pinched Nerve Treatment | Reading & Wimbledon",
     ogDescription:
       "Assessment and acupuncture-led care for pinched nerve symptoms — pain, tingling or numbness from nerve compression. Suitability decided at consultation.",
+    ctaHeading: "Ready to book pinched nerve treatment?",
     h1: "Pinched Nerve Treatment in Reading & Wimbledon",
     eyebrow: "Conditions · Pinched Nerve",
     lede: "A pinched nerve is a compression problem — pain, tingling or numbness where a nerve is under pressure. We assess the likely site, then use acupuncture and manual therapy as part of care. Suitability is decided at consultation.",
-    image: "/images/sciatica-lower-back-pain-CiEnhdaob4WbteY2.png",
-    imageAlt: "Illustration of spinal nerve irritation and manual treatment for nerve-related pain",
+    image: "/images/sciatica-nerve-illustration.webp",
+    imageAlt: "Illustration of sciatic nerve pain with manual therapy and herbal medicine",
     intro: [
       "“Pinched nerve” describes irritation or compression of a nerve — often in the neck, shoulder girdle or lower back. The nerve itself is not always the only structure involved: nearby joints, discs and tight muscle can all reduce the space a nerve has to move.",
       "Typical symptoms include pain, tingling, numbness or a radiating ache along the nerve’s path. This page cannot tell you which structure is responsible. In the UK the same picture is often called a <a href=\"/trapped-nerve\">trapped nerve</a>; we keep that page for location-led questions (neck, shoulder or back) and this one for compression and treatment options. Disc-related back pain is covered separately under <a href=\"/herniated-disc\">herniated disc</a>.",
@@ -668,11 +675,12 @@ export const conditions: Condition[] = [
     ogTitle: "Trapped Nerve Treatment | Neck, Shoulder or Back",
     ogDescription:
       "If pain shoots from the neck, shoulder or back into an arm or leg, the next step is assessment. Book at Reading or Wimbledon — no GP referral needed.",
+    ctaHeading: "Ready to book for a trapped nerve?",
     h1: "Treatment for a Trapped Nerve",
     eyebrow: "Conditions · Trapped Nerve",
     lede: "In the UK, “trapped nerve” usually means pain that shoots from the neck, shoulder or back into the arm or leg. The next step is assessment — not guessing the structure from a webpage.",
-    image: "/images/acupuncture-for-shoulder-pain-k9uul1g0Hqlp9Qaa.webp",
-    imageAlt: "Practitioner treating the neck and shoulder region in clinic",
+    image: "/images/shoulder-pain-symptom.webp",
+    imageAlt: "Woman holding her shoulder, with the joint highlighted to show pain",
     intro: [
       "People search for a trapped nerve in the neck, a trapped nerve in the shoulder, or a trapped nerve in the back because that is how the pain presents in daily life — turning to check a blind spot, reaching for a seatbelt, sitting at a desk, or getting out of a chair. The useful clinical question is not the label. It is where the symptoms start, where they travel, and what they do to sleep, work and movement.",
       "If you want the compression-mechanism explanation, that sits on our <a href=\"/pinched-nerve\">pinched nerve</a> page. Here the focus is what to do next: a structured consultation at <a href=\"/reading-clinic\">Reading</a> or <a href=\"/wimbledon-clinic\">Wimbledon</a>, and treatment only where it is appropriate. Neck-and-shoulder presentations are often assessed alongside <a href=\"/neck-pain\">neck pain</a> and <a href=\"/shoulder-pain\">shoulder pain</a>.",
@@ -801,7 +809,7 @@ export const conditions: Condition[] = [
     h1: "Neck Pain Treatment — Reading & Wimbledon",
     eyebrow: "Conditions · Neck Pain",
     lede: "Stiff neck, desk tension, or pain that spreads into the shoulder is common — and often mixed. We assess the neck and the shoulder girdle together, then treat accordingly.",
-    image: "/images/tui-na-massage-8YKIYR6VTwdVMTdx.webp",
+    image: "/images/tui-na-massage-treatment.webp",
     imageAlt: "Practitioner using Tui Na manual therapy on a patient’s upper back",
     intro: [
       "Neck pain ranges from a stiff neck after sleep to a chronic ache that builds through the working day. Many people also feel it across the shoulders or into the upper back. Muscular neck pain, postural loading and joint stiffness often overlap — which is why a single stretch or heat pack is not always enough.",
@@ -928,10 +936,11 @@ export const conditions: Condition[] = [
     ogTitle: "Slipped Disc & Herniated Disc Treatment | Yin Yang CMC",
     ogDescription:
       "UK patients often say slipped disc. We treat the pain and movement limitation — we do not claim to put a disc back in place.",
+    ctaHeading: "Ready to book slipped disc treatment?",
     h1: "Herniated Disc and Slipped Disc Treatment",
     eyebrow: "Conditions · Herniated Disc",
     lede: "“Slipped disc” is the name most people in the UK use. It does not mean the disc has slid out of the spine. We treat the pain, muscle guarding and movement limitation — we do not claim to put a disc back in place.",
-    image: "/images/back-pain-sciatica-hAE6tS5ptUz32TSo.png",
+    image: "/images/manual-therapy-side-lying.webp",
     imageAlt: "Practitioner treating the lower back with the patient in a side-lying position",
     intro: [
       "A herniated disc — often called a slipped disc in the UK — is when disc material bulges or leaks enough to irritate nearby tissue, sometimes including a nerve root. Many people first notice it as disc-related back pain; others notice leg pain and look up <a href=\"/sciatica-treatment\">sciatica</a>.",
@@ -1058,11 +1067,12 @@ export const conditions: Condition[] = [
     ogTitle: "Piriformis Syndrome Treatment | Reading & Wimbledon",
     ogDescription:
       "Buttock pain or pain down the leg is not always spinal sciatica. We assess piriformis-related symptoms before treating.",
+    ctaHeading: "Ready to book piriformis treatment?",
     h1: "Piriformis Syndrome Treatment",
     eyebrow: "Conditions · Piriformis Syndrome",
     lede: "Deep buttock pain that travels down the leg is often labelled sciatica. Sometimes the piriformis muscle is the irritant. Assessment is what distinguishes the two — a webpage cannot.",
-    image: "/images/back_pain_treatment-vMLmusxJIAVKmYK5.png",
-    imageAlt: "Clinical image used for lower-back and buttock pain treatment",
+    image: "/images/back-assessment-treatment.webp",
+    imageAlt: "Practitioner assessing a patient's back in clinic",
     intro: [
       "The piriformis is a small muscle deep in the buttock. When it is tight or irritated, it can aggravate the sciatic nerve that runs beneath (and in some people, through) the muscle. The result can be piriformis pain, buttock pain, and pain down the leg that looks and feels like <a href=\"/sciatica-treatment\">sciatica</a>.",
       "That overlap is exactly why self-diagnosis from symptoms is unreliable. True nerve-root sciatica, <a href=\"/back-pain\">back pain</a>, and <a href=\"/hip-pain\">hip pain</a> can all occupy the same neighbourhood. We examine rather than assume the piriformis is the culprit.",
@@ -1191,8 +1201,8 @@ export const conditions: Condition[] = [
     h1: "Knee Pain Treatment in Reading & Wimbledon",
     eyebrow: "Conditions · Knee Pain",
     lede: "Knee pain when walking, stiffness after sitting, or a chronic ache in the joint. We may support symptoms with acupuncture and manual therapy. Significant injury, locking or a hot swollen knee needs medical assessment first.",
-    image: "/images/sports-injuries-orthopaedics-7F9Mh61pjr43DjEH.png",
-    imageAlt: "Sports and orthopaedic treatment imagery used for knee and joint care",
+    image: "/images/knee-assessment-clinic.webp",
+    imageAlt: "Practitioner examining a patient's knee in clinic",
     intro: [
       "People look for knee pain treatment without surgery because they want to keep walking, working and training. That is a reasonable aim — and it is not the same as saying acupuncture can replace an operation when an orthopaedic surgeon has already judged surgery to be necessary. Suitability is assessed in clinic, alongside whatever NHS or specialist advice you already have.",
       "We see overuse-related discomfort, longer-standing stiffness, and sports-related knees as part of <a href=\"/sports-injuries\">sports injury</a> care. Pain around the knee can also be influenced by the <a href=\"/hip-pain\">hip</a> or <a href=\"/back-pain\">back</a>, which is why we look at how you walk, not only at the sore joint.",
@@ -1321,8 +1331,8 @@ export const conditions: Condition[] = [
     h1: "Hip Pain Treatment in Reading & Wimbledon",
     eyebrow: "Conditions · Hip Pain",
     lede: "Pain around the hip is not always the hip joint. It can come from the back, the buttock, or further down the chain. We assess before we treat.",
-    image: "/images/bone-setting-orthopaedic-care-o6PPJu9WdXDef1r7.webp",
-    imageAlt: "Practitioner treating the back and hip region with manual therapy",
+    image: "/images/bone-setting-treatment.webp",
+    imageAlt: "Practitioner using manual therapy on a patient's back and shoulder",
     intro: [
       "Hip pain when walking, stiffness after sitting, or an ache in the buttock and hip can have several sources: the hip joint itself, the lumbar spine, the sacroiliac region, or muscles such as the piriformis. Searching the symptom is useful. Naming the structure from a webpage is not.",
       "We therefore treat hip presentations as a differential, not a single protocol. Related pages include <a href=\"/back-pain\">back pain</a>, <a href=\"/sciatica-treatment\">sciatica</a>, <a href=\"/piriformis-syndrome\">piriformis syndrome</a> and <a href=\"/knee-pain\">knee pain</a> — because those are the neighbourhoods this symptom lives in.",

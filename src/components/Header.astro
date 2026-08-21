@@ -7,7 +7,7 @@ import { conditionCategories, conditionsInCategory } from "../data/conditions";
 
     <!-- Brand -->
     <a class="brand" href="/">
-      <img src="/images/ming_logo-full-7UbV6e2W5oyjr2Ir.png" alt="Yin Yang CMC" width="48" height="48" />
+      <img src="/images/yin-yang-cmc-logo.png" alt="Yin Yang CMC" width="640" height="266" />
     </a>
 
     <!-- Desktop navigation -->
@@ -30,14 +30,34 @@ import { conditionCategories, conditionsInCategory } from "../data/conditions";
           </button>
           <div class="drop-menu mega-menu" role="menu">
             <div class="mega-cols">
-              {conditionCategories.map((cat) => (
-                <div class="mega-col">
-                  <a class="mega-col-label" href={`/conditions#${cat.id}`}>{cat.short}</a>
-                  {conditionsInCategory(cat.id).map((i) => (
-                    <a href={i.href} role="menuitem">{i.label}</a>
-                  ))}
-                </div>
-              ))}
+              {conditionCategories.map((cat) => {
+                const items = conditionsInCategory(cat.id);
+                const split = cat.id === "pain-msk" && items.length > 8;
+                const mid = Math.ceil(items.length / 2);
+                return (
+                  <div class={split ? "mega-col mega-col-wide" : "mega-col"}>
+                    <a class="mega-col-label" href={`/conditions#${cat.id}`}>{cat.short}</a>
+                    {split ? (
+                      <div class="mega-split">
+                        <div class="mega-subcol">
+                          {items.slice(0, mid).map((i) => (
+                            <a href={i.href} role="menuitem">{i.label}</a>
+                          ))}
+                        </div>
+                        <div class="mega-subcol">
+                          {items.slice(mid).map((i) => (
+                            <a href={i.href} role="menuitem">{i.label}</a>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      items.map((i) => (
+                        <a href={i.href} role="menuitem">{i.label}</a>
+                      ))
+                    )}
+                  </div>
+                );
+              })}
             </div>
             <a class="mega-foot" href="/conditions" role="menuitem">All Conditions →</a>
           </div>
