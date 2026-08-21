@@ -1287,7 +1287,7 @@ p  { margin: 0 0 1em; }
 }
 .review-track::-webkit-scrollbar { display: none; }
 .review-card {
-  flex: 0 0 min(100%, 360px);
+  flex: 0 0 min(100%, 420px);
   scroll-snap-align: start;
   background: var(--white);
   border: 1px solid var(--border);
@@ -1296,12 +1296,12 @@ p  { margin: 0 0 1em; }
   box-shadow: var(--sh-xs);
   display: flex;
   flex-direction: column;
-  min-height: 240px;
+  min-height: 280px;
 }
 .review-card p {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--ink);
-  line-height: 1.6;
+  line-height: 1.58;
   flex: 1;
   margin: 0.7rem 0 1.1rem;
 }
