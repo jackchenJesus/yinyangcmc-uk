@@ -11,7 +11,6 @@ interface Props {
 const { condition } = Astro.props;
 const siteUrl = "https://yinyangcmc.uk";
 const pageUrl = new URL(condition.href, siteUrl).href;
-const imageAlt = condition.imageAlt ?? condition.label;
 
 const related = condition.related
   .map((slug) => getConditionBySlug(slug))
@@ -61,10 +60,10 @@ const schema = {
 <section class="page-hero" style="min-height:62vh;display:grid;place-items:center">
   <img
     class="page-hero-bg"
-    src={condition.image}
+    src={condition.heroImage ?? condition.image}
     alt=""
-    width="1600"
-    height="1066"
+    width="1536"
+    height="1024"
     loading="eager"
     fetchpriority="high"
   />
@@ -109,10 +108,10 @@ const schema = {
       <div class="img-wrap">
         <img
           class="rounded-photo cond-photo"
-          src={condition.image}
-          alt={imageAlt}
+          src={condition.sectionImage ?? condition.image}
+          alt={condition.sectionImageAlt ?? condition.imageAlt ?? condition.label}
           width="800"
-          height="420"
+          height="533"
           loading="lazy"
         />
       </div>
