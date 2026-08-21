@@ -199,7 +199,13 @@ p  { margin: 0 0 1em; }
   transition: background var(--tx), color var(--tx), border-color var(--tx),
               transform var(--tx), box-shadow var(--tx);
 }
-.btn:hover { transform: translateY(-1px); }
+.btn:focus-visible,
+.treat-card:focus-visible,
+.home-svc-card:focus-visible,
+.heritage-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
 .btn-gold {
   background: var(--gold);
   color: var(--ink);
@@ -1239,6 +1245,115 @@ p  { margin: 0 0 1em; }
   min-height: 380px;
   object-position: left center;
 }
+.home-intro .lead a,
+.section-head p a {
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+.home-intro .lead a:hover,
+.section-head p a:hover { color: var(--navy); }
+
+/* What we treat */
+.treat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+.treat-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.55rem;
+  min-height: 52px;
+  padding: 0.8rem 1rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--sh-xs);
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.92rem;
+  line-height: 1.25;
+  transition: border-color var(--tx), box-shadow var(--tx), transform var(--tx);
+}
+.treat-card::after {
+  content: "→";
+  color: var(--gold);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.treat-card:hover {
+  border-color: rgba(192,152,90,0.55);
+  box-shadow: var(--sh-sm);
+  transform: translateY(-1px);
+}
+
+/* Compact clinical services */
+.home-svc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.home-svc-card {
+  display: block;
+  min-height: 96px;
+  padding: 1.1rem 1.15rem 1.15rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-xs);
+  text-decoration: none;
+  transition: border-color var(--tx), box-shadow var(--tx), transform var(--tx);
+}
+.home-svc-card:hover {
+  border-color: rgba(192,152,90,0.55);
+  box-shadow: var(--sh-sm);
+  transform: translateY(-1px);
+}
+.home-svc-card strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.28rem;
+}
+.home-svc-card span {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Heritage — quiet brand history */
+.home-heritage {
+  padding: 1.75rem 0 2rem;
+  background: var(--cream);
+  border-top: 1px solid var(--border);
+}
+.heritage-inner { max-width: 46rem; }
+.heritage-inner .eyebrow { margin-bottom: 0.35rem; }
+.heritage-inner p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 0.55rem;
+}
+.heritage-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted-lt);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.heritage-link:hover { color: var(--navy); }
+#treat,
+#services,
+#booknowform { scroll-margin-top: 96px; }
 
 /* Google reviews slider */
 .reviews-head {
@@ -1359,82 +1474,6 @@ p  { margin: 0 0 1em; }
   cursor: pointer;
 }
 .review-dots button.is-active { background: var(--gold); width: 22px; border-radius: 99px; }
-
-/* Origin cards — UK / Hong Kong */
-.origin-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 1.15rem;
-}
-.origin-card {
-  position: relative;
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 2rem 1.8rem 1.9rem;
-  color: var(--white);
-  box-shadow: var(--sh-sm);
-}
-.origin-card img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.origin-uk::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(14,20,28,0.08) 28%, rgba(14,20,28,0.82) 100%);
-}
-.origin-hk {
-  background: var(--navy);
-  justify-content: space-between;
-  min-height: 400px;
-}
-.origin-hk::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--gold);
-}
-.origin-mark {
-  position: absolute;
-  right: -0.15em;
-  top: 0.15em;
-  font-family: var(--serif);
-  font-size: clamp(5.5rem, 10vw, 8.5rem);
-  color: rgba(255,255,255,0.06);
-  line-height: 0.85;
-  pointer-events: none;
-}
-.origin-copy { position: relative; z-index: 1; }
-.origin-copy .loc-tag { color: var(--gold-lt); margin-bottom: 0.55rem; }
-.origin-copy h3 {
-  color: var(--white);
-  font-size: clamp(1.55rem, 2.6vw, 2.15rem);
-  margin-bottom: 0.45rem;
-}
-.origin-copy p {
-  color: rgba(240,234,226,0.82);
-  font-size: 0.95rem;
-  line-height: 1.55;
-  max-width: 38ch;
-  margin: 0;
-}
-.origin-copy .origin-locs {
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.88);
-  margin: 0 0 0.7rem;
-}
-.origin-hk .btn { position: relative; z-index: 1; align-self: flex-start; }
 
 /* Practitioner portraits */
 .home-prac-grid {
@@ -1788,7 +1827,6 @@ p  { margin: 0 0 1em; }
   .home-fact:nth-child(2) { border-right: 0; }
   .home-fact:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
   .hero-facts .home-fact:nth-child(-n+2) { border-bottom-color: rgba(255,255,255,0.22); }
-  .origin-grid { grid-template-columns: 1fr; }
   .review-nav { display: none; }
   .review-card { flex-basis: min(100%, 320px); }
   .prac-page-card { grid-template-columns: 1fr; }
@@ -1798,7 +1836,16 @@ p  { margin: 0 0 1em; }
     grid-template-columns: minmax(0, 400px);
     justify-content: center;
   }
-  .origin-card, .origin-hk { min-height: 320px; }
+  .treat-grid,
+  .home-svc-grid { grid-template-columns: 1fr 1fr; }
+  .hero .actions {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero .actions .btn { width: 100%; }
   .home-intro-photo .rounded-photo { min-height: 280px; }
   .cond-dir { grid-template-columns: 1fr 1fr; }
 
@@ -1848,9 +1895,10 @@ p  { margin: 0 0 1em; }
   .home-fact { padding: 1.1rem 0.7rem; }
   .home-fact strong { font-size: 1.4rem; }
   .hero-inner { padding: 4.5rem 0 2rem; }
+  .treat-card { font-size: 0.86rem; padding: 0.75rem 0.85rem; }
+  .home-svc-card { min-height: 0; }
   .review-card { min-height: 220px; }
   .prac-page-body { padding: 1.4rem 1.3rem 1.5rem; }
   .prac-portrait img { height: 260px; }
   .home-loc-grid .loc-card img { height: 210px; }
-  .origin-card { padding: 1.5rem 1.3rem 1.4rem; min-height: 280px; }
 }
