@@ -14,7 +14,7 @@ export const nav = {
   services: [
     { href: "/acupuncture", label: "Acupuncture" },
     { href: "/tui-na-massage", label: "Tui Na Massage" },
-    { href: "/herbal-consultation", label: "Herbal consultation" },
+    { href: "/herbal-consultation", label: "Herbal Consultation" },
     { href: "/bone-setting", label: "Bone Setting" },
     { href: "/other-treatment", label: "Other Treatments" },
     { href: "/cupping", label: "Cupping" },
@@ -103,6 +103,24 @@ export const reviews = {
     },
   ],
 };
+
+export const homeConditions = [
+  { href: "/back-pain", label: "Back Pain" },
+  { href: "/sciatica-treatment", label: "Sciatica" },
+  { href: "/shoulder-pain", label: "Shoulder Pain" },
+  { href: "/frozen-shoulder", label: "Frozen Shoulder" },
+  { href: "/conditions#pain-msk", label: "Neck Pain" },
+  { href: "/sports-injuries", label: "Sports Injuries" },
+  { href: "/conditions#womens-health", label: "Women's Health" },
+  { href: "/conditions#pain-msk", label: "Headaches & Migraines" },
+];
+
+export const homeServices = [
+  { href: "/acupuncture", label: "Acupuncture", note: "Needling for pain and recovery" },
+  { href: "/tui-na-massage", label: "Tui Na", note: "Manual therapy for joints and muscle" },
+  { href: "/bone-setting", label: "Bone Setting", note: "Joint restriction and alignment work" },
+  { href: "/herbal-consultation", label: "Herbal Consultation", note: "Chinese herbal medicine after assessment" },
+];
 
 export const practitioners = [
   {

@@ -1,5 +1,5 @@
 ---
-import { nav, site } from "../data/site";
+import { nav } from "../data/site";
 import { conditionCategories, conditionsInCategory } from "../data/conditions";
 ---
 <header class="site-header" id="siteHeader">
@@ -8,10 +8,6 @@ import { conditionCategories, conditionsInCategory } from "../data/conditions";
     <!-- Brand -->
     <a class="brand" href="/">
       <img src="/images/ming_logo-full-7UbV6e2W5oyjr2Ir.png" alt="Yin Yang CMC" width="48" height="48" />
-      <span>
-        <span class="brand-name">Yin Yang CMC</span>
-        <span class="brand-sub">UK Clinic</span>
-      </span>
     </a>
 
     <!-- Desktop navigation -->
@@ -65,8 +61,6 @@ import { conditionCategories, conditionsInCategory } from "../data/conditions";
 
     <!-- Desktop CTA -->
     <div class="header-right">
-      <a class="hdr-phone" href={`tel:${site.phoneIntl}`}>{site.phoneDisplay}</a>
-      <div class="hdr-divider" aria-hidden="true"></div>
       <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book Now</a>
     </div>
 
@@ -109,7 +103,6 @@ import { conditionCategories, conditionsInCategory } from "../data/conditions";
   </div>
   <div class="mob-ctas">
     <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book Now on WhatsApp</a>
-    <a class="btn btn-outline" href={`tel:${site.phoneIntl}`}>Call {site.phoneDisplay}</a>
   </div>
 </nav>
 

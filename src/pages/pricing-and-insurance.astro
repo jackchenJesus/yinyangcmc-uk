@@ -1,144 +1,696 @@
 ---
 import Base from "../layouts/Base.astro";
-import PageHero from "../components/PageHero.astro";
 import FAQAccordion from "../components/FAQAccordion.astro";
-import CTASection from "../components/CTASection.astro";
+import { site } from "../data/site";
 
 const faqItems = [
   {
-    q: "Is the £10 consultation fee separate from the treatment fee?",
+    q: "Is the £10 consultation fee separate from treatment?",
     a: "Yes. The consultation covers your TCM assessment and diagnosis. If treatment follows in the same session, the relevant treatment fee applies in addition.",
   },
   {
-    q: "Does my NHS GP referral affect my insurance claim?",
+    q: "Does a GP referral affect my insurance claim?",
     a: "Some private insurers require a GP referral before authorising complementary therapy claims. Check your policy terms — we can provide any clinical documentation your insurer requires.",
   },
   {
-    q: "Are herbal granules included in the consultation fee?",
+    q: "Are herbal granules included?",
     a: "Herbal granules are charged per day of prescription, separate from consultation and treatment fees.",
   },
   {
-    q: "What does the 20% first-visit discount apply to?",
-    a: "The first-visit discount is applied at booking to your first treatment.",
+    q: "What does the 20% first-treatment discount apply to?",
+    a: "The first-treatment discount is applied at booking to your first treatment.",
   },
   {
-    q: "Do I need to inform you I'm using insurance before my appointment?",
+    q: "Do I need to tell you I am using insurance?",
     a: "Yes — tell us at booking so we prepare the correct documentation.",
   },
   {
-    q: "My insurer isn't listed — can I still claim?",
-    a: "Often yes. We provide receipts that meet standard cash-plan and insurer submission requirements. Check with your insurer first.",
+    q: "What if my insurer is not listed?",
+    a: "Often yes, you can still claim. We provide receipts that meet standard cash-plan and insurer submission requirements. Check with your insurer first.",
   },
+];
+
+const insurers = [
+  { src: "/images/axa-pgrbfCYpRRoo1New.png", alt: "AXA Health" },
+  { src: "/images/pru-health-vitalty-insurance-london-canada-water-se16-stratford-e15-e20-canary-wharf-e14-london-bridge-se1-rDAt2VDOOdmYgqEM.webp", alt: "Vitality" },
+  { src: "/images/screenshot-2026-06-23-183044-YhgRn9pOvK6KsiM2.png", alt: "Aviva" },
+  { src: "/images/wpa-sbHlIPUxP3aHSfe4.png", alt: "WPA" },
 ];
 ---
 <Base title="Acupuncture cost Wimbledon & Reading | Price & Insurance | yin yang uk" description="Curious about acupuncture cost Wimbledon or acupuncture cost Reading? View our price list for expert acupuncture, bone-setting, Tui Na, and insurance details.">
-  <PageHero
-    title="Transparent fees. No surprises."
-    lede="General TCM consultation from £10. Acupuncture £60. All-inclusive Integrated Treatment £120. Both practitioners are recognised providers with AXA Health, Vitality, Aviva, and WPA."
-    ctaSecLabel="All Services"
-    ctaSecHref="/clinical-services"
-  />
 
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Fees</p>
-        <h2>Our treatment fees</h2>
-        <p>20% off your first treatment, applied at booking. No hidden charges at checkout.</p>
-      </div>
-
-      <div class="grid-3">
-        <article class="card">
-          <div class="card-body">
-            <p class="price-label">General TCM Consultation</p>
-            <p class="price-val">£10</p>
-            <p>Initial assessment &amp; diagnosis</p>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card-body">
-            <p class="price-label">Acupuncture</p>
-            <p class="price-val">£60</p>
-            <p>Per treatment session</p>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card-body">
-            <p class="price-label">Integrated Treatment</p>
-            <p class="price-val">£120</p>
-            <p>All techniques as clinically indicated</p>
-          </div>
-        </article>
+<!-- ═══════════════════════════════════════════════
+     §1 HERO
+═══════════════════════════════════════════════ -->
+<section class="pi-hero">
+  <div class="wrap pi-hero-grid">
+    <div>
+      <p class="eyebrow">Pricing &amp; Insurance · Reading &amp; Wimbledon</p>
+      <h1>Transparent fees.<br />No surprises.</h1>
+      <p class="lede">
+        General TCM consultation from £10. Acupuncture £60. Integrated Treatment £120.
+        Recognised by major UK health insurers.
+      </p>
+      <div class="actions">
+        <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
+        <a class="btn btn-ghost" href="#insurance">How insurance works</a>
       </div>
     </div>
-  </section>
 
-  <section class="section-soft">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Insurance</p>
-        <h2>Provider numbers</h2>
-        <p>Quote these numbers when making a claim. Your sessions may already be covered — ask us when you book.</p>
+    <div class="pi-hero-visual">
+      <img
+        src="/images/img_6058-eVlfhKuykGV6M98J.jpg"
+        alt="Treatment room at Yin Yang CMC in Reading and Wimbledon"
+        width="560"
+        height="400"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="pi-hero-panel">
+        <p class="pi-hero-panel-label">Recognised UK provider</p>
+        <p class="pi-hero-panel-names">AXA Health · Vitality · Aviva · WPA</p>
       </div>
-      <div class="grid-2">
-        <article class="card">
-          <div class="card-body">
-            <h3>Winton Hui (Shing Hui)</h3>
-            <p>ATCM: FM0250005 · MBAcC: 963087</p>
-            <p>Vitality Health: SP123180</p>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card-body">
-            <h3>Andrea Li (Chui Ying Li)</h3>
-            <p>ATCM: FM0250004 · MBAcC: 963093</p>
-            <p>Vitality Health: SP123173</p>
-          </div>
-        </article>
-      </div>
-      <div class="accred-divider">
-        <p class="accred-divider-label">Recognised by UK health insurers</p>
-        <div class="insurer-strip">
-          <img src="/images/axa-pgrbfCYpRRoo1New.png" alt="AXA Health" />
-          <img src="/images/pru-health-vitalty-insurance-london-canada-water-se16-stratford-e15-e20-canary-wharf-e14-london-bridge-se1-rDAt2VDOOdmYgqEM.webp" alt="Vitality Health" />
-          <img src="/images/screenshot-2026-06-23-183044-YhgRn9pOvK6KsiM2.png" alt="Aviva Health" />
-          <img src="/images/wpa-sbHlIPUxP3aHSfe4.png" alt="WPA" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §2 TREATMENT FEES
+═══════════════════════════════════════════════ -->
+<section class="section" id="fees">
+  <div class="wrap">
+    <div class="section-head pi-fees-head">
+      <p class="eyebrow">Fees</p>
+      <h2>Our treatment fees</h2>
+      <p>Clear session prices for acupuncture and integrated Chinese medicine at our Reading and Wimbledon clinics. No hidden charges at checkout.</p>
+    </div>
+
+    <p class="pi-offer-banner">
+      <span class="pi-offer-kicker">New patients</span>
+      <span class="pi-offer-copy">20% off your first treatment</span>
+      <span class="pi-offer-note">Applied at booking</span>
+    </p>
+
+    <div class="pi-price-grid">
+      <article class="pi-price-card">
+        <span class="pi-price-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" />
+            <rect x="9" y="3" width="6" height="4" rx="1" />
+            <path d="M9 12h6M9 16h4" />
+          </svg>
+        </span>
+        <h3>General TCM Consultation</h3>
+        <p class="pi-price-val">£10</p>
+        <p class="pi-price-desc">Initial assessment &amp; diagnosis</p>
+      </article>
+
+      <article class="pi-price-card">
+        <span class="pi-price-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3.2" />
+            <path d="M12 4v3.2M12 16.8V20M4 12h3.2M16.8 12H20" />
+            <path d="m7.1 7.1 2.2 2.2M14.7 14.7l2.2 2.2M16.9 7.1l-2.2 2.2M9.3 14.7l-2.2 2.2" />
+          </svg>
+        </span>
+        <h3>Acupuncture</h3>
+        <p class="pi-price-val">£60</p>
+        <p class="pi-price-desc">Per treatment session</p>
+      </article>
+
+      <article class="pi-price-card is-featured">
+        <span class="pi-price-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v18M8 7h8M6 12h12M8 17h8" />
+          </svg>
+        </span>
+        <h3>Integrated Treatment</h3>
+        <p class="pi-price-val">£120</p>
+        <p class="pi-price-desc">All techniques as clinically indicated</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §3 INSURANCE TRUST
+═══════════════════════════════════════════════ -->
+<section class="section-soft" id="insurance">
+  <div class="wrap">
+    <div class="section-head pi-insure-head">
+      <p class="eyebrow">Private health insurance</p>
+      <h2>Recognised by leading UK health insurers</h2>
+      <p>
+        Eligible acupuncture treatment may be claimable depending on your policy.
+        We cannot confirm cover on behalf of your insurer.
+      </p>
+    </div>
+
+    <ul class="pi-insurers">
+      {insurers.map((insurer) => (
+        <li>
+          <img src={insurer.src} alt={insurer.alt} height="32" loading="lazy" />
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §4 PROVIDER NUMBERS
+═══════════════════════════════════════════════ -->
+<section class="section" id="provider-numbers">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Provider numbers</p>
+      <h2>Qualified UK practitioners</h2>
+      <p>
+        Both practitioners are British Acupuncture Council and ATCM registered, and recognised insurance providers.
+        You may need these provider numbers when making an insurance claim.
+      </p>
+    </div>
+
+    <div class="pi-prov-grid">
+      <article class="pi-prov-card">
+        <img
+          src="/images/e--ae-a-_edited-XhbCA7G3Oou0Mlsq.jpg"
+          alt="Winton Hui (Shing Hui), Yin Yang CMC practitioner"
+          width="96"
+          height="96"
+          loading="lazy"
+        />
+        <div>
+          <h3>Winton Hui (Shing Hui)</h3>
+          <p class="pi-prov-role">British Acupuncture Council &amp; ATCM registered</p>
+          <dl class="pi-reg-list">
+            <div><dt>ATCM</dt><dd>FM0250005</dd></div>
+            <div><dt>MBAcC</dt><dd>963087</dd></div>
+            <div><dt>Vitality Health</dt><dd>SP123180</dd></div>
+          </dl>
         </div>
-      </div>
-    </div>
-  </section>
+      </article>
 
-  <section class="section">
-    <div class="wrap grid-2-lg" style="gap:4rem">
+      <article class="pi-prov-card">
+        <img
+          src="/images/aeeppsc-c-e-a-_edited_edited-a6uAksf7EtvBGWTM.jpg"
+          alt="Andrea Li (Chui Ying Li), Yin Yang CMC practitioner"
+          width="96"
+          height="96"
+          loading="lazy"
+        />
+        <div>
+          <h3>Andrea Li (Chui Ying Li)</h3>
+          <p class="pi-prov-role">British Acupuncture Council &amp; ATCM registered</p>
+          <dl class="pi-reg-list">
+            <div><dt>ATCM</dt><dd>FM0250004</dd></div>
+            <div><dt>MBAcC</dt><dd>963093</dd></div>
+            <div><dt>Vitality Health</dt><dd>SP123173</dd></div>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §5 HOW TO CLAIM
+═══════════════════════════════════════════════ -->
+<section class="section-soft" id="how-to-claim">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Claims</p>
+      <h2>How to claim on your insurance</h2>
+      <p>Three straightforward steps — most patients set this up before their first visit.</p>
+    </div>
+
+    <ol class="pi-steps">
+      <li>
+        <span class="pi-step-num" aria-hidden="true">01</span>
+        <h3>Check your cover</h3>
+        <p>Confirm that acupuncture or complementary therapy is included in your policy and whether pre-authorisation or a GP referral is required.</p>
+      </li>
+      <li>
+        <span class="pi-step-num" aria-hidden="true">02</span>
+        <h3>Book your treatment</h3>
+        <p>Tell Yin Yang CMC that you intend to claim through insurance when booking, so we can prepare the correct documentation.</p>
+      </li>
+      <li>
+        <span class="pi-step-num" aria-hidden="true">03</span>
+        <h3>Submit your claim</h3>
+        <p>Use the appropriate practitioner provider number and the itemised receipt supplied after treatment.</p>
+      </li>
+    </ol>
+
+    <p class="pi-cash-note">
+      Health cash plans such as Simplyhealth and Healthshield may also cover treatment depending on your policy.
+    </p>
+
+    <div class="pi-help">
       <div>
-        <p class="eyebrow">Claims</p>
-        <h2>How to claim on your insurance</h2>
-        <p>Most claims take just a few minutes to set up. Follow these steps.</p>
+        <h3>Not sure if you're covered?</h3>
+        <p>
+          Send us your insurer name before booking and we'll help you identify what information you may need to check with them.
+        </p>
       </div>
-      <ol class="claim-list">
-        <li>Verify your benefit — confirm acupuncture or complementary therapy is included.</li>
-        <li>Get authorisation — some insurers require pre-approval and a GP referral.</li>
-        <li>Book &amp; inform us that you are claiming on insurance.</li>
-        <li>Quote the provider number above when submitting your claim.</li>
-        <li>Receive your itemised receipt after every session.</li>
-        <li>Health cash plans (Simplyhealth, Healthshield and similar) also accepted.</li>
-      </ol>
+      <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Ask us on WhatsApp</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section-soft">
-    <div class="wrap grid-2-lg" style="gap:5rem">
-      <div>
-        <p class="eyebrow">Common Questions</p>
-        <h2>Pricing &amp; insurance FAQ</h2>
-        <p class="muted">If you are unsure whether your policy covers treatment, message us before booking — we can help you check.</p>
-      </div>
-      <FAQAccordion items={faqItems} />
+
+<!-- ═══════════════════════════════════════════════
+     §6 FAQ
+═══════════════════════════════════════════════ -->
+<section class="section" id="faq">
+  <div class="wrap pi-faq">
+    <div>
+      <p class="eyebrow">Common questions</p>
+      <h2>Pricing &amp; insurance FAQ</h2>
+      <p class="muted">
+        If you are unsure whether your policy covers acupuncture or complementary treatment, message us before booking — we can help you check what to ask your insurer.
+      </p>
     </div>
-  </section>
+    <FAQAccordion items={faqItems} />
+  </div>
+</section>
 
-  <CTASection
-    heading="Ready to book your first session?"
-    sub="20% off your first treatment. Wimbledon and Reading clinics available."
-  />
+
+<!-- ═══════════════════════════════════════════════
+     §7 FINAL CTA
+═══════════════════════════════════════════════ -->
+<section class="cta-section pi-cta">
+  <div class="wrap container-narrow">
+    <p class="eyebrow" style="color:var(--gold)">Book your appointment</p>
+    <h2>Ready to book your first session?</h2>
+    <p class="pi-cta-offer">20% off your first treatment</p>
+    <p>Available at <strong>Reading Clinic</strong> · <strong>Wimbledon Clinic</strong></p>
+    <div class="actions actions-c">
+      <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book on WhatsApp</a>
+      <a class="btn btn-ghost" href={`tel:${site.phoneIntl}`}>Call {site.phoneDisplay}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  #fees,
+  #insurance,
+  #provider-numbers,
+  #how-to-claim,
+  #faq {
+    scroll-margin-top: 96px;
+  }
+
+  /* Hero — compact two-column, not a tall banner */
+  .pi-hero {
+    background: var(--navy);
+    color: var(--white);
+    padding: 3.25rem 0 3rem;
+  }
+  .pi-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 3.5rem;
+    align-items: center;
+  }
+  .pi-hero h1 {
+    color: var(--white);
+    font-size: clamp(1.85rem, 4vw, 2.9rem);
+    margin-bottom: 0.75rem;
+  }
+  .pi-hero .lede {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 42ch;
+    line-height: 1.65;
+    margin-bottom: 1.35rem;
+  }
+  .pi-hero-visual {
+    position: relative;
+    min-width: 0;
+  }
+  .pi-hero-visual img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--r-lg);
+    display: block;
+  }
+  .pi-hero-panel {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    background: var(--white);
+    color: var(--navy);
+    border-radius: var(--r-md);
+    padding: 0.85rem 1.1rem;
+    box-shadow: var(--sh-sm);
+  }
+  .pi-hero-panel-label {
+    margin: 0 0 0.15rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .pi-hero-panel-names {
+    margin: 0;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.4;
+  }
+
+  .pi-fees-head,
+  .pi-insure-head { max-width: 58ch; }
+
+  /* First-treatment offer — understated clinic banner */
+  .pi-offer-banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.45rem 1rem;
+    margin: 0 0 1.75rem;
+    padding: 0.95rem 1.25rem;
+    background: var(--cream);
+    border: 1px solid rgba(192, 152, 90, 0.28);
+    border-radius: var(--r-md);
+  }
+  .pi-offer-kicker {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .pi-offer-copy {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+  .pi-offer-note {
+    margin-left: auto;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  /* Pricing cards — clinic fees, not SaaS tables */
+  .pi-price-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.15rem;
+  }
+  .pi-price-card {
+    position: relative;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    box-shadow: var(--sh-xs);
+    padding: 2rem 1.6rem 1.85rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .pi-price-card.is-featured {
+    border-color: rgba(192, 152, 90, 0.42);
+    box-shadow: var(--sh-sm);
+    background: #fffdf8;
+  }
+  .pi-price-card.is-featured::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold);
+    border-radius: var(--r-lg) var(--r-lg) 0 0;
+  }
+  .pi-price-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--r-md);
+    background: var(--cream);
+    color: var(--gold);
+    display: grid;
+    place-items: center;
+    margin-bottom: 1.15rem;
+  }
+  .pi-price-card h3 {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.7rem;
+  }
+  .pi-price-val {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 4vw, 3.1rem);
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1;
+    margin: 0 0 0.7rem;
+  }
+  .pi-price-desc {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* Insurer logo row */
+  .pi-insurers {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+  .pi-insurers li {
+    margin: 0;
+    min-height: 88px;
+    display: grid;
+    place-items: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 1.1rem 1rem;
+  }
+  .pi-insurers img {
+    height: 32px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    filter: grayscale(0.15);
+  }
+
+  /* Practitioner provider cards */
+  .pi-prov-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+  .pi-prov-card {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 1.15rem;
+    align-items: start;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    box-shadow: var(--sh-xs);
+    padding: 1.4rem 1.5rem 1.45rem;
+    min-width: 0;
+  }
+  .pi-prov-card img {
+    width: 88px;
+    height: 88px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: var(--r-md);
+  }
+  .pi-prov-card h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.2rem;
+  }
+  .pi-prov-role {
+    margin: 0 0 0.9rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .pi-reg-list {
+    margin: 0;
+    display: grid;
+    gap: 0.35rem;
+  }
+  .pi-reg-list > div {
+    display: grid;
+    grid-template-columns: 8.2rem minmax(0, 1fr);
+    gap: 0.6rem;
+    align-items: baseline;
+    padding: 0.4rem 0;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  .pi-reg-list dt {
+    margin: 0;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .pi-reg-list dd {
+    margin: 0;
+    font-weight: 700;
+    color: var(--navy);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+    user-select: all;
+  }
+
+  /* Claim process */
+  .pi-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.1rem;
+    counter-reset: none;
+  }
+  .pi-steps li {
+    margin: 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    box-shadow: var(--sh-xs);
+    padding: 1.6rem 1.45rem 1.55rem;
+    min-width: 0;
+  }
+  .pi-step-num {
+    display: block;
+    font-family: var(--serif);
+    font-size: 1.55rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.85rem;
+  }
+  .pi-steps h3 {
+    font-size: 1.12rem;
+    margin: 0 0 0.45rem;
+  }
+  .pi-steps p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .pi-cash-note {
+    margin: 1.35rem 0 0;
+    font-size: 0.88rem;
+    color: var(--muted);
+    max-width: 62ch;
+  }
+
+  /* Soft conversion block */
+  .pi-help {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 1.5rem 1.6rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+  }
+  .pi-help h3 {
+    font-size: 1.35rem;
+    margin: 0 0 0.35rem;
+  }
+  .pi-help p {
+    margin: 0;
+    max-width: 52ch;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  .pi-help .btn { flex-shrink: 0; }
+
+  .pi-faq {
+    display: grid;
+    grid-template-columns: 1.05fr 1.2fr;
+    gap: 4.5rem;
+    align-items: start;
+  }
+  .pi-faq :global(.faq-item summary:focus-visible) {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .pi-cta { text-align: center; }
+  .pi-cta-offer {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--gold-lt);
+    margin: 0 auto 0.35rem;
+  }
+  .pi-cta p { margin-bottom: 0.4rem; }
+  .pi-cta .actions { margin-top: 1.6rem; }
+
+  @media (max-width: 960px) {
+    .pi-hero { padding: 2.6rem 0 2.4rem; }
+    .pi-hero-grid,
+    .pi-prov-grid,
+    .pi-faq {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+    .pi-hero-visual img { height: 240px; }
+    .pi-price-grid,
+    .pi-steps { grid-template-columns: 1fr; }
+    .pi-help { flex-direction: column; align-items: flex-start; }
+    .pi-offer-note { margin-left: 0; }
+  }
+
+  @media (max-width: 640px) {
+    .pi-hero { padding: 2.15rem 0 2rem; }
+    .pi-hero .lede { margin-bottom: 1.1rem; }
+    .pi-hero .actions,
+    .pi-help .btn,
+    .pi-cta .actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .pi-hero .actions .btn,
+    .pi-help .btn,
+    .pi-cta .actions .btn { width: 100%; }
+    .pi-insurers { grid-template-columns: 1fr 1fr; }
+    .pi-insurers li { min-height: 76px; padding: 0.85rem 0.7rem; }
+    .pi-insurers img { height: 26px; max-width: 110px; }
+    .pi-prov-card { grid-template-columns: 72px 1fr; gap: 0.9rem; padding: 1.15rem 1.1rem 1.2rem; }
+    .pi-prov-card img { width: 72px; height: 72px; }
+    .pi-reg-list > div { grid-template-columns: 6.4rem minmax(0, 1fr); }
+    .pi-price-card { padding: 1.55rem 1.3rem 1.45rem; }
+    .pi-hero-visual img { height: 200px; }
+    .pi-hero-panel-names { font-size: 0.8rem; }
+    .pi-offer-banner { padding: 0.85rem 1rem; }
+  }
+</style>
+
 </Base>

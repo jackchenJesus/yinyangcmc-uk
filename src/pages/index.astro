@@ -1,18 +1,18 @@
 ---
 import Base from "../layouts/Base.astro";
-import { clinics, practitioners, reviews, site } from "../data/site";
+import { clinics, homeConditions, homeServices, practitioners, reviews, site } from "../data/site";
 ---
-<Base title="Chinese Medicine Wimbledon & Reading | Yin-Yang Clinic | yin yang uk" description="Chinese medicine clinic in Reading and Wimbledon. British Acupuncture Council registered. Acupuncture, Tui Na, bone-setting and herbal care. No GP referral needed.">
+<Base title="Chinese Medicine Wimbledon & Reading | Yin-Yang Clinic | yin yang uk" description="Chinese medicine clinic in Reading and Wimbledon. British Acupuncture Council registered. Acupuncture, Tui Na, bone-setting and Chinese herbal medicine consultation. No GP referral needed.">
   <section class="hero">
     <img class="hero-bg" src="/images/webbanner-eQwGJSc8Re6udP6z.jpg" alt="" />
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="hero-inner">
       <p class="eyebrow" style="color:var(--gold)">Reading &amp; Wimbledon</p>
       <h1>Chinese Medicine in Reading &amp; Wimbledon</h1>
-      <p class="lead">Acupuncture · Tui Na · Bone setting · Herbal medicine</p>
+      <p class="lead">Acupuncture · Tui Na · Bone Setting · Herbal Consultation</p>
       <div class="actions" style="justify-content:center">
         <a class="btn btn-gold" href="#booknowform">Book Now</a>
-        <a class="btn btn-ghost" href="/clinical-services">Clinical Services</a>
+        <a class="btn btn-ghost" href="#treat">View Conditions We Treat</a>
       </div>
     </div>
     <div class="hero-facts" aria-label="Clinic at a glance">
@@ -43,7 +43,7 @@ import { clinics, practitioners, reviews, site } from "../data/site";
         <p class="eyebrow">Our clinic</p>
         <h2>Care for local patients<br>in Berkshire &amp; SW London</h2>
         <p class="lead">
-          Two UK clinics — Reading town centre and Wimbledon SW19. British Acupuncture Council registered. Recognised by AXA, Vitality, Aviva and WPA.
+          Two UK clinics — <a href="/reading-clinic">Reading town centre</a> and <a href="/wimbledon-clinic">Wimbledon SW19</a>. British Acupuncture Council registered. <a href="/pricing-and-insurance">Recognised by AXA, Vitality, Aviva and WPA</a>.
         </p>
         <ul class="home-intro-points">
           <li>No GP referral needed</li>
@@ -52,7 +52,7 @@ import { clinics, practitioners, reviews, site } from "../data/site";
         </ul>
         <div class="actions" style="margin-top:1.5rem">
           <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
-          <a class="btn btn-outline" href="/clinical-services">Explore Services</a>
+          <a class="btn btn-outline" href="#services">Clinical services</a>
         </div>
       </div>
       <div class="home-intro-photo">
@@ -65,7 +65,46 @@ import { clinics, practitioners, reviews, site } from "../data/site";
     </div>
   </section>
 
-  <section class="section-soft" id="reviews">
+  <section class="section" id="treat">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Conditions</p>
+        <h2>What Can We Help With?</h2>
+        <p>Explore some of the common conditions our practitioners support with acupuncture and traditional Chinese medicine.</p>
+      </div>
+      <div class="treat-grid">
+        {homeConditions.map((c) => (
+          <a class="treat-card" href={c.href}>{c.label}</a>
+        ))}
+      </div>
+      <div class="actions" style="justify-content:center;margin-top:1.35rem">
+        <a class="btn btn-outline" href="/conditions">View All Conditions</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Clinical services</p>
+        <h2>How we treat</h2>
+        <p>Treatment is chosen after assessment — not from a fixed package.</p>
+      </div>
+      <div class="home-svc-grid">
+        {homeServices.map((s) => (
+          <a class="home-svc-card" href={s.href}>
+            <strong>{s.label}</strong>
+            <span>{s.note}</span>
+          </a>
+        ))}
+      </div>
+      <div class="actions" style="justify-content:center;margin-top:1.35rem">
+        <a class="btn btn-outline" href="/clinical-services">All clinical services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reviews">
     <div class="wrap">
       <div class="reviews-head">
         <div class="section-head">
@@ -103,41 +142,12 @@ import { clinics, practitioners, reviews, site } from "../data/site";
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Our Clinics</p>
-        <h2>Reading &amp; Wimbledon</h2>
-      </div>
-      <div class="origin-grid">
-        <article class="origin-card origin-uk">
-          <img src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi_2-M3Nk8jihE1285fVW.jpg" alt="Yin Yang CMC Reading clinic" />
-          <div class="origin-copy">
-            <span class="loc-tag">United Kingdom</span>
-            <h3>Two local clinics</h3>
-            <p>Acupuncture, Tui Na and herbal care for back pain, sports injury, women's health and long-term conditions — same team at both sites.</p>
-          </div>
-        </article>
-        <article class="origin-card origin-hk">
-          <span class="origin-mark" aria-hidden="true">香港</span>
-          <div class="origin-copy">
-            <span class="loc-tag">Also in Hong Kong</span>
-            <h3>Hong Kong origin</h3>
-            <p class="origin-locs">To Kwa Wan · Mei Foo</p>
-            <p>Founded in 2014. The same hospital-trained standard, now in the UK.</p>
-          </div>
-          <a class="btn btn-ghost btn-sm" href="https://www.yinyangcmc.com" target="_blank" rel="noreferrer">Hong Kong site</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
+  <section class="section-soft">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">The team</p>
         <h2>Our Practitioners</h2>
-        <p>MSc-qualified. UK registered (ATCM &amp; MBAcC). Both work across Reading and Wimbledon.</p>
+        <p>MSc-qualified. UK registered (ATCM &amp; MBAcC). Both work across <a href="/reading-clinic">Reading</a> and <a href="/wimbledon-clinic">Wimbledon</a>.</p>
       </div>
       <div class="home-prac-grid home-prac-teaser">
         {practitioners.map((p) => (
@@ -157,7 +167,7 @@ import { clinics, practitioners, reviews, site } from "../data/site";
     </div>
   </section>
 
-  <section class="section-soft">
+  <section class="section">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Visit Us</p>
@@ -171,7 +181,7 @@ import { clinics, practitioners, reviews, site } from "../data/site";
             <h3>Reading</h3>
             <p class="loc-meta">{clinics.reading.address}<br>{clinics.reading.hours} · By appointment</p>
             <div class="loc-actions">
-              <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic details</a>
+              <a class="btn btn-outline btn-sm" href="/reading-clinic">Reading clinic</a>
               <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book</a>
             </div>
           </div>
@@ -183,12 +193,20 @@ import { clinics, practitioners, reviews, site } from "../data/site";
             <h3>Wimbledon</h3>
             <p class="loc-meta">{clinics.wimbledon.address}<br>{clinics.wimbledon.hours} · By appointment</p>
             <div class="loc-actions">
-              <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic details</a>
+              <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Wimbledon clinic</a>
               <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book</a>
             </div>
           </div>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="home-heritage" aria-label="Clinic history">
+    <div class="wrap heritage-inner">
+      <p class="eyebrow">Established in 2014</p>
+      <p>Originally founded in Hong Kong, Yin Yang Chinese Medical now brings the same experienced, patient-focused approach to our clinics in Reading and Wimbledon.</p>
+      <a class="heritage-link" href="https://www.yinyangcmc.com" target="_blank" rel="noreferrer">Hong Kong clinic site</a>
     </div>
   </section>
 
