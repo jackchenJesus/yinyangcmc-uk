@@ -1,5 +1,6 @@
 ---
 import { nav, site } from "../data/site";
+import { conditionCategories, conditionsInCategory } from "../data/conditions";
 ---
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
@@ -26,14 +27,23 @@ import { nav, site } from "../data/site";
             {nav.services.map((i) => <a href={i.href} role="menuitem">{i.label}</a>)}
           </div>
         </li>
-        <li class="drop-wrap">
+        <li class="drop-wrap mega-wrap">
           <button class="nav-btn" aria-expanded="false" aria-haspopup="true">
-            Condition Treatments
+            Conditions
             <svg class="drop-svg" viewBox="0 0 10 6" aria-hidden="true"><polyline points="1 1 5 5 9 1"/></svg>
           </button>
-          <div class="drop-menu" role="menu">
-            <a class="drop-top" href="/conditions" role="menuitem">All Conditions</a>
-            {nav.conditions.map((i) => <a href={i.href} role="menuitem">{i.label}</a>)}
+          <div class="drop-menu mega-menu" role="menu">
+            <div class="mega-cols">
+              {conditionCategories.map((cat) => (
+                <div class="mega-col">
+                  <a class="mega-col-label" href={`/conditions#${cat.id}`}>{cat.short}</a>
+                  {conditionsInCategory(cat.id).map((i) => (
+                    <a href={i.href} role="menuitem">{i.label}</a>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <a class="mega-foot" href="/conditions" role="menuitem">All Conditions →</a>
           </div>
         </li>
         <li class="drop-wrap">
@@ -46,6 +56,7 @@ import { nav, site } from "../data/site";
             {nav.locations.map((i) => <a href={i.href} role="menuitem">{i.label}</a>)}
           </div>
         </li>
+        <li><a class="nav-link" href="/our-practitioners">Practitioners</a></li>
         <li><a class="nav-link" href="/pricing-and-insurance">Pricing &amp; Insurance</a></li>
         <li><a class="nav-link" href="/course">Course</a></li>
         <li><a class="nav-link" href="/contact">Contact</a></li>
@@ -75,9 +86,14 @@ import { nav, site } from "../data/site";
     {nav.services.map((i) => <a href={i.href}>{i.label}</a>)}
   </div>
   <div class="mob-group">
-    <span class="mob-label">Condition Treatments</span>
+    <span class="mob-label">Conditions</span>
     <a href="/conditions">All Conditions</a>
-    {nav.conditions.map((i) => <a href={i.href}>{i.label}</a>)}
+    {conditionCategories.map((cat) => (
+      <>
+        <span class="mob-sublabel">{cat.short}</span>
+        {conditionsInCategory(cat.id).map((i) => <a href={i.href}>{i.label}</a>)}
+      </>
+    ))}
   </div>
   <div class="mob-group">
     <span class="mob-label">Our Locations</span>
@@ -86,6 +102,7 @@ import { nav, site } from "../data/site";
   </div>
   <div class="mob-group">
     <span class="mob-label">More</span>
+    <a href="/our-practitioners">Our Practitioners</a>
     <a href="/pricing-and-insurance">Pricing &amp; Insurance</a>
     <a href="/course">Course</a>
     <a href="/contact">Contact</a>

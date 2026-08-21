@@ -1,0 +1,191 @@
+---
+import Base from "../layouts/Base.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import CTASection from "../components/CTASection.astro";
+import { site } from "../data/site";
+import { conditionCategories, conditionsInCategory } from "../data/conditions";
+
+const faqItems = [
+  {
+    q: "Which conditions do you treat?",
+    a: "Musculoskeletal pain is our largest caseload — back pain, sciatica, shoulder pain, frozen shoulder and sports injuries each have a dedicated page. We also see women's health, skin, digestive, anxiety and sleep presentations. If you are unsure whether your condition is suitable, message us on WhatsApp before booking.",
+  },
+  {
+    q: "Do I need a diagnosis from my GP first?",
+    a: "No GP referral is required. Bring any existing imaging or specialist letters if you have them — useful, not mandatory. If your presentation needs medical investigation first, we will say so at assessment.",
+  },
+  {
+    q: "Which treatments are used for which conditions?",
+    a: "That is decided at consultation, not from a menu. Back pain and sciatica often combine acupuncture with Tui Na and bone-setting. Frozen shoulder and sports injuries follow the same logic with different emphasis. Internal and skin presentations more often include herbal medicine. Each live condition page lists the modalities typically used.",
+  },
+  {
+    q: "How many sessions will I need?",
+    a: "Acute pain often changes within 2–4 sessions. Chronic or regulatory conditions are reviewed over a longer course. Your practitioner gives a realistic timeline at the first appointment and adjusts it according to your response.",
+  },
+  {
+    q: "Is the same treatment available in Reading and Wimbledon?",
+    a: "Yes. Same practitioners, same protocols, both clinics. You can start at one location and continue at the other.",
+  },
+];
+---
+<Base
+  title="Conditions We Treat | TCM Pain & Health Wimbledon & Reading | Yin Yang CMC"
+  description="Conditions treated at Yin Yang CMC in Wimbledon and Reading — back pain, sciatica, frozen shoulder, sports injuries, women's health, skin and sleep. British Acupuncture Council registered."
+>
+
+<section class="page-hero" style="min-height:62vh;display:grid;place-items:center">
+  <img
+    class="page-hero-bg"
+    src="/images/conditions-we-treat-OWrWp19D0BpU3xPw.webp"
+    alt="Conditions treated at Yin Yang CMC"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="wrap" style="padding:5rem 0 3.5rem">
+    <p class="eyebrow">Conditions · Reading &amp; Wimbledon</p>
+    <h1>Conditions we treat</h1>
+    <p class="lede">
+      One condition, one page — each mapped to the treatments we actually use.
+      Pain and musculoskeletal care first; women's health, skin and internal presentations alongside.
+    </p>
+    <div class="actions" style="margin-top:1.2rem">
+      <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-ghost" href="/clinical-services">View treatments</a>
+    </div>
+    <div class="hero-trust-row">
+      <span><span class="htc">✓</span> Assessed, not packaged</span>
+      <span><span class="htc">✓</span> Two UK clinics</span>
+      <span><span class="htc">✓</span> BAcC &amp; ATCM registered</span>
+      <span><span class="htc">✓</span> English &amp; Cantonese</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-al" style="gap:4rem">
+      <div>
+        <p class="eyebrow">How to use this directory</p>
+        <h2>Find the page that matches your pain</h2>
+        <p>
+          Dedicated pages currently cover the five presentations we see most often.
+          Each page explains the condition, typical causes, and the treatments used for it —
+          acupuncture, Tui Na, bone-setting, cupping or herbal medicine as indicated.
+        </p>
+        <p>
+          Conditions listed without a full page are still treated at both clinics.
+          Message us with your symptoms and we will tell you whether an appointment is appropriate.
+        </p>
+      </div>
+      <div class="grid-2" style="gap:1px;background:var(--border);border-radius:var(--r-lg);overflow:hidden;align-content:start">
+        {[
+          { val: "5", label: "Dedicated condition pages" },
+          { val: "15", label: "Presentations listed here" },
+          { val: "2", label: "Clinics — same protocol" },
+          { val: "No GP", label: "referral needed" },
+        ].map(({ val, label }) => (
+          <div style="background:var(--white);padding:1.5rem;text-align:center">
+            <span style="display:block;font-family:var(--serif);font-size:2rem;color:var(--navy);line-height:1;margin-bottom:0.35rem">{val}</span>
+            <span style="font-size:0.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em">{label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+{conditionCategories.map((cat, i) => {
+  const items = conditionsInCategory(cat.id);
+  return (
+    <section class={`cond-cat ${i % 2 === 0 ? "section" : "section-soft"}`} id={cat.id}>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Directory</p>
+          <h2>{cat.label}</h2>
+        </div>
+        <div class="cond-dir">
+          {items.map((c) => (
+            <a
+              class={`cond-dir-card${c.status === "listed" ? " is-listed" : ""}`}
+              href={c.status === "live" ? c.href : site.whatsapp}
+              target={c.status === "listed" ? "_blank" : undefined}
+              rel={c.status === "listed" ? "noreferrer" : undefined}
+            >
+              <h3>{c.label}</h3>
+              <p>{c.summary}</p>
+              <div class="cond-dir-meta">
+                {c.status === "live" ? (
+                  <span class="spec-link">Read the page</span>
+                ) : (
+                  <>
+                    <span class="cond-status">Treated at clinic</span>
+                    <span class="spec-link">Enquire</span>
+                  </>
+                )}
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+})}
+
+<section class="section-dark">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow eyebrow-dark">Treatments, not packages</p>
+      <h2>Condition pages map to therapies</h2>
+      <p style="color:rgba(240,234,226,0.75)">
+        A sciatica page should lead to acupuncture and Tui Na — not a generic clinic brochure.
+        That is how this section is built, and how further condition pages will be added.
+      </p>
+    </div>
+    <div class="ben-grid">
+      <div class="ben-item">
+        <span class="ben-num">01</span>
+        <h3>Pain &amp; musculoskeletal</h3>
+        <p>Back pain, sciatica, shoulder, frozen shoulder and sports injury — usually acupuncture with Tui Na and bone-setting.</p>
+      </div>
+      <div class="ben-item">
+        <span class="ben-num">02</span>
+        <h3>Women's health</h3>
+        <p>Fertility support, menstrual pain and postnatal recovery — often acupuncture timed to the cycle, with herbal medicine where indicated.</p>
+      </div>
+      <div class="ben-item">
+        <span class="ben-num">03</span>
+        <h3>Internal, skin &amp; sleep</h3>
+        <p>Anxiety, insomnia, digestion, eczema and fatigue — internal consultation first; herbal prescription where it is the right tool.</p>
+      </div>
+      <div class="ben-item">
+        <span class="ben-num">04</span>
+        <h3>Decided at assessment</h3>
+        <p>Nothing is added as a default extra. Your practitioner selects the combination from the condition and the pattern in front of them.</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem">
+      <a class="btn btn-gold" href="/clinical-services">All clinical services</a>
+    </p>
+  </div>
+</section>
+
+<section class="section-soft">
+  <div class="wrap grid-2-lg" style="gap:5rem">
+    <div>
+      <p class="eyebrow">Common questions</p>
+      <h2>Before you book for a condition</h2>
+      <p class="muted">If your symptom is not listed as a full page, still write to us — most musculoskeletal and many internal presentations are seen at both clinics.</p>
+      <div class="actions" style="margin-top:1.5rem">
+        <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp {site.phoneDisplay}</a>
+      </div>
+    </div>
+    <FAQAccordion items={faqItems} />
+  </div>
+</section>
+
+<CTASection
+  heading="Not sure which page applies?"
+  sub="Describe your symptoms on WhatsApp — we will tell you whether an appointment is appropriate, and which clinic is sooner."
+/>
+
+</Base>

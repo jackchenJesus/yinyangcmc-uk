@@ -2,7 +2,9 @@
 import Base from "../layouts/Base.astro";
 import PageHero from "../components/PageHero.astro";
 import CTASection from "../components/CTASection.astro";
+import ConditionDetail from "../components/ConditionDetail.astro";
 import pages from "../data/pages.json";
+import { getLiveCondition } from "../data/conditions";
 
 // Pages with dedicated Astro files — excluded from this fallback template
 export function getStaticPaths() {
@@ -23,6 +25,12 @@ export function getStaticPaths() {
     "moxibustion",
     "auricular-therapy",
     "tian-jiu",
+    // Location pages
+    "locations",
+    "reading-clinic",
+    "wimbledon-clinic",
+    "our-practitioners",
+    "conditions",
   ]);
   return Object.keys(pages)
     .filter((slug) => !skip.has(slug))
@@ -30,12 +38,15 @@ export function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
+const condition = getLiveCondition(slug!);
 const page = (pages as Record<string, { title: string; desc: string; headings: string[]; paras: string[] }>)[slug!];
 
 // Filter out navigation/footer/internal artefacts from scraped content
 const SKIP_HEADS = new Set([
   "Contact", "BOOK NOW", "01", "02", "03", "04", "05", "06",
   "WH", "AL", "Silo 1 — Clinical Services Pillar Page",
+  "Ready to start your recovery?", "Ready to book your first session?",
+  "Book via WhatsApp", "FAQ", "Frequently asked questions",
 ]);
 const SKIP_PARA_START = [
   "Acupuncture Tui Na Massage", "All rights reserved",
@@ -43,34 +54,37 @@ const SKIP_PARA_START = [
   "Reach us anytime", "Call Us 07301",
 ];
 
-const headings = page.headings.filter((h) => !SKIP_HEADS.has(h));
-const paras    = page.paras.filter((p) =>
-  !SKIP_PARA_START.some((s) => p.startsWith(s))
-);
+const headings = (!condition && page)
+  ? page.headings.filter((h) => !SKIP_HEADS.has(h))
+  : [];
+const paras = (!condition && page)
+  ? page.paras.filter((p) => !SKIP_PARA_START.some((s) => p.startsWith(s)))
+  : [];
 
-const hero = headings[0] || page.title;
+const hero = headings[0] || page?.title || "";
 const lede = (headings[1] && headings[1].length > 40)
   ? headings[1]
   : paras[0]?.slice(0, 240);
 
 const heroImages: Record<string, string> = {
-  acupuncture:          "/images/label_acupuncture_white-sVIFuDil6Vi0omnp.png",
-  "tui-na-massage":     "/images/tui-na-massage-8YKIYR6VTwdVMTdx.webp",
-  "herbal-consultation":"/images/chinese-herbal-medicine-6MuZIXMBnlhegCyU.webp",
-  "bone-setting":       "/images/bone-setting-orthopaedic-care-o6PPJu9WdXDef1r7.webp",
-  conditions:           "/images/conditions-we-treat-OWrWp19D0BpU3xPw.webp",
-  "back-pain":          "/images/back_pain_treatment-vMLmusxJIAVKmYK5.png",
-  "sciatica-treatment": "/images/sciatica-lower-back-pain-CiEnhdaob4WbteY2.png",
-  "frozen-shoulder":    "/images/acupuncture_for_frozen_shoulder-LYlyaUQ7GqsYzZB5.webp",
-  "shoulder-pain":      "/images/acupuncture-for-shoulder-pain-k9uul1g0Hqlp9Qaa.webp",
-  "sports-injuries":    "/images/sports-injuries-orthopaedics-7F9Mh61pjr43DjEH.png",
-  "reading-clinic":     "/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg",
-  "wimbledon-clinic":   "/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg",
-  locations:            "/images/img_6058-eVlfhKuykGV6M98J.jpg",
-  course:               "/images/lesson-1-sqDt7CzsVqOfjk8h.jpg",
-  "other-treatment":    "/images/label_other_white-ilyOGIeZEF3BJ6hg.png",
+  course: "/images/lesson-1-sqDt7CzsVqOfjk8h.jpg",
 };
+
+const courseImages = slug === "course"
+  ? [
+      "/images/lesson-1-sqDt7CzsVqOfjk8h.jpg",
+      "/images/lesson-2-lRbBjXWM7hxFlTSo.jpg",
+      "/images/lesson-3-KEj7Q3TDqNbc5hA8.jpg",
+      "/images/lesson-4-FeX7VoWsezomSvjS.jpg",
+      "/images/lesson-5-uPJtsceVCgOAp9aF.jpg",
+    ]
+  : [];
 ---
+{condition ? (
+  <Base title={condition.title} description={condition.description}>
+    <ConditionDetail condition={condition} />
+  </Base>
+) : (
 <Base title={page.title} description={page.desc}>
   <PageHero
     title={hero}
@@ -80,32 +94,50 @@ const heroImages: Record<string, string> = {
     ctaSecHref="/clinical-services"
   />
 
-  <section class="section">
+  <section class="section-soft">
     <div class="wrap">
-      <div class="grid-2-lg" style="gap:3rem">
+      <div class="grid-2-lg" style="gap:3.5rem">
         <div class="prose">
           {paras.slice(1).map((p) => <p>{p}</p>)}
         </div>
         {heroImages[slug!] && (
           <img
+            class="rounded-photo"
             src={heroImages[slug!]}
             alt=""
-            style="border-radius:var(--r-lg);width:100%;max-height:400px;object-fit:cover"
+            style="min-height:280px;max-height:420px"
             loading="lazy"
           />
         )}
       </div>
 
-      {headings.slice(2, 20).length > 0 && (
+      {headings.slice(2, 18).length > 0 && (
         <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border)">
           <h3>Key information</h3>
-          <ul style="columns:2;column-gap:2rem;margin-top:0.75rem">
-            {headings.slice(2, 20).map((h) => <li style="font-size:0.93rem;margin-bottom:0.4rem">{h}</li>)}
-          </ul>
+          <div class="key-chips">
+            {headings.slice(2, 18).map((h) => <span class="key-chip">{h}</span>)}
+          </div>
         </div>
       )}
     </div>
   </section>
 
+  {courseImages.length > 0 && (
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Workshop</p>
+          <h2>Course photos</h2>
+        </div>
+        <div class="grid-3">
+          {courseImages.map((src) => (
+            <img class="rounded-photo" src={src} alt="Course workshop" style="min-height:180px;max-height:220px" loading="lazy" />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   <CTASection />
 </Base>
+)}

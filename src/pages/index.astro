@@ -1,118 +1,205 @@
 ---
 import Base from "../layouts/Base.astro";
-import { clinics, site } from "../data/site";
+import { clinics, practitioners, reviews, site } from "../data/site";
 ---
-<Base title="Chinese Medicine Wimbledon & Reading | Yin-Yang Clinic | yin yang uk" description="Looking for a trusted Chinese medicine Wimbledon or Chinese medicine Reading clinic? Our expert team offers expert acupuncture, bone-setting, and herbal care.">
+<Base title="Chinese Medicine Wimbledon & Reading | Yin-Yang Clinic | yin yang uk" description="Chinese medicine clinic in Reading and Wimbledon. British Acupuncture Council registered. Acupuncture, Tui Na, bone-setting and herbal care. No GP referral needed.">
   <section class="hero">
-    <img class="bg" src="/images/webbanner-eQwGJSc8Re6udP6z.jpg" alt="" />
-    <div class="hero-copy">
-      <p class="eyebrow">Yin Yang CMC</p>
-      <h1>Modern TCM & Wellness Centre</h1>
-      <p>(include acupuncture, acupressure, massage, manipulation / bone setting)</p>
+    <img class="hero-bg" src="/images/webbanner-eQwGJSc8Re6udP6z.jpg" alt="" />
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow" style="color:var(--gold)">Reading &amp; Wimbledon</p>
+      <h1>Chinese Medicine in Reading &amp; Wimbledon</h1>
+      <p class="lead">Acupuncture · Tui Na · Bone setting · Herbal medicine</p>
       <div class="actions" style="justify-content:center">
         <a class="btn btn-gold" href="#booknowform">Book Now</a>
         <a class="btn btn-ghost" href="/clinical-services">Clinical Services</a>
       </div>
     </div>
+    <div class="hero-facts" aria-label="Clinic at a glance">
+      <div class="wrap home-facts-inner">
+        <div class="home-fact">
+          <strong>15+</strong>
+          <span>Years' experience</span>
+        </div>
+        <div class="home-fact">
+          <strong>2</strong>
+          <span>UK clinics</span>
+        </div>
+        <div class="home-fact">
+          <strong>BAcC</strong>
+          <span>UK registered</span>
+        </div>
+        <div class="home-fact">
+          <strong>{reviews.rating}</strong>
+          <span>Google reviews</span>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="section">
-    <div class="wrap cards grid-4">
-      {[
-        ["/images/label_acupuncture_white-sVIFuDil6Vi0omnp.png", "/acupuncture", "Acupuncture"],
-        ["/images/label_ipm_white-vMTHbj4InE8W2YbM.png", "/tui-na-massage", "Tui Na & pain care"],
-        ["/images/label_herbal_medicine_white-Azozow4y5JPdMMVy.png", "/herbal-consultation", "Herbal medicine"],
-        ["/images/label_other_white-ilyOGIeZEF3BJ6hg.png", "/other-treatment", "Other treatments"],
-      ].map(([src, href, label]) => (
-        <a class="card" href={href}>
-          <img src={src} alt={label} />
+  <section class="section-soft">
+    <div class="wrap grid-2-al home-intro">
+      <div>
+        <p class="eyebrow">Our clinic</p>
+        <h2>Care for local patients<br>in Berkshire &amp; SW London</h2>
+        <p class="lead">
+          Two UK clinics — Reading town centre and Wimbledon SW19. British Acupuncture Council registered. Recognised by AXA, Vitality, Aviva and WPA.
+        </p>
+        <ul class="home-intro-points">
+          <li>No GP referral needed</li>
+          <li>English, Cantonese &amp; Mandarin</li>
+          <li>Same-week appointments</li>
+        </ul>
+        <div class="actions" style="margin-top:1.5rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+          <a class="btn btn-outline" href="/clinical-services">Explore Services</a>
+        </div>
+      </div>
+      <div class="home-intro-photo">
+        <img
+          class="rounded-photo"
+          src="/images/img_6058-eVlfhKuykGV6M98J.jpg"
+          alt="Treatment room at Yin Yang CMC"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft" id="reviews">
+    <div class="wrap">
+      <div class="reviews-head">
+        <div class="section-head">
+          <p class="eyebrow">Google reviews</p>
+          <h2>What patients say</h2>
+        </div>
+        <a class="reviews-rating-pill" href={reviews.googleUrl} target="_blank" rel="noreferrer">
+          <strong>{reviews.rating}</strong>
+          <span>
+            <span class="reviews-stars" aria-hidden="true">★★★★★</span>
+            {reviews.count} Google reviews
+          </span>
         </a>
-      ))}
-    </div>
-  </section>
-
-  <section class="section alt" id="ukclinic">
-    <div class="wrap">
-      <p class="eyebrow">Our Clinics</p>
-      <h2>UNITED KINGDOM</h2>
-      <p>Yin-Yang CMC's overseas clinics are now open in Wimbledon and Reading, dedicated to providing high-quality Chinese medicine services, especially in pain management and chronic health concerns.</p>
-      <h2>HONG KONG</h2>
-      <p>Yin-Yang CMC currently has clinics in To Kwa Wan and Mei Foo. All resident Chinese Medicine Practitioners (CMPs) hold registered qualifications recognised by the Chinese Medicine Council of Hong Kong, possess Bachelor's, Master's, or higher degrees in Chinese Medicine, and have undergone advanced training at public and private medical institutions or at Yin-Yang CMC itself.</p>
-      <a class="btn btn-outline" href="https://www.yinyangcmc.com" target="_blank" rel="noreferrer">Hong Kong site</a>
+      </div>
+      <div class="review-slider" data-review-slider>
+        <button class="review-nav prev" type="button" aria-label="Previous review">‹</button>
+        <div class="review-track">
+          {reviews.quotes.map((q) => (
+            <article class="review-card">
+              <span class="reviews-stars" aria-hidden="true">{"★".repeat(q.stars)}</span>
+              <p>“{q.text}”</p>
+              <footer>
+                <div>
+                  <strong>{q.name}</strong>
+                  <em>{q.location}</em>
+                </div>
+                <span class="review-src">Google</span>
+              </footer>
+            </article>
+          ))}
+        </div>
+        <button class="review-nav next" type="button" aria-label="Next review">›</button>
+      </div>
+      <div class="review-dots" data-review-dots></div>
     </div>
   </section>
 
   <section class="section">
-    <div class="wrap grid-2">
-      <div>
-        <p class="eyebrow">About Yin Yang UK</p>
-        <h2>15+ Years of Trusted Experience</h2>
-        <p>Welcome to Yin-Yang Chinese Medicine Clinic, a trusted provider of high-quality traditional Chinese medicine (TCM) services. Established in Hong Kong in 2014, our clinic is dedicated to promoting the essence of TCM by integrating ancient wisdom with modern medical practices. With branches in Hong Kong and now in the UK, we aim to bring professional and personalized care to our patients, addressing pain management, internal medicine, and various chronic conditions.</p>
-        <p>Our team of licensed practitioners, trained in Hong Kong and internationally, specializes in acupuncture, Tui Na (therapeutic massage), and herbal medicine. Whether you are seeking relief from pain, treatment for internal disorders, or holistic wellness solutions, we are here to help restore balance and harmony to your health. Let us guide you on your journey to well-being, wherever you are.</p>
-      </div>
-      <img src="/images/img_6058-eVlfhKuykGV6M98J.jpg" alt="Yin Yang CMC clinic" style="border-radius:18px;height:100%;object-fit:cover" />
-    </div>
-  </section>
-
-  <section class="section alt">
     <div class="wrap">
-      <p class="eyebrow">Your health, our priority. Expert care with a personal touch.</p>
-      <h2>Our Theraptists</h2>
-      <div class="cards cards-2" style="margin-top:1.5rem">
-        <article class="therapist">
-          <img src="/images/e--ae-a-_edited-XhbCA7G3Oou0Mlsq.jpg" alt="Shing Hui (Winton)" />
-          <div>
-            <h3>Shing Hui (Winton)</h3>
-            <p>Chinese Medicine Practitioner</p>
-            <p>Registered Chinese Medicine Practitioner in Hong Kong. Graduated from the School of Chinese Medicine, Chinese University of Hong Kong in 2010 with a Bachelor's degree in TCM and a Master of Science in Chinese Medicine. Previously a Tui Na specialist at Tung Wah Eastern Hospital (HK) and orthopaedic consultant for Yin-Yang CMC in Hong Kong. Specialises in acupuncture and Tui Na orthopedic techniques for soft tissue injuries, joint swelling, restricted movement, cervical and lumbar spine disorders, and complex pain conditions.</p>
-            <p class="muted">ATCM FM0250005 · MBAcC 963087</p>
+      <div class="section-head">
+        <p class="eyebrow">Our Clinics</p>
+        <h2>Reading &amp; Wimbledon</h2>
+      </div>
+      <div class="origin-grid">
+        <article class="origin-card origin-uk">
+          <img src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi_2-M3Nk8jihE1285fVW.jpg" alt="Yin Yang CMC Reading clinic" />
+          <div class="origin-copy">
+            <span class="loc-tag">United Kingdom</span>
+            <h3>Two local clinics</h3>
+            <p>Acupuncture, Tui Na and herbal care for back pain, sports injury, women's health and long-term conditions — same team at both sites.</p>
           </div>
         </article>
-        <article class="therapist">
-          <img src="/images/aeeppsc-c-e-a-_edited_edited-a6uAksf7EtvBGWTM.jpg" alt="Chui Ying Li (Andrea)" />
-          <div>
-            <h3>Chui Ying Li (Andrea)</h3>
-            <p>Chinese Medicine Practitioner</p>
-            <p>Registered Chinese Medicine Practitioner in Hong Kong. Graduated from the School of Chinese Medicine, Chinese University of Hong Kong in 2010 with a Bachelor's degree in TCM and a Master of Science in Chinese Medicine. Consultant practitioner at Yin-Yang CMC in Hong Kong. Specialises in dermatology and gynaecology/paediatrics, including infertility, prenatal and postnatal disorders, postpartum pelvic adjustment, and body sculpting, with additional expertise in acupuncture and Tui Na orthopedics.</p>
-            <p class="muted">ATCM FM0250004 · MBAcC 963093</p>
+        <article class="origin-card origin-hk">
+          <span class="origin-mark" aria-hidden="true">香港</span>
+          <div class="origin-copy">
+            <span class="loc-tag">Also in Hong Kong</span>
+            <h3>Hong Kong origin</h3>
+            <p class="origin-locs">To Kwa Wan · Mei Foo</p>
+            <p>Founded in 2014. The same hospital-trained standard, now in the UK.</p>
           </div>
+          <a class="btn btn-ghost btn-sm" href="https://www.yinyangcmc.com" target="_blank" rel="noreferrer">Hong Kong site</a>
         </article>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="wrap cards cards-2">
-      <article class="card">
-        <img src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg" alt="Reading clinic" />
-        <div class="card-body">
-          <h3>Reading</h3>
-          <p>{clinics.reading.subtitle}</p>
-          <p>{clinics.reading.address}</p>
-          <p>{clinics.reading.hours}</p>
-          <a class="more" href="/reading-clinic">Detail</a>
-        </div>
-      </article>
-      <article class="card">
-        <img src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg" alt="Wimbledon clinic" />
-        <div class="card-body">
-          <h3>Wimbledon</h3>
-          <p>{clinics.wimbledon.subtitle}</p>
-          <p>{clinics.wimbledon.address}</p>
-          <p>{clinics.wimbledon.hours}</p>
-          <a class="more" href="/wimbledon-clinic">Detail</a>
-        </div>
-      </article>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The team</p>
+        <h2>Our Practitioners</h2>
+        <p>MSc-qualified. UK registered (ATCM &amp; MBAcC). Both work across Reading and Wimbledon.</p>
+      </div>
+      <div class="home-prac-grid home-prac-teaser">
+        {practitioners.map((p) => (
+          <a class="prac-portrait prac-teaser" href="/our-practitioners">
+            <img src={p.image} alt={p.name} />
+            <div class="prac-body">
+              <h3>{p.name}</h3>
+              <span class="prac-role">{p.role}</span>
+              <p>{p.summary}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="actions" style="justify-content:center;margin-top:1.6rem">
+        <a class="btn btn-outline" href="/our-practitioners">Meet our practitioners</a>
+      </div>
     </div>
   </section>
 
-  <section class="section alt" id="booknowform">
+  <section class="section-soft">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Visit Us</p>
+        <h2>Two Clinics. One Standard of Care.</h2>
+      </div>
+      <div class="home-loc-grid">
+        <article class="loc-card">
+          <img src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg" alt="Reading clinic" />
+          <div class="loc-body">
+            <span class="loc-tag">Berkshire · Castle Street</span>
+            <h3>Reading</h3>
+            <p class="loc-meta">{clinics.reading.address}<br>{clinics.reading.hours} · By appointment</p>
+            <div class="loc-actions">
+              <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic details</a>
+              <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book</a>
+            </div>
+          </div>
+        </article>
+        <article class="loc-card">
+          <img src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg" alt="Wimbledon clinic" />
+          <div class="loc-body">
+            <span class="loc-tag">South West London · SW19</span>
+            <h3>Wimbledon</h3>
+            <p class="loc-meta">{clinics.wimbledon.address}<br>{clinics.wimbledon.hours} · By appointment</p>
+            <div class="loc-actions">
+              <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic details</a>
+              <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="booknowform">
     <div class="wrap grid-2">
       <div>
-        <h2>BOOK NOW</h2>
-        <p>Reach us anytime — we usually respond within the hour.</p>
-        <p><strong>WhatsApp UK Clinic:</strong> <a href={site.whatsapp}>{site.phoneDisplay}</a></p>
-        <p><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></p>
+        <p class="eyebrow">Book Now</p>
+        <h2>Reach us anytime</h2>
+        <p>We usually respond within the hour during clinic hours.</p>
+        <p><strong>WhatsApp:</strong> <a href={site.whatsapp} style="color:var(--teal);font-weight:700">{site.phoneDisplay}</a></p>
+        <p><strong>Email:</strong> <a href={`mailto:${site.email}`} style="color:var(--teal);font-weight:700">{site.email}</a></p>
       </div>
       <form class="form" action={`mailto:${site.email}`} method="post" enctype="text/plain">
         <input name="name" placeholder="Full name" required />
@@ -126,4 +213,59 @@ import { clinics, site } from "../data/site";
       </form>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    name: "Yin Yang CMC",
+    url: "https://yinyangcmc.uk",
+    telephone: site.phoneIntl,
+    email: site.email,
+    areaServed: ["Reading", "Wimbledon", "Berkshire", "South West London"],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: reviews.rating,
+      reviewCount: reviews.count,
+      bestRating: "5",
+    },
+  })} />
+  <script>
+    const root = document.querySelector("[data-review-slider]");
+    const track = root?.querySelector(".review-track");
+    const dotsWrap = document.querySelector("[data-review-dots]");
+    if (root && track instanceof HTMLElement && dotsWrap) {
+      const cards = [...track.children] as HTMLElement[];
+      cards.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", `Go to review ${i + 1}`);
+        if (i === 0) dot.classList.add("is-active");
+        dot.addEventListener("click", () => cards[i].scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" }));
+        dotsWrap.append(dot);
+      });
+      const step = () => cards[0]?.getBoundingClientRect().width + 18;
+      root.querySelector(".review-nav.prev")?.addEventListener("click", () => {
+        track.scrollBy({ left: -step(), behavior: "smooth" });
+      });
+      root.querySelector(".review-nav.next")?.addEventListener("click", () => {
+        const max = track.scrollWidth - track.clientWidth - 8;
+        if (track.scrollLeft >= max) track.scrollTo({ left: 0, behavior: "smooth" });
+        else track.scrollBy({ left: step(), behavior: "smooth" });
+      });
+      const syncDots = () => {
+        const i = Math.round(track.scrollLeft / step());
+        dotsWrap.querySelectorAll("button").forEach((d, n) => d.classList.toggle("is-active", n === i));
+      };
+      track.addEventListener("scroll", syncDots, { passive: true });
+      let timer = window.setInterval(() => {
+        root.querySelector<HTMLButtonElement>(".review-nav.next")?.click();
+      }, 5500);
+      root.addEventListener("mouseenter", () => window.clearInterval(timer));
+      root.addEventListener("mouseleave", () => {
+        timer = window.setInterval(() => {
+          root.querySelector<HTMLButtonElement>(".review-nav.next")?.click();
+        }, 5500);
+      });
+    }
+  </script>
 </Base>

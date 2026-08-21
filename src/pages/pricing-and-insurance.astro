@@ -1,52 +1,144 @@
 ---
 import Base from "../layouts/Base.astro";
 import PageHero from "../components/PageHero.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import CTASection from "../components/CTASection.astro";
+
+const faqItems = [
+  {
+    q: "Is the £10 consultation fee separate from the treatment fee?",
+    a: "Yes. The consultation covers your TCM assessment and diagnosis. If treatment follows in the same session, the relevant treatment fee applies in addition.",
+  },
+  {
+    q: "Does my NHS GP referral affect my insurance claim?",
+    a: "Some private insurers require a GP referral before authorising complementary therapy claims. Check your policy terms — we can provide any clinical documentation your insurer requires.",
+  },
+  {
+    q: "Are herbal granules included in the consultation fee?",
+    a: "Herbal granules are charged per day of prescription, separate from consultation and treatment fees.",
+  },
+  {
+    q: "What does the 20% first-visit discount apply to?",
+    a: "The first-visit discount is applied at booking to your first treatment.",
+  },
+  {
+    q: "Do I need to inform you I'm using insurance before my appointment?",
+    a: "Yes — tell us at booking so we prepare the correct documentation.",
+  },
+  {
+    q: "My insurer isn't listed — can I still claim?",
+    a: "Often yes. We provide receipts that meet standard cash-plan and insurer submission requirements. Check with your insurer first.",
+  },
+];
 ---
 <Base title="Acupuncture cost Wimbledon & Reading | Price & Insurance | yin yang uk" description="Curious about acupuncture cost Wimbledon or acupuncture cost Reading? View our price list for expert acupuncture, bone-setting, Tui Na, and insurance details.">
-  <PageHero title="Transparent fees. No surprises." lede="General TCM consultation from £10. Acupuncture £60. All-inclusive Integrated Treatment £120. Both practitioners are recognised providers with AXA Health, Vitality, Aviva, and WPA." />
+  <PageHero
+    title="Transparent fees. No surprises."
+    lede="General TCM consultation from £10. Acupuncture £60. All-inclusive Integrated Treatment £120. Both practitioners are recognised providers with AXA Health, Vitality, Aviva, and WPA."
+    ctaSecLabel="All Services"
+    ctaSecHref="/clinical-services"
+  />
+
   <section class="section">
     <div class="wrap">
-      <p>20% off your first treatment, applied at booking. We believe you should know exactly what you're paying — and whether your insurer will cover it — before you even pick up the phone.</p>
-      <div class="cards grid-3" style="margin:2rem 0">
-        <article class="card"><div class="card-body"><p class="muted">General TCM Consultation</p><p class="price">£10</p><p>Initial assessment & diagnosis</p></div></article>
-        <article class="card"><div class="card-body"><p class="muted">Acupuncture</p><p class="price">£60</p><p>Per treatment session</p></div></article>
-        <article class="card"><div class="card-body"><p class="muted">Integrated Treatment</p><p class="price">£120</p><p>All techniques as clinically indicated</p></div></article>
+      <div class="section-head">
+        <p class="eyebrow">Fees</p>
+        <h2>Our treatment fees</h2>
+        <p>20% off your first treatment, applied at booking. No hidden charges at checkout.</p>
       </div>
-      <h2>Provider numbers</h2>
-      <div class="cards cards-2">
-        <article class="card"><div class="card-body">
-          <h3>Winton Hui (Shing Hui)</h3>
-          <p>ATCM: FM0250005 · MBAcC: 963087</p>
-          <p>Vitality Health: SP123180</p>
-        </div></article>
-        <article class="card"><div class="card-body">
-          <h3>Andrea Li (Chui Ying Li)</h3>
-          <p>ATCM: FM0250004 · MBAcC: 963093</p>
-          <p>Vitality Health: SP123173</p>
-        </div></article>
+
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-body">
+            <p class="price-label">General TCM Consultation</p>
+            <p class="price-val">£10</p>
+            <p>Initial assessment &amp; diagnosis</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <p class="price-label">Acupuncture</p>
+            <p class="price-val">£60</p>
+            <p>Per treatment session</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <p class="price-label">Integrated Treatment</p>
+            <p class="price-val">£120</p>
+            <p>All techniques as clinically indicated</p>
+          </div>
+        </article>
       </div>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin:2rem 0;align-items:center">
-        <img src="/images/axa-pgrbfCYpRRoo1New.png" alt="AXA" style="height:48px;width:auto" />
-        <img src="/images/pru-health-vitalty-insurance-london-canada-water-se16-stratford-e15-e20-canary-wharf-e14-london-bridge-se1-rDAt2VDOOdmYgqEM.webp" alt="Vitality" style="height:48px;width:auto" />
-        <img src="/images/wpa-sbHlIPUxP3aHSfe4.png" alt="WPA" style="height:48px;width:auto" />
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Insurance</p>
+        <h2>Provider numbers</h2>
+        <p>Quote these numbers when making a claim. Your sessions may already be covered — ask us when you book.</p>
       </div>
-      <h2>How to claim on your insurance</h2>
-      <ol>
+      <div class="grid-2">
+        <article class="card">
+          <div class="card-body">
+            <h3>Winton Hui (Shing Hui)</h3>
+            <p>ATCM: FM0250005 · MBAcC: 963087</p>
+            <p>Vitality Health: SP123180</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <h3>Andrea Li (Chui Ying Li)</h3>
+            <p>ATCM: FM0250004 · MBAcC: 963093</p>
+            <p>Vitality Health: SP123173</p>
+          </div>
+        </article>
+      </div>
+      <div class="accred-divider">
+        <p class="accred-divider-label">Recognised by UK health insurers</p>
+        <div class="insurer-strip">
+          <img src="/images/axa-pgrbfCYpRRoo1New.png" alt="AXA Health" />
+          <img src="/images/pru-health-vitalty-insurance-london-canada-water-se16-stratford-e15-e20-canary-wharf-e14-london-bridge-se1-rDAt2VDOOdmYgqEM.webp" alt="Vitality Health" />
+          <img src="/images/screenshot-2026-06-23-183044-YhgRn9pOvK6KsiM2.png" alt="Aviva Health" />
+          <img src="/images/wpa-sbHlIPUxP3aHSfe4.png" alt="WPA" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid-2-lg" style="gap:4rem">
+      <div>
+        <p class="eyebrow">Claims</p>
+        <h2>How to claim on your insurance</h2>
+        <p>Most claims take just a few minutes to set up. Follow these steps.</p>
+      </div>
+      <ol class="claim-list">
         <li>Verify your benefit — confirm acupuncture or complementary therapy is included.</li>
         <li>Get authorisation — some insurers require pre-approval and a GP referral.</li>
-        <li>Book & inform us that you are claiming on insurance.</li>
+        <li>Book &amp; inform us that you are claiming on insurance.</li>
         <li>Quote the provider number above when submitting your claim.</li>
         <li>Receive your itemised receipt after every session.</li>
         <li>Health cash plans (Simplyhealth, Healthshield and similar) also accepted.</li>
       </ol>
-      <div class="faq">
-        <details><summary>Is the £10 consultation fee separate from the treatment fee?</summary><p>Yes. The consultation covers your TCM assessment and diagnosis. If treatment follows in the same session, the relevant treatment fee applies in addition.</p></details>
-        <details><summary>Does my NHS GP referral affect my insurance claim?</summary><p>Some private insurers require a GP referral before authorising complementary therapy claims. Check your policy terms — we can provide any clinical documentation your insurer requires.</p></details>
-        <details><summary>Are herbal granules included in the consultation fee?</summary><p>Herbal granules are charged per day of prescription, separate from consultation and treatment fees.</p></details>
-        <details><summary>What does the 20% first-visit discount apply to?</summary><p>The first-visit discount is applied at booking to your first treatment.</p></details>
-        <details><summary>Do I need to inform you I'm using insurance before my appointment?</summary><p>Yes — tell us at booking so we prepare the correct documentation.</p></details>
-        <details><summary>My insurer isn't listed — can I still claim?</summary><p>Often yes. We provide receipts that meet standard cash-plan and insurer submission requirements. Check with your insurer first.</p></details>
-      </div>
     </div>
   </section>
+
+  <section class="section-soft">
+    <div class="wrap grid-2-lg" style="gap:5rem">
+      <div>
+        <p class="eyebrow">Common Questions</p>
+        <h2>Pricing &amp; insurance FAQ</h2>
+        <p class="muted">If you are unsure whether your policy covers treatment, message us before booking — we can help you check.</p>
+      </div>
+      <FAQAccordion items={faqItems} />
+    </div>
+  </section>
+
+  <CTASection
+    heading="Ready to book your first session?"
+    sub="20% off your first treatment. Wimbledon and Reading clinics available."
+  />
 </Base>

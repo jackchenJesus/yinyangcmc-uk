@@ -1,5 +1,6 @@
 ---
 import { site } from "../data/site";
+import { liveConditions } from "../data/conditions";
 ---
 <footer class="site-footer">
   <div class="wrap">
@@ -31,10 +32,9 @@ import { site } from "../data/site";
       <div>
         <h5>Conditions</h5>
         <nav class="foot-links" aria-label="Footer conditions">
-          <a href="/back-pain">Back Pain &amp; Sciatica</a>
-          <a href="/shoulder-pain">Shoulder Pain</a>
-          <a href="/frozen-shoulder">Frozen Shoulder</a>
-          <a href="/sports-injuries">Sports Injuries</a>
+          {liveConditions.map((c) => (
+            <a href={c.href}>{c.label}</a>
+          ))}
           <a href="/conditions">All Conditions</a>
         </nav>
       </div>
@@ -45,6 +45,7 @@ import { site } from "../data/site";
         <nav class="foot-links" aria-label="Footer clinics">
           <a href="/reading-clinic">Reading Clinic</a>
           <a href="/wimbledon-clinic">Wimbledon Clinic</a>
+          <a href="/our-practitioners">Our Practitioners</a>
           <a href="/pricing-and-insurance">Pricing &amp; Insurance</a>
           <a href="/contact">Contact Us</a>
           <a href="/locations">All Locations</a>

@@ -1,0 +1,229 @@
+---
+import FAQAccordion from "./FAQAccordion.astro";
+import CTASection from "./CTASection.astro";
+import { site } from "../data/site";
+import { liveConditions } from "../data/conditions";
+
+interface Props {
+  h1: string;
+  lede: string;
+  eyebrow: string;
+  tag: string;
+  clinicName: string;
+  address: string;
+  hours: string;
+  transport: string;
+  maps: string;
+  image: string;
+  imageAlt: string;
+  intro: string;
+  localNote: string;
+  gettingHere: string;
+  otherLabel: string;
+  otherHref: string;
+  ctaHeading: string;
+}
+
+const {
+  h1, lede, eyebrow, tag, clinicName, address, hours, transport, maps,
+  image, imageAlt, intro, localNote, gettingHere, otherLabel, otherHref, ctaHeading,
+} = Astro.props;
+
+const faqItems = [
+  {
+    q: "Where are your TCM clinics located in the UK?",
+    a: "We have two clinics: Reading Health Centre, 61 Castle Street, Reading RG1 7SN, and 2 Saint Mark's Place, Wimbledon, London SW19 7ND. Both are accessible by public transport.",
+  },
+  {
+    q: "Do you offer Cantonese-speaking consultations?",
+    a: "Yes. Consultations are available in English, Cantonese, or Mandarin at both locations. Request this when booking via WhatsApp.",
+  },
+  {
+    q: "Are your practitioners registered with a recognised professional body?",
+    a: "Yes. Both practitioners are British Acupuncture Council (MBAcC) members on a PSA Accredited Register, and ATCM professional members. They also hold registration with the Chinese Medicine Council of Hong Kong (CMCHK) and Master's degrees in Chinese Medicine.",
+  },
+  {
+    q: "What conditions can be treated at your clinics?",
+    a: "Both clinics see musculoskeletal pain, sports injuries, sciatica, women's health (including fertility and postnatal recovery), anxiety, sleep disorders, and dermatological presentations such as eczema. Message us via WhatsApp before booking if you are unsure whether your condition is suitable.",
+  },
+  {
+    q: "How do I book an appointment?",
+    a: "WhatsApp is our primary booking channel. Message 07301 949 686 with your preferred clinic, condition, and available times. First appointments include a full diagnostic consultation. No GP referral is needed.",
+  },
+];
+
+const treatments = [
+  { href: "/acupuncture", title: "Acupuncture", summary: "Fine-needle treatment for pain, stress, and systemic regulation." },
+  { href: "/tui-na-massage", title: "Tui Na", summary: "Structured manual therapy for soft tissue and joint restriction." },
+  { href: "/bone-setting", title: "Bone Setting", summary: "Zheng Gu orthopaedic care for spinal, postural, and joint concerns." },
+  { href: "/herbal-consultation", title: "Herbal Medicine", summary: "Individualised consultation and GMP-certified herbal prescription." },
+];
+
+const conditions = liveConditions.map((c) => ({ label: c.label, href: c.href }));
+---
+
+<section class="page-hero" style="min-height:62vh;display:grid;place-items:center">
+  <img class="page-hero-bg" src={image} alt={imageAlt} loading="eager" fetchpriority="high" />
+  <div class="wrap" style="padding:5rem 0 3.5rem">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{h1}</h1>
+    <p class="lede">{lede}</p>
+    <div class="hero-exp-stat">
+      <span class="hero-exp-num">15+</span>
+      <span class="hero-exp-label">Years'<br>Clinical Experience</span>
+    </div>
+    <div class="actions" style="margin-top:0">
+      <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-ghost" href="/clinical-services">All Clinical Services</a>
+    </div>
+    <div class="hero-trust-row">
+      <span><span class="htc">✓</span> British Acupuncture Council Member</span>
+      <span><span class="htc">✓</span> ATCM Registered</span>
+      <span><span class="htc">✓</span> By appointment only</span>
+      <span><span class="htc">✓</span> English &amp; Cantonese</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-soft">
+  <div class="wrap grid-2-al" style="gap:4rem">
+    <div>
+      <div class="rating-row">
+        <span class="rating-stars" aria-hidden="true">★★★★★</span>
+        <span>4.9 · 15 Google reviews</span>
+      </div>
+      <p class="eyebrow">Visit the clinic</p>
+      <h2>{clinicName}</h2>
+      <p>{intro}</p>
+      <p>{localNote}</p>
+      <div class="loc-body" style="padding:0;margin-top:1.4rem">
+        <div class="loc-row"><strong>Address</strong><span>{address}</span></div>
+        <div class="loc-row"><strong>Hours</strong><span>{hours}</span></div>
+        <div class="loc-row"><strong>Transport</strong><span>{transport}</span></div>
+        <div class="loc-row"><strong>Languages</strong><span>English · Cantonese · Mandarin</span></div>
+        <div class="loc-row"><strong>Booking</strong><span>By appointment only — no GP referral needed</span></div>
+      </div>
+      <div class="actions" style="margin-top:1.6rem">
+        <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book via WhatsApp</a>
+        <a class="btn btn-outline" href={maps} target="_blank" rel="noreferrer">Open map</a>
+      </div>
+    </div>
+    <div class="img-wrap">
+      <img
+        src={image}
+        alt={imageAlt}
+        style="width:100%;height:460px;object-fit:cover;border-radius:var(--r-lg)"
+        loading="lazy"
+      />
+      <div class="cred-panel">
+        <div class="cred-row"><span class="cred-check">✓</span> British Acupuncture Council</div>
+        <div class="cred-row"><span class="cred-check">✓</span> ATCM Professional Member</div>
+        <div class="cred-row"><span class="cred-check">✓</span> PSA Accredited Register</div>
+        <div class="cred-row"><span class="cred-check">✓</span> Same-week appointments</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Conditions</p>
+      <h2>Conditions we commonly see here</h2>
+      <p>Your practitioner will assess whether treatment is appropriate for your individual circumstances.</p>
+    </div>
+    <div class="cond-grid">
+      {conditions.map(({ label, href }) => (
+        <a class="cond-chip" href={href}>{label}</a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Treatments</p>
+      <h2>Available at this clinic</h2>
+      <p>The same clinical team, protocols, and herbal formularies as our other UK location.</p>
+    </div>
+    <div class="spec-grid">
+      {treatments.map((t) => (
+        <a class="spec-card" href={t.href} style="text-decoration:none;color:inherit">
+          <h3>{t.title}</h3>
+          <p>{t.summary}</p>
+          <span class="spec-link">Explore {t.title}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The team</p>
+      <h2>Your practitioners</h2>
+      <p>MSc-qualified, UK registered (ATCM &amp; MBAcC). Both practitioners work across Reading and Wimbledon.</p>
+    </div>
+    <div class="grid-2">
+      <article class="prac-card">
+        <img src="/images/e--ae-a-_edited-XhbCA7G3Oou0Mlsq.jpg" alt="Shing Hui (Winton)" />
+        <div class="prac-body">
+          <h3>Shing Hui (Winton)</h3>
+          <span class="prac-role">Musculoskeletal &amp; pain</span>
+          <p>Tui Na specialist training at Tung Wah Eastern Hospital, Hong Kong. Combines acupuncture, Tui Na and Zheng Gu mobilisation for spinal, joint, and soft-tissue presentations.</p>
+          <p class="prac-reg">ATCM FM0250005 · MBAcC 963087</p>
+        </div>
+      </article>
+      <article class="prac-card">
+        <img src="/images/aeeppsc-c-e-a-_edited_edited-a6uAksf7EtvBGWTM.jpg" alt="Chui Ying Li (Andrea)" />
+        <div class="prac-body">
+          <h3>Chui Ying Li (Andrea)</h3>
+          <span class="prac-role">Women's health &amp; dermatology</span>
+          <p>Lead for women's health and dermatology across both UK clinics, including fertility support, postnatal recovery, eczema and acne, alongside acupuncture and Tui Na.</p>
+          <p class="prac-reg">ATCM FM0250004 · MBAcC 963093</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="wrap grid-2-al" style="gap:4rem">
+    <div>
+      <p class="eyebrow eyebrow-dark">Getting here</p>
+      <h2>How to reach {clinicName}</h2>
+      <p>{gettingHere}</p>
+      <div class="actions" style="margin-top:1.6rem">
+        <a class="btn btn-gold" href={maps} target="_blank" rel="noreferrer">Open in Google Maps</a>
+        <a class="btn btn-ghost" href={otherHref}>{otherLabel}</a>
+      </div>
+    </div>
+    <div>
+      <span class="loc-tag">{tag}</span>
+      <h3 style="margin-top:0.4rem">{address}</h3>
+      <p style="margin:0">{hours}</p>
+      <p style="margin:0.4rem 0 0">By appointment only</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-soft">
+  <div class="wrap grid-2-lg" style="gap:5rem">
+    <div>
+      <p class="eyebrow">Common questions</p>
+      <h2>Before you book</h2>
+      <p class="muted">Not sure which clinic or practitioner to choose? Message us — we usually reply within the hour during clinic hours.</p>
+      <div class="actions" style="margin-top:1.5rem">
+        <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Ask us on WhatsApp</a>
+      </div>
+    </div>
+    <FAQAccordion items={faqItems} />
+  </div>
+</section>
+
+<CTASection
+  heading={ctaHeading}
+  sub="Same-week appointments available. New patients welcome — no referral needed."
+/>

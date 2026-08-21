@@ -1,0 +1,56 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import CTASection from "../components/CTASection.astro";
+import { practitioners } from "../data/site";
+---
+<Base
+  title="Our Practitioners | Chinese Medicine Reading & Wimbledon | Yin Yang CMC"
+  description="Meet our British Acupuncture Council registered practitioners in Reading and Wimbledon. MSc Chinese Medicine. Acupuncture, Tui Na, women's health and pain care."
+>
+  <PageHero
+    eyebrow="The team · Reading & Wimbledon"
+    title="Our Practitioners"
+    lede="MSc-qualified. UK registered with the British Acupuncture Council and ATCM. Both practitioners treat patients at Reading and Wimbledon."
+    ctaLabel="Book a Consultation"
+    ctaSecLabel="View clinics"
+    ctaSecHref="/locations"
+  />
+
+  <section class="section">
+    <div class="wrap prac-page-list">
+      {practitioners.map((p) => (
+        <article class="prac-page-card">
+          <img src={p.image} alt={p.name} />
+          <div class="prac-page-body">
+            <h2>{p.name}</h2>
+            <span class="prac-role">{p.role}</span>
+            <p>{p.bio}</p>
+            <ul class="prac-focus">
+              {p.focus.map((item) => <li>{item}</li>)}
+            </ul>
+            <div class="prac-tags">
+              {p.tags.map((t) => <span>{t}</span>)}
+            </div>
+            <p class="prac-reg">{p.regs}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="wrap container-narrow" style="text-align:center">
+      <p class="eyebrow">How we practise</p>
+      <h2>UK registered. Hospital-trained.</h2>
+      <p class="lead" style="margin-inline:auto">
+        Appointments in English, Cantonese or Mandarin. No GP referral needed. Recognised by AXA Health, Vitality, Aviva and WPA.
+      </p>
+    </div>
+  </section>
+
+  <CTASection
+    heading="Book with the team"
+    sub="Same-week appointments at Reading and Wimbledon. Tell us which clinic suits you."
+  />
+</Base>

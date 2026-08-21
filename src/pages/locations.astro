@@ -1,0 +1,198 @@
+---
+import Base from "../layouts/Base.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import CTASection from "../components/CTASection.astro";
+import { clinics, site } from "../data/site";
+
+const faqItems = [
+  {
+    q: "Where are your TCM clinics located in the UK?",
+    a: "We have two clinics: 2 Saint Mark's Place, Wimbledon, London SW19 7ND, and Reading Health Centre, 61 Castle Street, Reading RG1 7SN. Both are accessible by public transport from central London and the wider Thames Valley.",
+  },
+  {
+    q: "Do you offer Cantonese-speaking consultations?",
+    a: "Yes. Cantonese- and Mandarin-speaking appointments are available at both locations. Request this when booking via WhatsApp.",
+  },
+  {
+    q: "Are your practitioners registered with a recognised professional body?",
+    a: "Yes. Both practitioners are British Acupuncture Council (MBAcC) members on a PSA Accredited Register, and ATCM professional members. They also hold CMCHK registration in Hong Kong and Master's degrees in Chinese Medicine.",
+  },
+  {
+    q: "What conditions can be treated at your clinics?",
+    a: "Both clinics treat musculoskeletal pain, sports injuries, sciatica, women's health conditions (including fertility and postnatal recovery), anxiety, sleep disorders, eczema, and other dermatological presentations. Message us via WhatsApp if you are unsure whether your condition is suitable.",
+  },
+  {
+    q: "How do I book an appointment?",
+    a: "WhatsApp is our primary booking channel. Message 07301 949 686 with your preferred clinic location, condition, and available times. First appointments include a full diagnostic consultation. No GP referral is required.",
+  },
+];
+---
+<Base
+  title="TCM Clinic Wimbledon & Reading | Yin-Yang Chinese Medicine | yin yang uk"
+  description="Looking for a trusted TCM clinic Wimbledon or TCM clinic Reading? Visit our expert practitioners for professional acupuncture, bone-setting and herbal care."
+>
+
+<section class="page-hero" style="min-height:62vh;display:grid;place-items:center">
+  <img
+    class="page-hero-bg"
+    src="/images/img_6058-eVlfhKuykGV6M98J.jpg"
+    alt="Yin Yang CMC UK clinic"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="wrap" style="padding:5rem 0 3.5rem">
+    <p class="eyebrow">Our Locations · Reading &amp; Wimbledon</p>
+    <h1>TCM Clinics in Wimbledon &amp; Reading — Hong Kong Standard Care</h1>
+    <p class="lede">
+      Two UK clinics. British Acupuncture Council registered practitioners. Cantonese consultations available. Find the nearest acupuncture and TCM clinic to you — no GP referral needed.
+    </p>
+    <div class="actions" style="margin-top:1.2rem">
+      <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-ghost" href="/clinical-services">View all services</a>
+    </div>
+    <div class="hero-trust-row">
+      <span><span class="htc">✓</span> Reading · Castle Street</span>
+      <span><span class="htc">✓</span> Wimbledon · SW19</span>
+      <span><span class="htc">✓</span> Same practitioners at both</span>
+      <span><span class="htc">✓</span> English &amp; Cantonese</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Two Clinics</p>
+      <h2>One standard of care</h2>
+      <p>
+        Both locations operate under the same clinical team, matched herbal formularies, and
+        synchronised diagnostic protocols — your treatment plan travels with you.
+      </p>
+    </div>
+    <div class="grid-2">
+      <article class="loc-card">
+        <img src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg" alt="Yin Yang CMC Reading clinic" />
+        <div class="loc-body">
+          <span class="loc-tag">Berkshire · Castle Street</span>
+          <h3>Reading Clinic</h3>
+          <div class="loc-row"><strong>Address</strong><span>{clinics.reading.address}</span></div>
+          <div class="loc-row"><strong>Hours</strong><span>{clinics.reading.hours}</span></div>
+          <div class="loc-row"><strong>Transport</strong><span>10 min walk from Reading Station · GWR from Paddington in under 30 min</span></div>
+          <div class="loc-row"><strong>Languages</strong><span>English · Cantonese · Mandarin</span></div>
+          <div class="loc-actions">
+            <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic details</a>
+            <a class="btn btn-gold btn-sm" href={site.whatsapp} target="_blank" rel="noreferrer">Book Reading</a>
+          </div>
+        </div>
+      </article>
+      <article class="loc-card">
+        <img src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg" alt="Yin Yang CMC Wimbledon clinic" />
+        <div class="loc-body">
+          <span class="loc-tag">South West London · SW19</span>
+          <h3>Wimbledon Clinic</h3>
+          <div class="loc-row"><strong>Address</strong><span>{clinics.wimbledon.address}</span></div>
+          <div class="loc-row"><strong>Hours</strong><span>{clinics.wimbledon.hours}</span></div>
+          <div class="loc-row"><strong>Transport</strong><span>5 min walk from Wimbledon Station · District Line, National Rail, Tramlink</span></div>
+          <div class="loc-row"><strong>Languages</strong><span>English · Cantonese · Mandarin</span></div>
+          <div class="loc-actions">
+            <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic details</a>
+            <a class="btn btn-gold btn-sm" href={site.whatsapp} target="_blank" rel="noreferrer">Book Wimbledon</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow eyebrow-dark">Why both clinics feel the same</p>
+      <h2>Same team. Same protocol.</h2>
+    </div>
+    <div class="ben-grid">
+      <div class="ben-item">
+        <span class="ben-num">01</span>
+        <h3>UK professional registration</h3>
+        <p>British Acupuncture Council members on a PSA Accredited Register, plus ATCM membership — recognised by major UK health insurers.</p>
+      </div>
+      <div class="ben-item">
+        <span class="ben-num">02</span>
+        <h3>Master's-level clinical training</h3>
+        <p>Both practitioners hold MSc degrees from the Chinese University of Hong Kong, with hospital clinical placements before UK practice.</p>
+      </div>
+      <div class="ben-item">
+        <span class="ben-num">03</span>
+        <h3>Bilingual consultations</h3>
+        <p>Describe symptoms in English, Cantonese, or Mandarin at either clinic — no translation loss.</p>
+      </div>
+      <div class="ben-item">
+        <span class="ben-num">04</span>
+        <h3>Modern TCM approach</h3>
+        <p>Treatment explained through clinical anatomy and physiology as well as classical theory — transparent, evidence-conscious care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Conditions</p>
+      <h2>Treated at both locations</h2>
+      <p>Each consultation begins with a structured assessment. Treatment is determined by your clinical picture — not a fixed package.</p>
+    </div>
+    <div class="grid-3" style="margin-bottom:2rem">
+      <div style="padding:1.6rem;background:var(--white);border-radius:var(--r-lg);border:1px solid var(--border)">
+        <h3 style="font-size:1.05rem">Pain &amp; orthopaedic care</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">Chronic back pain, sciatica, frozen shoulder, knee osteoarthritis, and sports injury rehabilitation.</p>
+        <a class="more-link" href="/back-pain">Back pain &amp; sciatica</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--white);border-radius:var(--r-lg);border:1px solid var(--border)">
+        <h3 style="font-size:1.05rem">Women's health</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">Fertility support, IVF adjunct care, PCOS, dysmenorrhoea, and postnatal recovery — assessed individually.</p>
+        <a class="more-link" href="/contact">Enquire about women's health</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--white);border-radius:var(--r-lg);border:1px solid var(--border)">
+        <h3 style="font-size:1.05rem">Skin &amp; dermatology</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">Eczema, acne, rosacea, and chronic urticaria approached as systemic presentations, not surface symptoms alone.</p>
+        <a class="more-link" href="/contact">Enquire about skin conditions</a>
+      </div>
+    </div>
+    <div class="cond-grid">
+      {[
+        { label: "Back Pain", href: "/back-pain" },
+        { label: "Sciatica", href: "/sciatica-treatment" },
+        { label: "Shoulder Pain", href: "/shoulder-pain" },
+        { label: "Frozen Shoulder", href: "/frozen-shoulder" },
+        { label: "Sports Injuries", href: "/sports-injuries" },
+        { label: "Acupuncture", href: "/acupuncture" },
+        { label: "Tui Na", href: "/tui-na-massage" },
+        { label: "Bone Setting", href: "/bone-setting" },
+      ].map(({ label, href }) => (
+        <a class="cond-chip" href={href}>{label}</a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid-2-lg" style="gap:5rem">
+    <div>
+      <p class="eyebrow">Common questions</p>
+      <h2>Booking either clinic</h2>
+      <p class="muted">Send your preferred location, condition, and available dates. We typically reply within a few hours during clinic hours.</p>
+      <div class="actions" style="margin-top:1.5rem">
+        <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp {site.phoneDisplay}</a>
+      </div>
+    </div>
+    <FAQAccordion items={faqItems} />
+  </div>
+</section>
+
+<CTASection
+  heading="Ready to start your recovery?"
+  sub="Book an initial consultation at our Wimbledon or Reading clinic — same-week appointments available."
+/>
+
+</Base>
