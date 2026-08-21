@@ -14,7 +14,12 @@ export const nav = {
     { href: "/tui-na-massage", label: "Tui Na Massage" },
     { href: "/herbal-consultation", label: "Herbal consultation" },
     { href: "/bone-setting", label: "Bone Setting" },
-    { href: "/other-treatment", label: "Other Treatment" },
+    { href: "/other-treatment", label: "Other Treatments" },
+    { href: "/cupping", label: "Cupping" },
+    { href: "/gua-sha", label: "Gua Sha" },
+    { href: "/moxibustion", label: "Moxibustion" },
+    { href: "/auricular-therapy", label: "Auricular Therapy" },
+    { href: "/tian-jiu", label: "Tian Jiu" },
   ],
   conditions: [
     { href: "/sciatica-treatment", label: "Sciatica Treatment" },

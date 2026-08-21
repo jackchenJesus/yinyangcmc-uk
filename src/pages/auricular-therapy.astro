@@ -1,0 +1,288 @@
+---
+import Base from "../layouts/Base.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import CTASection from "../components/CTASection.astro";
+
+const faqItems = [
+  {
+    q: "What are ear seeds?",
+    a: "Ear seeds are small seeds — traditionally from the Vaccaria plant — or small metal pellets adhered to the ear surface with medical-grade tape at specific auricular acupoints. Patients are shown how to gently press the seeds between appointments to maintain stimulation. The seeds are typically retained for 3–7 days.",
+  },
+  {
+    q: "Does auricular therapy hurt?",
+    a: "The seeds produce a mild pressure sensation when pressed, and some acupoints on the auricle may feel tender — particularly those corresponding to areas of active concern. The application itself is non-invasive and painless. There are no needles involved in ear seed therapy.",
+  },
+  {
+    q: "Can I use auricular therapy between clinic visits?",
+    a: "Yes — this is one of its primary advantages. Seeds remain on the ear between appointments, and patients are instructed to press them briefly 2–3 times per day. This means auricular therapy extends your treatment beyond the clinical session into your daily routine.",
+  },
+  {
+    q: "What conditions respond well to auricular therapy?",
+    a: "Clinical application at Yin Yang CMC most commonly involves insomnia, vivid dreaming, motion sickness, tinnitus, gastrointestinal and digestive tract issues, bronchial conditions, weight management support, and pain conditions. Your practitioner will assess whether it is appropriate for your presentation.",
+  },
+  {
+    q: "Can auricular therapy be used alongside other treatments?",
+    a: "Yes. Auricular therapy is most effective as part of a broader treatment plan. Seeds are typically applied at the end of an acupuncture or Tui Na session and retained until the next appointment — functioning as ongoing between-session therapy.",
+  },
+];
+---
+<Base
+  title="Auricular Therapy Wimbledon & Reading | Ear Acupressure & Ear Seeds | Yin Yang CMC"
+  description="Auricular therapy (ear seeds / ear acupressure) in Wimbledon & Reading. Registered TCM practitioners for insomnia, tinnitus, digestive issues, pain management and more."
+>
+
+
+<!-- ═══════════════════════════════════════════════
+     §1 HERO
+═══════════════════════════════════════════════ -->
+<section class="page-hero" style="min-height:68vh;display:grid;place-items:center">
+  <img
+    class="page-hero-bg"
+    src="/images/webbanner-eQwGJSc8Re6udP6z.jpg"
+    alt="Auricular therapy at Yin Yang CMC"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="wrap" style="padding:5rem 0 3.5rem">
+    <p class="eyebrow">Auricular Therapy · Reading &amp; Wimbledon</p>
+    <h1>Auricular Therapy<br>in Wimbledon &amp; Reading</h1>
+    <p class="lede">
+      Ear seed acupressure stimulating reflex points on the auricle —
+      for insomnia, pain, digestive health, and systemic regulation.
+      Simple, non-invasive, and side-effect free.
+    </p>
+
+    <div class="hero-exp-stat">
+      <span class="hero-exp-num">15+</span>
+      <span class="hero-exp-label">Years'<br>Clinical Experience</span>
+    </div>
+
+    <div class="actions" style="margin-top:0">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-ghost" href="/other-treatment">All Other Treatments</a>
+    </div>
+
+    <div class="hero-trust-row">
+      <span><span class="htc">✓</span> Non-Invasive</span>
+      <span><span class="htc">✓</span> No Side Effects</span>
+      <span><span class="htc">✓</span> BAcC &amp; ATCM Registered</span>
+      <span><span class="htc">✓</span> No Referral Needed</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §2 WHAT IS AURICULAR THERAPY
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-al" style="gap:4rem">
+
+      <div>
+        <p class="eyebrow">About the Treatment</p>
+        <h2>What Is Auricular Therapy? <span style="font-size:1.2rem;color:var(--gold)">耳穴</span></h2>
+        <p>
+          Auricular therapy involves placing ear seeds — small Vaccaria seeds or
+          metal pellets — on specific acupoints on the surface of the auricle (outer
+          ear). These points correspond to organ systems, body regions, and functional
+          states mapped according to TCM and modern auricular cartography.
+        </p>
+        <p>
+          Seeds are held in place with medical-grade adhesive tape. Patients are
+          instructed to press each point briefly and regularly between appointments,
+          extending the therapeutic effect into daily life. The treatment is simple
+          to perform and has no known side effects when applied by a qualified
+          practitioner.
+        </p>
+
+        <ul style="list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:0.5rem">
+          {[
+            "Non-invasive — no needles involved",
+            "Seeds retained 3–7 days for ongoing stimulation",
+            "Effective for insomnia, tinnitus, pain, and digestive conditions",
+            "Frequently combined with acupuncture as part of a session",
+          ].map((item) => (
+            <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:0.92rem">
+              <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.05em">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div class="actions" style="margin-top:1.8rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+          <a class="btn btn-outline" href="/acupuncture">About Acupuncture</a>
+        </div>
+      </div>
+
+      <div style="background:var(--cream);border-radius:var(--r-lg);padding:2rem;border:1px solid rgba(192,152,90,0.2)">
+        <p class="eyebrow">Key Advantages</p>
+        <h3 style="font-size:1.1rem;margin-bottom:1.2rem">Why Auricular Therapy Works Well</h3>
+        <div style="display:grid;gap:1rem">
+          {[
+            { title: "Continuous Stimulation", body: "Unlike a one-hour clinic session, ear seeds work around the clock. Patient self-stimulation 2–3 times daily keeps the therapeutic signal active between appointments." },
+            { title: "Discreet and Portable", body: "Seeds are barely visible and completely unobtrusive in daily life. No restriction on activities, no recovery time, and no observable marks or side effects." },
+            { title: "Diagnostic Feedback", body: "Tenderness at specific auricular points when pressed can indicate active pathology in the corresponding body region. This provides ongoing diagnostic information beyond the clinical session." },
+          ].map(({ title, body }) => (
+            <div style="padding-bottom:1rem;border-bottom:1px solid rgba(192,152,90,0.15)">
+              <h4 style="font-size:0.95rem;color:var(--navy);margin-bottom:0.3rem">{title}</h4>
+              <p style="font-size:0.87rem;color:var(--muted);line-height:1.55;margin:0">{body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §3 CONDITIONS
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Conditions</p>
+      <h2>What Auricular Therapy May Be Used For</h2>
+      <p>
+        Auricular therapy has specific therapeutic applications. Your practitioner
+        will assess your presentation and select points accordingly.
+      </p>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:2.5rem">
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">😴</p>
+        <h3 style="font-size:1.05rem">Sleep &amp; Stress</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Insomnia, vivid dreaming, anxiety, and stress-related restlessness.
+          Auricular therapy has specific documented applications for sleep
+          regulation and autonomic nervous system calming.
+        </p>
+        <a class="more-link" href="/conditions">Conditions We Treat</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🍽️</p>
+        <h3 style="font-size:1.05rem">Digestive &amp; Metabolic</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Gastrointestinal and digestive tract conditions, obesity and appetite
+          regulation, and withdrawal support. Ear points for digestive organs
+          provide targeted ongoing stimulation.
+        </p>
+        <a class="more-link" href="/conditions">All Conditions</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🔊</p>
+        <h3 style="font-size:1.05rem">Pain &amp; Sensory</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Tinnitus, motion sickness, various pain-related conditions, and
+          bronchial issues. Auricular therapy is simple to administer and
+          has no known side effects.
+        </p>
+        <a class="more-link" href="/conditions">All Conditions</a>
+      </div>
+    </div>
+
+    <div class="cond-grid">
+      {[
+        { label: "Insomnia",        href: "/conditions" },
+        { label: "Vivid Dreaming",  href: "/conditions" },
+        { label: "Motion Sickness", href: "/conditions" },
+        { label: "Tinnitus",        href: "/conditions" },
+        { label: "Digestive Issues",href: "/conditions" },
+        { label: "Bronchial Issues",href: "/conditions" },
+        { label: "Obesity Support", href: "/conditions" },
+        { label: "Pain Conditions", href: "/conditions" },
+      ].map(({ label, href }) => (
+        <a class="cond-chip" href={href}>{label}</a>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §4 HOW IT WORKS — dark
+═══════════════════════════════════════════════ -->
+<section class="section-dark">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow eyebrow-dark">Your Session</p>
+      <h2>How Auricular Therapy Works</h2>
+    </div>
+
+    <div class="journey-grid">
+      <div class="journey-step">
+        <div class="j-num">01</div>
+        <h3>Point Selection</h3>
+        <p>
+          Based on your clinical presentation, your practitioner identifies the
+          relevant auricular points. Tenderness on the auricle when probed is
+          used alongside your symptom picture to select the most active points.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">02</div>
+        <h3>Seed Application</h3>
+        <p>
+          Seeds are cleaned and adhered precisely to each selected point with
+          medical-grade tape. The application takes only a few minutes and is
+          completely painless. You will feel gentle pressure when seeds are pressed.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">03</div>
+        <h3>Self-Care Protocol</h3>
+        <p>
+          Your practitioner shows you how to press each seed for 30–60 seconds,
+          2–3 times per day. Seeds are replaced at your next appointment. This
+          ongoing self-care significantly extends the treatment benefit.
+        </p>
+      </div>
+    </div>
+
+    <p style="margin-top:2.5rem;text-align:center">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book Your Consultation</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §5 FAQ
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+      <div>
+        <p class="eyebrow">Common Questions</p>
+        <h2>Questions About Auricular Therapy</h2>
+        <p style="color:var(--muted)">
+          What patients commonly ask before their first ear seed appointment.
+        </p>
+        <div class="actions" style="margin-top:1.5rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Ask Us Directly</a>
+        </div>
+        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
+          <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related therapies:</p>
+          <div style="display:grid;gap:0.3rem">
+            <a href="/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
+            <a href="/moxibustion" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Moxibustion</a>
+            <a href="/tian-jiu" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Tian Jiu</a>
+          </div>
+        </div>
+      </div>
+      <FAQAccordion items={faqItems} />
+    </div>
+  </div>
+</section>
+
+
+<CTASection
+  heading="Book Your Auricular Therapy Session"
+  sub="Same-week appointments at Reading and Wimbledon. Ear seeds are typically applied at the end of an acupuncture session — ask about adding auricular therapy to your next visit."
+/>
+
+</Base>

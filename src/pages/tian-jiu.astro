@@ -1,0 +1,312 @@
+---
+import Base from "../layouts/Base.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import CTASection from "../components/CTASection.astro";
+
+const faqItems = [
+  {
+    q: "When is Tian Jiu available?",
+    a: "Tian Jiu is a seasonal therapy traditionally performed during two windows each year: the hottest period (typically late July to August, around the San Fu days) and the coldest period (December to January, around the San Jiu days). Please contact the clinic or check our website for the exact schedule each year.",
+  },
+  {
+    q: "Does the plaster burn or hurt?",
+    a: "Tian Jiu uses herbal compounds that cause a localized warming and congestion sensation on the skin — not a thermal burn. The plasters are applied for a set duration (typically 1–4 hours depending on the formula and your skin sensitivity). Some patients experience mild redness or small blisters, which your practitioner will advise on.",
+  },
+  {
+    q: "How many sessions are needed?",
+    a: "A standard course of Tian Jiu involves three sessions over the seasonal window — once per San Fu or once per San Jiu period. Your practitioner may recommend a course spanning both summer and winter windows for maximum immune-strengthening effect.",
+  },
+  {
+    q: "Who is Tian Jiu most suitable for?",
+    a: "Tian Jiu is particularly well suited for patients with recurring seasonal respiratory conditions (rhinitis, asthma, chronic cough), digestive cold patterns, and musculoskeletal conditions worsened by cold. It is also used for general immune strengthening and sub-health regulation. Your practitioner will assess suitability at your initial consultation.",
+  },
+  {
+    q: "Are there any contraindications?",
+    a: "Tian Jiu is not appropriate for patients with open wounds or broken skin at application sites, those with known herbal allergies, pregnant women (at certain acupoints), or those in febrile (fever) states. Children may be treated with modified protocols. Inform your practitioner of any skin sensitivities when booking.",
+  },
+];
+---
+<Base
+  title="Tian Jiu Wimbledon & Reading | Medicinal Vesiculation Therapy | Yin Yang CMC"
+  description="Tian Jiu (天灸) seasonal herbal plaster therapy in Wimbledon & Reading. Non-thermal moxibustion for respiratory, digestive, and musculoskeletal conditions. Registered TCM practitioners."
+>
+
+
+<!-- ═══════════════════════════════════════════════
+     §1 HERO
+═══════════════════════════════════════════════ -->
+<section class="page-hero" style="min-height:68vh;display:grid;place-items:center">
+  <img
+    class="page-hero-bg"
+    src="/images/webbanner-eQwGJSc8Re6udP6z.jpg"
+    alt="Tian Jiu therapy at Yin Yang CMC"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="wrap" style="padding:5rem 0 3.5rem">
+    <p class="eyebrow">Tian Jiu · Reading &amp; Wimbledon</p>
+    <h1>Tian Jiu (天灸)<br>Medicinal Vesiculation</h1>
+    <p class="lede">
+      Non-thermal moxibustion using herbal plasters applied to acupoints —
+      strengthening immunity and treating respiratory, digestive, and
+      musculoskeletal conditions. A seasonal TCM therapy.
+    </p>
+
+    <div class="hero-exp-stat">
+      <span class="hero-exp-num">15+</span>
+      <span class="hero-exp-label">Years'<br>Clinical Experience</span>
+    </div>
+
+    <div class="actions" style="margin-top:0">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-ghost" href="/other-treatment">All Other Treatments</a>
+    </div>
+
+    <div class="hero-trust-row">
+      <span><span class="htc">✓</span> Seasonal Therapy</span>
+      <span><span class="htc">✓</span> BAcC &amp; ATCM Registered</span>
+      <span><span class="htc">✓</span> No Referral Needed</span>
+      <span><span class="htc">✓</span> Insurance Recognised</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §2 WHAT IS TIAN JIU
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-al" style="gap:4rem">
+
+      <div>
+        <p class="eyebrow">About the Treatment</p>
+        <h2>What Is Tian Jiu? <span style="font-size:1.2rem;color:var(--gold)">天灸</span></h2>
+        <p>
+          Tian Jiu is a non-thermal moxibustion method in Traditional Chinese Medicine.
+          It involves applying herbal medication — typically a compound paste containing
+          warming and stimulating herbs — directly to specific skin areas and acupoints.
+          This causes localised congestion and a mild vesiculation (blistering) effect
+          that activates the body's Qi, regulates the Qi and blood of internal organs,
+          and achieves the prevention and treatment of disease through an external route.
+        </p>
+        <p>
+          Unlike conventional moxibustion which uses burning mugwort, Tian Jiu achieves
+          its effect pharmacologically and reflexively through the skin — making it
+          suitable for patients who cannot tolerate heat-based therapies. It is a form
+          of external therapy with systemic effects.
+        </p>
+
+        <ul style="list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:0.5rem">
+          {[
+            "Non-thermal — herbal compounds work through the skin",
+            "Activates Qi and regulates internal organ function",
+            "Enhances immunity and prevents recurring seasonal illness",
+            "Seasonal: summer (San Fu) and winter (San Jiu) windows",
+          ].map((item) => (
+            <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:0.92rem">
+              <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.05em">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div class="actions" style="margin-top:1.8rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Enquire About Tian Jiu</a>
+          <a class="btn btn-outline" href="/moxibustion">About Moxibustion</a>
+        </div>
+      </div>
+
+      <div style="background:var(--cream);border-radius:var(--r-lg);padding:2rem;border:1px solid rgba(192,152,90,0.2)">
+        <p class="eyebrow">Seasonal Schedule</p>
+        <h3 style="font-size:1.1rem;margin-bottom:1.2rem">When Tian Jiu Is Performed</h3>
+        <div style="display:grid;gap:1rem">
+          {[
+            {
+              name: "San Fu Days (三伏天)",
+              period: "July – August",
+              desc: "The three hottest days of the lunar calendar — the optimal period for warming Yang-deficient and cold-pattern conditions. Respiratory and immune strengthening is most effective during this window.",
+            },
+            {
+              name: "San Jiu Days (三九天)",
+              period: "December – January",
+              desc: "The three coldest days of the lunar calendar — used to consolidate and reinforce the effects of summer treatment. Together, summer and winter courses produce the strongest preventive effect.",
+            },
+          ].map(({ name, period, desc }) => (
+            <div style="padding:1rem;background:var(--white);border-radius:var(--r-md);border:1px solid rgba(192,152,90,0.15)">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.4rem">
+                <h4 style="font-size:0.95rem;color:var(--navy);margin:0">{name}</h4>
+                <span style="font-size:0.76rem;font-weight:700;color:var(--gold);letter-spacing:0.05em;text-transform:uppercase;white-space:nowrap;margin-left:0.5rem">{period}</span>
+              </div>
+              <p style="font-size:0.87rem;color:var(--muted);line-height:1.55;margin:0">{desc}</p>
+            </div>
+          ))}
+        </div>
+        <p style="font-size:0.82rem;color:var(--muted);margin-top:1rem;font-style:italic">
+          Contact the clinic or check our website for the exact dates each year.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §3 CONDITIONS
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Conditions</p>
+      <h2>What Tian Jiu Is Used For</h2>
+      <p>
+        Tian Jiu is particularly effective in preventing and treating the following
+        categories of conditions. Your practitioner will confirm suitability at assessment.
+      </p>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:2.5rem">
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🫁</p>
+        <h3 style="font-size:1.05rem">Respiratory System</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Allergic rhinitis, asthma, chronic bronchitis, chronic cough, and
+          individuals with a weak constitution prone to recurring colds.
+          Tian Jiu on lung-associated points significantly reduces seasonal relapse rates.
+        </p>
+        <a class="more-link" href="/contact">Enquire</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🍽️</p>
+        <h3 style="font-size:1.05rem">Digestive System</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Diarrhoea, stomach pain, anorexia (loss of appetite), and indigestion.
+          Tian Jiu warms the Spleen and Stomach in TCM terms, addressing
+          chronic cold-pattern digestive weakness.
+        </p>
+        <a class="more-link" href="/conditions">All Conditions</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🦴</p>
+        <h3 style="font-size:1.05rem">Locomotor System</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Rheumatism and rheumatoid arthritis, frozen shoulder, and neck, shoulder,
+          waist, and leg pain. Tian Jiu reaches deeper structural cold-stagnation
+          patterns that respond poorly to surface heat.
+        </p>
+        <a class="more-link" href="/frozen-shoulder">Frozen Shoulder</a>
+      </div>
+    </div>
+
+    <div style="background:var(--cream);border-radius:var(--r-lg);padding:1.8rem;border:1px solid rgba(192,152,90,0.2);margin-bottom:2rem">
+      <h3 style="font-size:1.05rem;margin-bottom:0.6rem">General Health &amp; Immune Strengthening</h3>
+      <p style="font-size:0.9rem;color:var(--muted);max-width:72ch">
+        Tian Jiu can effectively enhance the body's immunity, promote general health
+        and physical fitness, and regulate sub-health conditions. It is frequently
+        used by patients without a specific diagnosis who seek preventive seasonal care
+        and immune fortification.
+      </p>
+    </div>
+
+    <div class="cond-grid">
+      {[
+        { label: "Allergic Rhinitis",    href: "/conditions" },
+        { label: "Asthma",               href: "/conditions" },
+        { label: "Chronic Bronchitis",   href: "/conditions" },
+        { label: "Chronic Cough",        href: "/conditions" },
+        { label: "Frozen Shoulder",      href: "/frozen-shoulder" },
+        { label: "Rheumatism",           href: "/conditions" },
+        { label: "Stomach Pain",         href: "/conditions" },
+        { label: "Immune Deficiency",    href: "/conditions" },
+      ].map(({ label, href }) => (
+        <a class="cond-chip" href={href}>{label}</a>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §4 HOW IT WORKS — dark
+═══════════════════════════════════════════════ -->
+<section class="section-dark">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow eyebrow-dark">Your Session</p>
+      <h2>How a Tian Jiu Session Works</h2>
+    </div>
+
+    <div class="journey-grid">
+      <div class="journey-step">
+        <div class="j-num">01</div>
+        <h3>Assessment &amp; Point Selection</h3>
+        <p>
+          Your practitioner reviews your condition and selects the appropriate
+          acupoints for herbal application. Points are chosen based on your
+          primary pattern — respiratory, digestive, or locomotor.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">02</div>
+        <h3>Plaster Application</h3>
+        <p>
+          Herbal compound is applied to selected points and covered with adhesive
+          plaster. Plasters are retained for a prescribed period — typically 1–4 hours
+          depending on the formula and your skin sensitivity.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">03</div>
+        <h3>Course Completion</h3>
+        <p>
+          A standard course involves three sessions within the seasonal window.
+          Your practitioner will advise on the full course schedule and whether
+          both summer and winter courses are recommended for your condition.
+        </p>
+      </div>
+    </div>
+
+    <p style="margin-top:2.5rem;text-align:center">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Enquire About Tian Jiu Dates</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §5 FAQ
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+      <div>
+        <p class="eyebrow">Common Questions</p>
+        <h2>Questions About Tian Jiu</h2>
+        <p style="color:var(--muted)">
+          What patients commonly ask about this seasonal therapy.
+        </p>
+        <div class="actions" style="margin-top:1.5rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Ask Us Directly</a>
+        </div>
+        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
+          <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related therapies:</p>
+          <div style="display:grid;gap:0.3rem">
+            <a href="/moxibustion" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Moxibustion</a>
+            <a href="/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
+            <a href="/other-treatment" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ All Other Treatments</a>
+          </div>
+        </div>
+      </div>
+      <FAQAccordion items={faqItems} />
+    </div>
+  </div>
+</section>
+
+
+<CTASection
+  heading="Enquire About Tian Jiu"
+  sub="Tian Jiu is seasonal — contact us to find out when the next treatment window opens. Same-week appointments at Reading and Wimbledon."
+/>
+
+</Base>

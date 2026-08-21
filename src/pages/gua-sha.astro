@@ -1,0 +1,286 @@
+---
+import Base from "../layouts/Base.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import CTASection from "../components/CTASection.astro";
+
+const faqItems = [
+  {
+    q: "What are the red marks left after Gua Sha?",
+    a: "The reddish marks — called 'sha' — are petechiae caused by extravasation of blood into the subcutaneous tissue. They are not bruises from impact. The colour and density of sha reflects the degree of blood stasis in that area. Marks typically fade within 3–5 days and their appearance provides diagnostic information for the practitioner.",
+  },
+  {
+    q: "Is Gua Sha painful?",
+    a: "Gua Sha involves firm, repeated strokes with a smooth-edged tool. There is typically a scraping sensation that can be intense over areas of stasis or tight connective tissue. Your practitioner adjusts pressure based on your tolerance and the clinical requirement.",
+  },
+  {
+    q: "How often should I have Gua Sha?",
+    a: "For acute conditions, Gua Sha may be applied once or twice per week, usually as part of a broader TCM session. For chronic conditions or maintenance, your practitioner will recommend an appropriate frequency at your initial assessment.",
+  },
+  {
+    q: "Can Gua Sha be combined with acupuncture?",
+    a: "Yes. Gua Sha and acupuncture are frequently combined within a single treatment session at Yin Yang CMC. The sequencing of modalities is determined by your clinical presentation.",
+  },
+  {
+    q: "Are there contraindications for Gua Sha?",
+    a: "Gua Sha is not applied over broken skin, active rashes, sunburn, or areas of acute inflammation. It is avoided in patients on blood thinners, or with certain clotting conditions. Pregnancy requires technique modification. Your practitioner will screen for contraindications.",
+  },
+];
+---
+<Base
+  title="Gua Sha Wimbledon & Reading | TCM Scraping Therapy | Yin Yang CMC"
+  description="Professional Gua Sha scraping therapy in Wimbledon & Reading. Registered TCM practitioners for muscle conditions, inflammation, and chronic pain relief."
+>
+
+
+<!-- ═══════════════════════════════════════════════
+     §1 HERO
+═══════════════════════════════════════════════ -->
+<section class="page-hero" style="min-height:68vh;display:grid;place-items:center">
+  <img
+    class="page-hero-bg"
+    src="/images/webbanner-eQwGJSc8Re6udP6z.jpg"
+    alt="Gua Sha therapy at Yin Yang CMC"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="wrap" style="padding:5rem 0 3.5rem">
+    <p class="eyebrow">Gua Sha · Reading &amp; Wimbledon</p>
+    <h1>Gua Sha Therapy<br>in Wimbledon &amp; Reading</h1>
+    <p class="lede">
+      Instrument-assisted scraping to promote circulation, reduce inflammation,
+      and tonify deficiency — by registered TCM practitioners.
+    </p>
+
+    <div class="hero-exp-stat">
+      <span class="hero-exp-num">15+</span>
+      <span class="hero-exp-label">Years'<br>Clinical Experience</span>
+    </div>
+
+    <div class="actions" style="margin-top:0">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-ghost" href="/other-treatment">All Other Treatments</a>
+    </div>
+
+    <div class="hero-trust-row">
+      <span><span class="htc">✓</span> BAcC &amp; ATCM Registered</span>
+      <span><span class="htc">✓</span> Clinical Assessment First</span>
+      <span><span class="htc">✓</span> No Referral Needed</span>
+      <span><span class="htc">✓</span> Insurance Recognised</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §2 WHAT IS GUA SHA
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-al" style="gap:4rem">
+
+      <div>
+        <p class="eyebrow">About the Treatment</p>
+        <h2>What Is Gua Sha? <span style="font-size:1.2rem;color:var(--gold)">刮痧</span></h2>
+        <p>
+          Gua Sha involves applying firm, repeated unidirectional strokes with a
+          smooth-edged instrument — typically jade, horn, or stainless steel — to the
+          lubricated surface of the skin. The technique raises sha (petechiae) and
+          promotes the movement of stagnant Qi and blood in the subcutaneous tissues.
+        </p>
+        <p>
+          In clinical TCM, Gua Sha is most suitable for skin, muscle, and joint
+          conditions, and is best applied for tonifying deficiencies. It has an
+          anti-inflammatory and analgesic effect supported by modern research, and is
+          frequently used alongside acupuncture for musculoskeletal presentations.
+        </p>
+
+        <ul style="list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:0.5rem">
+          {[
+            "Most suitable for skin, muscle, and joint conditions",
+            "Best for tonifying deficiencies and relieving stagnation",
+            "Promotes local circulation and reduces inflammation",
+            "Often combined with acupuncture in a single session",
+          ].map((item) => (
+            <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:0.92rem">
+              <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.05em">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div class="actions" style="margin-top:1.8rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
+          <a class="btn btn-outline" href="/acupuncture">About Acupuncture</a>
+        </div>
+      </div>
+
+      <div style="background:var(--cream);border-radius:var(--r-lg);padding:2rem;border:1px solid rgba(192,152,90,0.2)">
+        <p class="eyebrow">Clinical Notes</p>
+        <h3 style="font-size:1.1rem;margin-bottom:1.2rem">What to Expect</h3>
+        <div style="display:grid;gap:1.2rem">
+          {[
+            { title: "The Sha (Marks)", body: "The raised petechiae left after treatment are diagnostic and therapeutic. Their colour — from pale pink to dark red — indicates the degree of local stasis. Marks are not painful after the session and fade within 3–5 days." },
+            { title: "Treatment Area", body: "Gua Sha is most commonly applied to the back, neck, and shoulders, but can be used on any body surface where stasis or tightness is identified. Facial Gua Sha uses lighter pressure and specialist technique." },
+            { title: "Post-Treatment", body: "Avoid cold, wind, and bathing in cold water for at least 12 hours after treatment. Keep treated areas covered and warm to support the therapeutic effect." },
+          ].map(({ title, body }) => (
+            <div style="padding-bottom:1rem;border-bottom:1px solid rgba(192,152,90,0.15)">
+              <h4 style="font-size:0.95rem;color:var(--navy);margin-bottom:0.3rem">{title}</h4>
+              <p style="font-size:0.87rem;color:var(--muted);line-height:1.55;margin:0">{body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §3 CONDITIONS
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Conditions</p>
+      <h2>What Gua Sha May Be Used For</h2>
+      <p>
+        Your practitioner will assess your individual presentation before determining
+        whether Gua Sha is clinically appropriate and where to apply it.
+      </p>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:2.5rem">
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🦴</p>
+        <h3 style="font-size:1.05rem">Muscle &amp; Joint Pain</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Chronic neck and shoulder tension, upper back stiffness, muscle tightness,
+          and joint mobility restriction. Gua Sha effectively breaks down
+          superficial adhesions and reduces local inflammation.
+        </p>
+        <a class="more-link" href="/shoulder-pain">Shoulder Pain</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🫁</p>
+        <h3 style="font-size:1.05rem">Respiratory Support</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Chronic cough, bronchitis, and cold-pattern respiratory presentations.
+          Upper back Gua Sha stimulates lung-associated points and supports
+          the clearing of pathogenic factors.
+        </p>
+        <a class="more-link" href="/contact">Enquire</a>
+      </div>
+      <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🌡️</p>
+        <h3 style="font-size:1.05rem">Fever &amp; Heat Conditions</h3>
+        <p style="font-size:0.9rem;color:var(--muted)">
+          Early-stage febrile conditions, heat stroke, and summer-heat presentations.
+          Gua Sha is a traditional first-response therapy for releasing
+          exterior pathogenic heat.
+        </p>
+        <a class="more-link" href="/contact">Enquire</a>
+      </div>
+    </div>
+
+    <div class="cond-grid">
+      {[
+        { label: "Neck Pain",         href: "/conditions" },
+        { label: "Shoulder Pain",     href: "/shoulder-pain" },
+        { label: "Back Pain",         href: "/back-pain" },
+        { label: "Muscle Tightness",  href: "/conditions" },
+        { label: "Sports Injuries",   href: "/sports-injuries" },
+        { label: "Headaches",         href: "/conditions" },
+        { label: "Chronic Fatigue",   href: "/conditions" },
+        { label: "Respiratory",       href: "/conditions" },
+      ].map(({ label, href }) => (
+        <a class="cond-chip" href={href}>{label}</a>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §4 HOW IT WORKS — dark
+═══════════════════════════════════════════════ -->
+<section class="section-dark">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow eyebrow-dark">Your Session</p>
+      <h2>How a Gua Sha Session Works</h2>
+    </div>
+
+    <div class="journey-grid">
+      <div class="journey-step">
+        <div class="j-num">01</div>
+        <h3>Clinical Assessment</h3>
+        <p>
+          Your practitioner assesses your condition, identifies the areas of stasis
+          or tension to address, and explains the technique and what to expect —
+          including the sha marks that will be raised.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">02</div>
+        <h3>Gua Sha Application</h3>
+        <p>
+          Oil is applied to the skin. The practitioner makes repeated firm strokes
+          with the Gua Sha tool along meridian pathways or affected muscle groups
+          until sha appears or the tissue releases.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">03</div>
+        <h3>Post-Treatment Guidance</h3>
+        <p>
+          You will receive specific aftercare instructions — including keeping treated
+          areas warm and avoiding cold exposure — and a note on what the sha colour
+          indicates about your clinical state.
+        </p>
+      </div>
+    </div>
+
+    <p style="margin-top:2.5rem;text-align:center">
+      <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book Your Consultation</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §5 FAQ
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+      <div>
+        <p class="eyebrow">Common Questions</p>
+        <h2>Questions About Gua Sha</h2>
+        <p style="color:var(--muted)">
+          What patients commonly ask before their first Gua Sha session.
+        </p>
+        <div class="actions" style="margin-top:1.5rem">
+          <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Ask Us Directly</a>
+        </div>
+        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
+          <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related therapies:</p>
+          <div style="display:grid;gap:0.3rem">
+            <a href="/cupping" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Cupping Therapy</a>
+            <a href="/moxibustion" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Moxibustion</a>
+            <a href="/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
+          </div>
+        </div>
+      </div>
+      <FAQAccordion items={faqItems} />
+    </div>
+  </div>
+</section>
+
+
+<CTASection
+  heading="Book Your Gua Sha Session"
+  sub="Same-week appointments at Reading and Wimbledon. Gua Sha is often combined with acupuncture — your practitioner will advise."
+/>
+
+</Base>

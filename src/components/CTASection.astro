@@ -1,0 +1,34 @@
+---
+interface Props {
+  heading?: string;
+  sub?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+}
+const {
+  heading        = "Ready to Start Your Treatment?",
+  sub            = "Same-week appointments available at our Wimbledon and Reading clinics. New patients welcome — no referral needed.",
+  primaryLabel   = "Book Now on WhatsApp",
+  primaryHref    = "https://wa.me/447301949686",
+  secondaryLabel = "Call Us",
+  secondaryHref  = "tel:+447301949686",
+} = Astro.props;
+---
+<section class="cta-section">
+  <div class="wrap container-narrow" style="text-align:center">
+    <p class="eyebrow" style="color:var(--gold)">Book Your Appointment</p>
+    <h2>{heading}</h2>
+    <p>{sub}</p>
+    <div class="actions actions-c">
+      <a
+        class="btn btn-gold"
+        href={primaryHref}
+        target={primaryHref.startsWith("http") ? "_blank" : undefined}
+        rel={primaryHref.startsWith("http") ? "noreferrer" : undefined}
+      >{primaryLabel}</a>
+      <a class="btn btn-ghost" href={secondaryHref}>{secondaryLabel}</a>
+    </div>
+  </div>
+</section>

@@ -1,25 +1,61 @@
 ---
-import { clinics, site } from "../data/site";
+import { site } from "../data/site";
 ---
 <footer class="site-footer">
-  <div class="wrap foot-grid">
-    <div>
-      <h3>Yin Yang CMC</h3>
-      <p>Modern TCM & Wellness Centre. Hong Kong clinical standards in Wimbledon and Reading.</p>
-      <p><a href={`mailto:${site.email}`}>{site.email}</a><br />
-      <a href={`tel:${site.phoneIntl}`}>+44 {site.phoneDisplay}</a></p>
+  <div class="wrap">
+    <div class="foot-grid">
+
+      <!-- Col 1: Brand -->
+      <div class="foot-brand">
+        <img src="/images/ming_logo-full-7UbV6e2W5oyjr2Ir.png" alt="Yin Yang CMC" />
+        <p class="foot-tagline">Professional Chinese Medicine<br />in Wimbledon &amp; Reading</p>
+        <nav class="foot-contact" aria-label="Contact">
+          <a href={`tel:${site.phoneIntl}`}>{site.phoneDisplay}</a>
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </nav>
+      </div>
+
+      <!-- Col 2: Services -->
+      <div>
+        <h5>Services</h5>
+        <nav class="foot-links" aria-label="Footer services">
+          <a href="/clinical-services">All Clinical Services</a>
+          <a href="/acupuncture">Acupuncture</a>
+          <a href="/tui-na-massage">Tui Na Massage</a>
+          <a href="/bone-setting">Bone Setting</a>
+          <a href="/herbal-consultation">Herbal Medicine</a>
+        </nav>
+      </div>
+
+      <!-- Col 3: Conditions -->
+      <div>
+        <h5>Conditions</h5>
+        <nav class="foot-links" aria-label="Footer conditions">
+          <a href="/back-pain">Back Pain &amp; Sciatica</a>
+          <a href="/shoulder-pain">Shoulder Pain</a>
+          <a href="/frozen-shoulder">Frozen Shoulder</a>
+          <a href="/sports-injuries">Sports Injuries</a>
+          <a href="/conditions">All Conditions</a>
+        </nav>
+      </div>
+
+      <!-- Col 4: Clinics & Info -->
+      <div>
+        <h5>Clinics</h5>
+        <nav class="foot-links" aria-label="Footer clinics">
+          <a href="/reading-clinic">Reading Clinic</a>
+          <a href="/wimbledon-clinic">Wimbledon Clinic</a>
+          <a href="/pricing-and-insurance">Pricing &amp; Insurance</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/locations">All Locations</a>
+        </nav>
+      </div>
+
     </div>
-    <div>
-      <h4>Reading</h4>
-      <p>{clinics.reading.address}<br />{clinics.reading.hours}</p>
+
+    <div class="foot-legal">
+      <span>© {site.year} Yin Yang CMC · All rights reserved.</span>
+      <a href="/privacy-terms-and-conditions">Privacy &amp; Terms</a>
     </div>
-    <div>
-      <h4>Wimbledon</h4>
-      <p>{clinics.wimbledon.address}<br />{clinics.wimbledon.hours}</p>
-    </div>
-  </div>
-  <div class="wrap legal">
-    <span>© {site.year}. Yin Yang CMC All rights reserved.</span>
-    <a href="/privacy-terms-and-conditions">Privacy | Terms and Conditions</a>
   </div>
 </footer>
