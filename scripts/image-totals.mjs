@@ -1,0 +1,10 @@
+import fs from "node:fs";
+const h = fs.readFileSync("dist/back-pain/index.html", "utf8");
+const m = h.match(/og:image" content="[^"]+/);
+console.log(m && m[0]);
+const d = "public/images";
+let t = 0;
+const files = fs.readdirSync(d);
+for (const f of files) t += fs.statSync(d + "/" + f).size;
+console.log("files", files.length, "bytes", t);
+console.log(files.sort().join("\n"));

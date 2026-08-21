@@ -1,0 +1,347 @@
+{
+  "replacements": {
+    "webbanner-eQwGJSc8Re6udP6z.jpg": "acupuncture-back-treatment.webp",
+    "img_6058-eVlfhKuykGV6M98J.jpg": "reading-clinic-treatment-room.webp",
+    "ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg": "reading-clinic-interior.webp",
+    "screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg": "wimbledon-clinic-interior.webp",
+    "e--ae-a-_edited-XhbCA7G3Oou0Mlsq.jpg": "shing-hui-practitioner.webp",
+    "aeeppsc-c-e-a-_edited_edited-a6uAksf7EtvBGWTM.jpg": "chui-ying-li-practitioner.webp",
+    "adobestock_88537046-low-My8DbSswqH0l0J9t.jpg": "acupuncture-abdomen-treatment.webp",
+    "lesson-1-sqDt7CzsVqOfjk8h.jpg": "tcm-workshop-presentation.webp",
+    "lesson-2-lRbBjXWM7hxFlTSo.jpg": "tcm-workshop-2.webp",
+    "lesson-3-KEj7Q3TDqNbc5hA8.jpg": "tcm-workshop-3.webp",
+    "lesson-4-FeX7VoWsezomSvjS.jpg": "tcm-workshop-4.webp",
+    "lesson-5-uPJtsceVCgOAp9aF.jpg": "tcm-workshop-5.webp",
+    "back_pain_treatment-vMLmusxJIAVKmYK5.png": "back-assessment-treatment.webp",
+    "sciatica-lower-back-pain-CiEnhdaob4WbteY2.png": "sciatica-nerve-illustration.webp",
+    "sports-injuries-orthopaedics-7F9Mh61pjr43DjEH.png": "knee-assessment-clinic.webp",
+    "back-pain-sciatica-hAE6tS5ptUz32TSo.png": "manual-therapy-side-lying.webp",
+    "acupuncture-for-shoulder-pain-k9uul1g0Hqlp9Qaa.webp": "shoulder-pain-symptom.webp",
+    "acupuncture_for_frozen_shoulder-LYlyaUQ7GqsYzZB5.webp": "shoulder-pain-holding-shoulder.webp",
+    "tui-na-massage-8YKIYR6VTwdVMTdx.webp": "tui-na-massage-treatment.webp",
+    "bone-setting-orthopaedic-care-o6PPJu9WdXDef1r7.webp": "bone-setting-treatment.webp",
+    "chinese-herbal-medicine-6MuZIXMBnlhegCyU.webp": "chinese-herbal-medicine.webp",
+    "conditions-we-treat-OWrWp19D0BpU3xPw.webp": "pulse-diagnosis-consultation.webp",
+    "label_other_white-ilyOGIeZEF3BJ6hg.png": "other-treatment-icon.webp",
+    "ming_logo-full-7UbV6e2W5oyjr2Ir.png": "yin-yang-cmc-logo.png",
+    "img_6166_edited_edited-9Q17LqGYALOqVATK.png": "bacc-member-logo.png",
+    "logo-1Sd4CEWi2DBGgfdr.png": "atcm-logo.png",
+    "psa-logo-7Gbuzq9tXIGQIaKt.png": "psa-logo.png",
+    "axa-pgrbfCYpRRoo1New.png": "axa-health-logo.png",
+    "pru-health-vitalty-insurance-london-canada-water-se16-stratford-e15-e20-canary-wharf-e14-london-bridge-se1-rDAt2VDOOdmYgqEM.webp": "vitality-health-logo.webp",
+    "screenshot-2026-06-23-183044-YhgRn9pOvK6KsiM2.png": "aviva-health-logo.png",
+    "wpa-sbHlIPUxP3aHSfe4.png": "wpa-logo.png"
+  },
+  "report": [
+    {
+      "from": "webbanner-eQwGJSc8Re6udP6z.jpg",
+      "to": "acupuncture-back-treatment.webp",
+      "beforeBytes": 63678,
+      "afterBytes": 18932,
+      "savingBytes": 44746,
+      "pct": "70.3",
+      "beforeDim": "1600x1067",
+      "afterDim": "1600x1067"
+    },
+    {
+      "from": "img_6058-eVlfhKuykGV6M98J.jpg",
+      "to": "reading-clinic-treatment-room.webp",
+      "beforeBytes": 303755,
+      "afterBytes": 192184,
+      "savingBytes": 111571,
+      "pct": "36.7",
+      "beforeDim": "1600x1202",
+      "afterDim": "1600x1202"
+    },
+    {
+      "from": "ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg",
+      "to": "reading-clinic-interior.webp",
+      "beforeBytes": 142427,
+      "afterBytes": 59994,
+      "savingBytes": 82433,
+      "pct": "57.9",
+      "beforeDim": "1600x1010",
+      "afterDim": "1600x1010"
+    },
+    {
+      "from": "screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg",
+      "to": "wimbledon-clinic-interior.webp",
+      "beforeBytes": 157485,
+      "afterBytes": 76998,
+      "savingBytes": 80487,
+      "pct": "51.1",
+      "beforeDim": "1600x869",
+      "afterDim": "1600x869"
+    },
+    {
+      "from": "e--ae-a-_edited-XhbCA7G3Oou0Mlsq.jpg",
+      "to": "shing-hui-practitioner.webp",
+      "beforeBytes": 137064,
+      "afterBytes": 21672,
+      "savingBytes": 115392,
+      "pct": "84.2",
+      "beforeDim": "1600x1763",
+      "afterDim": "800x882"
+    },
+    {
+      "from": "aeeppsc-c-e-a-_edited_edited-a6uAksf7EtvBGWTM.jpg",
+      "to": "chui-ying-li-practitioner.webp",
+      "beforeBytes": 126011,
+      "afterBytes": 19802,
+      "savingBytes": 106209,
+      "pct": "84.3",
+      "beforeDim": "1600x1763",
+      "afterDim": "800x882"
+    },
+    {
+      "from": "adobestock_88537046-low-My8DbSswqH0l0J9t.jpg",
+      "to": "acupuncture-abdomen-treatment.webp",
+      "beforeBytes": 70974,
+      "afterBytes": 20246,
+      "savingBytes": 50728,
+      "pct": "71.5",
+      "beforeDim": "1600x1067",
+      "afterDim": "1400x934"
+    },
+    {
+      "from": "lesson-1-sqDt7CzsVqOfjk8h.jpg",
+      "to": "tcm-workshop-presentation.webp",
+      "beforeBytes": 221657,
+      "afterBytes": 87924,
+      "savingBytes": 133733,
+      "pct": "60.3",
+      "beforeDim": "1600x1200",
+      "afterDim": "1400x1050"
+    },
+    {
+      "from": "lesson-2-lRbBjXWM7hxFlTSo.jpg",
+      "to": "tcm-workshop-2.webp",
+      "beforeBytes": 269668,
+      "afterBytes": 126130,
+      "savingBytes": 143538,
+      "pct": "53.2",
+      "beforeDim": "1600x1200",
+      "afterDim": "1400x1050"
+    },
+    {
+      "from": "lesson-3-KEj7Q3TDqNbc5hA8.jpg",
+      "to": "tcm-workshop-3.webp",
+      "beforeBytes": 199997,
+      "afterBytes": 86206,
+      "savingBytes": 113791,
+      "pct": "56.9",
+      "beforeDim": "1600x1066",
+      "afterDim": "1400x933"
+    },
+    {
+      "from": "lesson-4-FeX7VoWsezomSvjS.jpg",
+      "to": "tcm-workshop-4.webp",
+      "beforeBytes": 291981,
+      "afterBytes": 134742,
+      "savingBytes": 157239,
+      "pct": "53.9",
+      "beforeDim": "1600x1200",
+      "afterDim": "1400x1050"
+    },
+    {
+      "from": "lesson-5-uPJtsceVCgOAp9aF.jpg",
+      "to": "tcm-workshop-5.webp",
+      "beforeBytes": 409342,
+      "afterBytes": 199440,
+      "savingBytes": 209902,
+      "pct": "51.3",
+      "beforeDim": "1600x1600",
+      "afterDim": "1400x1400"
+    },
+    {
+      "from": "back_pain_treatment-vMLmusxJIAVKmYK5.png",
+      "to": "back-assessment-treatment.webp",
+      "beforeBytes": 117818,
+      "afterBytes": 49682,
+      "savingBytes": 68136,
+      "pct": "57.8",
+      "beforeDim": "1600x900",
+      "afterDim": "1600x900"
+    },
+    {
+      "from": "sciatica-lower-back-pain-CiEnhdaob4WbteY2.png",
+      "to": "sciatica-nerve-illustration.webp",
+      "beforeBytes": 229863,
+      "afterBytes": 124142,
+      "savingBytes": 105721,
+      "pct": "46.0",
+      "beforeDim": "1600x1066",
+      "afterDim": "1600x1066"
+    },
+    {
+      "from": "sports-injuries-orthopaedics-7F9Mh61pjr43DjEH.png",
+      "to": "knee-assessment-clinic.webp",
+      "beforeBytes": 176917,
+      "afterBytes": 81984,
+      "savingBytes": 94933,
+      "pct": "53.7",
+      "beforeDim": "1600x1066",
+      "afterDim": "1600x1066"
+    },
+    {
+      "from": "back-pain-sciatica-hAE6tS5ptUz32TSo.png",
+      "to": "manual-therapy-side-lying.webp",
+      "beforeBytes": 160735,
+      "afterBytes": 73920,
+      "savingBytes": 86815,
+      "pct": "54.0",
+      "beforeDim": "1600x1066",
+      "afterDim": "1600x1066"
+    },
+    {
+      "from": "acupuncture-for-shoulder-pain-k9uul1g0Hqlp9Qaa.webp",
+      "to": "shoulder-pain-symptom.webp",
+      "beforeBytes": 108691,
+      "afterBytes": 48656,
+      "savingBytes": 60035,
+      "pct": "55.2",
+      "beforeDim": "1600x853",
+      "afterDim": "1600x853"
+    },
+    {
+      "from": "acupuncture_for_frozen_shoulder-LYlyaUQ7GqsYzZB5.webp",
+      "to": "shoulder-pain-holding-shoulder.webp",
+      "beforeBytes": 104506,
+      "afterBytes": 42704,
+      "savingBytes": 61802,
+      "pct": "59.1",
+      "beforeDim": "1600x1066",
+      "afterDim": "1600x1066"
+    },
+    {
+      "from": "tui-na-massage-8YKIYR6VTwdVMTdx.webp",
+      "to": "tui-na-massage-treatment.webp",
+      "beforeBytes": 110936,
+      "afterBytes": 47058,
+      "savingBytes": 63878,
+      "pct": "57.6",
+      "beforeDim": "1600x1066",
+      "afterDim": "1600x1066"
+    },
+    {
+      "from": "bone-setting-orthopaedic-care-o6PPJu9WdXDef1r7.webp",
+      "to": "bone-setting-treatment.webp",
+      "beforeBytes": 133363,
+      "afterBytes": 59842,
+      "savingBytes": 73521,
+      "pct": "55.1",
+      "beforeDim": "1600x1066",
+      "afterDim": "1600x1066"
+    },
+    {
+      "from": "chinese-herbal-medicine-6MuZIXMBnlhegCyU.webp",
+      "to": "chinese-herbal-medicine.webp",
+      "beforeBytes": 153279,
+      "afterBytes": 76072,
+      "savingBytes": 77207,
+      "pct": "50.4",
+      "beforeDim": "1600x853",
+      "afterDim": "1600x853"
+    },
+    {
+      "from": "conditions-we-treat-OWrWp19D0BpU3xPw.webp",
+      "to": "pulse-diagnosis-consultation.webp",
+      "beforeBytes": 149015,
+      "afterBytes": 64898,
+      "savingBytes": 84117,
+      "pct": "56.4",
+      "beforeDim": "1600x1066",
+      "afterDim": "1600x1066"
+    },
+    {
+      "from": "label_other_white-ilyOGIeZEF3BJ6hg.png",
+      "to": "other-treatment-icon.webp",
+      "beforeBytes": 86558,
+      "afterBytes": 35828,
+      "savingBytes": 50730,
+      "pct": "58.6",
+      "beforeDim": "1600x822",
+      "afterDim": "1200x617"
+    },
+    {
+      "from": "ming_logo-full-7UbV6e2W5oyjr2Ir.png",
+      "to": "yin-yang-cmc-logo.png",
+      "beforeBytes": 137804,
+      "afterBytes": 14380,
+      "savingBytes": 123424,
+      "pct": "89.6",
+      "beforeDim": "1600x664",
+      "afterDim": "480x199"
+    },
+    {
+      "from": "img_6166_edited_edited-9Q17LqGYALOqVATK.png",
+      "to": "bacc-member-logo.png",
+      "beforeBytes": 185539,
+      "afterBytes": 18654,
+      "savingBytes": 166885,
+      "pct": "89.9",
+      "beforeDim": "1600x603",
+      "afterDim": "400x151"
+    },
+    {
+      "from": "logo-1Sd4CEWi2DBGgfdr.png",
+      "to": "atcm-logo.png",
+      "beforeBytes": 883922,
+      "afterBytes": 80725,
+      "savingBytes": 803197,
+      "pct": "90.9",
+      "beforeDim": "1600x1780",
+      "afterDim": "400x445"
+    },
+    {
+      "from": "psa-logo-7Gbuzq9tXIGQIaKt.png",
+      "to": "psa-logo.png",
+      "beforeBytes": 133536,
+      "afterBytes": 10291,
+      "savingBytes": 123245,
+      "pct": "92.3",
+      "beforeDim": "1600x747",
+      "afterDim": "400x187"
+    },
+    {
+      "from": "axa-pgrbfCYpRRoo1New.png",
+      "to": "axa-health-logo.png",
+      "beforeBytes": 289457,
+      "afterBytes": 2192,
+      "savingBytes": 287265,
+      "pct": "99.2",
+      "beforeDim": "1600x1571",
+      "afterDim": "98x96"
+    },
+    {
+      "from": "pru-health-vitalty-insurance-london-canada-water-se16-stratford-e15-e20-canary-wharf-e14-london-bridge-se1-rDAt2VDOOdmYgqEM.webp",
+      "to": "vitality-health-logo.webp",
+      "beforeBytes": 31787,
+      "afterBytes": 1440,
+      "savingBytes": 30347,
+      "pct": "95.5",
+      "beforeDim": "1600x900",
+      "afterDim": "171x96"
+    },
+    {
+      "from": "screenshot-2026-06-23-183044-YhgRn9pOvK6KsiM2.png",
+      "to": "aviva-health-logo.png",
+      "beforeBytes": 118990,
+      "afterBytes": 1797,
+      "savingBytes": 117193,
+      "pct": "98.5",
+      "beforeDim": "1600x1207",
+      "afterDim": "127x96"
+    },
+    {
+      "from": "wpa-sbHlIPUxP3aHSfe4.png",
+      "to": "wpa-logo.png",
+      "beforeBytes": 166581,
+      "afterBytes": 1708,
+      "savingBytes": 164873,
+      "pct": "99.0",
+      "beforeDim": "1600x1055",
+      "afterDim": "146x96"
+    }
+  ]
+}
