@@ -2,8 +2,9 @@
 import Base from "../layouts/Base.astro";
 import PageHero from "../components/PageHero.astro";
 import CTASection from "../components/CTASection.astro";
+import ConditionDetail from "../components/ConditionDetail.astro";
 import pages from "../data/pages.json";
-import { clinics } from "../data/site";
+import { getLiveCondition } from "../data/conditions";
 
 // Pages with dedicated Astro files — excluded from this fallback template
 export function getStaticPaths() {
@@ -24,6 +25,12 @@ export function getStaticPaths() {
     "moxibustion",
     "auricular-therapy",
     "tian-jiu",
+    // Location pages
+    "locations",
+    "reading-clinic",
+    "wimbledon-clinic",
+    "our-practitioners",
+    "conditions",
   ]);
   return Object.keys(pages)
     .filter((slug) => !skip.has(slug))
@@ -31,6 +38,7 @@ export function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
+const condition = getLiveCondition(slug!);
 const page = (pages as Record<string, { title: string; desc: string; headings: string[]; paras: string[] }>)[slug!];
 
 // Filter out navigation/footer/internal artefacts from scraped content
@@ -46,31 +54,22 @@ const SKIP_PARA_START = [
   "Reach us anytime", "Call Us 07301",
 ];
 
-const headings = page.headings.filter((h) => !SKIP_HEADS.has(h));
-const paras    = page.paras.filter((p) =>
-  !SKIP_PARA_START.some((s) => p.startsWith(s))
-);
+const headings = (!condition && page)
+  ? page.headings.filter((h) => !SKIP_HEADS.has(h))
+  : [];
+const paras = (!condition && page)
+  ? page.paras.filter((p) => !SKIP_PARA_START.some((s) => p.startsWith(s)))
+  : [];
 
-const hero = headings[0] || page.title;
+const hero = headings[0] || page?.title || "";
 const lede = (headings[1] && headings[1].length > 40)
   ? headings[1]
   : paras[0]?.slice(0, 240);
 
 const heroImages: Record<string, string> = {
-  conditions:           "/images/conditions-we-treat-OWrWp19D0BpU3xPw.webp",
-  "back-pain":          "/images/back_pain_treatment-vMLmusxJIAVKmYK5.png",
-  "sciatica-treatment": "/images/sciatica-lower-back-pain-CiEnhdaob4WbteY2.png",
-  "frozen-shoulder":    "/images/acupuncture_for_frozen_shoulder-LYlyaUQ7GqsYzZB5.webp",
-  "shoulder-pain":      "/images/acupuncture-for-shoulder-pain-k9uul1g0Hqlp9Qaa.webp",
-  "sports-injuries":    "/images/sports-injuries-orthopaedics-7F9Mh61pjr43DjEH.png",
-  "reading-clinic":     "/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg",
-  "wimbledon-clinic":   "/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg",
-  locations:            "/images/img_6058-eVlfhKuykGV6M98J.jpg",
-  course:               "/images/lesson-1-sqDt7CzsVqOfjk8h.jpg",
+  course: "/images/lesson-1-sqDt7CzsVqOfjk8h.jpg",
 };
 
-const locationSlugs = new Set(["locations", "reading-clinic", "wimbledon-clinic"]);
-const showLocations = locationSlugs.has(slug!);
 const courseImages = slug === "course"
   ? [
       "/images/lesson-1-sqDt7CzsVqOfjk8h.jpg",
@@ -81,6 +80,11 @@ const courseImages = slug === "course"
     ]
   : [];
 ---
+{condition ? (
+  <Base title={condition.title} description={condition.description}>
+    <ConditionDetail condition={condition} />
+  </Base>
+) : (
 <Base title={page.title} description={page.desc}>
   <PageHero
     title={hero}
@@ -134,44 +138,6 @@ const courseImages = slug === "course"
     </section>
   )}
 
-  {showLocations && (
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Our Clinics</p>
-          <h2>Reading &amp; Wimbledon</h2>
-        </div>
-        <div class="grid-2">
-          <article class="loc-card">
-            <img src="/images/ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg" alt="Reading clinic" />
-            <div class="loc-body">
-              <span class="loc-tag">Berkshire · Castle Street</span>
-              <h3>Reading</h3>
-              <div class="loc-row"><strong>Address</strong><span>{clinics.reading.address}</span></div>
-              <div class="loc-row"><strong>Hours</strong><span>{clinics.reading.hours}</span></div>
-              <div class="loc-actions">
-                <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic details</a>
-                <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book</a>
-              </div>
-            </div>
-          </article>
-          <article class="loc-card">
-            <img src="/images/screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg" alt="Wimbledon clinic" />
-            <div class="loc-body">
-              <span class="loc-tag">South West London · SW19</span>
-              <h3>Wimbledon</h3>
-              <div class="loc-row"><strong>Address</strong><span>{clinics.wimbledon.address}</span></div>
-              <div class="loc-row"><strong>Hours</strong><span>{clinics.wimbledon.hours}</span></div>
-              <div class="loc-actions">
-                <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic details</a>
-                <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-  )}
-
   <CTASection />
 </Base>
+)}

@@ -1,0 +1,168 @@
+---
+import FAQAccordion from "./FAQAccordion.astro";
+import CTASection from "./CTASection.astro";
+import { site } from "../data/site";
+import { getConditionBySlug, type LiveCondition } from "../data/conditions";
+
+interface Props {
+  condition: LiveCondition;
+}
+
+const { condition } = Astro.props;
+
+const related = condition.related
+  .map((slug) => getConditionBySlug(slug))
+  .filter((c): c is NonNullable<typeof c> => Boolean(c));
+---
+
+<section class="page-hero" style="min-height:62vh;display:grid;place-items:center">
+  <img
+    class="page-hero-bg"
+    src={condition.image}
+    alt={condition.label}
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="wrap" style="padding:5rem 0 3.5rem">
+    <p class="eyebrow">{condition.eyebrow}</p>
+    <h1>{condition.h1}</h1>
+    <p class="lede">{condition.lede}</p>
+    <div class="actions" style="margin-top:1.2rem">
+      <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-ghost" href="/conditions">All Conditions</a>
+    </div>
+    <div class="hero-trust-row">
+      <span><span class="htc">✓</span> Reading &amp; Wimbledon</span>
+      <span><span class="htc">✓</span> BAcC registered</span>
+      <span><span class="htc">✓</span> No GP referral</span>
+      <span><span class="htc">✓</span> English &amp; Cantonese</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-al" style="gap:4rem">
+      <div>
+        <p class="eyebrow">The condition</p>
+        <h2>What we are treating</h2>
+        {condition.intro.map((p) => <p>{p}</p>)}
+        <ul class="pseo-check">
+          {condition.symptoms.map((s) => (
+            <li>{s}</li>
+          ))}
+        </ul>
+      </div>
+      <div class="img-wrap">
+        <img
+          class="rounded-photo"
+          src={condition.image}
+          alt={condition.label}
+          style="width:100%;height:420px;object-fit:cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Causes</p>
+      <h2>What is usually driving it</h2>
+      <p>The label is not the diagnosis. These are the patterns we see most often — your assessment decides which applies.</p>
+    </div>
+    <div class="grid-3">
+      {condition.causes.map((cause) => (
+        <article class="pseo-card">
+          <h3>{cause.title}</h3>
+          <p>{cause.body}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow eyebrow-dark">Related treatments</p>
+      <h2>How we treat {condition.label.toLowerCase()}</h2>
+      <p style="color:rgba(240,234,226,0.75)">
+        Modalities are combined according to your clinical picture — not offered as a fixed add-on list.
+      </p>
+    </div>
+    <div class="pseo-tx-grid">
+      {condition.treatments.map((t, i) => (
+        <a class="pseo-tx" href={t.href}>
+          <span class="pseo-tx-num">{String(i + 1).padStart(2, "0")}</span>
+          <h3>{t.label}</h3>
+          <p>{t.why}</p>
+          <span class="spec-link">Explore {t.label}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+      <div>
+        <p class="eyebrow">TCM diagnosis</p>
+        <h2>The pattern behind the pain</h2>
+        <p>
+          Western imaging shows structure. TCM adds why recovery has stalled. These patterns are not mutually exclusive — many chronic cases present with a combination.
+        </p>
+      </div>
+      <div class="pseo-pattern-list">
+        {condition.patterns.map((p) => (
+          <div class="pseo-pattern">
+            <h3>{p.title}</h3>
+            <p>{p.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+{related.length > 0 && (
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Related conditions</p>
+        <h2>Often assessed alongside</h2>
+      </div>
+      <div class="grid-3">
+        {related.map((c) => (
+          <a class="pseo-card pseo-card-link" href={c.href}>
+            <h3>{c.label}</h3>
+            <p>{c.summary}</p>
+            <span class="spec-link">Read more</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<section class="section-soft">
+  <div class="wrap grid-2-lg" style="gap:5rem">
+    <div>
+      <p class="eyebrow">Common questions</p>
+      <h2>{condition.label} — what patients ask</h2>
+      <p class="muted">Same-week appointments at Reading and Wimbledon. No GP referral needed.</p>
+      <div class="actions" style="margin-top:1.5rem">
+        <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp {site.phoneDisplay}</a>
+      </div>
+    </div>
+    <FAQAccordion items={condition.faqs} />
+  </div>
+</section>
+
+<CTASection
+  heading={`Ready to address ${condition.label.toLowerCase()}?`}
+  sub="Book an initial consultation at our Wimbledon or Reading clinic — same-week appointments available."
+/>
