@@ -14,11 +14,11 @@ const faqItems = [
   },
   {
     q: "How many sessions are needed?",
-    a: "A standard course of Tian Jiu involves three sessions over the seasonal window — once per San Fu or once per San Jiu period. Your practitioner may recommend a course spanning both summer and winter windows for maximum immune-strengthening effect.",
+    a: "A standard course of Tian Jiu involves three sessions over the seasonal window — once per San Fu or once per San Jiu period. Your practitioner may recommend a course spanning both summer and winter windows.",
   },
   {
     q: "Who is Tian Jiu most suitable for?",
-    a: "Tian Jiu is particularly well suited for patients with recurring seasonal respiratory conditions (rhinitis, asthma, chronic cough), digestive cold patterns, and musculoskeletal conditions worsened by cold. It is also used for general immune strengthening and sub-health regulation. Your practitioner will assess suitability at your initial consultation.",
+    a: "Tian Jiu is particularly well suited for patients with recurring seasonal respiratory conditions (rhinitis, chronic cough, and GP-managed asthma), digestive cold patterns, and musculoskeletal conditions worsened by cold. It is also used as seasonal care. Your practitioner will assess suitability at your initial consultation.",
   },
   {
     q: "Are there any contraindications?",
@@ -48,8 +48,8 @@ const faqItems = [
     <h1>Tian Jiu (天灸)<br>Medicinal Vesiculation</h1>
     <p class="lede">
       Non-thermal moxibustion using herbal plasters applied to acupoints —
-      strengthening immunity and treating respiratory, digestive, and
-      musculoskeletal conditions. A seasonal TCM therapy.
+      used as seasonal care for respiratory, digestive, and
+      musculoskeletal presentations. A traditional TCM therapy.
     </p>
 
     <div class="hero-exp-stat">
@@ -88,7 +88,7 @@ const faqItems = [
           warming and stimulating herbs — directly to specific skin areas and acupoints.
           This causes localised congestion and a mild vesiculation (blistering) effect
           that activates the body's Qi, regulates the Qi and blood of internal organs,
-          and achieves the prevention and treatment of disease through an external route.
+          and is used as seasonal complementary care through an external route.
         </p>
         <p>
           Unlike conventional moxibustion which uses burning mugwort, Tian Jiu achieves
@@ -101,7 +101,7 @@ const faqItems = [
           {[
             "Non-thermal — herbal compounds work through the skin",
             "Activates Qi and regulates internal organ function",
-            "Enhances immunity and prevents recurring seasonal illness",
+            "Used as seasonal care for recurring winter and summer presentations",
             "Seasonal: summer (San Fu) and winter (San Jiu) windows",
           ].map((item) => (
             <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:0.92rem">
@@ -125,12 +125,12 @@ const faqItems = [
             {
               name: "San Fu Days (三伏天)",
               period: "July – August",
-              desc: "The three hottest days of the lunar calendar — the optimal period for warming Yang-deficient and cold-pattern conditions. Respiratory and immune strengthening is most effective during this window.",
+              desc: "The three hottest days of the lunar calendar — the traditional period for warming Yang-deficient and cold-pattern conditions. Respiratory seasonal care is often timed to this window.",
             },
             {
               name: "San Jiu Days (三九天)",
               period: "December – January",
-              desc: "The three coldest days of the lunar calendar — used to consolidate and reinforce the effects of summer treatment. Together, summer and winter courses produce the strongest preventive effect.",
+              desc: "The three coldest days of the lunar calendar — used to consolidate summer treatment. Together, summer and winter courses are the traditional preventive window in TCM practice.",
             },
           ].map(({ name, period, desc }) => (
             <div style="padding:1rem;background:var(--white);border-radius:var(--r-md);border:1px solid rgba(192,152,90,0.15)">
@@ -161,8 +161,8 @@ const faqItems = [
       <p class="eyebrow">Conditions</p>
       <h2>What Tian Jiu Is Used For</h2>
       <p>
-        Tian Jiu is particularly effective in preventing and treating the following
-        categories of conditions. Your practitioner will confirm suitability at assessment.
+        Tian Jiu is traditionally used for the following
+        categories of presentation. Your practitioner will confirm suitability at assessment.
       </p>
     </div>
 
@@ -171,9 +171,10 @@ const faqItems = [
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🫁</p>
         <h3 style="font-size:1.05rem">Respiratory System</h3>
         <p style="font-size:0.9rem;color:var(--muted)">
-          Allergic rhinitis, asthma, chronic bronchitis, chronic cough, and
-          individuals with a weak constitution prone to recurring colds.
-          Tian Jiu on lung-associated points significantly reduces seasonal relapse rates.
+          Seasonal rhinitis, chronic cough, and people already managing asthma
+          with their GP who seek complementary seasonal care.
+          Tian Jiu on lung-associated points is a traditional approach for cold-pattern
+          respiratory presentations.
         </p>
         <a class="more-link" href="/contact">Enquire</a>
       </div>
@@ -181,7 +182,7 @@ const faqItems = [
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🍽️</p>
         <h3 style="font-size:1.05rem">Digestive System</h3>
         <p style="font-size:0.9rem;color:var(--muted)">
-          Diarrhoea, stomach pain, anorexia (loss of appetite), and indigestion.
+          Diarrhoea, stomach pain, reduced appetite, and indigestion.
           Tian Jiu warms the Spleen and Stomach in TCM terms, addressing
           chronic cold-pattern digestive weakness.
         </p>
@@ -191,9 +192,10 @@ const faqItems = [
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🦴</p>
         <h3 style="font-size:1.05rem">Locomotor System</h3>
         <p style="font-size:0.9rem;color:var(--muted)">
-          Rheumatism and rheumatoid arthritis, frozen shoulder, and neck, shoulder,
-          waist, and leg pain. Tian Jiu reaches deeper structural cold-stagnation
-          patterns that respond poorly to surface heat.
+          Weather-sensitive joint pain, frozen shoulder, and neck, shoulder,
+          waist, and leg pain. Tian Jiu is used for deeper cold-stagnation
+          patterns in TCM terms. Rheumatoid arthritis and other inflammatory joint
+          disease remain under GP or specialist care.
         </p>
         <a class="more-link" href="/frozen-shoulder">Frozen Shoulder</a>
       </div>
@@ -202,10 +204,9 @@ const faqItems = [
     <div style="background:var(--cream);border-radius:var(--r-lg);padding:1.8rem;border:1px solid rgba(192,152,90,0.2);margin-bottom:2rem">
       <h3 style="font-size:1.05rem;margin-bottom:0.6rem">General Health &amp; Immune Strengthening</h3>
       <p style="font-size:0.9rem;color:var(--muted);max-width:72ch">
-        Tian Jiu can effectively enhance the body's immunity, promote general health
-        and physical fitness, and regulate sub-health conditions. It is frequently
-        used by patients without a specific diagnosis who seek preventive seasonal care
-        and immune fortification.
+        Tian Jiu is used in TCM as seasonal care for people who feel run down
+        or catch winter illnesses easily. It is not a replacement for GP-led
+        immune or respiratory management. Suitability is assessed at consultation.
       </p>
     </div>
 
@@ -216,9 +217,9 @@ const faqItems = [
         { label: "Chronic Bronchitis",   href: "/conditions" },
         { label: "Chronic Cough",        href: "/conditions" },
         { label: "Frozen Shoulder",      href: "/frozen-shoulder" },
-        { label: "Rheumatism",           href: "/conditions" },
+        { label: "Joint Pain",           href: "/conditions" },
         { label: "Stomach Pain",         href: "/conditions" },
-        { label: "Immune Deficiency",    href: "/conditions" },
+        { label: "Seasonal Care",        href: "/conditions" },
       ].map(({ label, href }) => (
         <a class="cond-chip" href={href}>{label}</a>
       ))}

@@ -116,9 +116,9 @@ export const homeConditions = [
 ];
 
 export const homeServices = [
-  { href: "/acupuncture", label: "Acupuncture", note: "Needling for pain and recovery" },
+  { href: "/acupuncture", label: "Acupuncture", note: "Needling for pain and musculoskeletal care" },
   { href: "/tui-na-massage", label: "Tui Na", note: "Manual therapy for joints and muscle" },
-  { href: "/bone-setting", label: "Bone Setting", note: "Joint restriction and alignment work" },
+  { href: "/bone-setting", label: "Bone Setting", note: "Joint restriction and mobilisation" },
   { href: "/herbal-consultation", label: "Herbal Consultation", note: "Chinese herbal medicine after assessment" },
 ];
 

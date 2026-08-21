@@ -6,11 +6,11 @@ import CTASection from "../components/CTASection.astro";
 const faqItems = [
   {
     q: "Is Chinese herbal medicine safe in the UK?",
-    a: "When prescribed by a qualified practitioner, yes. All herbal formulas at Yin Yang CMC use pharmaceutical-grade granules from GMP-certified, licensed suppliers. We screen for herb-drug interactions at every consultation and follow RCHM safety guidelines. We will inform you of any significant interactions and recommend you inform your GP where relevant.",
+    a: "When prescribed by a qualified practitioner, yes. We prescribe granule formulas after a full consultation. We screen for herb-drug interactions at every consultation. We will inform you of any significant interactions and recommend you inform your GP where relevant.",
   },
   {
     q: "How long does a first herbal consultation take?",
-    a: "Your first consultation is 60 minutes. This includes a full clinical history, pulse and tongue diagnosis, lifestyle and dietary review, and pattern identification. Follow-up appointments are typically 30 minutes. Most patients see meaningful change within 4–8 weeks, depending on the condition and duration.",
+    a: "Your first consultation is 60 minutes. This includes a full clinical history, pulse and tongue diagnosis, lifestyle and dietary review, and pattern identification. Follow-up appointments are typically 30 minutes. Progress is usually reviewed over 4–8 weeks, depending on the presentation and how long symptoms have been present.",
   },
   {
     q: "Can I take herbal medicine alongside my GP prescription?",
@@ -32,7 +32,7 @@ const faqItems = [
 ---
 <Base
   title="Herbal Medicine Wimbledon & Reading | Chinese Herbal Consultation | Yin Yang CMC"
-  description="Professional Chinese herbal medicine consultations in Wimbledon & Reading. GMP-certified herbal materials. Tailored prescriptions for internal medicine, women's health, skin conditions and more."
+  description="Professional Chinese herbal medicine consultations in Wimbledon & Reading. Tailored prescriptions after assessment for internal medicine, women's health, skin conditions and more."
 >
 
 
@@ -52,7 +52,7 @@ const faqItems = [
     <h1>Chinese Herbal Medicine<br>in Wimbledon &amp; Reading</h1>
     <p class="lede">
       Individually tailored herbal prescriptions following a full internal consultation.
-      GMP-certified herbal materials. No formula prescribed without assessment.
+      No formula prescribed without assessment.
     </p>
 
     <div class="hero-exp-stat">
@@ -67,7 +67,7 @@ const faqItems = [
 
     <div class="hero-trust-row">
       <span><span class="htc">✓</span> British Acupuncture Council Member</span>
-      <span><span class="htc">✓</span> GMP-Certified Herbal Materials</span>
+      <span><span class="htc">✓</span> Assessment before prescription</span>
       <span><span class="htc">✓</span> Insurance Recognised</span>
       <span><span class="htc">✓</span> No Referral Needed</span>
     </div>
@@ -101,7 +101,7 @@ const faqItems = [
         <ul style="list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:0.5rem">
           {[
             "First consultation: 60 minutes — full diagnostic assessment",
-            "GMP-certified granule formulas — convenient, hygienic, consistent potency",
+            "Granule formulas — convenient to take, reviewed at follow-up",
             "Follow-up every 2–4 weeks — formula adjusted based on your response",
             "Treatment is time-bound — realistic timeline discussed at outset",
           ].map((item) => (
@@ -128,8 +128,7 @@ const faqItems = [
         <div class="cred-panel">
           <div class="cred-row"><span class="cred-check">✓</span> MBAcC · Nos. 963087 &amp; 963093</div>
           <div class="cred-row"><span class="cred-check">✓</span> ATCM Professional Member</div>
-          <div class="cred-row"><span class="cred-check">✓</span> GMP-certified materials</div>
-          <div class="cred-row"><span class="cred-check">✓</span> RCHM safety guidelines</div>
+          <div class="cred-row"><span class="cred-check">✓</span> Assessment before prescription</div>
         </div>
       </div>
 
@@ -148,7 +147,7 @@ const faqItems = [
       <h2>Conditions Addressed Through Herbal Medicine</h2>
       <p>
         Herbal medicine consultations at Yin Yang CMC address a broad range of internal
-        and chronic conditions. Below are the areas where clinical outcomes are strongest.
+        and chronic presentations. Below are the areas we see most often.
         Your practitioner will assess whether herbal medicine is appropriate for your
         individual presentation.
       </p>
@@ -169,9 +168,9 @@ const faqItems = [
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🌿</p>
         <h3 style="font-size:1.05rem">Skin Conditions</h3>
         <p style="font-size:0.9rem;color:var(--muted)">
-          Eczema, acne, and chronic urticaria — addressed as internal Heat, Dampness, or
-          Blood deficiency patterns rather than surface symptoms only. Systemic approach
-          targeting the root cause.
+          Eczema, acne, and chronic urticaria — approached as internal Heat, Dampness, or
+          Blood deficiency patterns rather than surface symptoms only. Systemic care
+          alongside dietary and lifestyle guidance.
         </p>
         <a class="more-link" href="/contact">Enquire About Skin Conditions</a>
       </div>
@@ -179,8 +178,8 @@ const faqItems = [
         <p style="font-size:1.4rem;margin-bottom:0.5rem">😴</p>
         <h3 style="font-size:1.05rem">Stress &amp; Sleep</h3>
         <p style="font-size:0.9rem;color:var(--muted)">
-          Chronic stress, poor sleep architecture, and fatigue. Herbal formulas targeting
-          the nervous system with measurable anxiolytic effects — used alongside or
+          Chronic stress, poor sleep, and fatigue. Herbal formulas selected after
+          consultation for the identified pattern — used alongside or
           independently from acupuncture.
         </p>
         <a class="more-link" href="/contact">Enquire About Stress &amp; Sleep</a>
@@ -286,8 +285,7 @@ const faqItems = [
         </p>
 
         <p>
-          All herbal materials are sourced from GMP-certified suppliers and comply with
-          UK regulatory standards. Follow-up consultations are scheduled every two to four
+          All herbal materials are prescribed as granule formulas after consultation. Follow-up consultations are scheduled every two to four
           weeks to review your response and adjust the formula accordingly.
         </p>
 
@@ -324,7 +322,7 @@ const faqItems = [
       <div style="display:grid;gap:1.5rem;align-content:start">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:var(--r-lg);overflow:hidden">
           {[
-            { val: "GMP",    label: "Certified Materials" },
+            { val: "Rx",     label: "After Assessment" },
             { val: "60m",    label: "First Consultation" },
             { val: "EN/粵",  label: "Bilingual Care" },
             { val: "15+",    label: "Years' Experience" },
@@ -378,8 +376,8 @@ const faqItems = [
       <h2>Professional Memberships &amp; Accreditations</h2>
       <p>
         Both practitioners hold active UK professional registrations. Andrea Li specialises
-        in women's health, dermatology, and internal medicine. All herbal materials comply
-        with UK regulatory standards from GMP-certified suppliers.
+        in women's health, dermatology, and internal medicine. Granule formulas are
+        prescribed only after consultation.
       </p>
     </div>
 

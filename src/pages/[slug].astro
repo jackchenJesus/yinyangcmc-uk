@@ -31,6 +31,8 @@ export function getStaticPaths() {
     "wimbledon-clinic",
     "our-practitioners",
     "conditions",
+    // Retired — 301 to /clinical-services via public/_redirects
+    "professional-services",
   ]);
   return Object.keys(pages)
     .filter((slug) => !skip.has(slug))

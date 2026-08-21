@@ -28,6 +28,10 @@ const faqItems = [
     q: "What if my insurer is not listed?",
     a: "Often yes, you can still claim. We provide receipts that meet standard cash-plan and insurer submission requirements. Check with your insurer first.",
   },
+  {
+    q: "Does recognition mean every treatment is covered?",
+    a: "No. Provider recognition relates to the relevant practitioner and eligible acupuncture treatment. Tui Na, bone setting and herbal consultation are not automatically covered. Check your individual policy with your insurer before treatment.",
+  },
 ];
 
 const insurers = [
@@ -49,7 +53,7 @@ const insurers = [
       <h1>Transparent fees.<br />No surprises.</h1>
       <p class="lede">
         General TCM consultation from £10. Acupuncture £60. Integrated Treatment £120.
-        Recognised by major UK health insurers.
+        Recognised by AXA Health, Vitality, Aviva and WPA. Cover depends on your policy.
       </p>
       <div class="actions">
         <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
@@ -143,8 +147,7 @@ const insurers = [
       <p class="eyebrow">Private health insurance</p>
       <h2>Recognised by leading UK health insurers</h2>
       <p>
-        Eligible acupuncture treatment may be claimable depending on your policy.
-        We cannot confirm cover on behalf of your insurer.
+        Private health insurance cover depends on your individual policy and insurer requirements. Please check your cover directly with your insurer before treatment.
       </p>
     </div>
 
@@ -154,6 +157,34 @@ const insurers = [
           <img src={insurer.src} alt={insurer.alt} height="32" loading="lazy" />
         </li>
       ))}
+    </ul>
+
+    <div class="pi-codes-head">
+      <h3>Provider numbers</h3>
+      <p>Quote these when you contact your insurer. Recognition relates to the relevant practitioner and eligible acupuncture treatment — not automatically to Tui Na, bone setting or herbal consultation.</p>
+    </div>
+
+    <ul class="pi-codes">
+      <li>
+        <p class="pi-code-name">AXA Health</p>
+        <p class="pi-code-label">Provider</p>
+        <p class="pi-code-val">CL03375</p>
+      </li>
+      <li>
+        <p class="pi-code-name">Vitality Health</p>
+        <p class="pi-code-label">Provider</p>
+        <p class="pi-code-val">SP123173</p>
+      </li>
+      <li>
+        <p class="pi-code-name">Aviva</p>
+        <p class="pi-code-label">Provider</p>
+        <p class="pi-code-val">600185413</p>
+      </li>
+      <li>
+        <p class="pi-code-name">WPA</p>
+        <p class="pi-code-label">Provider</p>
+        <p class="pi-code-val">921550015</p>
+      </li>
     </ul>
   </div>
 </section>
@@ -165,11 +196,11 @@ const insurers = [
 <section class="section" id="provider-numbers">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Provider numbers</p>
+      <p class="eyebrow">Practitioners</p>
       <h2>Qualified UK practitioners</h2>
       <p>
-        Both practitioners are British Acupuncture Council and ATCM registered, and recognised insurance providers.
-        You may need these provider numbers when making an insurance claim.
+        Both practitioners are British Acupuncture Council and ATCM registered.
+        Use the insurer provider numbers above when making a claim.
       </p>
     </div>
 
@@ -188,7 +219,6 @@ const insurers = [
           <dl class="pi-reg-list">
             <div><dt>ATCM</dt><dd>FM0250005</dd></div>
             <div><dt>MBAcC</dt><dd>963087</dd></div>
-            <div><dt>Vitality Health</dt><dd>SP123180</dd></div>
           </dl>
         </div>
       </article>
@@ -207,7 +237,6 @@ const insurers = [
           <dl class="pi-reg-list">
             <div><dt>ATCM</dt><dd>FM0250004</dd></div>
             <div><dt>MBAcC</dt><dd>963093</dd></div>
-            <div><dt>Vitality Health</dt><dd>SP123173</dd></div>
           </dl>
         </div>
       </article>
@@ -241,7 +270,7 @@ const insurers = [
       <li>
         <span class="pi-step-num" aria-hidden="true">03</span>
         <h3>Submit your claim</h3>
-        <p>Use the appropriate practitioner provider number and the itemised receipt supplied after treatment.</p>
+        <p>Use the insurer provider number listed above and the itemised receipt supplied after treatment.</p>
       </li>
     </ol>
 
@@ -271,7 +300,7 @@ const insurers = [
       <p class="eyebrow">Common questions</p>
       <h2>Pricing &amp; insurance FAQ</h2>
       <p class="muted">
-        If you are unsure whether your policy covers acupuncture or complementary treatment, message us before booking — we can help you check what to ask your insurer.
+        If you are unsure whether your policy covers eligible acupuncture treatment, message us before booking — we can help you check what to ask your insurer. Cover is not automatic for every clinic service.
       </p>
     </div>
     <FAQAccordion items={faqItems} />
@@ -496,6 +525,62 @@ const insurers = [
     filter: grayscale(0.15);
   }
 
+  .pi-codes-head {
+    margin: 2rem 0 1rem;
+    max-width: 62ch;
+  }
+  .pi-codes-head h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.4rem;
+  }
+  .pi-codes-head p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .pi-codes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+  .pi-codes li {
+    margin: 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 1.15rem 1.1rem 1.2rem;
+    min-width: 0;
+  }
+  .pi-code-name {
+    margin: 0 0 0.55rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .pi-code-label {
+    margin: 0 0 0.15rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .pi-code-val {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+    user-select: all;
+  }
+
   /* Practitioner provider cards */
   .pi-prov-grid {
     display: grid;
@@ -664,6 +749,7 @@ const insurers = [
     .pi-hero-visual img { height: 240px; }
     .pi-price-grid,
     .pi-steps { grid-template-columns: 1fr; }
+    .pi-codes { grid-template-columns: 1fr 1fr; }
     .pi-help { flex-direction: column; align-items: flex-start; }
     .pi-offer-note { margin-left: 0; }
   }
@@ -681,6 +767,7 @@ const insurers = [
     .pi-help .btn,
     .pi-cta .actions .btn { width: 100%; }
     .pi-insurers { grid-template-columns: 1fr 1fr; }
+    .pi-codes { grid-template-columns: 1fr 1fr; }
     .pi-insurers li { min-height: 76px; padding: 0.85rem 0.7rem; }
     .pi-insurers img { height: 26px; max-width: 110px; }
     .pi-prov-card { grid-template-columns: 72px 1fr; gap: 0.9rem; padding: 1.15rem 1.1rem 1.2rem; }

@@ -54,17 +54,17 @@ export const conditions: Condition[] = [
     category: "pain-msk",
     status: "live",
     summary:
-      "Mechanical, inflammatory and chronic lower-back pain treated with acupuncture, Tui Na and bone-setting — not painkillers alone.",
+      "Mechanical, inflammatory and chronic lower-back pain — acupuncture, Tui Na and bone-setting as part of musculoskeletal care, not painkillers alone.",
     title: "Back Pain Treatment Wimbledon & Reading | Yin Yang CMC",
     description:
       "Acupuncture, Tui Na and bone-setting for back pain in Wimbledon and Reading. British Acupuncture Council registered. No GP referral needed.",
     h1: "Back Pain Treatment in Wimbledon & Reading",
     eyebrow: "Conditions · Back Pain",
-    lede: "Painkillers manage the sensation. They do not resolve what is driving it. We assess the structural and physiological root — then treat it directly.",
+    lede: "Painkillers manage the sensation. We assess the musculoskeletal picture — then provide acupuncture and manual therapy for back pain, tailored to your presentation.",
     image: "/images/back_pain_treatment-vMLmusxJIAVKmYK5.png",
     intro: [
       "Back pain is one of the most common reasons people in the UK reduce activity, take time off work, or live with daily discomfort that gradually wears them down. It is a symptom with many drivers — not a single diagnosis.",
-      "Whether the pain sits in the lower back, mid-spine, or radiates into the hips, our practitioners combine classical TCM diagnosis with modern musculoskeletal assessment. Treatment is typically a combination of acupuncture, Tui Na and bone-setting, calibrated to your presentation — not a fixed package.",
+      "Whether the pain sits in the lower back, mid-spine, or radiates into the hips, our practitioners combine classical TCM diagnosis with modern musculoskeletal assessment. Treatment is typically a combination of acupuncture, Tui Na and bone-setting, calibrated to your presentation — not a fixed package. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
     ],
     symptoms: [
       "Aching or stiffness that worsens with sitting or standing",
@@ -96,12 +96,12 @@ export const conditions: Condition[] = [
       {
         href: "/tui-na-massage",
         label: "Tui Na",
-        why: "Targets fascia, deep musculature and spinal joints — releasing adhesions and restoring range of motion where mechanical restriction has become entrenched.",
+        why: "Targets fascia, deep musculature and spinal joints — used to ease restriction and support mobility where mechanical tightness has become entrenched.",
       },
       {
         href: "/bone-setting",
         label: "Bone Setting",
-        why: "Where joint misalignment contributes to pain, Zheng Gu addresses the structural component directly. Often introduced once acute inflammation has settled.",
+        why: "Where joint restriction contributes to pain, Zheng Gu is used for mobilisation after assessment. Often introduced once acute inflammation has settled.",
       },
     ],
     patterns: [
@@ -145,17 +145,17 @@ export const conditions: Condition[] = [
     category: "pain-msk",
     status: "live",
     summary:
-      "Nerve-root and piriformis-related sciatica — sharp, burning or electric pain down the leg — treated at the compression, not only the sensation.",
+      "Nerve-root and piriformis-related sciatica — sharp, burning or electric pain down the leg — acupuncture and manual therapy for the symptoms and the surrounding musculoskeletal picture.",
     title: "Sciatica Treatment Wimbledon & Reading | Yin Yang CMC",
     description:
       "Sciatica treatment in Wimbledon and Reading. Acupuncture, Tui Na and bone-setting for nerve compression and radiating leg pain. No GP referral needed.",
     h1: "Sciatica Treatment in Wimbledon & Reading",
     eyebrow: "Conditions · Sciatica",
-    lede: "Sciatica is not just back pain. It is nerve pain travelling from the lower back through the buttock and down the leg. We treat the compression driving it.",
+    lede: "Sciatica is not just back pain. It is nerve pain travelling from the lower back through the buttock and down the leg. We provide acupuncture and traditional Chinese medicine approaches for sciatica symptoms.",
     image: "/images/sciatica-lower-back-pain-CiEnhdaob4WbteY2.png",
     intro: [
       "Sciatica describes pain from compression or irritation of the sciatic nerve — the longest nerve in the body, running from the lumbar spine through the buttock and down each leg to the foot. When compressed, pain signals can fire anywhere along that path.",
-      "A trapped nerve, pinched nerve, or compressed nerve root in the lower back are common terms for the same mechanism. Treatment depends on which structure is compressing the nerve — disc, canal, facet, or piriformis — and on the TCM pattern maintaining the presentation.",
+      "A trapped nerve, pinched nerve, or compressed nerve root in the lower back are common terms for the same mechanism. Treatment depends on which structure is irritating the nerve — disc, canal, facet, or piriformis — and on the TCM pattern maintaining the presentation. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
     ],
     symptoms: [
       "Sharp, electric or burning pain down one leg",
@@ -192,7 +192,7 @@ export const conditions: Condition[] = [
       {
         href: "/bone-setting",
         label: "Bone Setting",
-        why: "Where joint restriction or alignment is feeding nerve-root irritation, Zheng Gu may be introduced once acute inflammation has settled.",
+        why: "Where joint restriction is feeding nerve-root irritation, Zheng Gu may be introduced once acute inflammation has settled.",
       },
       {
         href: "/moxibustion",
@@ -226,7 +226,7 @@ export const conditions: Condition[] = [
       },
       {
         q: "Can I have treatment if I already have an MRI?",
-        a: "Yes. Bring any imaging you have — it is useful but not required. TCM assessment adds the layer imaging cannot show: why recovery has stalled and which pattern is maintaining the pain.",
+        a: "Yes. Bring any imaging you have — it is useful but not required. TCM assessment adds a pattern-based layer imaging does not show, and helps shape the treatment plan.",
       },
       {
         q: "Do you treat sciatica at both clinics?",
@@ -251,7 +251,7 @@ export const conditions: Condition[] = [
     image: "/images/acupuncture-for-shoulder-pain-k9uul1g0Hqlp9Qaa.webp",
     intro: [
       "The shoulder is the most mobile joint in the body — held by the rotator cuff, tendons and ligaments rather than a deep bony socket. That mobility makes it prone to strain, inflammation and restriction from posture, overuse, sport and gym training.",
-      "Shoulder pain can also be referred from the neck, or signal frozen shoulder or impingement. Identifying the true source is essential before treatment begins. Painkillers mask discomfort without restoring how the joint moves.",
+      "Shoulder pain can also be referred from the neck, or signal frozen shoulder or impingement. Identifying the likely source is essential before treatment begins. Painkillers manage discomfort; they do not address how the joint is moving.",
     ],
     symptoms: [
       "Sharp pain when lifting the arm or reaching overhead",
@@ -283,12 +283,12 @@ export const conditions: Condition[] = [
       {
         href: "/tui-na-massage",
         label: "Tui Na",
-        why: "Mobilises the glenohumeral joint and surrounding soft tissue — restoring range where postural loading and overuse have restricted movement.",
+        why: "Mobilises the glenohumeral joint and surrounding soft tissue — used to support range of motion where postural loading and overuse have restricted movement.",
       },
       {
         href: "/bone-setting",
         label: "Bone Setting",
-        why: "For joint restriction and scapular or cervical contribution that manual mobilisation alone does not resolve.",
+        why: "For joint restriction and scapular or cervical contribution that manual mobilisation alone has not eased.",
       },
       {
         href: "/cupping",
@@ -337,17 +337,17 @@ export const conditions: Condition[] = [
     category: "pain-msk",
     status: "live",
     summary:
-      "Adhesive capsulitis — progressive pain then stiffness. Early treatment shortens a course that can otherwise last 18 months to 3 years.",
+      "Adhesive capsulitis — progressive pain then stiffness. Acupuncture, Tui Na and bone-setting for frozen shoulder symptoms across a course that can otherwise last many months.",
     title: "Frozen Shoulder Treatment Wimbledon & Reading | Yin Yang CMC",
     description:
-      "Frozen shoulder (adhesive capsulitis) treatment in Wimbledon and Reading. Acupuncture, Tui Na and bone-setting to restore movement and reduce pain.",
+      "Frozen shoulder (adhesive capsulitis) treatment in Wimbledon and Reading. Acupuncture, Tui Na and bone-setting for pain and restricted movement.",
     h1: "Frozen Shoulder Treatment in Wimbledon & Reading",
     eyebrow: "Conditions · Frozen Shoulder",
     lede: "The joint locks gradually — first with sharp pain, then with stiffness that makes lifting, reaching and sleeping difficult. We treat both the inflammation and the adhesion.",
     image: "/images/acupuncture_for_frozen_shoulder-LYlyaUQ7GqsYzZB5.webp",
     intro: [
       "Frozen shoulder — adhesive capsulitis — occurs when the joint capsule becomes inflamed, then thickens and tightens. Range of motion is restricted in all directions. Most patients cannot lift the arm, reach behind the back, or dress without pain.",
-      "Night pain that disrupts sleep is a hallmark. Without treatment, recovery can take 18 months to 3 years. Early intervention shortens that timeline. Painkillers mask symptoms; they do not restore range of motion.",
+      "Night pain that disrupts sleep is a hallmark. Without treatment, the natural course can take 18 months to 3 years. Early care is aimed at supporting usable range sooner. Painkillers manage symptoms; they do not restore range of motion on their own.",
     ],
     symptoms: [
       "Pain when lifting the arm",
@@ -379,7 +379,7 @@ export const conditions: Condition[] = [
       {
         href: "/tui-na-massage",
         label: "Tui Na",
-        why: "In the frozen and thawing stages, manual work focuses on breaking adhesions and restoring range that needling alone cannot open.",
+        why: "In the frozen and thawing stages, manual work focuses on restricted soft tissue and supporting range that needling alone cannot open.",
       },
       {
         href: "/bone-setting",
@@ -418,7 +418,7 @@ export const conditions: Condition[] = [
       },
       {
         q: "Will it resolve on its own?",
-        a: "It can, but the natural course is often 18 months to 3 years, and residual stiffness is common. Treatment is aimed at shortening that course and recovering usable range sooner.",
+        a: "It can, but the natural course is often 18 months to 3 years, and residual stiffness is common. Treatment is aimed at supporting usable range sooner across that course.",
       },
       {
         q: "Can I claim through health insurance?",
@@ -442,7 +442,7 @@ export const conditions: Condition[] = [
     lede: "You trained. Now the knee catches on the stairs, the shoulder pulls overhead, or the lower back seizes after a run. We treat the tissue and the compensation pattern — not only the sore spot.",
     image: "/images/sports-injuries-orthopaedics-7F9Mh61pjr43DjEH.png",
     intro: [
-      "Sports injuries range from acute trauma to cumulative overuse. Rest and anti-inflammatories often settle symptoms without restoring full biomechanical function. That gap is where TCM is used as a parallel clinical system — tissue repair, pain modulation and joint mobility — not as a replacement for sports medicine or imaging where those are needed.",
+      "Sports injuries range from acute trauma to cumulative overuse. Rest and anti-inflammatories often settle symptoms without restoring full biomechanical function. That gap is where TCM is used as a parallel clinical system — tissue care, pain modulation and joint mobility — not as a replacement for sports medicine or imaging where those are needed.",
       "Plans are built around your sport, training volume and recovery window. A runner's Achilles tendinopathy is not treated as a footballer's ankle sprain.",
     ],
     symptoms: [
@@ -470,17 +470,17 @@ export const conditions: Condition[] = [
       {
         href: "/acupuncture",
         label: "Acupuncture",
-        why: "Used to modulate inflammation and pain signalling at the injury site, and to support range-of-motion restoration alongside load management.",
+        why: "Used to modulate inflammation and pain signalling at the injury site, and to support range of motion alongside load management.",
       },
       {
         href: "/tui-na-massage",
         label: "Tui Na",
-        why: "Graded manual pressure to release myofascial restriction and restore tissue glide around the injured structure.",
+        why: "Graded manual pressure to ease myofascial restriction and support tissue glide around the injured structure.",
       },
       {
         href: "/bone-setting",
         label: "Bone Setting",
-        why: "Corrects joint restriction that persists after injury and feeds compensation through the rest of the chain.",
+        why: "Used for joint restriction that persists after injury and feeds compensation through the rest of the chain.",
       },
     ],
     patterns: [
@@ -505,7 +505,7 @@ export const conditions: Condition[] = [
       },
       {
         q: "What if physiotherapy has already plateaued?",
-        a: "Physio and TCM address different layers. Where strengthening has stalled, acupuncture is often used to change the inflammatory and neurological environment that determines whether tissue actually heals. Many patients use both.",
+        a: "Physio and TCM address different layers. Where strengthening has stalled, acupuncture is often used alongside load management as part of ongoing care. Many patients use both.",
       },
       {
         q: "Do I need a GP or physio referral?",
@@ -513,7 +513,7 @@ export const conditions: Condition[] = [
       },
       {
         q: "Do you only treat competitive athletes?",
-        a: "No. Club tennis, parkrun, gym training and weekend cycling are the majority of the caseload. The clinical approach is the same: accurate diagnosis, targeted treatment, measurable change.",
+        a: "No. Club tennis, parkrun, gym training and weekend cycling are the majority of the caseload. The clinical approach is the same: assessment first, then a targeted treatment plan.",
       },
     ],
   },
