@@ -109,7 +109,7 @@ export const homeConditions = [
   { href: "/sciatica-treatment", label: "Sciatica" },
   { href: "/shoulder-pain", label: "Shoulder Pain" },
   { href: "/frozen-shoulder", label: "Frozen Shoulder" },
-  { href: "/conditions#pain-msk", label: "Neck Pain" },
+  { href: "/neck-pain", label: "Neck Pain" },
   { href: "/sports-injuries", label: "Sports Injuries" },
   { href: "/conditions#womens-health", label: "Women's Health" },
   { href: "/conditions#pain-msk", label: "Headaches & Migraines" },

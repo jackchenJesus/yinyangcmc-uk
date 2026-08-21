@@ -26,7 +26,7 @@ const { items } = Astro.props;
         itemprop="acceptedAnswer"
         itemtype="https://schema.org/Answer"
       >
-        <p itemprop="text">{a}</p>
+        <p itemprop="text" set:html={a} />
       </div>
     </details>
   ))}

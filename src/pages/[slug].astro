@@ -4,7 +4,7 @@ import PageHero from "../components/PageHero.astro";
 import CTASection from "../components/CTASection.astro";
 import ConditionDetail from "../components/ConditionDetail.astro";
 import pages from "../data/pages.json";
-import { getLiveCondition } from "../data/conditions";
+import { getLiveCondition, liveConditions } from "../data/conditions";
 
 // Pages with dedicated Astro files — excluded from this fallback template
 export function getStaticPaths() {
@@ -34,9 +34,11 @@ export function getStaticPaths() {
     // Retired — 301 to /clinical-services via public/_redirects
     "professional-services",
   ]);
-  return Object.keys(pages)
-    .filter((slug) => !skip.has(slug))
-    .map((slug) => ({ params: { slug } }));
+  const slugs = new Set([
+    ...Object.keys(pages).filter((key) => !skip.has(key)),
+    ...liveConditions.map((c) => c.slug),
+  ]);
+  return [...slugs].map((slug) => ({ params: { slug } }));
 }
 
 const { slug } = Astro.params;
@@ -83,7 +85,14 @@ const courseImages = slug === "course"
   : [];
 ---
 {condition ? (
-  <Base title={condition.title} description={condition.description}>
+  <Base
+    title={condition.title}
+    description={condition.description}
+    canonical={new URL(condition.href, Astro.site ?? "https://yinyangcmc.uk").href}
+    ogTitle={condition.ogTitle ?? condition.title}
+    ogDescription={condition.ogDescription ?? condition.description}
+    ogImage={condition.image}
+  >
     <ConditionDetail condition={condition} />
   </Base>
 ) : (

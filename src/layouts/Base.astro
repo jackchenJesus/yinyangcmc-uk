@@ -7,13 +7,24 @@ interface Props {
   title: string;
   description?: string;
   canonical?: string;
+  ogImage?: string;
+  ogTitle?: string;
+  ogDescription?: string;
 }
 const {
   title,
   description = "Professional Chinese Medicine in Wimbledon and Reading. ATCM & BAcC registered practitioners. Acupuncture, Tui Na, bone-setting and herbal care.",
   canonical,
+  ogImage,
+  ogTitle,
+  ogDescription,
 } = Astro.props;
 const canonicalUrl = canonical ?? Astro.url.href;
+const shareTitle = ogTitle ?? title;
+const shareDescription = ogDescription ?? description;
+const shareImage = ogImage
+  ? new URL(ogImage, Astro.site ?? "https://yinyangcmc.uk").href
+  : undefined;
 ---
 <!doctype html>
 <html lang="en">
@@ -33,9 +44,11 @@ const canonicalUrl = canonical ?? Astro.url.href;
       rel="stylesheet"
     />
     <!-- Open Graph basic -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title" content={shareTitle} />
+    <meta property="og:description" content={shareDescription} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    {shareImage && <meta property="og:image" content={shareImage} />}
   </head>
   <body>
     <Header />

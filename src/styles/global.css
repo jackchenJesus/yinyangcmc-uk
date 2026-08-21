@@ -1749,6 +1749,55 @@ p  { margin: 0 0 1em; }
 .pseo-pattern h3 { font-size: 1rem; margin-bottom: 0.35rem; }
 .pseo-pattern p { font-size: 0.9rem; color: var(--muted); margin: 0; }
 
+.cond-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.85rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.62);
+}
+.cond-crumbs a {
+  color: rgba(255,255,255,0.78);
+  text-decoration: none;
+}
+.cond-crumbs a:hover { color: var(--gold); }
+.cond-crumbs [aria-current="page"] { color: var(--gold); }
+.cond-copy a {
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: none;
+}
+.cond-copy a:hover { text-decoration: underline; }
+.cond-sym-label {
+  margin: 1.35rem 0 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cond-safety { max-width: 68ch; }
+.cond-safety .pseo-check { margin-top: 1rem; }
+.cond-book-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.1rem;
+  margin-top: 1.15rem;
+  font-size: 0.88rem;
+}
+.cond-book-links a {
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: none;
+}
+.cond-book-links a:hover { text-decoration: underline; }
+.faq-answer a {
+  color: var(--teal);
+  font-weight: 600;
+}
+
 .key-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.75rem; }
 .key-chip {
   display: inline-flex;
