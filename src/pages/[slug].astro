@@ -31,12 +31,14 @@ export function getStaticPaths() {
     "wimbledon-clinic",
     "our-practitioners",
     "conditions",
+    // Dedicated condition page (custom layout, not ConditionDetail)
+    "fertility-support",
     // Retired — 301 to /clinical-services via public/_redirects
     "professional-services",
   ]);
   const slugs = new Set([
     ...Object.keys(pages).filter((key) => !skip.has(key)),
-    ...liveConditions.map((c) => c.slug),
+    ...liveConditions.map((c) => c.slug).filter((s) => !skip.has(s)),
   ]);
   return [...slugs].map((slug) => ({ params: { slug } }));
 }

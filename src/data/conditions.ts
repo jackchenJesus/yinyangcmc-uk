@@ -73,8 +73,8 @@ export const conditions: Condition[] = [
     image: "/images/back-assessment-treatment.webp",
     imageAlt: "Practitioner assessing a patient's back in clinic",
     heroImage: "/images/generated/back-pain-patient-hero.webp",
-    sectionImage: "/images/generated/acupuncture-treatment-closeup.webp",
-    sectionImageAlt: "Close-up of acupuncture needles in treatment",
+    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Back pain is one of the most common reasons people in the UK reduce activity, take time off work, or live with daily discomfort that gradually wears them down. It is a symptom with many drivers — not a single diagnosis.",
       "Whether the pain sits in the lower back, mid-spine, or radiates into the hips, our practitioners combine classical TCM diagnosis with modern musculoskeletal assessment. Treatment is typically a combination of acupuncture, Tui Na and bone-setting, calibrated to your presentation — not a fixed package. If pain travels into a leg, we also assess for <a href=\"/sciatica-treatment\">sciatica</a>, a <a href=\"/herniated-disc\">herniated disc</a>, or a <a href=\"/pinched-nerve\">pinched nerve</a>. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
@@ -168,8 +168,8 @@ export const conditions: Condition[] = [
     image: "/images/sciatica-nerve-illustration.webp",
     imageAlt: "Illustration of sciatic nerve pain with manual therapy and herbal medicine",
     heroImage: "/images/generated/sciatica-patient-hero.webp",
-    sectionImage: "/images/generated/acupuncture-treatment-closeup.webp",
-    sectionImageAlt: "Close-up of acupuncture needles in treatment",
+    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Sciatica describes pain from compression or irritation of the sciatic nerve — the longest nerve in the body, running from the lumbar spine through the buttock and down each leg to the foot. When compressed, pain signals can fire anywhere along that path.",
       "People often describe this as a <a href=\"/trapped-nerve\">trapped nerve</a> or <a href=\"/pinched-nerve\">pinched nerve</a>. Treatment depends on which structure is irritating the nerve — <a href=\"/herniated-disc\">disc</a>, canal, facet, or <a href=\"/piriformis-syndrome\">piriformis</a> — and on the TCM pattern maintaining the presentation. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
@@ -268,8 +268,8 @@ export const conditions: Condition[] = [
     image: "/images/shoulder-pain-symptom.webp",
     imageAlt: "Woman holding her shoulder, with the joint highlighted to show pain",
     heroImage: "/images/generated/shoulder-pain-patient-hero.webp",
-    sectionImage: "/images/generated/acupuncture-treatment-closeup.webp",
-    sectionImageAlt: "Close-up of acupuncture needles in treatment",
+    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "The shoulder is the most mobile joint in the body — held by the rotator cuff, tendons and ligaments rather than a deep bony socket. That mobility makes it prone to strain, inflammation and restriction from posture, overuse, sport and gym training.",
       "Shoulder pain can also be referred from the <a href=\"/neck-pain\">neck</a>, or signal <a href=\"/frozen-shoulder\">frozen shoulder</a> or impingement. A <a href=\"/trapped-nerve\">trapped nerve</a> in the neck can be felt across the shoulder. Identifying the likely source is essential before treatment begins. Painkillers manage discomfort; they do not address how the joint is moving.",
@@ -368,8 +368,8 @@ export const conditions: Condition[] = [
     image: "/images/shoulder-pain-holding-shoulder.webp",
     imageAlt: "Woman holding her left shoulder, with a highlight showing pain",
     heroImage: "/images/generated/frozen-shoulder-patient-hero.webp",
-    sectionImage: "/images/generated/acupuncture-treatment-closeup.webp",
-    sectionImageAlt: "Close-up of acupuncture needles in treatment",
+    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Frozen shoulder — adhesive capsulitis — occurs when the joint capsule becomes inflamed, then thickens and tightens. Range of motion is restricted in all directions. Most patients cannot lift the arm, reach behind the back, or dress without pain. It is a different picture from ordinary <a href=\"/shoulder-pain\">shoulder pain</a> or stiffness that mainly sits in the <a href=\"/neck-pain\">neck</a>.",
       "Night pain that disrupts sleep is a hallmark. Without treatment, the natural course can take 18 months to 3 years. Early care is aimed at supporting usable range sooner. Painkillers manage symptoms; they do not restore range of motion on their own.",
@@ -467,9 +467,9 @@ export const conditions: Condition[] = [
     lede: "You trained. Now the knee catches on the stairs, the shoulder pulls overhead, or the lower back seizes after a run. We treat the tissue and the compensation pattern — not only the sore spot.",
     image: "/images/knee-assessment-clinic.webp",
     imageAlt: "Practitioner examining a patient's knee in clinic",
-    heroImage: "/images/generated/sports-injuries-patient-hero.webp",
-    sectionImage: "/images/generated/acupuncture-treatment-closeup.webp",
-    sectionImageAlt: "Close-up of acupuncture needles in treatment",
+    heroImage: "/images/sports-injuries-hero.webp",
+    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Sports injuries range from acute trauma to cumulative overuse. Rest and anti-inflammatories often settle symptoms without restoring full biomechanical function. That gap is where TCM is used as a parallel clinical system — tissue care, pain modulation and joint mobility — not as a replacement for sports medicine or imaging where those are needed.",
       "Plans are built around your sport, training volume and recovery window. <a href=\"/knee-pain\">Knee pain</a>, <a href=\"/hip-pain\">hip pain</a> and <a href=\"/back-pain\">lower-back pain</a> are assessed as part of the same chain, not as isolated sore spots.",
@@ -569,8 +569,8 @@ export const conditions: Condition[] = [
     image: "/images/sciatica-nerve-illustration.webp",
     imageAlt: "Illustration of sciatic nerve pain with manual therapy and herbal medicine",
     heroImage: "/images/generated/pinched-nerve-patient-hero.webp",
-    sectionImage: "/images/generated/acupuncture-treatment-closeup.webp",
-    sectionImageAlt: "Close-up of acupuncture needles in treatment",
+    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "“Pinched nerve” describes irritation or compression of a nerve — often in the neck, shoulder girdle or lower back. The nerve itself is not always the only structure involved: nearby joints, discs and tight muscle can all reduce the space a nerve has to move.",
       "Typical symptoms include pain, tingling, numbness or a radiating ache along the nerve’s path. This page cannot tell you which structure is responsible. In the UK the same picture is often called a <a href=\"/trapped-nerve\">trapped nerve</a>; we keep that page for location-led questions (neck, shoulder or back) and this one for compression and treatment options. Disc-related back pain is covered separately under <a href=\"/herniated-disc\">herniated disc</a>.",
@@ -703,8 +703,8 @@ export const conditions: Condition[] = [
     image: "/images/shoulder-pain-symptom.webp",
     imageAlt: "Woman holding her shoulder, with the joint highlighted to show pain",
     heroImage: "/images/generated/trapped-nerve-patient-hero.webp",
-    sectionImage: "/images/generated/acupuncture-treatment-closeup.webp",
-    sectionImageAlt: "Close-up of acupuncture needles in treatment",
+    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People search for a trapped nerve in the neck, a trapped nerve in the shoulder, or a trapped nerve in the back because that is how the pain presents in daily life — turning to check a blind spot, reaching for a seatbelt, sitting at a desk, or getting out of a chair. The useful clinical question is not the label. It is where the symptoms start, where they travel, and what they do to sleep, work and movement.",
       "If you want the compression-mechanism explanation, that sits on our <a href=\"/pinched-nerve\">pinched nerve</a> page. Here the focus is what to do next: a structured consultation at <a href=\"/reading-clinic\">Reading</a> or <a href=\"/wimbledon-clinic\">Wimbledon</a>, and treatment only where it is appropriate. Neck-and-shoulder presentations are often assessed alongside <a href=\"/neck-pain\">neck pain</a> and <a href=\"/shoulder-pain\">shoulder pain</a>.",
@@ -836,8 +836,8 @@ export const conditions: Condition[] = [
     image: "/images/tui-na-massage-treatment.webp",
     imageAlt: "Practitioner using Tui Na manual therapy on a patient’s upper back",
     heroImage: "/images/generated/neck-pain-patient-hero.webp",
-    sectionImage: "/images/generated/acupuncture-treatment-closeup.webp",
-    sectionImageAlt: "Close-up of acupuncture needles in treatment",
+    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Neck pain ranges from a stiff neck after sleep to a chronic ache that builds through the working day. Many people also feel it across the shoulders or into the upper back. Muscular neck pain, postural loading and joint stiffness often overlap — which is why a single stretch or heat pack is not always enough.",
       "We commonly combine <a href=\"/acupuncture\">acupuncture</a> with <a href=\"/tui-na-massage\">Tui Na</a>. Where nerve-type symptoms travel into an arm, we also consider a <a href=\"/pinched-nerve\">pinched nerve</a> or <a href=\"/trapped-nerve\">trapped nerve</a> picture. Local shoulder joint pain is covered on our <a href=\"/shoulder-pain\">shoulder pain</a> page.",
@@ -970,8 +970,8 @@ export const conditions: Condition[] = [
     image: "/images/manual-therapy-side-lying.webp",
     imageAlt: "Practitioner treating the lower back with the patient in a side-lying position",
     heroImage: "/images/generated/herniated-disc-patient-hero.webp",
-    sectionImage: "/images/generated/acupuncture-treatment-closeup.webp",
-    sectionImageAlt: "Close-up of acupuncture needles in treatment",
+    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "A herniated disc — often called a slipped disc in the UK — is when disc material bulges or leaks enough to irritate nearby tissue, sometimes including a nerve root. Many people first notice it as disc-related back pain; others notice leg pain and look up <a href=\"/sciatica-treatment\">sciatica</a>.",
       "Acupuncture does not physically repair, replace or “move” a spinal disc. What we may support is pain, muscle spasm and how comfortably you can move while medical advice and, where needed, imaging remain in the picture. Related searches such as <a href=\"/back-pain\">back pain</a> and <a href=\"/pinched-nerve\">pinched nerve</a> are often the same clinical visit from a different starting phrase.",
@@ -1104,8 +1104,8 @@ export const conditions: Condition[] = [
     image: "/images/back-assessment-treatment.webp",
     imageAlt: "Practitioner assessing a patient's back in clinic",
     heroImage: "/images/generated/piriformis-syndrome-patient-hero.webp",
-    sectionImage: "/images/generated/acupuncture-treatment-closeup.webp",
-    sectionImageAlt: "Close-up of acupuncture needles in treatment",
+    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "The piriformis is a small muscle deep in the buttock. When it is tight or irritated, it can aggravate the sciatic nerve that runs beneath (and in some people, through) the muscle. The result can be piriformis pain, buttock pain, and pain down the leg that looks and feels like <a href=\"/sciatica-treatment\">sciatica</a>.",
       "That overlap is exactly why self-diagnosis from symptoms is unreliable. True nerve-root sciatica, <a href=\"/back-pain\">back pain</a>, and <a href=\"/hip-pain\">hip pain</a> can all occupy the same neighbourhood. We examine rather than assume the piriformis is the culprit.",
@@ -1237,8 +1237,8 @@ export const conditions: Condition[] = [
     image: "/images/knee-assessment-clinic.webp",
     imageAlt: "Practitioner examining a patient's knee in clinic",
     heroImage: "/images/generated/knee-pain-patient-hero.webp",
-    sectionImage: "/images/generated/acupuncture-treatment-closeup.webp",
-    sectionImageAlt: "Close-up of acupuncture needles in treatment",
+    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People look for knee pain treatment without surgery because they want to keep walking, working and training. That is a reasonable aim — and it is not the same as saying acupuncture can replace an operation when an orthopaedic surgeon has already judged surgery to be necessary. Suitability is assessed in clinic, alongside whatever NHS or specialist advice you already have.",
       "We see overuse-related discomfort, longer-standing stiffness, and sports-related knees as part of <a href=\"/sports-injuries\">sports injury</a> care. Pain around the knee can also be influenced by the <a href=\"/hip-pain\">hip</a> or <a href=\"/back-pain\">back</a>, which is why we look at how you walk, not only at the sore joint.",
@@ -1370,8 +1370,8 @@ export const conditions: Condition[] = [
     image: "/images/bone-setting-treatment.webp",
     imageAlt: "Practitioner using manual therapy on a patient's back and shoulder",
     heroImage: "/images/generated/hip-pain-patient-hero.webp",
-    sectionImage: "/images/generated/acupuncture-treatment-closeup.webp",
-    sectionImageAlt: "Close-up of acupuncture needles in treatment",
+    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Hip pain when walking, stiffness after sitting, or an ache in the buttock and hip can have several sources: the hip joint itself, the lumbar spine, the sacroiliac region, or muscles such as the piriformis. Searching the symptom is useful. Naming the structure from a webpage is not.",
       "We therefore treat hip presentations as a differential, not a single protocol. Related pages include <a href=\"/back-pain\">back pain</a>, <a href=\"/sciatica-treatment\">sciatica</a>, <a href=\"/piriformis-syndrome\">piriformis syndrome</a> and <a href=\"/knee-pain\">knee pain</a> — because those are the neighbourhoods this symptom lives in.",
@@ -1498,12 +1498,103 @@ export const conditions: Condition[] = [
   // ── Women's health ────────────────────────────────────
   {
     slug: "fertility-support",
-    href: "/conditions#womens-health",
+    href: "/fertility-support",
     label: "Fertility Support",
     category: "womens-health",
-    status: "listed",
+    status: "live",
     summary:
       "Acupuncture and herbal medicine as an adjunct around fertility and IVF cycles — assessed individually, not as a package.",
+    title: "Acupuncture for Fertility | TCM Fertility Support Reading & Wimbledon",
+    description:
+      "Acupuncture and Traditional Chinese Medicine for fertility in Reading and Wimbledon. A clinic guide to assessment, herbal medicine, IVF adjunct care and what to expect. No GP referral needed.",
+    ogTitle: "Acupuncture & TCM for Fertility | Yin Yang CMC",
+    ogDescription:
+      "A guide from our clinic: how we assess fertility, prescribe herbal medicine and acupuncture, and support patients trying naturally or alongside IVF.",
+    ctaHeading: "We look forward to supporting you on your journey",
+    h1: "Acupuncture & Traditional Chinese Medicine for Fertility",
+    eyebrow: "Women's Health · Fertility",
+    lede: "A guide from our clinic — how we assess, diagnose and support you, whether you are trying naturally or alongside IVF.",
+    image: "/images/generated/clinic-consultation.webp",
+    imageAlt: "Clinic consultation at Yin Yang CMC",
+    heroImage: "/images/generated/clinic-consultation.webp",
+    sectionImage: "/images/generated/chinese-medicine-pulse-assessment.webp",
+    sectionImageAlt: "Practitioner taking a patient's pulse during a Traditional Chinese Medicine consultation",
+    intro: [
+      "Infertility is a deeply personal journey, and the causes are often multifaceted. Some are structural — such as uterine fibroids, polycystic ovarian syndrome (PCOS), or blocked fallopian tubes. Others relate to hormonal imbalances, irregular menstrual cycles, diminished egg or sperm quality, age-related factors, or a general state of physical and reproductive exhaustion.",
+      "Traditional Chinese Medicine, including acupuncture and herbal therapy, is used to restore balance, regulate the menstrual cycle, nourish the reproductive system, and support overall vitality — both for natural fertility and as an adjunct around IVF. Read the full clinic guide on this page.",
+    ],
+    symptoms: [
+      "Difficulty conceiving, including after previous fertility treatment or IVF",
+      "Irregular, painful or absent menstrual cycles",
+      "PCOS, fibroids, or a history of hormonal imbalance",
+      "Concerns about egg or sperm quality, or age-related fertility",
+      "Physical or reproductive exhaustion alongside trying to conceive",
+    ],
+    causes: [
+      {
+        title: "Structural and hormonal factors",
+        body: "Fibroids, PCOS, blocked tubes, irregular cycles and hormonal imbalance are among the presentations we take a history of — they do not automatically dictate a single protocol.",
+      },
+      {
+        title: "Egg, sperm and age-related factors",
+        body: "Diminished egg or sperm quality and age-related change are common reasons people seek TCM as part of a wider fertility plan, including alongside assisted treatment.",
+      },
+      {
+        title: "Constitutional depletion",
+        body: "A general state of physical and reproductive exhaustion is treated as part of the TCM picture, not as a separate add-on.",
+      },
+    ],
+    treatments: [
+      {
+        href: "/acupuncture",
+        label: "Acupuncture",
+        why: "Fine, single-use needles selected to your pattern. Electroacupuncture may be added where clinically appropriate.",
+      },
+      {
+        href: "/herbal-consultation",
+        label: "Chinese Herbal Medicine",
+        why: "Concentrated granules from certified Hong Kong suppliers, prescribed only after consultation and compliant with UK regulatory standards.",
+      },
+    ],
+    patterns: [
+      {
+        title: "Qi & Blood Deficiency 氣血虧虛",
+        body: "Fatigue, a pale or scanty cycle, and a depleted reproductive picture. Treatment is aimed at nourishing rather than pushing.",
+      },
+      {
+        title: "Liver & Kidney Insufficiency 肝腎不足",
+        body: "A longer-standing constitutional pattern often discussed in fertility presentations — explained in clinic in plain language.",
+      },
+      {
+        title: "Blood Stasis 血瘀",
+        body: "Fixed, clotty or painful cycles, or a history that suggests stagnation. Often combined with another pattern rather than standing alone.",
+      },
+    ],
+    related: ["menstrual-pain", "postnatal-recovery"],
+    expect: [
+      {
+        title: "Initial health assessment",
+        body: "A detailed questionnaire before you arrive covers menstrual history, general health, lifestyle and any previous fertility or IVF outcomes.",
+      },
+      {
+        title: "In-clinic consultation",
+        body: "Pulse diagnosis (切脈) and tongue diagnosis (望舌) sit alongside a face-to-face history so we can identify the underlying pattern.",
+      },
+      {
+        title: "Diagnosis and treatment plan",
+        body: "You leave with a clear TCM explanation and a plan: herbs, acupuncture or both; expected duration; and dietary and lifestyle guidance.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can acupuncture and TCM be used alongside IVF?",
+        a: "Yes. Many patients come to us while preparing for, or going through, assisted reproductive treatment. TCM is used as an adjunct, not a replacement for your fertility clinic.",
+      },
+      {
+        q: "Do I need Chinese herbal medicine as well as acupuncture?",
+        a: "Not automatically. After assessment, the practitioner explains whether herbal medicine, acupuncture, or a combination is recommended.",
+      },
+    ],
   },
   {
     slug: "menstrual-pain",
