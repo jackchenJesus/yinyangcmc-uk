@@ -1,0 +1,541 @@
+---
+import Base from "../layouts/Base.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import CTASection from "../components/CTASection.astro";
+import { site } from "../data/site";
+
+const pageUrl = "https://yinyangcmc.uk/fertility-support";
+
+const faqItems = [
+  {
+    q: "Can acupuncture and TCM be used alongside IVF?",
+    a: "Yes. Many patients come to us while preparing for, or going through, assisted reproductive treatment. We review your cycle, medications and any previous IVF outcomes at consultation, then tailor acupuncture and — where appropriate — herbal medicine around that plan. TCM is used as an adjunct, not a replacement for your fertility clinic.",
+  },
+  {
+    q: "Do I need Chinese herbal medicine as well as acupuncture?",
+    a: "Not automatically. After your TCM assessment, the practitioner will explain whether herbal medicine, acupuncture, or a combination is recommended — and for how long. Formulas are prescribed only after consultation, as concentrated granules sourced from certified Hong Kong suppliers and compliant with UK regulatory standards.",
+  },
+  {
+    q: "Is acupuncture painful?",
+    a: "We use only single-use, sterile, disposable needles that meet UK safety standards. They are extremely fine — significantly thinner than a standard medical needle — and most patients experience little to no discomfort on insertion. A dull ache, tingling, warmth or heaviness at the point (De Qi, 得氣) is a normal, expected response.",
+  },
+  {
+    q: "What should I do before my first appointment?",
+    a: "Complete the health questionnaire we send you, eat a light meal before treatment, and wear or bring loose clothing so we can reach points on the arms and legs. If you feel unwell or anxious on the day, tell your practitioner before treatment begins. Bring any previous fertility or IVF records if you have them.",
+  },
+  {
+    q: "Who will I see for fertility support?",
+    a: "Chui Ying Li (Andrea) is the lead for women's health and fertility support across both UK clinics. Consultations are available in English, Cantonese and Mandarin at Reading and Wimbledon. No GP referral is required.",
+  },
+  {
+    q: "How long does a course of treatment usually last?",
+    a: "That is decided after your assessment — not sold as a fixed package. Your plan will set out the expected duration, whether herbs and acupuncture are combined, and dietary and lifestyle guidance. Progress is reviewed as you go.",
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://yinyangcmc.uk" },
+        { "@type": "ListItem", position: 2, name: "Conditions", item: "https://yinyangcmc.uk/conditions" },
+        { "@type": "ListItem", position: 3, name: "Fertility Support", item: pageUrl },
+      ],
+    },
+    {
+      "@type": "WebPage",
+      name: "Acupuncture & Traditional Chinese Medicine for Fertility",
+      description:
+        "A clinic guide to acupuncture and Chinese herbal medicine for fertility support in Reading and Wimbledon — assessment, diagnosis and what to expect.",
+      url: pageUrl,
+      isPartOf: { "@type": "WebSite", name: site.name, url: "https://yinyangcmc.uk" },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    },
+  ],
+};
+---
+<Base
+  title="Acupuncture for Fertility | TCM Fertility Support Reading & Wimbledon"
+  description="Acupuncture and Traditional Chinese Medicine for fertility in Reading and Wimbledon. A clinic guide to assessment, herbal medicine, IVF adjunct care and what to expect. No GP referral needed."
+  canonical={pageUrl}
+  ogTitle="Acupuncture & TCM for Fertility | Yin Yang CMC"
+  ogDescription="A guide from our clinic: how we assess fertility, prescribe herbal medicine and acupuncture, and support patients trying naturally or alongside IVF."
+  ogImage="/images/generated/clinic-consultation.webp"
+>
+
+
+<!-- ═══════════════════════════════════════════════
+     §1 HERO
+═══════════════════════════════════════════════ -->
+<section class="page-hero" style="min-height:68vh;display:grid;place-items:center">
+  <img
+    class="page-hero-bg"
+    src="/images/generated/clinic-consultation.webp"
+    alt=""
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="wrap" style="padding:5rem 0 3.5rem">
+    <nav class="cond-crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/conditions">Conditions</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Fertility Support</span>
+    </nav>
+    <p class="eyebrow">Women's Health · Reading &amp; Wimbledon</p>
+    <h1>Acupuncture &amp; Traditional Chinese Medicine for Fertility</h1>
+    <p class="lede">
+      A guide from our clinic — how we assess, diagnose and support you,
+      whether you are trying naturally or alongside IVF.
+    </p>
+
+    <div class="hero-exp-stat">
+      <span class="hero-exp-num">15+</span>
+      <span class="hero-exp-label">Years'<br>Clinical Experience</span>
+    </div>
+
+    <div class="actions" style="margin-top:0">
+      <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-ghost" href="/our-practitioners">Meet Our Practitioners</a>
+    </div>
+
+    <div class="hero-trust-row">
+      <span><span class="htc">✓</span> Women's health lead: Andrea Li</span>
+      <span><span class="htc">✓</span> British Acupuncture Council Member</span>
+      <span><span class="htc">✓</span> Natural fertility &amp; IVF adjunct</span>
+      <span><span class="htc">✓</span> No Referral Needed</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §2 UNDERSTANDING FERTILITY CHALLENGES
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="grid-2-al" style="gap:4rem">
+
+      <div>
+        <p class="eyebrow">Understanding Fertility Challenges</p>
+        <h2>A personal journey — often with more than one cause</h2>
+        <p>
+          Infertility is a deeply personal journey, and the causes are often multifaceted.
+          Some are structural — such as uterine fibroids, polycystic ovarian syndrome (PCOS),
+          or blocked fallopian tubes. Others relate to hormonal imbalances, irregular menstrual
+          cycles, diminished egg or sperm quality, age-related factors, or a general state of
+          physical and reproductive exhaustion.
+        </p>
+        <p>
+          Traditional Chinese Medicine (TCM), including acupuncture and herbal therapy, offers
+          a holistic approach to addressing many of these underlying factors. By restoring balance,
+          regulating the menstrual cycle, nourishing the reproductive system, and supporting overall
+          vitality, TCM may meaningfully support natural fertility — and for those undergoing
+          assisted reproductive treatment, it may also be used as an adjunct to IVF cycles.
+        </p>
+
+        <ul style="list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:0.5rem">
+          {[
+            "Assessment before any treatment plan is set",
+            "Acupuncture, herbal medicine, or a combination — decided with you",
+            "Used for natural fertility and as an adjunct around IVF",
+            "Same practitioners at Reading and Wimbledon",
+          ].map((item) => (
+            <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:0.92rem">
+              <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.05em">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div class="actions" style="margin-top:1.8rem">
+          <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
+          <a class="btn btn-outline" href="/herbal-consultation">Herbal Consultation</a>
+        </div>
+      </div>
+
+      <div class="img-wrap" style="position:relative">
+        <img
+          src="/images/generated/chinese-medicine-pulse-assessment.webp"
+          alt="Practitioner taking a patient's pulse during a Traditional Chinese Medicine consultation"
+          style="width:100%;height:460px;object-fit:cover;border-radius:var(--r-lg)"
+          loading="lazy"
+        />
+        <div class="cred-panel">
+          <div class="cred-row"><span class="cred-check">✓</span> Pulse diagnosis · 切脈</div>
+          <div class="cred-row"><span class="cred-check">✓</span> Tongue diagnosis · 望舌</div>
+          <div class="cred-row"><span class="cred-check">✓</span> Individual TCM pattern, not a package</div>
+          <div class="cred-row"><span class="cred-check">✓</span> English · Cantonese · Mandarin</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §3 HOW WE APPROACH YOUR CARE
+═══════════════════════════════════════════════ -->
+<section class="section-dark">
+  <div class="wrap">
+    <div class="section-head" style="max-width:52ch">
+      <p class="eyebrow eyebrow-dark">How We Approach Your Care</p>
+      <h2>Three steps from questionnaire to a plan you can follow</h2>
+      <p style="color:rgba(240,234,226,0.75)">
+        Our goal is to give you a clear direction and a sense of empowerment throughout your fertility journey.
+      </p>
+    </div>
+
+    <div class="journey-grid">
+      <div class="journey-step">
+        <div class="j-num">01</div>
+        <h3>Initial Health Assessment</h3>
+        <p>
+          Before your first appointment, you will be asked to complete a detailed health
+          questionnaire. This helps our practitioner understand your menstrual history,
+          general health, lifestyle, and — where applicable — any previous fertility
+          treatments or IVF outcomes. Coming prepared allows us to make the most of your
+          consultation time.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">02</div>
+        <h3>In-Clinic Consultation</h3>
+        <p>
+          During your face-to-face appointment, our practitioner will conduct a comprehensive
+          TCM assessment using classical diagnostic methods, including pulse diagnosis (切脈)
+          and tongue diagnosis (望舌). These techniques allow us to look beyond surface
+          symptoms and identify the underlying patterns of imbalance within your body.
+        </p>
+      </div>
+      <div class="journey-step">
+        <div class="j-num">03</div>
+        <h3>Diagnosis &amp; Treatment Plan</h3>
+        <p>
+          Your practitioner will explain your TCM diagnosis in clear, accessible terms.
+          You leave with a personalised plan: whether herbal medicine, acupuncture, or both
+          is recommended; the expected duration; and dietary and lifestyle guidance.
+        </p>
+      </div>
+    </div>
+
+    <p style="margin-top:2.5rem;text-align:center">
+      <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book Your First Consultation</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §4 DIAGNOSIS DETAIL
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+
+      <div>
+        <p class="eyebrow">Your TCM Diagnosis</p>
+        <h2>What we explain — and what your plan includes</h2>
+
+        <div class="pull-quote">
+          <p>"You will leave this consultation with a thorough understanding of what is
+          happening in your body from a TCM perspective."</p>
+        </div>
+
+        <p>
+          Based on the assessment, our practitioner will explain your TCM diagnosis in
+          clear, accessible terms — whether that points to Qi and Blood deficiency,
+          Liver and Kidney insufficiency, Blood stasis, or a combination of patterns.
+        </p>
+        <p>
+          From there, a personalised treatment plan is tailored to your specific needs.
+          This will clearly outline:
+        </p>
+
+        <ul style="list-style:none;padding:0;margin:1.2rem 0 0;display:grid;gap:0.55rem">
+          {[
+            "Whether Chinese herbal medicine, acupuncture, or a combination of both is recommended",
+            "The expected duration of your treatment course",
+            "Dietary and lifestyle guidance to support your progress",
+          ].map((item) => (
+            <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:0.92rem">
+              <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.05em">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div style="display:grid;gap:1.5rem;align-content:start">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:var(--r-lg);overflow:hidden">
+          {[
+            { val: "切脈", label: "Pulse diagnosis" },
+            { val: "望舌", label: "Tongue diagnosis" },
+            { val: "EN/粵", label: "Bilingual care" },
+            { val: "IVF", label: "Adjunct support" },
+          ].map(({ val, label }) => (
+            <div style="background:var(--white);padding:1.5rem;text-align:center">
+              <span style="display:block;font-family:var(--serif);font-size:2rem;color:var(--navy);line-height:1;margin-bottom:0.35rem">{val}</span>
+              <span style="font-size:0.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em">{label}</span>
+            </div>
+          ))}
+        </div>
+
+        <div style="background:var(--cream);border-radius:var(--r-lg);padding:1.4rem 1.6rem;border:1px solid rgba(192,152,90,0.2)">
+          <p style="font-size:0.76rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.7rem">Related treatments</p>
+          <div style="display:grid;gap:0.4rem">
+            {[
+              { label: "Acupuncture", href: "/acupuncture" },
+              { label: "Herbal Medicine Consultation", href: "/herbal-consultation" },
+              { label: "Our Practitioners", href: "/our-practitioners" },
+              { label: "All Conditions", href: "/conditions" },
+            ].map(({ label, href }) => (
+              <a
+                href={href}
+                style="display:flex;align-items:center;gap:0.4rem;font-size:0.9rem;font-weight:600;color:var(--teal);text-decoration:none;padding:0.3rem 0"
+              >
+                → {label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div style="background:var(--navy);border-radius:var(--r-md);padding:1.3rem">
+          <p style="font-family:var(--serif);font-size:1.02rem;font-style:italic;color:#f0ece2;line-height:1.6;margin:0">
+            "We understand that seeking help for fertility can feel overwhelming. We are here to support you every step of the way."
+          </p>
+          <a class="btn btn-gold btn-sm" href={site.whatsapp} target="_blank" rel="noreferrer" style="margin-top:0.9rem">WhatsApp Us Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §5 ABOUT THE TREATMENTS
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">About the Treatments</p>
+      <h2>Chinese herbal medicine &amp; acupuncture</h2>
+      <p>
+        Your plan may use one or both. Nothing is prescribed as a default extra —
+        the mix is decided after your diagnosis.
+      </p>
+    </div>
+
+    <div class="grid-2" style="gap:1.5rem">
+      <article style="background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden">
+        <img
+          src="/images/chinese-herbal-medicine.webp"
+          alt="Chinese herbal medicine ingredients used in clinic prescriptions"
+          style="width:100%;height:220px;object-fit:cover;display:block"
+          loading="lazy"
+        />
+        <div style="padding:1.6rem 1.7rem 1.8rem">
+          <h3 style="font-size:1.2rem;margin-bottom:0.7rem">Chinese Herbal Medicine</h3>
+          <p style="font-size:0.92rem;color:var(--muted)">
+            The herbal formulas we prescribe are sourced from certified suppliers in Hong Kong,
+            fully compliant with UK regulatory standards. We use concentrated herbal granules —
+            a modern, convenient form of traditional herbal medicine. Simply dissolve the granules
+            in hot water and drink. No boiling required, and easy to incorporate into your daily routine.
+          </p>
+          <a class="more-link" href="/herbal-consultation">Herbal consultation details</a>
+        </div>
+      </article>
+
+      <article style="background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden">
+        <img
+          src="/images/generated/acupuncture-treatment-session.webp"
+          alt="Acupuncture treatment session at Yin Yang CMC"
+          style="width:100%;height:220px;object-fit:cover;display:block"
+          loading="lazy"
+        />
+        <div style="padding:1.6rem 1.7rem 1.8rem">
+          <h3 style="font-size:1.2rem;margin-bottom:0.7rem">Acupuncture</h3>
+          <p style="font-size:0.92rem;color:var(--muted)">
+            We use only single-use, sterile, disposable acupuncture needles that meet UK safety
+            standards. Needles are extremely fine — significantly thinner than a standard medical
+            needle — and most patients experience little to no discomfort upon insertion. Before
+            needling, the relevant acupoints are cleansed with medical-grade antiseptic alcohol.
+            Needles are then swiftly and precisely placed at carefully selected points, typically
+            on the head and limbs, chosen according to your individual pattern and treatment goals.
+          </p>
+          <p style="font-size:0.92rem;color:var(--muted);margin-top:0.8rem">
+            Where clinically appropriate, electroacupuncture (電針) may be used to enhance
+            therapeutic effect by delivering a gentle, regulated electrical stimulation through
+            the needles.
+          </p>
+          <a class="more-link" href="/acupuncture">About acupuncture</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §6 WHAT TO EXPECT
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">During &amp; After Treatment</p>
+      <h2>What to expect</h2>
+    </div>
+
+    <div class="grid-2" style="gap:1.5rem;margin-bottom:2rem">
+      <div style="padding:1.8rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <h3 style="font-size:1.15rem;margin-bottom:0.7rem">During acupuncture</h3>
+        <p style="font-size:0.92rem;color:var(--muted)">
+          It is common to experience sensations at the needle sites — such as a dull ache,
+          tingling, warmth, or a feeling of heaviness. This is known in TCM as “De Qi” (得氣),
+          or the “arrival of Qi.” It is a positive and expected response, indicating that the
+          acupoint has been activated and the body's self-healing mechanisms are being engaged.
+          This sensation promotes the circulation of Qi and Blood and supports the body's
+          natural regulatory processes.
+        </p>
+      </div>
+      <div style="padding:1.8rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
+        <h3 style="font-size:1.15rem;margin-bottom:0.7rem">After acupuncture</h3>
+        <p style="font-size:0.92rem;color:var(--muted)">
+          Following treatment, some patients feel noticeably relaxed or mildly fatigued —
+          this is entirely normal and reflects the body beginning its recovery process.
+          Occasionally, there may be very minor bruising or a small amount of bleeding at
+          the needle site. These occurrences are uncommon and resolve quickly on their own.
+          There is no cause for concern.
+        </p>
+      </div>
+    </div>
+
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.8rem 2rem">
+      <p class="eyebrow" style="margin-bottom:0.5rem">Before Your Appointment</p>
+      <h3 style="font-size:1.2rem;margin-bottom:1rem">A few reminders</h3>
+      <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.65rem">
+        {[
+          "Please eat a light meal before your treatment. Attending on an empty stomach is not recommended.",
+          "If you feel unwell, anxious, or have any concerns on the day, please inform your practitioner before treatment begins.",
+          "Wear or bring loose, comfortable clothing to allow easy access to acupuncture points on the arms and legs.",
+        ].map((item) => (
+          <li style="display:flex;gap:0.7rem;align-items:flex-start;font-size:0.95rem">
+            <span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.05em">✓</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §7 LOCATIONS
+═══════════════════════════════════════════════ -->
+<section class="section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our Clinics</p>
+      <h2>Fertility support in Reading &amp; Wimbledon</h2>
+      <p>Same clinical team and the same standard of assessment at both locations.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="loc-card">
+        <img
+          src="/images/reading-clinic-interior.webp"
+          alt="Reception and hallway at the Reading clinic"
+          loading="lazy"
+        />
+        <div class="loc-body">
+          <span class="loc-tag">Berkshire · Castle Street</span>
+          <h3>Reading Clinic</h3>
+          <div class="loc-row"><strong>Address</strong><span>Reading Health Centre, 61 Castle St, Reading RG1 7SN</span></div>
+          <div class="loc-row"><strong>Hours</strong><span>Mon / Wed / Fri 9:00 am – 6:00 pm</span></div>
+          <div class="loc-row"><strong>Transport</strong><span>Reading Station — Elizabeth Line &amp; GWR</span></div>
+          <div class="loc-actions">
+            <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic Details</a>
+            <a class="btn btn-gold btn-sm" href={site.whatsapp} target="_blank" rel="noreferrer">Book via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-card">
+        <img
+          src="/images/wimbledon-clinic-interior.webp"
+          alt="Reception area at the Wimbledon clinic"
+          loading="lazy"
+        />
+        <div class="loc-body">
+          <span class="loc-tag">South West London · SW19</span>
+          <h3>Wimbledon Clinic</h3>
+          <div class="loc-row"><strong>Address</strong><span>2 Saint Mark's Place, Wimbledon, London SW19 7ND</span></div>
+          <div class="loc-row"><strong>Hours</strong><span>Saturday 9:00 am – 5:00 pm</span></div>
+          <div class="loc-row"><strong>Transport</strong><span>Wimbledon Station — District Line &amp; National Rail</span></div>
+          <div class="loc-actions">
+            <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic Details</a>
+            <a class="btn btn-gold btn-sm" href={site.whatsapp} target="_blank" rel="noreferrer">Book via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §8 FAQ
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="wrap">
+    <div class="grid-2-lg" style="gap:5rem">
+      <div>
+        <p class="eyebrow">Common Questions</p>
+        <h2>Questions about fertility support</h2>
+        <p style="color:var(--muted)">
+          We understand that seeking help for fertility can feel overwhelming, and we are
+          here to support you every step of the way. If you have any questions about our
+          treatments, herbal medicines, or what to expect, please do not hesitate to get in touch.
+        </p>
+        <div class="actions" style="margin-top:1.5rem">
+          <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Ask Us Directly</a>
+        </div>
+        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
+          <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related services:</p>
+          <div style="display:grid;gap:0.3rem">
+            <a href="/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
+            <a href="/herbal-consultation" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Herbal Medicine Consultation</a>
+            <a href="/our-practitioners" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Our Practitioners</a>
+          </div>
+        </div>
+      </div>
+      <FAQAccordion items={faqItems} />
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     §9 FINAL CTA
+═══════════════════════════════════════════════ -->
+<CTASection
+  heading="We look forward to supporting you on your journey"
+  sub="Same-week appointments at Reading and Wimbledon. Complete the health questionnaire before you arrive so we can make the most of your consultation."
+/>
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+</Base>

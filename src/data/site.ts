@@ -111,7 +111,7 @@ export const homeConditions = [
   { href: "/frozen-shoulder", label: "Frozen Shoulder" },
   { href: "/neck-pain", label: "Neck Pain" },
   { href: "/sports-injuries", label: "Sports Injuries" },
-  { href: "/conditions#womens-health", label: "Women's Health" },
+  { href: "/fertility-support", label: "Fertility Support" },
   { href: "/conditions#pain-msk", label: "Headaches & Migraines" },
 ];
 
