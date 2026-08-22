@@ -18,8 +18,7 @@ export function getStaticPaths() {
     "tui-na-massage",
     "bone-setting",
     "herbal-consultation",
-    // Batch 2 — other treatment sub-pages
-    "other-treatment",
+    // Batch 2 — complementary therapy pages
     "cupping",
     "gua-sha",
     "moxibustion",
@@ -35,6 +34,7 @@ export function getStaticPaths() {
     "fertility-support",
     // Retired — 301 to /clinical-services via public/_redirects
     "professional-services",
+    "other-treatment",
   ]);
   const slugs = new Set([
     ...Object.keys(pages).filter((key) => !skip.has(key)),

@@ -1,2 +1,4 @@
 /professional-services    /clinical-services/    301
 /professional-services/   /clinical-services/    301
+/other-treatment          /clinical-services/    301
+/other-treatment/         /clinical-services/    301
