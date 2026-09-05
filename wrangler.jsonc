@@ -2,6 +2,7 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "yinyangcmc-uk",
   "compatibility_date": "2026-08-17",
+  "workers_dev": true,
   "routes": [
     {
       "pattern": "yinyangcmc.uk",
