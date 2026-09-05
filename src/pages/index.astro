@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import ContactForm from "../components/ContactForm.astro";
 import { clinics, homeConditions, homeServices, practitioners, reviews, site } from "../data/site";
 ---
 <Base title="Chinese Medicine Wimbledon & Reading | Yin-Yang Clinic | yin yang uk" description="Chinese medicine clinic in Reading and Wimbledon. British Acupuncture Council registered. Acupuncture, Tui Na, bone-setting and Chinese herbal medicine consultation. No GP referral needed.">
@@ -43,7 +44,7 @@ import { clinics, homeConditions, homeServices, practitioners, reviews, site } f
         <p class="eyebrow">Our clinic</p>
         <h2>Care for local patients<br>in Berkshire &amp; SW London</h2>
         <p class="lead">
-          Two UK clinics — <a href="/reading-clinic">Reading town centre</a> and <a href="/wimbledon-clinic">Wimbledon SW19</a>. British Acupuncture Council registered. Recognised by AXA Health, Vitality, Aviva and WPA. <a href="/pricing-and-insurance">View insurance &amp; provider details</a>.
+          Two UK clinics — <a href="/locations/reading-clinic">Reading town centre</a> and <a href="/locations/wimbledon-clinic">Wimbledon SW19</a>. British Acupuncture Council registered. Recognised by AXA Health, Vitality, Aviva and WPA. <a href="/pricing-and-insurance">View insurance &amp; provider details</a>.
         </p>
         <ul class="home-intro-points">
           <li>No GP referral needed</li>
@@ -150,7 +151,7 @@ import { clinics, homeConditions, homeServices, practitioners, reviews, site } f
       <div class="section-head">
         <p class="eyebrow">The team</p>
         <h2>Our Practitioners</h2>
-        <p>MSc-qualified. UK registered (ATCM &amp; MBAcC). Both work across <a href="/reading-clinic">Reading</a> and <a href="/wimbledon-clinic">Wimbledon</a>.</p>
+        <p>MSc-qualified. UK registered (ATCM &amp; MBAcC). Both work across <a href="/locations/reading-clinic">Reading</a> and <a href="/locations/wimbledon-clinic">Wimbledon</a>.</p>
       </div>
       <div class="home-prac-grid home-prac-teaser">
         {practitioners.map((p) => (
@@ -184,7 +185,7 @@ import { clinics, homeConditions, homeServices, practitioners, reviews, site } f
             <h3>Reading</h3>
             <p class="loc-meta">{clinics.reading.address}<br>{clinics.reading.hours} · By appointment</p>
             <div class="loc-actions">
-              <a class="btn btn-outline btn-sm" href="/reading-clinic">Reading clinic</a>
+              <a class="btn btn-outline btn-sm" href="/locations/reading-clinic">Reading clinic</a>
               <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book</a>
             </div>
           </div>
@@ -196,7 +197,7 @@ import { clinics, homeConditions, homeServices, practitioners, reviews, site } f
             <h3>Wimbledon</h3>
             <p class="loc-meta">{clinics.wimbledon.address}<br>{clinics.wimbledon.hours} · By appointment</p>
             <div class="loc-actions">
-              <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Wimbledon clinic</a>
+              <a class="btn btn-outline btn-sm" href="/locations/wimbledon-clinic">Wimbledon clinic</a>
               <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book</a>
             </div>
           </div>
@@ -222,16 +223,7 @@ import { clinics, homeConditions, homeServices, practitioners, reviews, site } f
         <p><strong>WhatsApp:</strong> <a href={site.whatsapp} style="color:var(--teal);font-weight:700">{site.phoneDisplay}</a></p>
         <p><strong>Email:</strong> <a href={`mailto:${site.email}`} style="color:var(--teal);font-weight:700">{site.email}</a></p>
       </div>
-      <form class="form" action={`mailto:${site.email}`} method="post" enctype="text/plain">
-        <input name="name" placeholder="Full name" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <select name="clinic">
-          <option>Reading clinic</option>
-          <option>Wimbledon clinic</option>
-        </select>
-        <textarea name="message" rows="5" placeholder="Message" required></textarea>
-        <button class="btn btn-gold" type="submit">Submit</button>
-      </form>
+      <ContactForm messageRows={5} />
     </div>
   </section>
 

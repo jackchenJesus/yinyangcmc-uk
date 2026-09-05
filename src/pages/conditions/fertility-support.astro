@@ -1,10 +1,10 @@
 ---
-import Base from "../layouts/Base.astro";
-import FAQAccordion from "../components/FAQAccordion.astro";
-import CTASection from "../components/CTASection.astro";
-import { site } from "../data/site";
+import Base from "../../layouts/Base.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
+import CTASection from "../../components/CTASection.astro";
+import { site } from "../../data/site";
 
-const pageUrl = "https://yinyangcmc.uk/fertility-support";
+const pageUrl = "https://yinyangcmc.uk/conditions/fertility-support";
 
 const faqItems = [
   {
@@ -160,7 +160,7 @@ const schema = {
 
         <div class="actions" style="margin-top:1.8rem">
           <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
-          <a class="btn btn-outline" href="/herbal-consultation">Herbal Consultation</a>
+          <a class="btn btn-outline" href="/clinical-services/herbal-consultation">Herbal Consultation</a>
         </div>
       </div>
 
@@ -296,8 +296,8 @@ const schema = {
           <p style="font-size:0.76rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.7rem">Related treatments</p>
           <div style="display:grid;gap:0.4rem">
             {[
-              { label: "Acupuncture", href: "/acupuncture" },
-              { label: "Herbal Medicine Consultation", href: "/herbal-consultation" },
+              { label: "Acupuncture", href: "/clinical-services/acupuncture" },
+              { label: "Herbal Medicine Consultation", href: "/clinical-services/herbal-consultation" },
               { label: "Our Practitioners", href: "/our-practitioners" },
               { label: "All Conditions", href: "/conditions" },
             ].map(({ label, href }) => (
@@ -354,7 +354,7 @@ const schema = {
             a modern, convenient form of traditional herbal medicine. Simply dissolve the granules
             in hot water and drink. No boiling required, and easy to incorporate into your daily routine.
           </p>
-          <a class="more-link" href="/herbal-consultation">Herbal consultation details</a>
+          <a class="more-link" href="/clinical-services/herbal-consultation">Herbal consultation details</a>
         </div>
       </article>
 
@@ -380,7 +380,7 @@ const schema = {
             therapeutic effect by delivering a gentle, regulated electrical stimulation through
             the needles.
           </p>
-          <a class="more-link" href="/acupuncture">About acupuncture</a>
+          <a class="more-link" href="/clinical-services/acupuncture">About acupuncture</a>
         </div>
       </article>
     </div>
@@ -467,7 +467,7 @@ const schema = {
           <div class="loc-row"><strong>Hours</strong><span>Mon / Wed / Fri 9:00 am – 6:00 pm</span></div>
           <div class="loc-row"><strong>Transport</strong><span>Reading Station — Elizabeth Line &amp; GWR</span></div>
           <div class="loc-actions">
-            <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic Details</a>
+            <a class="btn btn-outline btn-sm" href="/locations/reading-clinic">Clinic Details</a>
             <a class="btn btn-gold btn-sm" href={site.whatsapp} target="_blank" rel="noreferrer">Book via WhatsApp</a>
           </div>
         </div>
@@ -486,7 +486,7 @@ const schema = {
           <div class="loc-row"><strong>Hours</strong><span>Saturday 9:00 am – 5:00 pm</span></div>
           <div class="loc-row"><strong>Transport</strong><span>Wimbledon Station — District Line &amp; National Rail</span></div>
           <div class="loc-actions">
-            <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic Details</a>
+            <a class="btn btn-outline btn-sm" href="/locations/wimbledon-clinic">Clinic Details</a>
             <a class="btn btn-gold btn-sm" href={site.whatsapp} target="_blank" rel="noreferrer">Book via WhatsApp</a>
           </div>
         </div>
@@ -516,8 +516,8 @@ const schema = {
         <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
           <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related services:</p>
           <div style="display:grid;gap:0.3rem">
-            <a href="/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
-            <a href="/herbal-consultation" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Herbal Medicine Consultation</a>
+            <a href="/clinical-services/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
+            <a href="/clinical-services/herbal-consultation" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Herbal Medicine Consultation</a>
             <a href="/our-practitioners" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Our Practitioners</a>
           </div>
         </div>

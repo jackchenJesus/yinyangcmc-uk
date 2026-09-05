@@ -2,56 +2,28 @@
 import Base from "../layouts/Base.astro";
 import PageHero from "../components/PageHero.astro";
 import CTASection from "../components/CTASection.astro";
-import ConditionDetail from "../components/ConditionDetail.astro";
 import pages from "../data/pages.json";
-import { getLiveCondition, liveConditions } from "../data/conditions";
 
-// Pages with dedicated Astro files — excluded from this fallback template
 export function getStaticPaths() {
-  const skip = new Set([
-    "home",
-    "contact",
-    "pricing-and-insurance",
-    "clinical-services",
-    // Batch 1 — dedicated service pages
-    "acupuncture",
-    "tui-na-massage",
-    "bone-setting",
-    "herbal-consultation",
-    // Batch 2 — complementary therapy pages
-    "cupping",
-    "gua-sha",
-    "moxibustion",
-    "auricular-therapy",
-    "tian-jiu",
-    // Location pages
-    "locations",
-    "reading-clinic",
-    "wimbledon-clinic",
-    "our-practitioners",
-    "conditions",
-    // Dedicated condition page (custom layout, not ConditionDetail)
-    "fertility-support",
-    // Retired — 301 to /clinical-services via public/_redirects
-    "professional-services",
-    "other-treatment",
-  ]);
-  const slugs = new Set([
-    ...Object.keys(pages).filter((key) => !skip.has(key)),
-    ...liveConditions.map((c) => c.slug).filter((s) => !skip.has(s)),
-  ]);
-  return [...slugs].map((slug) => ({ params: { slug } }));
+  const leftover = [
+    "blog",
+    "course",
+    "insights-and-advice-from-our-expert-doctors",
+    "insights-from-our-doctors-at-yin-yang-uk",
+    "privacy-terms-and-conditions",
+  ];
+  return leftover
+    .filter((slug) => slug in pages)
+    .map((slug) => ({ params: { slug } }));
 }
 
 const { slug } = Astro.params;
-const condition = getLiveCondition(slug!);
 const page = (pages as Record<string, { title: string; desc: string; headings: string[]; paras: string[] }>)[slug!];
 
-if (!condition && !page) {
+if (!page) {
   throw new Error(`Unknown slug: ${slug}`);
 }
 
-// Filter out navigation/footer/internal artefacts from scraped content
 const SKIP_HEADS = new Set([
   "Contact", "BOOK NOW", "01", "02", "03", "04", "05", "06",
   "WH", "AL", "Silo 1 — Clinical Services Pillar Page",
@@ -64,14 +36,10 @@ const SKIP_PARA_START = [
   "Reach us anytime", "Call Us 07301",
 ];
 
-const headings = (!condition && page)
-  ? page.headings.filter((h) => !SKIP_HEADS.has(h))
-  : [];
-const paras = (!condition && page)
-  ? page.paras.filter((p) => !SKIP_PARA_START.some((s) => p.startsWith(s)))
-  : [];
+const headings = page.headings.filter((h) => !SKIP_HEADS.has(h));
+const paras = page.paras.filter((p) => !SKIP_PARA_START.some((s) => p.startsWith(s)));
 
-const hero = headings[0] || page?.title || "";
+const hero = headings[0] || page.title || "";
 const lede = (headings[1] && headings[1].length > 40)
   ? headings[1]
   : paras[0]?.slice(0, 240);
@@ -90,19 +58,7 @@ const courseImages = slug === "course"
     ]
   : [];
 ---
-{condition ? (
-  <Base
-    title={condition.title}
-    description={condition.description}
-    canonical={new URL(condition.href, Astro.site ?? "https://yinyangcmc.uk").href}
-    ogTitle={condition.ogTitle ?? condition.title}
-    ogDescription={condition.ogDescription ?? condition.description}
-    ogImage={condition.image}
-  >
-    <ConditionDetail condition={condition} />
-  </Base>
-) : (
-<Base title={page!.title} description={page!.desc}>
+<Base title={page.title} description={page.desc}>
   <PageHero
     title={hero}
     lede={lede}
@@ -159,4 +115,3 @@ const courseImages = slug === "course"
 
   <CTASection />
 </Base>
-)}

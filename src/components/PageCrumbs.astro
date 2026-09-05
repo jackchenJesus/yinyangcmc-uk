@@ -1,0 +1,16 @@
+---
+interface Props {
+  hubHref: string;
+  hubLabel: string;
+  current: string;
+}
+
+const { hubHref, hubLabel, current } = Astro.props;
+---
+<nav class="cond-crumbs" aria-label="Breadcrumb">
+  <a href="/">Home</a>
+  <span aria-hidden="true">/</span>
+  <a href={hubHref}>{hubLabel}</a>
+  <span aria-hidden="true">/</span>
+  <span aria-current="page">{current}</span>
+</nav>

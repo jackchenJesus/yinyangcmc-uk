@@ -1,7 +1,8 @@
 ---
-import Base from "../layouts/Base.astro";
-import FAQAccordion from "../components/FAQAccordion.astro";
-import CTASection from "../components/CTASection.astro";
+import Base from "../../layouts/Base.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
+import CTASection from "../../components/CTASection.astro";
+import PageCrumbs from "../../components/PageCrumbs.astro";
 
 const faqItems = [
   {
@@ -46,6 +47,7 @@ const faqItems = [
     fetchpriority="high"
   />
   <div class="wrap" style="padding:5rem 0 3.5rem">
+    <PageCrumbs hubHref="/clinical-services" hubLabel="Clinical Services" current="Tian Jiu" />
     <p class="eyebrow">Tian Jiu · Reading &amp; Wimbledon</p>
     <h1>Tian Jiu (天灸)<br>Medicinal Vesiculation</h1>
     <p class="lede">
@@ -115,7 +117,7 @@ const faqItems = [
 
         <div class="actions" style="margin-top:1.8rem">
           <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Enquire About Tian Jiu</a>
-          <a class="btn btn-outline" href="/moxibustion">About Moxibustion</a>
+          <a class="btn btn-outline" href="/clinical-services/moxibustion">About Moxibustion</a>
         </div>
       </div>
 
@@ -199,7 +201,7 @@ const faqItems = [
           patterns in TCM terms. Rheumatoid arthritis and other inflammatory joint
           disease remain under GP or specialist care.
         </p>
-        <a class="more-link" href="/frozen-shoulder">Frozen Shoulder</a>
+        <a class="more-link" href="/conditions/frozen-shoulder">Frozen Shoulder</a>
       </div>
     </div>
 
@@ -218,7 +220,7 @@ const faqItems = [
         { label: "Asthma",               href: "/conditions" },
         { label: "Chronic Bronchitis",   href: "/conditions" },
         { label: "Chronic Cough",        href: "/conditions" },
-        { label: "Frozen Shoulder",      href: "/frozen-shoulder" },
+        { label: "Frozen Shoulder",      href: "/conditions/frozen-shoulder" },
         { label: "Joint Pain",           href: "/conditions" },
         { label: "Stomach Pain",         href: "/conditions" },
         { label: "Seasonal Care",        href: "/conditions" },
@@ -295,8 +297,8 @@ const faqItems = [
         <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
           <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related therapies:</p>
           <div style="display:grid;gap:0.3rem">
-            <a href="/moxibustion" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Moxibustion</a>
-            <a href="/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
+            <a href="/clinical-services/moxibustion" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Moxibustion</a>
+            <a href="/clinical-services/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
             <a href="/clinical-services" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ All Clinical Services</a>
           </div>
         </div>

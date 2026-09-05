@@ -1031,6 +1031,7 @@ p  { margin: 0 0 1em; }
   padding: 1.8rem;
   border-radius: var(--r-lg);
   border: 1px solid var(--border);
+  position: relative;
 }
 .form input,
 .form textarea,
@@ -1049,6 +1050,30 @@ p  { margin: 0 0 1em; }
 .form textarea:focus,
 .form select:focus { outline: none; border-color: var(--gold); }
 .form button { border: 0; cursor: pointer; }
+.form button:disabled { opacity: 0.7; cursor: wait; }
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  height: 0;
+  overflow: hidden;
+}
+.form-status {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-radius: var(--r-md);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.form-status--success {
+  background: #e8f4ec;
+  color: #1d4d2c;
+  border: 1px solid #b7d7c0;
+}
+.form-status--error {
+  background: #fbeaea;
+  color: #7a1f1f;
+  border: 1px solid #e3b4b4;
+}
 
 /* ─── CTA SECTION ────────────────────────────────────── */
 .cta-section {

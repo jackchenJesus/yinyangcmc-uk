@@ -1,0 +1,28 @@
+---
+import Base from "../../layouts/Base.astro";
+import ConditionDetail from "../../components/ConditionDetail.astro";
+import { getLiveCondition, liveConditions } from "../../data/conditions";
+
+export function getStaticPaths() {
+  return liveConditions
+    .filter((c) => c.slug !== "fertility-support")
+    .map((c) => ({ params: { slug: c.slug } }));
+}
+
+const { slug } = Astro.params;
+const condition = getLiveCondition(slug!);
+
+if (!condition) {
+  throw new Error(`Unknown condition slug: ${slug}`);
+}
+---
+<Base
+  title={condition.title}
+  description={condition.description}
+  canonical={new URL(condition.href, Astro.site ?? "https://yinyangcmc.uk").href}
+  ogTitle={condition.ogTitle ?? condition.title}
+  ogDescription={condition.ogDescription ?? condition.description}
+  ogImage={condition.image}
+>
+  <ConditionDetail condition={condition} />
+</Base>

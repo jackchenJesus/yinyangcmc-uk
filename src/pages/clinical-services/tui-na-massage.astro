@@ -1,7 +1,8 @@
 ---
-import Base from "../layouts/Base.astro";
-import FAQAccordion from "../components/FAQAccordion.astro";
-import CTASection from "../components/CTASection.astro";
+import Base from "../../layouts/Base.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
+import CTASection from "../../components/CTASection.astro";
+import PageCrumbs from "../../components/PageCrumbs.astro";
 
 const faqItems = [
   {
@@ -48,6 +49,7 @@ const faqItems = [
     fetchpriority="high"
   />
   <div class="wrap" style="padding:5rem 0 3.5rem">
+    <PageCrumbs hubHref="/clinical-services" hubLabel="Clinical Services" current="Tui Na Massage" />
     <p class="eyebrow">Tui Na Massage · Reading &amp; Wimbledon</p>
     <h1>Tui Na Therapeutic<br>Massage in Wimbledon<br>&amp; Reading</h1>
     <p class="lede">
@@ -162,7 +164,7 @@ const faqItems = [
           postural strain. Often staged alongside bone setting — soft tissue release first,
           joint mobilisation second.
         </p>
-        <a class="more-link" href="/back-pain">Back Pain &amp; Sciatica</a>
+        <a class="more-link" href="/conditions/back-pain">Back Pain &amp; Sciatica</a>
       </div>
       <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🏃</p>
@@ -172,7 +174,7 @@ const faqItems = [
           lymphatic techniques in the early phase; deep cross-fibre work in the
           remodelling phase.
         </p>
-        <a class="more-link" href="/sports-injuries">Sports Injuries</a>
+        <a class="more-link" href="/conditions/sports-injuries">Sports Injuries</a>
       </div>
       <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🧘</p>
@@ -189,13 +191,13 @@ const faqItems = [
     <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Commonly treated presentations:</p>
     <div class="cond-grid">
       {[
-        { label: "Neck Pain",           href: "/neck-pain" },
-        { label: "Shoulder Pain",       href: "/shoulder-pain" },
-        { label: "Frozen Shoulder",     href: "/frozen-shoulder" },
-        { label: "Back Pain",           href: "/back-pain" },
-        { label: "Sciatica",            href: "/sciatica-treatment" },
-        { label: "Sports Injuries",     href: "/sports-injuries" },
-        { label: "Knee Pain",           href: "/knee-pain" },
+        { label: "Neck Pain",           href: "/conditions/neck-pain" },
+        { label: "Shoulder Pain",       href: "/conditions/shoulder-pain" },
+        { label: "Frozen Shoulder",     href: "/conditions/frozen-shoulder" },
+        { label: "Back Pain",           href: "/conditions/back-pain" },
+        { label: "Sciatica",            href: "/conditions/sciatica-treatment" },
+        { label: "Sports Injuries",     href: "/conditions/sports-injuries" },
+        { label: "Knee Pain",           href: "/conditions/knee-pain" },
         { label: "Trapezius Tension",   href: "/conditions" },
         { label: "Postural Strain",     href: "/conditions" },
         { label: "Repetitive Strain",   href: "/conditions" },
@@ -329,9 +331,9 @@ const faqItems = [
           <p style="font-size:0.76rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.7rem">Related Treatments</p>
           <div style="display:grid;gap:0.4rem">
             {[
-              { label: "Acupuncture", href: "/acupuncture" },
-              { label: "Bone Setting & Orthopaedic Care", href: "/bone-setting" },
-              { label: "Herbal Medicine Consultation", href: "/herbal-consultation" },
+              { label: "Acupuncture", href: "/clinical-services/acupuncture" },
+              { label: "Bone Setting & Orthopaedic Care", href: "/clinical-services/bone-setting" },
+              { label: "Herbal Medicine Consultation", href: "/clinical-services/herbal-consultation" },
               { label: "All Clinical Services", href: "/clinical-services" },
             ].map(({ label, href }) => (
               <a
@@ -438,7 +440,7 @@ const faqItems = [
           <div class="loc-row"><strong>Hours</strong><span>Mon / Wed / Fri 9:00 am – 6:00 pm</span></div>
           <div class="loc-row"><strong>Transport</strong><span>Reading Station — Elizabeth Line &amp; GWR</span></div>
           <div class="loc-actions">
-            <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic Details</a>
+            <a class="btn btn-outline btn-sm" href="/locations/reading-clinic">Clinic Details</a>
             <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
           </div>
         </div>
@@ -457,7 +459,7 @@ const faqItems = [
           <div class="loc-row"><strong>Hours</strong><span>Saturday 9:00 am – 5:00 pm</span></div>
           <div class="loc-row"><strong>Transport</strong><span>Wimbledon Station — District Line &amp; National Rail</span></div>
           <div class="loc-actions">
-            <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic Details</a>
+            <a class="btn btn-outline btn-sm" href="/locations/wimbledon-clinic">Clinic Details</a>
             <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
           </div>
         </div>
@@ -486,9 +488,9 @@ const faqItems = [
         <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
           <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related services:</p>
           <div style="display:grid;gap:0.3rem">
-            <a href="/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
-            <a href="/bone-setting" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Bone Setting &amp; Orthopaedic Care</a>
-            <a href="/herbal-consultation" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Herbal Medicine Consultation</a>
+            <a href="/clinical-services/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
+            <a href="/clinical-services/bone-setting" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Bone Setting &amp; Orthopaedic Care</a>
+            <a href="/clinical-services/herbal-consultation" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Herbal Medicine Consultation</a>
           </div>
         </div>
       </div>

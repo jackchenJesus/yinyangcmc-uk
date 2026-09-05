@@ -1,7 +1,7 @@
 ---
-import Base from "../layouts/Base.astro";
-import CTASection from "../components/CTASection.astro";
-import FAQAccordion from "../components/FAQAccordion.astro";
+import Base from "../../layouts/Base.astro";
+import CTASection from "../../components/CTASection.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
 
 const faqItems = [
   {
@@ -165,7 +165,7 @@ const faqItems = [
           and systemic balance. Commonly used as part of care for musculoskeletal pain,
           headaches, insomnia, menstrual irregularity, and stress-related conditions.
         </p>
-        <a class="spec-link" href="/acupuncture">Explore Acupuncture</a>
+        <a class="spec-link" href="/clinical-services/acupuncture">Explore Acupuncture</a>
       </div>
 
       <div class="spec-card">
@@ -177,7 +177,7 @@ const faqItems = [
           to address soft tissue and range-of-motion concerns. Closer in application to
           physiotherapy than general sports massage.
         </p>
-        <a class="spec-link" href="/tui-na-massage">Explore Tui Na</a>
+        <a class="spec-link" href="/clinical-services/tui-na-massage">Explore Tui Na</a>
       </div>
 
       <div class="spec-card">
@@ -189,7 +189,7 @@ const faqItems = [
           vertebral mobilisation, applied within a modern biomechanical assessment framework.
           May be considered for spinal, postural, and joint concerns.
         </p>
-        <a class="spec-link" href="/bone-setting">Explore Bone Setting</a>
+        <a class="spec-link" href="/clinical-services/bone-setting">Explore Bone Setting</a>
       </div>
 
       <div class="spec-card">
@@ -201,7 +201,7 @@ const faqItems = [
           history — followed by an individually tailored herbal prescription.
           Often used alongside acupuncture for internal health concerns.
         </p>
-        <a class="spec-link" href="/herbal-consultation">Explore Herbal Consultation</a>
+        <a class="spec-link" href="/clinical-services/herbal-consultation">Explore Herbal Consultation</a>
       </div>
 
     </div>
@@ -475,7 +475,7 @@ const faqItems = [
           Lumbar disc herniation, sciatica, cervical spondylosis, and sacroiliac dysfunction.
           Acupuncture and bone-setting are often used together as part of care for these conditions.
         </p>
-        <a class="more-link" href="/herniated-disc">Herniated disc &amp; sciatica</a>
+        <a class="more-link" href="/conditions/herniated-disc">Herniated disc &amp; sciatica</a>
       </div>
       <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🌸</p>
@@ -485,7 +485,7 @@ const faqItems = [
           Your practitioner will assess whether acupuncture or herbal medicine may be appropriate
           for your individual circumstances.
         </p>
-        <a class="more-link" href="/fertility-support">Fertility &amp; Women's Health</a>
+        <a class="more-link" href="/conditions/fertility-support">Fertility &amp; Women's Health</a>
       </div>
       <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🏃</p>
@@ -495,26 +495,26 @@ const faqItems = [
           acupuncture are commonly used as part of rehabilitation programmes for recreational
           and competitive athletes.
         </p>
-        <a class="more-link" href="/sports-injuries">Sports Injuries</a>
+        <a class="more-link" href="/conditions/sports-injuries">Sports Injuries</a>
       </div>
     </div>
 
     <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Also treated at our clinics:</p>
     <div class="cond-grid">
       {[
-        { label: "Back Pain",         href: "/back-pain" },
-        { label: "Sciatica",          href: "/sciatica-treatment" },
-        { label: "Shoulder Pain",     href: "/shoulder-pain" },
-        { label: "Frozen Shoulder",   href: "/frozen-shoulder" },
-        { label: "Sports Injuries",   href: "/sports-injuries" },
-        { label: "Neck Pain",         href: "/neck-pain" },
-        { label: "Knee Pain",         href: "/knee-pain" },
+        { label: "Back Pain",         href: "/conditions/back-pain" },
+        { label: "Sciatica",          href: "/conditions/sciatica-treatment" },
+        { label: "Shoulder Pain",     href: "/conditions/shoulder-pain" },
+        { label: "Frozen Shoulder",   href: "/conditions/frozen-shoulder" },
+        { label: "Sports Injuries",   href: "/conditions/sports-injuries" },
+        { label: "Neck Pain",         href: "/conditions/neck-pain" },
+        { label: "Knee Pain",         href: "/conditions/knee-pain" },
         { label: "Headaches",         href: "/conditions" },
         { label: "Anxiety & Stress",  href: "/conditions" },
         { label: "Sleep Disorders",   href: "/conditions" },
         { label: "Digestive Health",  href: "/conditions" },
         { label: "Skin Conditions",   href: "/conditions" },
-        { label: "Fertility Support", href: "/fertility-support" },
+        { label: "Fertility Support", href: "/conditions/fertility-support" },
         { label: "Fatigue",           href: "/conditions" },
         { label: "Post-natal Care",   href: "/contact" },
       ].map(({ label, href }) => (
@@ -554,7 +554,7 @@ const faqItems = [
           <div class="loc-row"><strong>Languages</strong><span>English · Cantonese · Mandarin</span></div>
           <div class="loc-row"><strong>Transport</strong><span>Reading Station — Elizabeth Line &amp; GWR</span></div>
           <div class="loc-actions">
-            <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic Info &amp; Map</a>
+            <a class="btn btn-outline btn-sm" href="/locations/reading-clinic">Clinic Info &amp; Map</a>
             <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
           </div>
         </div>
@@ -574,7 +574,7 @@ const faqItems = [
           <div class="loc-row"><strong>Languages</strong><span>English · Cantonese · Mandarin</span></div>
           <div class="loc-row"><strong>Transport</strong><span>Wimbledon Station — District Line &amp; National Rail</span></div>
           <div class="loc-actions">
-            <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic Info &amp; Map</a>
+            <a class="btn btn-outline btn-sm" href="/locations/wimbledon-clinic">Clinic Info &amp; Map</a>
             <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book via WhatsApp</a>
           </div>
         </div>

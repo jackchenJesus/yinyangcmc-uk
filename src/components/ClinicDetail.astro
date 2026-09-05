@@ -1,6 +1,7 @@
 ---
 import FAQAccordion from "./FAQAccordion.astro";
 import CTASection from "./CTASection.astro";
+import PageCrumbs from "./PageCrumbs.astro";
 import { site } from "../data/site";
 import { liveConditions } from "../data/conditions";
 
@@ -57,10 +58,10 @@ const faqItems = [
 ];
 
 const treatments = [
-  { href: "/acupuncture", title: "Acupuncture", summary: "Fine-needle treatment for pain, stress, and systemic regulation." },
-  { href: "/tui-na-massage", title: "Tui Na", summary: "Structured manual therapy for soft tissue and joint restriction." },
-  { href: "/bone-setting", title: "Bone Setting", summary: "Zheng Gu orthopaedic care for spinal, postural, and joint concerns." },
-  { href: "/herbal-consultation", title: "Herbal Medicine", summary: "Individualised herbal prescription after consultation." },
+  { href: "/clinical-services/acupuncture", title: "Acupuncture", summary: "Fine-needle treatment for pain, stress, and systemic regulation." },
+  { href: "/clinical-services/tui-na-massage", title: "Tui Na", summary: "Structured manual therapy for soft tissue and joint restriction." },
+  { href: "/clinical-services/bone-setting", title: "Bone Setting", summary: "Zheng Gu orthopaedic care for spinal, postural, and joint concerns." },
+  { href: "/clinical-services/herbal-consultation", title: "Herbal Medicine", summary: "Individualised herbal prescription after consultation." },
 ];
 
 const conditions = liveConditions.map((c) => ({ label: c.label, href: c.href }));
@@ -69,6 +70,7 @@ const conditions = liveConditions.map((c) => ({ label: c.label, href: c.href }))
 <section class="page-hero" style="min-height:62vh;display:grid;place-items:center">
   <img class="page-hero-bg" src={image} alt="" width="1600" height="1010" loading="eager" fetchpriority="high" />
   <div class="wrap" style="padding:5rem 0 3.5rem">
+    <PageCrumbs hubHref="/locations" hubLabel="Locations" current={clinicName} />
     <p class="eyebrow">{eyebrow}</p>
     <h1>{h1}</h1>
     <p class="lede">{lede}</p>

@@ -1,8 +1,8 @@
 ---
-import Base from "../layouts/Base.astro";
-import FAQAccordion from "../components/FAQAccordion.astro";
-import CTASection from "../components/CTASection.astro";
-import { clinics, site } from "../data/site";
+import Base from "../../layouts/Base.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
+import CTASection from "../../components/CTASection.astro";
+import { clinics, site } from "../../data/site";
 
 const faqItems = [
   {
@@ -86,7 +86,7 @@ const faqItems = [
           <div class="loc-row"><strong>Transport</strong><span>10 min walk from Reading Station · GWR from Paddington in under 30 min</span></div>
           <div class="loc-row"><strong>Languages</strong><span>English · Cantonese · Mandarin</span></div>
           <div class="loc-actions">
-            <a class="btn btn-outline btn-sm" href="/reading-clinic">Clinic details</a>
+            <a class="btn btn-outline btn-sm" href="/locations/reading-clinic">Clinic details</a>
             <a class="btn btn-gold btn-sm" href={site.whatsapp} target="_blank" rel="noreferrer">Book Reading</a>
           </div>
         </div>
@@ -101,7 +101,7 @@ const faqItems = [
           <div class="loc-row"><strong>Transport</strong><span>5 min walk from Wimbledon Station · District Line, National Rail, Tramlink</span></div>
           <div class="loc-row"><strong>Languages</strong><span>English · Cantonese · Mandarin</span></div>
           <div class="loc-actions">
-            <a class="btn btn-outline btn-sm" href="/wimbledon-clinic">Clinic details</a>
+            <a class="btn btn-outline btn-sm" href="/locations/wimbledon-clinic">Clinic details</a>
             <a class="btn btn-gold btn-sm" href={site.whatsapp} target="_blank" rel="noreferrer">Book Wimbledon</a>
           </div>
         </div>
@@ -152,12 +152,12 @@ const faqItems = [
       <div style="padding:1.6rem;background:var(--white);border-radius:var(--r-lg);border:1px solid var(--border)">
         <h3 style="font-size:1.05rem">Pain &amp; orthopaedic care</h3>
         <p style="font-size:0.9rem;color:var(--muted)">Chronic back pain, sciatica, frozen shoulder, knee osteoarthritis, and sports injury rehabilitation.</p>
-        <a class="more-link" href="/back-pain">Back pain &amp; sciatica</a>
+        <a class="more-link" href="/conditions/back-pain">Back pain &amp; sciatica</a>
       </div>
       <div style="padding:1.6rem;background:var(--white);border-radius:var(--r-lg);border:1px solid var(--border)">
         <h3 style="font-size:1.05rem">Women's health</h3>
         <p style="font-size:0.9rem;color:var(--muted)">Fertility support, IVF adjunct care, PCOS, dysmenorrhoea, and postnatal recovery — assessed individually.</p>
-        <a class="more-link" href="/fertility-support">Fertility &amp; women's health</a>
+        <a class="more-link" href="/conditions/fertility-support">Fertility &amp; women's health</a>
       </div>
       <div style="padding:1.6rem;background:var(--white);border-radius:var(--r-lg);border:1px solid var(--border)">
         <h3 style="font-size:1.05rem">Skin &amp; dermatology</h3>
@@ -167,14 +167,14 @@ const faqItems = [
     </div>
     <div class="cond-grid">
       {[
-        { label: "Back Pain", href: "/back-pain" },
-        { label: "Sciatica", href: "/sciatica-treatment" },
-        { label: "Shoulder Pain", href: "/shoulder-pain" },
-        { label: "Frozen Shoulder", href: "/frozen-shoulder" },
-        { label: "Sports Injuries", href: "/sports-injuries" },
-        { label: "Acupuncture", href: "/acupuncture" },
-        { label: "Tui Na", href: "/tui-na-massage" },
-        { label: "Bone Setting", href: "/bone-setting" },
+        { label: "Back Pain", href: "/conditions/back-pain" },
+        { label: "Sciatica", href: "/conditions/sciatica-treatment" },
+        { label: "Shoulder Pain", href: "/conditions/shoulder-pain" },
+        { label: "Frozen Shoulder", href: "/conditions/frozen-shoulder" },
+        { label: "Sports Injuries", href: "/conditions/sports-injuries" },
+        { label: "Acupuncture", href: "/clinical-services/acupuncture" },
+        { label: "Tui Na", href: "/clinical-services/tui-na-massage" },
+        { label: "Bone Setting", href: "/clinical-services/bone-setting" },
       ].map(({ label, href }) => (
         <a class="cond-chip" href={href}>{label}</a>
       ))}

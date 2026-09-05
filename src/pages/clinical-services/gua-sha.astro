@@ -1,7 +1,8 @@
 ---
-import Base from "../layouts/Base.astro";
-import FAQAccordion from "../components/FAQAccordion.astro";
-import CTASection from "../components/CTASection.astro";
+import Base from "../../layouts/Base.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
+import CTASection from "../../components/CTASection.astro";
+import PageCrumbs from "../../components/PageCrumbs.astro";
 
 const faqItems = [
   {
@@ -46,6 +47,7 @@ const faqItems = [
     fetchpriority="high"
   />
   <div class="wrap" style="padding:5rem 0 3.5rem">
+    <PageCrumbs hubHref="/clinical-services" hubLabel="Clinical Services" current="Gua Sha" />
     <p class="eyebrow">Gua Sha · Reading &amp; Wimbledon</p>
     <h1>Gua Sha Therapy<br>in Wimbledon &amp; Reading</h1>
     <p class="lede">
@@ -111,7 +113,7 @@ const faqItems = [
 
         <div class="actions" style="margin-top:1.8rem">
           <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
-          <a class="btn btn-outline" href="/acupuncture">About Acupuncture</a>
+          <a class="btn btn-outline" href="/clinical-services/acupuncture">About Acupuncture</a>
         </div>
       </div>
 
@@ -160,7 +162,7 @@ const faqItems = [
           and joint mobility restriction. Gua Sha is used to ease
           superficial tightness and support local circulation.
         </p>
-        <a class="more-link" href="/shoulder-pain">Shoulder Pain</a>
+        <a class="more-link" href="/conditions/shoulder-pain">Shoulder Pain</a>
       </div>
       <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🫁</p>
@@ -187,11 +189,11 @@ const faqItems = [
 
     <div class="cond-grid">
       {[
-        { label: "Neck Pain",         href: "/neck-pain" },
-        { label: "Shoulder Pain",     href: "/shoulder-pain" },
-        { label: "Back Pain",         href: "/back-pain" },
+        { label: "Neck Pain",         href: "/conditions/neck-pain" },
+        { label: "Shoulder Pain",     href: "/conditions/shoulder-pain" },
+        { label: "Back Pain",         href: "/conditions/back-pain" },
         { label: "Muscle Tightness",  href: "/conditions" },
-        { label: "Sports Injuries",   href: "/sports-injuries" },
+        { label: "Sports Injuries",   href: "/conditions/sports-injuries" },
         { label: "Headaches",         href: "/conditions" },
         { label: "Chronic Fatigue",   href: "/conditions" },
         { label: "Respiratory",       href: "/conditions" },
@@ -268,9 +270,9 @@ const faqItems = [
         <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
           <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related therapies:</p>
           <div style="display:grid;gap:0.3rem">
-            <a href="/cupping" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Cupping Therapy</a>
-            <a href="/moxibustion" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Moxibustion</a>
-            <a href="/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
+            <a href="/clinical-services/cupping" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Cupping Therapy</a>
+            <a href="/clinical-services/moxibustion" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Moxibustion</a>
+            <a href="/clinical-services/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
           </div>
         </div>
       </div>

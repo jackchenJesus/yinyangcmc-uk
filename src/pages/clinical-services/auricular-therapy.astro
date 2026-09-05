@@ -1,7 +1,8 @@
 ---
-import Base from "../layouts/Base.astro";
-import FAQAccordion from "../components/FAQAccordion.astro";
-import CTASection from "../components/CTASection.astro";
+import Base from "../../layouts/Base.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
+import CTASection from "../../components/CTASection.astro";
+import PageCrumbs from "../../components/PageCrumbs.astro";
 
 const faqItems = [
   {
@@ -46,6 +47,7 @@ const faqItems = [
     fetchpriority="high"
   />
   <div class="wrap" style="padding:5rem 0 3.5rem">
+    <PageCrumbs hubHref="/clinical-services" hubLabel="Clinical Services" current="Auricular Therapy" />
     <p class="eyebrow">Auricular Therapy · Reading &amp; Wimbledon</p>
     <h1>Auricular Therapy<br>in Wimbledon &amp; Reading</h1>
     <p class="lede">
@@ -114,7 +116,7 @@ const faqItems = [
 
         <div class="actions" style="margin-top:1.8rem">
           <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
-          <a class="btn btn-outline" href="/acupuncture">About Acupuncture</a>
+          <a class="btn btn-outline" href="/clinical-services/acupuncture">About Acupuncture</a>
         </div>
       </div>
 
@@ -270,9 +272,9 @@ const faqItems = [
         <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
           <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related therapies:</p>
           <div style="display:grid;gap:0.3rem">
-            <a href="/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
-            <a href="/moxibustion" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Moxibustion</a>
-            <a href="/tian-jiu" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Tian Jiu</a>
+            <a href="/clinical-services/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
+            <a href="/clinical-services/moxibustion" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Moxibustion</a>
+            <a href="/clinical-services/tian-jiu" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Tian Jiu</a>
           </div>
         </div>
       </div>

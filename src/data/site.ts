@@ -12,20 +12,20 @@ export const site = {
 
 export const nav = {
   services: [
-    { href: "/acupuncture", label: "Acupuncture" },
-    { href: "/tui-na-massage", label: "Tui Na Massage" },
-    { href: "/herbal-consultation", label: "Herbal Consultation" },
-    { href: "/bone-setting", label: "Bone Setting" },
-    { href: "/cupping", label: "Cupping" },
-    { href: "/gua-sha", label: "Gua Sha" },
-    { href: "/moxibustion", label: "Moxibustion" },
-    { href: "/auricular-therapy", label: "Auricular Therapy" },
-    { href: "/tian-jiu", label: "Tian Jiu" },
+    { href: "/clinical-services/acupuncture", label: "Acupuncture" },
+    { href: "/clinical-services/tui-na-massage", label: "Tui Na Massage" },
+    { href: "/clinical-services/herbal-consultation", label: "Herbal Consultation" },
+    { href: "/clinical-services/bone-setting", label: "Bone Setting" },
+    { href: "/clinical-services/cupping", label: "Cupping" },
+    { href: "/clinical-services/gua-sha", label: "Gua Sha" },
+    { href: "/clinical-services/moxibustion", label: "Moxibustion" },
+    { href: "/clinical-services/auricular-therapy", label: "Auricular Therapy" },
+    { href: "/clinical-services/tian-jiu", label: "Tian Jiu" },
   ],
   conditions: liveConditions.map((c) => ({ href: c.href, label: c.label })),
   locations: [
-    { href: "/reading-clinic", label: "Reading Clinic" },
-    { href: "/wimbledon-clinic", label: "Wimbledon Clinic" },
+    { href: "/locations/reading-clinic", label: "Reading Clinic" },
+    { href: "/locations/wimbledon-clinic", label: "Wimbledon Clinic" },
   ],
 };
 
@@ -104,21 +104,21 @@ export const reviews = {
 };
 
 export const homeConditions = [
-  { href: "/back-pain", label: "Back Pain" },
-  { href: "/sciatica-treatment", label: "Sciatica" },
-  { href: "/shoulder-pain", label: "Shoulder Pain" },
-  { href: "/frozen-shoulder", label: "Frozen Shoulder" },
-  { href: "/neck-pain", label: "Neck Pain" },
-  { href: "/sports-injuries", label: "Sports Injuries" },
-  { href: "/fertility-support", label: "Fertility Support" },
+  { href: "/conditions/back-pain", label: "Back Pain" },
+  { href: "/conditions/sciatica-treatment", label: "Sciatica" },
+  { href: "/conditions/shoulder-pain", label: "Shoulder Pain" },
+  { href: "/conditions/frozen-shoulder", label: "Frozen Shoulder" },
+  { href: "/conditions/neck-pain", label: "Neck Pain" },
+  { href: "/conditions/sports-injuries", label: "Sports Injuries" },
+  { href: "/conditions/fertility-support", label: "Fertility Support" },
   { href: "/conditions#pain-msk", label: "Headaches & Migraines" },
 ];
 
 export const homeServices = [
-  { href: "/acupuncture", label: "Acupuncture", note: "Needling for pain and musculoskeletal care" },
-  { href: "/tui-na-massage", label: "Tui Na", note: "Manual therapy for joints and muscle" },
-  { href: "/bone-setting", label: "Bone Setting", note: "Joint restriction and mobilisation" },
-  { href: "/herbal-consultation", label: "Herbal Consultation", note: "Chinese herbal medicine after assessment" },
+  { href: "/clinical-services/acupuncture", label: "Acupuncture", note: "Needling for pain and musculoskeletal care" },
+  { href: "/clinical-services/tui-na-massage", label: "Tui Na", note: "Manual therapy for joints and muscle" },
+  { href: "/clinical-services/bone-setting", label: "Bone Setting", note: "Joint restriction and mobilisation" },
+  { href: "/clinical-services/herbal-consultation", label: "Herbal Consultation", note: "Chinese herbal medicine after assessment" },
 ];
 
 export const practitioners = [

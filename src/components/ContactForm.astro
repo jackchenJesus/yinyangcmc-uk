@@ -1,0 +1,141 @@
+---
+interface Props {
+  messageRows?: number;
+}
+const { messageRows = 6 } = Astro.props;
+---
+<form class="form" data-contact-form novalidate={false}>
+  <p class="form-status form-status--success" data-form-success hidden></p>
+  <p class="form-status form-status--error" data-form-error hidden></p>
+  <label class="form-honeypot">
+    <span>Leave blank</span>
+    <input type="text" name="website" tabindex="-1" autocomplete="off" />
+  </label>
+  <input name="name" placeholder="Full name" required autocomplete="name" />
+  <input type="email" name="email" placeholder="Email" required autocomplete="email" />
+  <select name="clinic" required>
+    <option value="Reading clinic">Reading clinic</option>
+    <option value="Wimbledon clinic">Wimbledon clinic</option>
+  </select>
+  <textarea name="message" rows={messageRows} placeholder="Message" required></textarea>
+  <button class="btn btn-gold" type="submit" data-form-submit>Submit</button>
+</form>
+
+<script>
+  declare global {
+    interface Window {
+      dataLayer?: Record<string, unknown>[];
+      gtag?: (...args: unknown[]) => void;
+    }
+  }
+
+  function trackLead() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "generate_lead" });
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "generate_lead");
+    }
+  }
+
+  function bindContactForm(form: HTMLFormElement) {
+    if (form.dataset.bound === "true") return;
+    form.dataset.bound = "true";
+
+    const successEl = form.querySelector<HTMLElement>("[data-form-success]");
+    const errorEl = form.querySelector<HTMLElement>("[data-form-error]");
+    const submitBtn = form.querySelector<HTMLButtonElement>("[data-form-submit]");
+
+    const showSuccess = (text: string) => {
+      if (errorEl) {
+        errorEl.hidden = true;
+        errorEl.textContent = "";
+      }
+      if (successEl) {
+        successEl.hidden = false;
+        successEl.textContent = text;
+      }
+    };
+
+    const showError = (text: string) => {
+      if (successEl) {
+        successEl.hidden = true;
+        successEl.textContent = "";
+      }
+      if (errorEl) {
+        errorEl.hidden = false;
+        errorEl.textContent = text;
+      }
+    };
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const honeypot = form.querySelector<HTMLInputElement>('input[name="website"]');
+      if (honeypot?.value) {
+        showSuccess("Thank you. We have received your message and will reply shortly.");
+        form.reset();
+        return;
+      }
+
+      const data = new FormData(form);
+      const payload = {
+        name: String(data.get("name") ?? "").trim(),
+        email: String(data.get("email") ?? "").trim(),
+        clinic: String(data.get("clinic") ?? "").trim(),
+        message: String(data.get("message") ?? "").trim(),
+        website: honeypot?.value ?? "",
+      };
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending…";
+      }
+      showError("");
+      if (errorEl) errorEl.hidden = true;
+
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+        const result = (await response.json()) as {
+          ok?: boolean;
+          needsActivation?: boolean;
+          message?: string;
+        };
+
+        if (!response.ok || !result.ok) {
+          throw new Error(result.message || "Send failed");
+        }
+
+        form.reset();
+        showSuccess(
+          result.needsActivation
+            ? result.message ||
+                "Please open yinyangcmcuk@gmail.com (including Spam) and click Activate Form. Then submit again."
+            : "Thank you. We have received your message and will reply shortly.",
+        );
+        if (!result.needsActivation) {
+          trackLead();
+        }
+      } catch (error) {
+        const detail = error instanceof Error ? error.message : "";
+        showError(
+          detail ||
+            "We could not send the form just now. Please WhatsApp 07301 949 686 or email yinyangcmcuk@gmail.com.",
+        );
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Submit";
+        }
+      }
+    });
+  }
+
+  document.querySelectorAll<HTMLFormElement>("[data-contact-form]").forEach(bindContactForm);
+</script>
