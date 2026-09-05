@@ -1,0 +1,530 @@
+---
+import Base from "../layouts/Base.astro";
+import CTASection from "../components/CTASection.astro";
+import { site } from "../data/site";
+
+const waZh =
+  `${site.whatsapp}?text=${encodeURIComponent("你好，我想報名痛症自理初階手法課程（2026年9月23日第一堂）")}`;
+const waEn =
+  `${site.whatsapp}?text=${encodeURIComponent("Hi, I'd like to register for the Pain Self-Care Introductory Course (Lesson 1 on 23 Sep 2026).")}`;
+const mapsHref =
+  "https://maps.google.com/?q=Watlington+House+Watlington+Street+Reading+RG1+4RJ";
+
+const photos = [
+  "/images/tcm-workshop-presentation.webp",
+  "/images/tcm-workshop-2.webp",
+  "/images/tcm-workshop-3.webp",
+  "/images/tcm-workshop-4.webp",
+  "/images/tcm-workshop-5.webp",
+];
+
+const copy = {
+  zh: {
+    wa: waZh,
+    htmlLang: "zh-Hant",
+    metaTitle: "痛症自理初階手法課程 | Yin Yang CMC",
+    eyebrow: "痛症自理初階手法課程 · 雷丁 Reading",
+    h1: "告別痛症，由自己雙手開始！",
+    lede: "16年臨床經驗，濃縮成5堂實用課程。每堂2小時，£20／堂。",
+    cta: "WhatsApp 報名",
+    ctaSec: "課程詳情",
+    trust: ["5堂 · 每堂2小時", "£20／堂", "小班手把手教學", "許勝中醫師主理"],
+    introEyebrow: "課程理念",
+    introH2: "痛症自理，不應只是專業人士的專利",
+    introParas: [
+      "課程由擁有16年處理痛症經驗的許勝中醫師主理。多年來處理過無數痛症患者，深知痛症對日常生活的困擾。",
+      "只要掌握正確方法，每個人都可以成為自己身體的「良醫」。課程將多年臨床經驗，精心提煉成【痛症自理手法】。初階班以最簡潔、最易明的方式，讓學員輕鬆掌握實用的自理技巧，從此告別「周身痛」的煩惱。",
+    ],
+    nextEyebrow: "下一堂",
+    nextH2: "第一堂　上肢：肩肘痛症",
+    nextItems: [
+      { k: "日期", v: "2026年9月23日（三）" },
+      { k: "時間", v: "上午 10:30–12:30" },
+      { k: "費用", v: "£20／堂" },
+      { k: "地點", v: "Watlington House（Garden Hall），RG1 4RJ" },
+    ],
+    nextNote: "請由 South Street 進入。",
+    nextMap: "查看地圖",
+    structEyebrow: "初階手法班",
+    structH2: "課程架構（共5堂，每堂2小時）",
+    lessons: [
+      { n: "第1–2堂", t: "上肢痛症自理", d: "肩、肘、腕、手指等常見痛症" },
+      { n: "第3堂", t: "下肢痛症自理", d: "膝、踝等常見痛症" },
+      { n: "第4堂", t: "頸背部痛症自理", d: "頸緊、背痛、落枕等常見問題" },
+      { n: "第5堂", t: "腰臀部痛症自理", d: "腰酸背痛、坐骨神經不適等常見問題" },
+    ],
+    featEyebrow: "課堂特色",
+    featH2: "課程三大特色",
+    features: [
+      {
+        n: "01",
+        t: "點與線，快速定位痛點",
+        d: "毋須死記硬背複雜的解剖名詞。課程教授以「點」與「線」的簡易概念，快速找出痛點根源，精準出擊，事半功倍。",
+      },
+      {
+        n: "02",
+        t: "手把手教學，掌握「觸感」精髓",
+        d: "痛症手法的關鍵在於「觸感」——如何以手感知身體的細微變化。課堂上導師會手把手指導，讓學員親身感受正確的力度、角度與深度，確保真正上手，而非紙上談兵。",
+      },
+      {
+        n: "03",
+        t: "簡單、安全、有效",
+        d: "課程專為沒有解剖學知識的大眾而設，以最生活化的語言講解，配合即場實操，讓學員一學就會，一會就用，一用就掂。",
+      },
+    ],
+    whoEyebrow: "適合對象",
+    whoH2: "無論有否醫學背景，只要願意動手學習",
+    who: [
+      "經常受肩頸腰腿痛困擾的上班族",
+      "想照顧家人健康，卻苦無方法的家庭照顧者",
+      "熱衷養生，希望自我增值的養生愛好者",
+      "任何對中醫痛症療法感興趣的初學者",
+    ],
+    tutorEyebrow: "導師",
+    tutorH2: "許勝中醫師",
+    tutorRole: "主理導師 · 16年痛症臨床經驗",
+    tutorBio:
+      "許勝中醫師（Winton Hui）為香港註冊中醫師，專長針灸、推拿及痛症手法。課程內容濃縮其多年臨床經驗，以小班授課確保每位學員都能真正上手。",
+    photosEyebrow: "課堂實況",
+    photosH2: "工作坊照片",
+    posterEyebrow: "海報",
+    posterH2: "第一堂課程海報",
+    posterAlt: "痛症自理初階手法課程海報：2026年9月23日，雷丁 Watlington House",
+    ctaHeading: "立即行動",
+    ctaSub:
+      "痛症不會自行消失。與其繼續忍耐，不如花5堂時間，為自己裝備一套終身受用的自理技能。WhatsApp 報名即可。",
+    ctaPrimary: "WhatsApp 報名",
+    ctaSecondary: "致電 07301 949 686",
+  },
+  en: {
+    wa: waEn,
+    htmlLang: "en",
+    metaTitle: "Pain Self-Care Introductory Course | Yin Yang CMC",
+    eyebrow: "Introductory manual technique course · Reading",
+    h1: "Leave pain behind — starting with your own hands.",
+    lede: "16 years of clinical pain-care experience, distilled into 5 practical lessons. Two hours each, £20 per lesson.",
+    cta: "Register on WhatsApp",
+    ctaSec: "Course details",
+    trust: ["5 lessons · 2 hours each", "£20 per lesson", "Small-class, hands-on teaching", "Led by CMP Winton Hui"],
+    introEyebrow: "The idea",
+    introH2: "Self-care for pain should not belong only to professionals",
+    introParas: [
+      "The course is led by Chinese medicine practitioner Winton Hui (許勝中), with 16 years of experience treating pain. He has seen how pain disrupts everyday life — and how the right method can put useful care back in your own hands.",
+      "With the right approach, anyone can become a more capable carer of their own body. Years of clinic work have been refined into a set of pain self-care techniques. This introductory class keeps the method simple and easy to follow, so you can use practical skills at home and stop putting up with aches all over.",
+    ],
+    nextEyebrow: "Next class",
+    nextH2: "Lesson 1 — Upper limb: shoulder and elbow pain",
+    nextItems: [
+      { k: "Date", v: "Wednesday 23 September 2026" },
+      { k: "Time", v: "10:30am–12:30pm" },
+      { k: "Fee", v: "£20 per lesson" },
+      { k: "Venue", v: "Watlington House (Garden Hall), RG1 4RJ" },
+    ],
+    nextNote: "Please enter via South Street.",
+    nextMap: "Open map",
+    structEyebrow: "Introductory technique class",
+    structH2: "Course structure — 5 lessons, 2 hours each",
+    lessons: [
+      { n: "Lessons 1–2", t: "Upper-limb self-care", d: "Common pain in the shoulder, elbow, wrist and fingers" },
+      { n: "Lesson 3", t: "Lower-limb self-care", d: "Common pain in the knee and ankle" },
+      { n: "Lesson 4", t: "Neck and back self-care", d: "Tight neck, back pain, wry neck and similar problems" },
+      { n: "Lesson 5", t: "Low back and hip self-care", d: "Low-back ache and sciatica-type discomfort" },
+    ],
+    featEyebrow: "What makes it different",
+    featH2: "Three course features",
+    features: [
+      {
+        n: "01",
+        t: "Points and lines — find the pain quickly",
+        d: "No need to memorise complex anatomy. You learn a simple ‘point and line’ way to locate the source of pain, so you can work with it more accurately and get more from less effort.",
+      },
+      {
+        n: "02",
+        t: "Hands-on teaching — the feel of the technique",
+        d: "Manual pain-care depends on touch: sensing small changes in the body with your hands. The tutor guides you in person so you feel the right pressure, angle and depth — not just hear about it.",
+      },
+      {
+        n: "03",
+        t: "Simple, safe and effective",
+        d: "Designed for the general public with no anatomy background. Everyday language, live practice, and skills you can use as soon as you learn them.",
+      },
+    ],
+    whoEyebrow: "Who it is for",
+    whoH2: "No medical background needed — only a willingness to learn by doing",
+    who: [
+      "Office workers with recurring neck, shoulder, back or leg pain",
+      "Family carers who want a practical way to look after loved ones",
+      "People interested in self-care and building lasting health skills",
+      "Beginners curious about Chinese-medicine approaches to pain",
+    ],
+    tutorEyebrow: "Tutor",
+    tutorH2: "CMP Winton Hui (Shing Hui)",
+    tutorRole: "Course lead · 16 years’ clinical pain experience",
+    tutorBio:
+      "Winton Hui is a Hong Kong-registered Chinese medicine practitioner, focusing on acupuncture, Tui Na and manual techniques for musculoskeletal pain. The course condenses that clinic experience into small-class teaching so every student can get the technique into their hands.",
+    photosEyebrow: "In class",
+    photosH2: "Workshop photos",
+    posterEyebrow: "Poster",
+    posterH2: "Lesson 1 poster",
+    posterAlt: "Poster for the pain self-care introductory course, 23 September 2026 at Watlington House, Reading",
+    ctaHeading: "Take the next step",
+    ctaSub:
+      "Pain rarely fades on its own. Five lessons can give you a self-care skill you can use for life. Message us on WhatsApp to register.",
+    ctaPrimary: "Register on WhatsApp",
+    ctaSecondary: "Call 07301 949 686",
+  },
+} as const;
+
+const langs = [
+  { id: "zh" as const, label: "中文", t: copy.zh },
+  { id: "en" as const, label: "English", t: copy.en },
+];
+---
+<Base
+  title="痛症自理初階手法課程 | Pain Self-Care Course | Yin Yang CMC"
+  description="痛症自理初階手法課程，由許勝中醫師主理。5堂實用課程，每堂2小時，£20／堂。第一堂：2026年9月23日，Watlington House, Reading RG1 4RJ。Introductory pain self-care course in Reading."
+  ogTitle="痛症自理初階手法課程 | Yin Yang CMC Reading"
+  ogDescription="16年臨床經驗濃縮成5堂實用課程。第一堂 2026年9月23日（三）10:30–12:30，£20／堂，Watlington House, Reading。"
+  ogImage="/images/pain-self-care-course-poster.jpg"
+>
+
+<div class="course-page" data-course-page data-lang="zh">
+  <div class="course-lang-wrap">
+    <div class="course-lang-bar" role="group" aria-label="Language / 語言">
+      {langs.map((lang, i) => (
+        <button
+          type="button"
+          class:list={["course-lang-btn", { "is-active": i === 0 }]}
+          data-lang-btn={lang.id}
+          aria-pressed={i === 0 ? "true" : "false"}
+        >
+          {lang.label}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  {langs.map((lang, i) => (
+    <div class={`course-lang course-lang-${lang.id}`} data-lang-panel={lang.id} hidden={i !== 0} lang={lang.t.htmlLang}>
+      <section class="page-hero course-hero">
+        <img
+          class="page-hero-bg"
+          src="/images/tcm-workshop-presentation.webp"
+          alt=""
+          width="1400"
+          height="1050"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="wrap">
+          <p class="eyebrow">{lang.t.eyebrow}</p>
+          <h1>{lang.t.h1}</h1>
+          <p class="lede">{lang.t.lede}</p>
+          <div class="actions" style="margin-top:1.4rem">
+            <a class="btn btn-gold" href={lang.t.wa} target="_blank" rel="noreferrer">{lang.t.cta}</a>
+            <a class="btn btn-ghost" href={`#course-details-${lang.id}`}>{lang.t.ctaSec}</a>
+          </div>
+          <div class="hero-trust-row">
+            {lang.t.trust.map((item) => (
+              <span><span class="htc">✓</span> {item}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section-soft" id={`course-details-${lang.id}`}>
+        <div class="wrap">
+          <div class="grid-2-lg" style="gap:3.5rem">
+            <div>
+              <p class="eyebrow">{lang.t.introEyebrow}</p>
+              <h2>{lang.t.introH2}</h2>
+              {lang.t.introParas.map((p) => <p>{p}</p>)}
+            </div>
+            <aside class="course-next card" style="transform:none">
+              <p class="eyebrow">{lang.t.nextEyebrow}</p>
+              <h3>{lang.t.nextH2}</h3>
+              <dl class="course-dl">
+                {lang.t.nextItems.map((item) => (
+                  <>
+                    <dt>{item.k}</dt>
+                    <dd>{item.v}</dd>
+                  </>
+                ))}
+              </dl>
+              <p class="small muted">{lang.t.nextNote}</p>
+              <div class="actions" style="margin-top:1.1rem;flex-wrap:wrap">
+                <a class="btn btn-gold" href={lang.t.wa} target="_blank" rel="noreferrer">{lang.t.cta}</a>
+                <a class="btn btn-outline" href={mapsHref} target="_blank" rel="noreferrer">{lang.t.nextMap}</a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">{lang.t.structEyebrow}</p>
+            <h2>{lang.t.structH2}</h2>
+          </div>
+          <div class="course-lessons">
+            {lang.t.lessons.map((lesson) => (
+              <article class="spec-card">
+                <p class="eyebrow">{lesson.n}</p>
+                <h3>{lesson.t}</h3>
+                <p>{lesson.d}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section-soft">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">{lang.t.featEyebrow}</p>
+            <h2>{lang.t.featH2}</h2>
+          </div>
+          <div class="grid-3">
+            {lang.t.features.map((feat) => (
+              <article class="spec-card">
+                <p class="eyebrow">{feat.n}</p>
+                <h3>{feat.t}</h3>
+                <p>{feat.d}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="grid-2-lg" style="gap:3.5rem">
+            <div>
+              <p class="eyebrow">{lang.t.whoEyebrow}</p>
+              <h2>{lang.t.whoH2}</h2>
+              <ul class="course-who">
+                {lang.t.who.map((item) => (
+                  <li>
+                    <span aria-hidden="true">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <article class="prac-card">
+              <img
+                src="/images/shing-hui-practitioner.webp"
+                alt={lang.t.tutorH2}
+                width="800"
+                height="882"
+                loading="lazy"
+              />
+              <div class="prac-body">
+                <p class="eyebrow">{lang.t.tutorEyebrow}</p>
+                <h3>{lang.t.tutorH2}</h3>
+                <p class="small" style="color:var(--gold);font-weight:700;margin-bottom:0.6rem">{lang.t.tutorRole}</p>
+                <p>{lang.t.tutorBio}</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-soft">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">{lang.t.photosEyebrow}</p>
+            <h2>{lang.t.photosH2}</h2>
+          </div>
+          <div class="grid-3">
+            {photos.map((src) => (
+              <img
+                class="rounded-photo"
+                src={src}
+                alt=""
+                width="1400"
+                height="1050"
+                style="min-height:180px;max-height:220px"
+                loading="lazy"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap container-narrow" style="text-align:center">
+          <p class="eyebrow">{lang.t.posterEyebrow}</p>
+          <h2>{lang.t.posterH2}</h2>
+          <img
+            class="rounded-photo course-poster"
+            src="/images/pain-self-care-course-poster.jpg"
+            alt={lang.t.posterAlt}
+            width="1080"
+            height="1350"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <CTASection
+        eyebrow={lang.id === "zh" ? "報名" : "Register"}
+        heading={lang.t.ctaHeading}
+        sub={lang.t.ctaSub}
+        primaryLabel={lang.t.ctaPrimary}
+        primaryHref={lang.t.wa}
+        secondaryLabel={lang.t.ctaSecondary}
+        secondaryHref="tel:+447301949686"
+      />
+    </div>
+  ))}
+</div>
+
+<script>
+  const page = document.querySelector("[data-course-page]");
+  if (page) {
+    const buttons = page.querySelectorAll("[data-lang-btn]");
+    const panels = page.querySelectorAll("[data-lang-panel]");
+    const setLang = (id: string) => {
+      page.setAttribute("data-lang", id);
+      document.documentElement.lang = id === "zh" ? "zh-Hant" : "en";
+      buttons.forEach((btn) => {
+        const on = btn.getAttribute("data-lang-btn") === id;
+        btn.classList.toggle("is-active", on);
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      panels.forEach((panel) => {
+        const show = panel.getAttribute("data-lang-panel") === id;
+        (panel as HTMLElement).hidden = !show;
+      });
+    };
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-lang-btn");
+        if (id) setLang(id);
+      });
+    });
+  }
+</script>
+</Base>
+
+<style>
+  .course-page {
+    font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", var(--sans);
+  }
+  .course-lang-zh h1,
+  .course-lang-zh h2,
+  .course-lang-zh h3 {
+    font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", var(--serif);
+    letter-spacing: 0;
+  }
+  .course-lang-zh .eyebrow {
+    text-transform: none;
+    letter-spacing: 0.06em;
+    font-size: 0.82rem;
+  }
+  .course-hero h1 {
+    max-width: 16ch;
+  }
+  .course-lang-en .course-hero h1 {
+    max-width: 18ch;
+  }
+  .course-lang-wrap {
+    position: sticky;
+    top: 76px;
+    z-index: 20;
+    height: 0;
+    overflow: visible;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.85rem 1.25rem 0;
+    pointer-events: none;
+  }
+  .course-lang-zh .section-soft,
+  .course-lang-en .section-soft {
+    scroll-margin-top: 96px;
+  }
+  .course-lang-bar {
+    pointer-events: auto;
+    display: inline-flex;
+    gap: 0.2rem;
+    padding: 0.22rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r-pill);
+    box-shadow: var(--sh-sm);
+  }
+  .course-lang-btn {
+    min-height: 36px;
+    padding: 0 0.95rem;
+    border: 0;
+    border-radius: var(--r-pill);
+    background: transparent;
+    color: var(--muted);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.86rem;
+    cursor: pointer;
+  }
+  .course-lang-btn.is-active {
+    background: var(--navy);
+    color: var(--white);
+  }
+  .course-next {
+    padding: 1.6rem 1.7rem 1.8rem;
+  }
+  .course-dl {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0.45rem 0.8rem;
+    margin: 0 0 0.8rem;
+  }
+  .course-dl dt {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--gold);
+    padding-top: 0.15rem;
+  }
+  .course-dl dd {
+    margin: 0;
+    font-size: 0.98rem;
+  }
+  .course-lessons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-4);
+  }
+  .course-who {
+    list-style: none;
+    padding: 0;
+    margin: 1.2rem 0 0;
+    display: grid;
+    gap: 0.7rem;
+  }
+  .course-who li {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    margin: 0;
+  }
+  .course-who span:first-child {
+    color: var(--gold);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .course-poster {
+    margin: 1.4rem auto 0;
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    box-shadow: var(--sh-md);
+  }
+  @media (max-width: 860px) {
+    .course-lessons { grid-template-columns: 1fr; }
+    .course-hero h1,
+    .course-lang-en .course-hero h1 { max-width: none; }
+    .course-page .prac-card { flex-direction: column; }
+    .course-page .prac-card img { width: 100%; height: 280px; }
+  }
+</style>
