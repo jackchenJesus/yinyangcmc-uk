@@ -5,6 +5,7 @@
   "routes": [
     {
       "pattern": "yinyangcmc.uk",
+      "zone_name": "yinyangcmc.uk",
       "custom_domain": true
     }
   ],
