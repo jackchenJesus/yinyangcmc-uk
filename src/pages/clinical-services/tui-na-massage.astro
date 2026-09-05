@@ -1,38 +1,38 @@
 ---
-import Base from "../layouts/Base.astro";
-import FAQAccordion from "../components/FAQAccordion.astro";
-import CTASection from "../components/CTASection.astro";
+import Base from "../../layouts/Base.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
+import CTASection from "../../components/CTASection.astro";
 
 const faqItems = [
   {
-    q: "Is acupuncture painful?",
-    a: "The needles used are extremely fine — typically 0.25 mm diameter, far thinner than a hypodermic needle. Most patients describe a mild aching or warmth at the insertion point rather than pain. All sessions are conducted by a British Acupuncture Council registered practitioner throughout.",
+    q: "How many sessions until I see results?",
+    a: "Acute conditions (under 4 weeks onset) typically show measurable improvement within 2–3 sessions. Chronic conditions (3+ months) generally require a 4–6 session course before structural change stabilises. Your practitioner will give a realistic timeline at the first appointment — not an open-ended commitment.",
   },
   {
-    q: "How many sessions will I need?",
-    a: "This depends on the condition, how long symptoms have been present, and your individual response. Acute conditions may show improvement within 2–4 sessions. Chronic or regulatory conditions are typically assessed over a 6–8 session course. Your practitioner will discuss a realistic timeline at your initial assessment and will not prescribe a fixed number of sessions in advance.",
+    q: "Can Tui Na and acupuncture be done in the same session?",
+    a: "Yes, and it is often clinically preferable. Acupuncture addresses the neurological pain signal; Tui Na addresses the mechanical and soft tissue component. Combined sessions may produce faster functional recovery than either modality alone. Your practitioner will advise whether a combined approach is appropriate for your presentation.",
+  },
+  {
+    q: "Is Tui Na suitable for pregnant women or elderly patients?",
+    a: "Pregnancy and advanced age are not contraindications, but they require technique modification. Our practitioners are trained in perinatal TCM. Certain techniques are avoided in the first trimester. Please disclose pregnancy when booking so the appropriate session format can be arranged.",
+  },
+  {
+    q: "What should I bring to my first appointment?",
+    a: "Bring any relevant imaging (X-ray, MRI) if you have it — helpful but not required. Wear loose-fitting clothing that allows access to the back, shoulders, and legs. Arriving 5–10 minutes early allows time to complete the intake form.",
   },
   {
     q: "Are your practitioners registered in the UK?",
-    a: "Yes. Both practitioners are registered members of the British Acupuncture Council (MBAcC), which is listed on the Professional Standards Authority's Accredited Register — providing independent assurance of professional standards in health and care. They are also registered with the Association of Traditional Chinese Medicine & Acupuncture (ATCM). Member nos: 963087 & 963093.",
+    a: "Yes. Both practitioners are registered members of the British Acupuncture Council (MBAcC), listed on the Professional Standards Authority's Accredited Register, and registered with the Association of Traditional Chinese Medicine & Acupuncture (ATCM). Member nos: 963087 & 963093.",
   },
   {
-    q: "Do you accept health insurance?",
-    a: "Yes. We are recognised by AXA Health, Vitality, Aviva and WPA. Cover depends on your individual policy and insurer requirements, and usually relates to eligible acupuncture treatment — not automatically to Tui Na, bone setting or herbal consultation. Please check with your insurer before treatment. Provider numbers are on our Pricing & Insurance page.",
-  },
-  {
-    q: "Can I receive acupuncture alongside my NHS or GP treatment?",
-    a: "In the vast majority of cases, yes. During your initial consultation we review your current medications and ongoing treatments to identify any clinical considerations. We will advise you to consult your GP if there is any clinical uncertainty.",
-  },
-  {
-    q: "Do you offer consultations in Cantonese or Mandarin?",
-    a: "Yes. All practitioners are fluent in Cantonese and Mandarin. If you have previous medical records or TCM case notes in Chinese, we can review these directly — no translation loss, full clinical precision.",
+    q: "Do you accept health insurance for Tui Na?",
+    a: "We are recognised by AXA Health, Vitality, Aviva and WPA. Provider recognition does not mean Tui Na is automatically covered. Check your individual policy with your insurer before treatment. Provider numbers are on our Pricing & Insurance page.",
   },
 ];
 ---
 <Base
-  title="Acupuncture Wimbledon & Reading | Expert Pain Relief Clinic | Yin Yang CMC"
-  description="Professional acupuncture in Wimbledon & Reading. British Acupuncture Council registered practitioners with 15+ years' experience. No referral needed."
+  title="Tui Na Wimbledon & Reading | Therapeutic Massage Clinic | Yin Yang CMC"
+  description="Professional Tui Na therapeutic massage in Wimbledon & Reading. British Acupuncture Council registered. Clinical Chinese medicine manual therapy for pain and injury."
 >
 
 
@@ -42,17 +42,17 @@ const faqItems = [
 <section class="page-hero" style="min-height:68vh;display:grid;place-items:center">
   <img
     class="page-hero-bg"
-    src="/images/acupuncture-back-treatment.webp"
+    src="/images/tui-na-massage-treatment.webp"
     alt=""
     loading="eager"
     fetchpriority="high"
   />
   <div class="wrap" style="padding:5rem 0 3.5rem">
-    <p class="eyebrow">Acupuncture · Reading &amp; Wimbledon</p>
-    <h1>Acupuncture in<br>Wimbledon &amp; Reading</h1>
+    <p class="eyebrow">Tui Na Massage · Reading &amp; Wimbledon</p>
+    <h1>Tui Na Therapeutic<br>Massage in Wimbledon<br>&amp; Reading</h1>
     <p class="lede">
-      Evidence-conscious acupuncture for pain, stress, and systemic health —
-      delivered by British Acupuncture Council registered practitioners.
+      Structured manual therapy grounded in clinical assessment — not a relaxation
+      massage. British Acupuncture Council registered practitioners.
     </p>
 
     <div class="hero-exp-stat">
@@ -76,7 +76,7 @@ const faqItems = [
 
 
 <!-- ═══════════════════════════════════════════════
-     §2 WHAT IS ACUPUNCTURE
+     §2 WHAT IS TUI NA
 ═══════════════════════════════════════════════ -->
 <section class="section-soft">
   <div class="wrap">
@@ -84,25 +84,25 @@ const faqItems = [
 
       <div>
         <p class="eyebrow">About the Treatment</p>
-        <h2>What Is Acupuncture?</h2>
+        <h2>What Is Tui Na?</h2>
         <p>
-          Acupuncture involves the precise insertion of ultra-fine sterile needles into
-          specific anatomical points on the body. Needle stimulation activates nerve fibres,
-          supporting the regulation of pain signals, the autonomic nervous system, and
-          local tissue response.
+          Tui Na is a hands-on Chinese medicine manual therapy with over 2,000 years of
+          documented clinical use. The name means to push (推) and to grasp (拿). It applies
+          precisely controlled pressure, rotation, and traction across anatomical points and
+          meridian pathways to support functional movement and address soft tissue restriction.
         </p>
         <p>
-          At Yin Yang CMC, every session begins with a reassessment of your presenting symptoms.
-          Point selection is not fixed between appointments — it responds to your current
-          clinical picture, combining traditional pulse and tongue diagnosis with modern
-          musculoskeletal assessment.
+          Tui Na at Yin Yang CMC is structured therapeutic work grounded in both classical
+          meridian theory and modern musculoskeletal anatomy. In clinical application it is
+          closer to physiotherapy than to relaxation massage, and is frequently combined with
+          acupuncture in our pain management protocols.
         </p>
 
         <ul style="list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:0.5rem">
           {[
-            "Ultra-fine single-use sterile needles throughout",
-            "Needle retention typically 20–30 minutes per session",
-            "No GP referral required",
+            "First session: 60 minutes including full clinical assessment",
+            "Follow-up sessions: 45 minutes",
+            "Technique follows diagnosis, not habit or routine",
             "Same-week appointments at Reading and Wimbledon",
           ].map((item) => (
             <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:0.92rem">
@@ -120,15 +120,15 @@ const faqItems = [
 
       <div class="img-wrap" style="position:relative">
         <img
-          src="/images/acupuncture-abdomen-treatment.webp"
-          alt="Acupuncture needles being inserted into a patient's abdomen"
+          src="/images/reading-clinic-treatment-room.webp"
+          alt="Treatment room at Yin Yang CMC in Reading"
           style="width:100%;height:460px;object-fit:cover;border-radius:var(--r-lg)"
           loading="lazy"
         />
         <div class="cred-panel">
           <div class="cred-row"><span class="cred-check">✓</span> MBAcC · Nos. 963087 &amp; 963093</div>
           <div class="cred-row"><span class="cred-check">✓</span> ATCM Professional Member</div>
-          <div class="cred-row"><span class="cred-check">✓</span> PSA Accredited Register</div>
+          <div class="cred-row"><span class="cred-check">✓</span> Diagnosis before treatment</div>
           <div class="cred-row"><span class="cred-check">✓</span> AXA · Vitality · Aviva · WPA</div>
         </div>
       </div>
@@ -139,66 +139,66 @@ const faqItems = [
 
 
 <!-- ═══════════════════════════════════════════════
-     §3 CONDITIONS IT MAY HELP WITH
+     §3 CONDITIONS / PRESENTATIONS
 ═══════════════════════════════════════════════ -->
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Conditions</p>
-      <h2>What Acupuncture May Be Used For</h2>
+      <p class="eyebrow">Applications</p>
+      <h2>What Tui Na May Be Used For</h2>
       <p>
-        Acupuncture is used as part of care for a range of conditions. Your practitioner
-        will assess your individual circumstances at consultation — we do not suggest
-        acupuncture is appropriate for every patient or presentation.
+        Your practitioner will assess your individual presentation at consultation.
+        Tui Na is frequently used alongside acupuncture or bone setting depending on
+        the nature of your condition.
       </p>
     </div>
 
     <div class="grid-3" style="margin-bottom:2.5rem">
       <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🦴</p>
-        <h3 style="font-size:1.05rem">Musculoskeletal Pain</h3>
+        <h3 style="font-size:1.05rem">Spinal &amp; Postural</h3>
         <p style="font-size:0.9rem;color:var(--muted)">
-          Back pain, sciatica, neck and shoulder tension, knee pain, joint conditions,
-          and sports injuries. Commonly used alongside Tui Na and bone setting.
+          Cervical spondylosis, lower back pain, sacroiliac joint dysfunction, and
+          postural strain. Often staged alongside bone setting — soft tissue release first,
+          joint mobilisation second.
         </p>
-        <a class="more-link" href="/back-pain">Back Pain &amp; Sciatica</a>
+        <a class="more-link" href="/conditions/back-pain">Back Pain &amp; Sciatica</a>
       </div>
       <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
-        <p style="font-size:1.4rem;margin-bottom:0.5rem">🌸</p>
-        <h3 style="font-size:1.05rem">Women's Health</h3>
+        <p style="font-size:1.4rem;margin-bottom:0.5rem">🏃</p>
+        <h3 style="font-size:1.05rem">Sports Injury &amp; Recovery</h3>
         <p style="font-size:0.9rem;color:var(--muted)">
-          Menstrual irregularity, perimenopause, postnatal recovery, and fertility support.
-          Your practitioner will assess whether acupuncture is appropriate for your circumstances.
+          Post-acute tissue rehabilitation, tendinopathy, and repetitive strain. Gentle
+          lymphatic techniques in the early phase; deep cross-fibre work in the
+          remodelling phase.
         </p>
-          <a class="more-link" href="/fertility-support">Fertility &amp; Women's Health</a>
+        <a class="more-link" href="/conditions/sports-injuries">Sports Injuries</a>
       </div>
       <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🧘</p>
-        <h3 style="font-size:1.05rem">Stress &amp; Sleep</h3>
+        <h3 style="font-size:1.05rem">Stress &amp; Tension</h3>
         <p style="font-size:0.9rem;color:var(--muted)">
-          Anxiety, insomnia, fatigue, and stress-related conditions. Acupuncture may
-          support autonomic nervous system regulation and sleep quality.
+          Chronic stress physically contracts the posterior neck, upper back, and diaphragm.
+          Tui Na techniques along the spine may support a measurable parasympathetic
+          response, reducing tension and improving sleep onset.
         </p>
-        <a class="more-link" href="/contact">Enquire About Stress &amp; Sleep</a>
+        <a class="more-link" href="/contact">Enquire</a>
       </div>
     </div>
 
-    <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Also commonly treated:</p>
+    <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem">Commonly treated presentations:</p>
     <div class="cond-grid">
       {[
-        { label: "Back Pain",           href: "/back-pain" },
-        { label: "Sciatica",            href: "/sciatica-treatment" },
-        { label: "Shoulder Pain",       href: "/shoulder-pain" },
-        { label: "Frozen Shoulder",     href: "/frozen-shoulder" },
-        { label: "Sports Injuries",     href: "/sports-injuries" },
-        { label: "Neck Pain",           href: "/neck-pain" },
-        { label: "Knee Pain",           href: "/knee-pain" },
-        { label: "Headaches",           href: "/conditions" },
-        { label: "Anxiety & Stress",    href: "/conditions" },
-        { label: "Sleep Disorders",     href: "/conditions" },
-        { label: "Digestive Health",    href: "/conditions" },
-        { label: "Skin Conditions",     href: "/conditions" },
-        { label: "Fertility Support",   href: "/fertility-support" },
+        { label: "Neck Pain",           href: "/conditions/neck-pain" },
+        { label: "Shoulder Pain",       href: "/conditions/shoulder-pain" },
+        { label: "Frozen Shoulder",     href: "/conditions/frozen-shoulder" },
+        { label: "Back Pain",           href: "/conditions/back-pain" },
+        { label: "Sciatica",            href: "/conditions/sciatica-treatment" },
+        { label: "Sports Injuries",     href: "/conditions/sports-injuries" },
+        { label: "Knee Pain",           href: "/conditions/knee-pain" },
+        { label: "Trapezius Tension",   href: "/conditions" },
+        { label: "Postural Strain",     href: "/conditions" },
+        { label: "Repetitive Strain",   href: "/conditions" },
       ].map(({ label, href }) => (
         <a class="cond-chip" href={href}>{label}</a>
       ))}
@@ -214,8 +214,8 @@ const faqItems = [
   <div class="wrap">
     <div class="section-head" style="max-width:52ch">
       <p class="eyebrow eyebrow-dark">Your First Visit</p>
-      <h2>How Acupuncture Treatment Works</h2>
-      <p style="color:rgba(240,234,226,0.75)">From your initial booking to the end of your first session.</p>
+      <h2>How Tui Na Treatment Works</h2>
+      <p style="color:rgba(240,234,226,0.75)">Diagnosis before treatment at every appointment. Nothing repeated by habit.</p>
     </div>
 
     <div class="journey-grid">
@@ -223,26 +223,24 @@ const faqItems = [
         <div class="j-num">01</div>
         <h3>Clinical Assessment</h3>
         <p>
-          Structured 60–75 minute first appointment. Full symptom history, pulse and
-          tongue diagnosis, and relevant orthopaedic assessment to establish a complete
-          clinical picture.
+          20 minutes allocated to full clinical assessment before any hands-on treatment.
+          Chief complaint, orthopaedic movement testing, and TCM pattern identification.
         </p>
       </div>
       <div class="journey-step">
         <div class="j-num">02</div>
-        <h3>Personalised Treatment Plan</h3>
+        <h3>Targeted Treatment</h3>
         <p>
-          Your practitioner explains the proposed point protocol and treatment approach
-          in plain language. Treatment is determined by your assessment — not a fixed
-          package.
+          Technique selection is based on your clinical findings — not a routine protocol.
+          Measurable goals are set at the start. Discharge criteria agreed in advance.
         </p>
       </div>
       <div class="journey-step">
         <div class="j-num">03</div>
-        <h3>Needling &amp; Review</h3>
+        <h3>Progress Review</h3>
         <p>
-          Needle insertion and 20–30 minute retention. Post-treatment guidance on
-          what to expect and when to return based on your clinical response.
+          Follow-up sessions begin with a brief progress check — what changed since last
+          session? Technique is adjusted accordingly. No sessions on autopilot.
         </p>
       </div>
     </div>
@@ -263,50 +261,50 @@ const faqItems = [
 
       <div>
         <p class="eyebrow">Our Approach</p>
-        <h2>Clinical Acupuncture at Yin Yang CMC</h2>
+        <h2>Tui Na at Yin Yang CMC</h2>
 
         <div class="pull-quote">
-          <p>"Two diagnostic frameworks, one clinical outcome — classical TCM theory and
-          modern musculoskeletal anatomy, integrated at every session."</p>
+          <p>"Technique follows diagnosis, not habit. Every session adapted to your
+          current clinical picture."</p>
         </div>
 
         <p>
-          Every diagnosis at Yin Yang CMC combines pulse assessment, tongue observation, and
-          orthopaedic testing with a thorough review of your medical history. Your treatment
-          plan is explained in plain clinical language — not vague terminology.
+          Our practitioners apply Tui Na using specific technique sequences from the
+          Hong Kong clinical curriculum — not a generalised massage approach. The
+          distinction matters clinically: wrong technique applied to the right area
+          can delay recovery.
         </p>
 
         <p>
-          Point selection is reassessed at every appointment and adapted to your current
-          clinical picture. This session-by-session responsiveness is how we keep treatment
-          matched to your presentation, rather than repeating a fixed protocol.
+          For structural presentations, Tui Na is frequently staged alongside bone
+          setting — soft tissue mobilisation first, then joint mobilisation. For
+          injury recovery, the technique shifts across the three phases of tissue
+          healing (acute, sub-acute, remodelling).
         </p>
 
         <details class="expand-detail">
           <summary class="expand-summary">
-            Read about our full diagnostic approach
+            Three mechanisms of Tui Na
             <span class="expand-icon" aria-hidden="true">+</span>
           </summary>
           <div class="expand-body">
-            <h3>Diagnosis before treatment</h3>
+            <h3>Myofascial release</h3>
             <p>
-              We do not prescribe a treatment plan before completing a structured clinical
-              assessment. Traditional pulse and tongue diagnosis is combined with modern
-              orthopaedic testing to identify the root pattern — not just the presenting
-              symptom.
+              Directional pressure is used to ease fascial tightness and support range of
+              motion in restricted joints. This is distinct from general massage pressure,
+              which targets surface muscle tension rather than the fascial layer.
             </p>
-            <h3>Session-by-session adaptation</h3>
+            <h3>Neurological regulation</h3>
             <p>
-              Point selection and technique are reviewed at every appointment. What was
-              clinically indicated at your first session may differ from what is appropriate
-              at follow-up, depending on your individual response.
+              Rhythmic compression activates mechanoreceptors, downregulating the stress
+              response and reducing referred pain. This mechanism explains why Tui Na
+              produces effects beyond the site of manual contact.
             </p>
-            <h3>Combined modality protocols where appropriate</h3>
+            <h3>Meridian &amp; circulatory support</h3>
             <p>
-              When clinically indicated, acupuncture may be combined with Tui Na or bone
-              setting within a single session — for example, acupuncture for neurological
-              pain regulation alongside manual therapy for soft tissue and joint work.
-              Every combination is determined by assessment, not by a package offering.
+              Supporting meridian flow — a model that maps closely onto microcirculation
+              and lymphatic drainage. Particularly relevant in recovery from acute injury,
+              where local swelling can slow tissue healing.
             </p>
           </div>
         </details>
@@ -317,8 +315,8 @@ const faqItems = [
           {[
             { val: "MBAcC",  label: "BAcC Registered" },
             { val: "15+",    label: "Years' Experience" },
+            { val: "60m",    label: "First Appointment" },
             { val: "EN/粵",  label: "Bilingual Care" },
-            { val: "4.9★",   label: "Google Reviews" },
           ].map(({ val, label }) => (
             <div style="background:var(--white);padding:1.5rem;text-align:center">
               <span style="display:block;font-family:var(--serif);font-size:2rem;color:var(--navy);line-height:1;margin-bottom:0.35rem">{val}</span>
@@ -331,14 +329,14 @@ const faqItems = [
           <p style="font-size:0.76rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.7rem">Related Treatments</p>
           <div style="display:grid;gap:0.4rem">
             {[
-              { label: "Tui Na Therapeutic Massage", href: "/tui-na-massage" },
-              { label: "Bone Setting & Orthopaedic Care", href: "/bone-setting" },
-              { label: "Herbal Medicine Consultation", href: "/herbal-consultation" },
+              { label: "Acupuncture", href: "/clinical-services/acupuncture" },
+              { label: "Bone Setting & Orthopaedic Care", href: "/clinical-services/bone-setting" },
+              { label: "Herbal Medicine Consultation", href: "/clinical-services/herbal-consultation" },
               { label: "All Clinical Services", href: "/clinical-services" },
             ].map(({ label, href }) => (
               <a
                 href={href}
-                style="display:flex;align-items:center;gap:0.4rem;font-size:0.9rem;font-weight:600;color:var(--teal);text-decoration:none;padding:0.3rem 0;transition:color 0.18s ease"
+                style="display:flex;align-items:center;gap:0.4rem;font-size:0.9rem;font-weight:600;color:var(--teal);text-decoration:none;padding:0.3rem 0"
               >
                 → {label}
               </a>
@@ -348,7 +346,7 @@ const faqItems = [
 
         <div style="background:var(--navy);border-radius:var(--r-md);padding:1.3rem">
           <p style="font-family:var(--serif);font-size:1.02rem;font-style:italic;color:#f0ece2;line-height:1.6;margin:0">
-            "Same-week appointments available at Reading and Wimbledon. New patients welcome — no referral needed."
+            "Same-week appointments available. Bring any imaging you have — helpful but not required."
           </p>
           <a class="btn btn-gold btn-sm" href="https://wa.me/447301949686" target="_blank" rel="noreferrer" style="margin-top:0.9rem">WhatsApp Us Now</a>
         </div>
@@ -360,7 +358,7 @@ const faqItems = [
 
 
 <!-- ═══════════════════════════════════════════════
-     §6 WHY CHOOSE YIN YANG
+     §6 CREDENTIALS
 ═══════════════════════════════════════════════ -->
 <section class="section">
   <div class="wrap">
@@ -368,8 +366,9 @@ const faqItems = [
       <p class="eyebrow">Credentials &amp; Standards</p>
       <h2>Professional Memberships &amp; Accreditations</h2>
       <p>
-        Both practitioners hold active UK professional registrations and have practised
-        for over 15 years in clinical settings in Hong Kong and the UK.
+        Both practitioners hold active UK professional registrations. Winton Hui trained
+        as a Tui Na specialist at Tung Wah Eastern Hospital, one of Hong Kong's largest
+        public hospital networks.
       </p>
     </div>
 
@@ -421,7 +420,7 @@ const faqItems = [
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Our Clinics</p>
-      <h2>Acupuncture in Reading &amp; Wimbledon</h2>
+      <h2>Tui Na in Reading &amp; Wimbledon</h2>
       <p>Same clinical team, same treatment standards at both locations.</p>
     </div>
 
@@ -476,10 +475,10 @@ const faqItems = [
     <div class="grid-2-lg" style="gap:5rem">
       <div>
         <p class="eyebrow">Common Questions</p>
-        <h2>Questions About Acupuncture</h2>
+        <h2>Questions About Tui Na Massage</h2>
         <p style="color:var(--muted)">
           Answers to the questions our practitioners hear most from new patients —
-          particularly those new to acupuncture or to TCM.
+          particularly those new to Chinese medicine manual therapy.
         </p>
         <div class="actions" style="margin-top:1.5rem">
           <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Ask Us Directly</a>
@@ -487,9 +486,9 @@ const faqItems = [
         <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
           <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related services:</p>
           <div style="display:grid;gap:0.3rem">
-            <a href="/tui-na-massage" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Tui Na Therapeutic Massage</a>
-            <a href="/bone-setting" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Bone Setting &amp; Orthopaedic Care</a>
-            <a href="/herbal-consultation" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Herbal Medicine Consultation</a>
+            <a href="/clinical-services/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
+            <a href="/clinical-services/bone-setting" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Bone Setting &amp; Orthopaedic Care</a>
+            <a href="/clinical-services/herbal-consultation" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Herbal Medicine Consultation</a>
           </div>
         </div>
       </div>
@@ -503,7 +502,7 @@ const faqItems = [
      §9 FINAL CTA
 ═══════════════════════════════════════════════ -->
 <CTASection
-  heading="Book Your Acupuncture Consultation"
+  heading="Book Your Tui Na Consultation"
   sub="Same-week appointments available at both our Reading and Wimbledon clinics. New patients welcome — no referral needed."
 />
 

@@ -41,18 +41,18 @@ import { conditionCategories, conditionsInCategory } from "../data/conditions";
                       <div class="mega-split">
                         <div class="mega-subcol">
                           {items.slice(0, mid).map((i) => (
-                            <a href={i.href} role="menuitem">{i.label}</a>
+                            <a href={i.status === "live" ? i.href : `/conditions#${i.category}`} role="menuitem">{i.label}</a>
                           ))}
                         </div>
                         <div class="mega-subcol">
                           {items.slice(mid).map((i) => (
-                            <a href={i.href} role="menuitem">{i.label}</a>
+                            <a href={i.status === "live" ? i.href : `/conditions#${i.category}`} role="menuitem">{i.label}</a>
                           ))}
                         </div>
                       </div>
                     ) : (
                       items.map((i) => (
-                        <a href={i.href} role="menuitem">{i.label}</a>
+                        <a href={i.status === "live" ? i.href : `/conditions#${i.category}`} role="menuitem">{i.label}</a>
                       ))
                     )}
                   </div>
@@ -105,7 +105,9 @@ import { conditionCategories, conditionsInCategory } from "../data/conditions";
     {conditionCategories.map((cat) => (
       <>
         <span class="mob-sublabel">{cat.short}</span>
-        {conditionsInCategory(cat.id).map((i) => <a href={i.href}>{i.label}</a>)}
+        {conditionsInCategory(cat.id).map((i) => (
+          <a href={i.status === "live" ? i.href : `/conditions#${i.category}`}>{i.label}</a>
+        ))}
       </>
     ))}
   </div>

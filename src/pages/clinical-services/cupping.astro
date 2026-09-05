@@ -1,7 +1,7 @@
 ---
-import Base from "../layouts/Base.astro";
-import FAQAccordion from "../components/FAQAccordion.astro";
-import CTASection from "../components/CTASection.astro";
+import Base from "../../layouts/Base.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
+import CTASection from "../../components/CTASection.astro";
 
 const faqItems = [
   {
@@ -112,7 +112,7 @@ const faqItems = [
 
         <div class="actions" style="margin-top:1.8rem">
           <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
-          <a class="btn btn-outline" href="/acupuncture">About Acupuncture</a>
+          <a class="btn btn-outline" href="/clinical-services/acupuncture">About Acupuncture</a>
         </div>
       </div>
 
@@ -161,7 +161,7 @@ const faqItems = [
           Back pain, neck tension, shoulder stiffness, and sports injuries. Cupping
           is used to ease localised stasis and deep muscle tightness.
         </p>
-        <a class="more-link" href="/back-pain">Back Pain &amp; Sciatica</a>
+        <a class="more-link" href="/conditions/back-pain">Back Pain &amp; Sciatica</a>
       </div>
       <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🫁</p>
@@ -186,12 +186,12 @@ const faqItems = [
 
     <div class="cond-grid">
       {[
-        { label: "Back Pain",       href: "/back-pain" },
-        { label: "Sciatica",        href: "/sciatica-treatment" },
-        { label: "Shoulder Pain",   href: "/shoulder-pain" },
-        { label: "Frozen Shoulder", href: "/frozen-shoulder" },
-        { label: "Sports Injuries", href: "/sports-injuries" },
-        { label: "Neck Pain",       href: "/neck-pain" },
+        { label: "Back Pain",       href: "/conditions/back-pain" },
+        { label: "Sciatica",        href: "/conditions/sciatica-treatment" },
+        { label: "Shoulder Pain",   href: "/conditions/shoulder-pain" },
+        { label: "Frozen Shoulder", href: "/conditions/frozen-shoulder" },
+        { label: "Sports Injuries", href: "/conditions/sports-injuries" },
+        { label: "Neck Pain",       href: "/conditions/neck-pain" },
         { label: "Chronic Fatigue", href: "/conditions" },
         { label: "Respiratory",     href: "/conditions" },
       ].map(({ label, href }) => (
@@ -260,12 +260,12 @@ const faqItems = [
     </div>
     <div class="grid-3">
       {[
-        { label: "Gua Sha", href: "/gua-sha", desc: "Instrument-assisted scraping to promote circulation and reduce inflammation." },
-        { label: "Moxibustion", href: "/moxibustion", desc: "Warming therapy using dried mugwort to dispel cold and support meridian flow." },
-        { label: "Auricular Therapy", href: "/auricular-therapy", desc: "Ear seed acupressure for insomnia, pain, and systemic regulation." },
-        { label: "Tian Jiu", href: "/tian-jiu", desc: "Seasonal herbal plaster therapy for respiratory and immune conditions." },
-        { label: "Acupuncture", href: "/acupuncture", desc: "Precision needling for pain, stress, and systemic regulation." },
-        { label: "Tui Na Massage", href: "/tui-na-massage", desc: "Clinical manual therapy for musculoskeletal and soft tissue conditions." },
+        { label: "Gua Sha", href: "/clinical-services/gua-sha", desc: "Instrument-assisted scraping to promote circulation and reduce inflammation." },
+        { label: "Moxibustion", href: "/clinical-services/moxibustion", desc: "Warming therapy using dried mugwort to dispel cold and support meridian flow." },
+        { label: "Auricular Therapy", href: "/clinical-services/auricular-therapy", desc: "Ear seed acupressure for insomnia, pain, and systemic regulation." },
+        { label: "Tian Jiu", href: "/clinical-services/tian-jiu", desc: "Seasonal herbal plaster therapy for respiratory and immune conditions." },
+        { label: "Acupuncture", href: "/clinical-services/acupuncture", desc: "Precision needling for pain, stress, and systemic regulation." },
+        { label: "Tui Na Massage", href: "/clinical-services/tui-na-massage", desc: "Clinical manual therapy for musculoskeletal and soft tissue conditions." },
       ].map(({ label, href, desc }) => (
         <a href={href} style="display:block;text-decoration:none;padding:1.4rem;background:var(--white);border-radius:var(--r-md);border:1px solid rgba(192,152,90,0.2)">
           <h3 style="font-size:1rem;color:var(--navy);margin-bottom:0.4rem">{label}</h3>

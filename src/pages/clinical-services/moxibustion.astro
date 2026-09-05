@@ -1,7 +1,7 @@
 ---
-import Base from "../layouts/Base.astro";
-import FAQAccordion from "../components/FAQAccordion.astro";
-import CTASection from "../components/CTASection.astro";
+import Base from "../../layouts/Base.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
+import CTASection from "../../components/CTASection.astro";
 
 const faqItems = [
   {
@@ -112,7 +112,7 @@ const faqItems = [
 
         <div class="actions" style="margin-top:1.8rem">
           <a class="btn btn-gold" href="https://wa.me/447301949686" target="_blank" rel="noreferrer">Book a Consultation</a>
-          <a class="btn btn-outline" href="/acupuncture">About Acupuncture</a>
+          <a class="btn btn-outline" href="/clinical-services/acupuncture">About Acupuncture</a>
         </div>
       </div>
 
@@ -161,7 +161,7 @@ const faqItems = [
           conditions, cold lower back pain, and stiff joints. Moxa directly
           addresses the cold-stagnation pattern.
         </p>
-        <a class="more-link" href="/back-pain">Back Pain</a>
+        <a class="more-link" href="/conditions/back-pain">Back Pain</a>
       </div>
       <div style="padding:1.6rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid rgba(192,152,90,0.2)">
         <p style="font-size:1.4rem;margin-bottom:0.5rem">🌸</p>
@@ -187,9 +187,9 @@ const faqItems = [
 
     <div class="cond-grid">
       {[
-        { label: "Cold-Pattern Back Pain",  href: "/back-pain" },
+        { label: "Cold-Pattern Back Pain",  href: "/conditions/back-pain" },
         { label: "Rheumatism",              href: "/conditions" },
-        { label: "Frozen Shoulder",         href: "/frozen-shoulder" },
+        { label: "Frozen Shoulder",         href: "/conditions/frozen-shoulder" },
         { label: "Menstrual Irregularity",  href: "/conditions" },
         { label: "Digestive Disorders",     href: "/conditions" },
         { label: "Post-Natal Recovery",     href: "/conditions" },
@@ -268,9 +268,9 @@ const faqItems = [
         <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
           <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related therapies:</p>
           <div style="display:grid;gap:0.3rem">
-            <a href="/tian-jiu" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Tian Jiu (Non-Thermal Moxa)</a>
-            <a href="/cupping" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Cupping Therapy</a>
-            <a href="/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
+            <a href="/clinical-services/tian-jiu" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Tian Jiu (Non-Thermal Moxa)</a>
+            <a href="/clinical-services/cupping" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Cupping Therapy</a>
+            <a href="/clinical-services/acupuncture" style="font-size:0.9rem;color:var(--teal);font-weight:600;text-decoration:none">→ Acupuncture</a>
           </div>
         </div>
       </div>
