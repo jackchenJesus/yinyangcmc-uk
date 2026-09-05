@@ -58,7 +58,7 @@ export const conditions: Condition[] = [
   // ── Pain & MSK — live ─────────────────────────────────
   {
     slug: "back-pain",
-    href: "/back-pain",
+    href: "/conditions/back-pain",
     label: "Back Pain",
     category: "pain-msk",
     status: "live",
@@ -77,7 +77,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Back pain is one of the most common reasons people in the UK reduce activity, take time off work, or live with daily discomfort that gradually wears them down. It is a symptom with many drivers — not a single diagnosis.",
-      "Whether the pain sits in the lower back, mid-spine, or radiates into the hips, our practitioners combine classical TCM diagnosis with modern musculoskeletal assessment. Treatment is typically a combination of acupuncture, Tui Na and bone-setting, calibrated to your presentation — not a fixed package. If pain travels into a leg, we also assess for <a href=\"/sciatica-treatment\">sciatica</a>, a <a href=\"/herniated-disc\">herniated disc</a>, or a <a href=\"/pinched-nerve\">pinched nerve</a>. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
+      "Whether the pain sits in the lower back, mid-spine, or radiates into the hips, our practitioners combine classical TCM diagnosis with modern musculoskeletal assessment. Treatment is typically a combination of acupuncture, Tui Na and bone-setting, calibrated to your presentation — not a fixed package. If pain travels into a leg, we also assess for <a href=\"/conditions/sciatica-treatment\">sciatica</a>, a <a href=\"/conditions/herniated-disc\">herniated disc</a>, or a <a href=\"/conditions/pinched-nerve\">pinched nerve</a>. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
     ],
     symptoms: [
       "Aching or stiffness that worsens with sitting or standing",
@@ -102,17 +102,17 @@ export const conditions: Condition[] = [
     ],
     treatments: [
       {
-        href: "/acupuncture",
+        href: "/clinical-services/acupuncture",
         label: "Acupuncture",
         why: "Reduces local inflammation, modulates nerve signalling, and interrupts the pain-spasm cycle that maintains many chronic back presentations.",
       },
       {
-        href: "/tui-na-massage",
+        href: "/clinical-services/tui-na-massage",
         label: "Tui Na",
         why: "Targets fascia, deep musculature and spinal joints — used to ease restriction and support mobility where mechanical tightness has become entrenched.",
       },
       {
-        href: "/bone-setting",
+        href: "/clinical-services/bone-setting",
         label: "Bone Setting",
         why: "Where joint restriction contributes to pain, Zheng Gu is used for mobilisation after assessment. Often introduced once acute inflammation has settled.",
       },
@@ -153,7 +153,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "sciatica-treatment",
-    href: "/sciatica-treatment",
+    href: "/conditions/sciatica-treatment",
     label: "Sciatica",
     category: "pain-msk",
     status: "live",
@@ -172,7 +172,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Sciatica describes pain from compression or irritation of the sciatic nerve — the longest nerve in the body, running from the lumbar spine through the buttock and down each leg to the foot. When compressed, pain signals can fire anywhere along that path.",
-      "People often describe this as a <a href=\"/trapped-nerve\">trapped nerve</a> or <a href=\"/pinched-nerve\">pinched nerve</a>. Treatment depends on which structure is irritating the nerve — <a href=\"/herniated-disc\">disc</a>, canal, facet, or <a href=\"/piriformis-syndrome\">piriformis</a> — and on the TCM pattern maintaining the presentation. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
+      "People often describe this as a <a href=\"/conditions/trapped-nerve\">trapped nerve</a> or <a href=\"/conditions/pinched-nerve\">pinched nerve</a>. Treatment depends on which structure is irritating the nerve — <a href=\"/conditions/herniated-disc\">disc</a>, canal, facet, or <a href=\"/conditions/piriformis-syndrome\">piriformis</a> — and on the TCM pattern maintaining the presentation. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
     ],
     symptoms: [
       "Sharp, electric or burning pain down one leg",
@@ -197,22 +197,22 @@ export const conditions: Condition[] = [
     ],
     treatments: [
       {
-        href: "/acupuncture",
+        href: "/clinical-services/acupuncture",
         label: "Acupuncture",
         why: "Used to modulate nerve pain signalling and local inflammation along the affected root pathway — including paravertebral and distal points selected after assessment.",
       },
       {
-        href: "/tui-na-massage",
+        href: "/clinical-services/tui-na-massage",
         label: "Tui Na",
         why: "Manual mobilisation of the lumbar and gluteal tissues, including work around the piriformis where muscle compression is contributing.",
       },
       {
-        href: "/bone-setting",
+        href: "/clinical-services/bone-setting",
         label: "Bone Setting",
         why: "Where joint restriction is feeding nerve-root irritation, Zheng Gu may be introduced once acute inflammation has settled.",
       },
       {
-        href: "/moxibustion",
+        href: "/clinical-services/moxibustion",
         label: "Moxibustion",
         why: "Added for Cold-Damp presentations — heavy, weather-sensitive sciatica that does not respond to needling alone.",
       },
@@ -253,7 +253,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "shoulder-pain",
-    href: "/shoulder-pain",
+    href: "/conditions/shoulder-pain",
     label: "Shoulder Pain",
     category: "pain-msk",
     status: "live",
@@ -272,7 +272,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "The shoulder is the most mobile joint in the body — held by the rotator cuff, tendons and ligaments rather than a deep bony socket. That mobility makes it prone to strain, inflammation and restriction from posture, overuse, sport and gym training.",
-      "Shoulder pain can also be referred from the <a href=\"/neck-pain\">neck</a>, or signal <a href=\"/frozen-shoulder\">frozen shoulder</a> or impingement. A <a href=\"/trapped-nerve\">trapped nerve</a> in the neck can be felt across the shoulder. Identifying the likely source is essential before treatment begins. Painkillers manage discomfort; they do not address how the joint is moving.",
+      "Shoulder pain can also be referred from the <a href=\"/conditions/neck-pain\">neck</a>, or signal <a href=\"/conditions/frozen-shoulder\">frozen shoulder</a> or impingement. A <a href=\"/conditions/trapped-nerve\">trapped nerve</a> in the neck can be felt across the shoulder. Identifying the likely source is essential before treatment begins. Painkillers manage discomfort; they do not address how the joint is moving.",
     ],
     symptoms: [
       "Sharp pain when lifting the arm or reaching overhead",
@@ -297,22 +297,22 @@ export const conditions: Condition[] = [
     ],
     treatments: [
       {
-        href: "/acupuncture",
+        href: "/clinical-services/acupuncture",
         label: "Acupuncture",
         why: "Used to reduce local inflammation and muscle guarding around the rotator cuff and scapular stabilisers, and to address neck-referred patterns where relevant.",
       },
       {
-        href: "/tui-na-massage",
+        href: "/clinical-services/tui-na-massage",
         label: "Tui Na",
         why: "Mobilises the glenohumeral joint and surrounding soft tissue — used to support range of motion where postural loading and overuse have restricted movement.",
       },
       {
-        href: "/bone-setting",
+        href: "/clinical-services/bone-setting",
         label: "Bone Setting",
         why: "For joint restriction and scapular or cervical contribution that manual mobilisation alone has not eased.",
       },
       {
-        href: "/cupping",
+        href: "/clinical-services/cupping",
         label: "Cupping",
         why: "Often combined for upper-back and shoulder-girdle stasis — particularly postural tightness across the scapula.",
       },
@@ -353,7 +353,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "frozen-shoulder",
-    href: "/frozen-shoulder",
+    href: "/conditions/frozen-shoulder",
     label: "Frozen Shoulder",
     category: "pain-msk",
     status: "live",
@@ -371,7 +371,7 @@ export const conditions: Condition[] = [
     sectionImage: "/images/acupuncture-needles-back.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
-      "Frozen shoulder — adhesive capsulitis — occurs when the joint capsule becomes inflamed, then thickens and tightens. Range of motion is restricted in all directions. Most patients cannot lift the arm, reach behind the back, or dress without pain. It is a different picture from ordinary <a href=\"/shoulder-pain\">shoulder pain</a> or stiffness that mainly sits in the <a href=\"/neck-pain\">neck</a>.",
+      "Frozen shoulder — adhesive capsulitis — occurs when the joint capsule becomes inflamed, then thickens and tightens. Range of motion is restricted in all directions. Most patients cannot lift the arm, reach behind the back, or dress without pain. It is a different picture from ordinary <a href=\"/conditions/shoulder-pain\">shoulder pain</a> or stiffness that mainly sits in the <a href=\"/conditions/neck-pain\">neck</a>.",
       "Night pain that disrupts sleep is a hallmark. Without treatment, the natural course can take 18 months to 3 years. Early care is aimed at supporting usable range sooner. Painkillers manage symptoms; they do not restore range of motion on their own.",
     ],
     symptoms: [
@@ -397,22 +397,22 @@ export const conditions: Condition[] = [
     ],
     treatments: [
       {
-        href: "/acupuncture",
+        href: "/clinical-services/acupuncture",
         label: "Acupuncture",
         why: "Used in the freezing stage to reduce inflammatory pain and slow further restriction — before the joint fully locks.",
       },
       {
-        href: "/tui-na-massage",
+        href: "/clinical-services/tui-na-massage",
         label: "Tui Na",
         why: "In the frozen and thawing stages, manual work focuses on restricted soft tissue and supporting range that needling alone cannot open.",
       },
       {
-        href: "/bone-setting",
+        href: "/clinical-services/bone-setting",
         label: "Bone Setting",
         why: "Joint mobilisation for the locked capsule, introduced when inflammation has settled enough for structural work.",
       },
       {
-        href: "/moxibustion",
+        href: "/clinical-services/moxibustion",
         label: "Moxibustion",
         why: "Warming therapy for Cold-Damp and Wind-Cold presentations — stiffness that worsens in cold weather or after exposure.",
       },
@@ -453,7 +453,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "sports-injuries",
-    href: "/sports-injuries",
+    href: "/conditions/sports-injuries",
     label: "Sports Injuries",
     category: "pain-msk",
     status: "live",
@@ -472,7 +472,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Sports injuries range from acute trauma to cumulative overuse. Rest and anti-inflammatories often settle symptoms without restoring full biomechanical function. That gap is where TCM is used as a parallel clinical system — tissue care, pain modulation and joint mobility — not as a replacement for sports medicine or imaging where those are needed.",
-      "Plans are built around your sport, training volume and recovery window. <a href=\"/knee-pain\">Knee pain</a>, <a href=\"/hip-pain\">hip pain</a> and <a href=\"/back-pain\">lower-back pain</a> are assessed as part of the same chain, not as isolated sore spots.",
+      "Plans are built around your sport, training volume and recovery window. <a href=\"/conditions/knee-pain\">Knee pain</a>, <a href=\"/conditions/hip-pain\">hip pain</a> and <a href=\"/conditions/back-pain\">lower-back pain</a> are assessed as part of the same chain, not as isolated sore spots.",
     ],
     symptoms: [
       "Muscle strain or ligament sprain that is slow to settle",
@@ -497,17 +497,17 @@ export const conditions: Condition[] = [
     ],
     treatments: [
       {
-        href: "/acupuncture",
+        href: "/clinical-services/acupuncture",
         label: "Acupuncture",
         why: "Used to modulate inflammation and pain signalling at the injury site, and to support range of motion alongside load management.",
       },
       {
-        href: "/tui-na-massage",
+        href: "/clinical-services/tui-na-massage",
         label: "Tui Na",
         why: "Graded manual pressure to ease myofascial restriction and support tissue glide around the injured structure.",
       },
       {
-        href: "/bone-setting",
+        href: "/clinical-services/bone-setting",
         label: "Bone Setting",
         why: "Used for joint restriction that persists after injury and feeds compensation through the rest of the chain.",
       },
@@ -550,7 +550,7 @@ export const conditions: Condition[] = [
   // ── Pain & MSK — additional live pages ───────────────
   {
     slug: "pinched-nerve",
-    href: "/pinched-nerve",
+    href: "/conditions/pinched-nerve",
     label: "Pinched Nerve",
     category: "pain-msk",
     status: "live",
@@ -573,7 +573,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "“Pinched nerve” describes irritation or compression of a nerve — often in the neck, shoulder girdle or lower back. The nerve itself is not always the only structure involved: nearby joints, discs and tight muscle can all reduce the space a nerve has to move.",
-      "Typical symptoms include pain, tingling, numbness or a radiating ache along the nerve’s path. This page cannot tell you which structure is responsible. In the UK the same picture is often called a <a href=\"/trapped-nerve\">trapped nerve</a>; we keep that page for location-led questions (neck, shoulder or back) and this one for compression and treatment options. Disc-related back pain is covered separately under <a href=\"/herniated-disc\">herniated disc</a>.",
+      "Typical symptoms include pain, tingling, numbness or a radiating ache along the nerve’s path. This page cannot tell you which structure is responsible. In the UK the same picture is often called a <a href=\"/conditions/trapped-nerve\">trapped nerve</a>; we keep that page for location-led questions (neck, shoulder or back) and this one for compression and treatment options. Disc-related back pain is covered separately under <a href=\"/conditions/herniated-disc\">herniated disc</a>.",
     ],
     symptoms: [
       "Sharp, burning or aching pain in the neck, shoulder or back",
@@ -598,17 +598,17 @@ export const conditions: Condition[] = [
     ],
     treatments: [
       {
-        href: "/acupuncture",
+        href: "/clinical-services/acupuncture",
         label: "Acupuncture",
         why: "Used to modulate local inflammation and nerve-pain signalling. Point selection follows the affected pathway after assessment — it is not a standard “pinched nerve protocol”.",
       },
       {
-        href: "/tui-na-massage",
+        href: "/clinical-services/tui-na-massage",
         label: "Tui Na",
         why: "Manual work on the muscles and fascia around the irritated segment, aimed at easing guarding that may be adding to compression.",
       },
       {
-        href: "/bone-setting",
+        href: "/clinical-services/bone-setting",
         label: "Bone Setting",
         why: "Where joint restriction is contributing, Zheng Gu may be introduced once acute irritation has settled enough for mobilisation.",
       },
@@ -658,15 +658,15 @@ export const conditions: Condition[] = [
       },
       {
         q: "What is the difference between a pinched nerve and a trapped nerve?",
-        a: "In clinic they often describe a similar problem. “Pinched nerve” emphasises compression; “trapped nerve” is the phrase many UK patients use for radiating neck, shoulder or back symptoms. We wrote a separate page for <a href=\"/trapped-nerve\">trapped nerve treatment</a> because the search questions are different — location and next steps, rather than the compression mechanism.",
+        a: "In clinic they often describe a similar problem. “Pinched nerve” emphasises compression; “trapped nerve” is the phrase many UK patients use for radiating neck, shoulder or back symptoms. We wrote a separate page for <a href=\"/conditions/trapped-nerve\">trapped nerve treatment</a> because the search questions are different — location and next steps, rather than the compression mechanism.",
       },
       {
         q: "Can a pinched nerve in the neck cause shoulder or arm pain?",
-        a: "Yes — cervical nerve irritation can be felt in the shoulder, arm or hand. That does not mean every shoulder ache is a pinched nerve. We assess the neck and shoulder together; see also <a href=\"/neck-pain\">neck pain</a> and <a href=\"/shoulder-pain\">shoulder pain</a>.",
+        a: "Yes — cervical nerve irritation can be felt in the shoulder, arm or hand. That does not mean every shoulder ache is a pinched nerve. We assess the neck and shoulder together; see also <a href=\"/conditions/neck-pain\">neck pain</a> and <a href=\"/conditions/shoulder-pain\">shoulder pain</a>.",
       },
       {
         q: "How is pinched nerve pain treated here?",
-        a: "Usually a combination of <a href=\"/acupuncture\">acupuncture</a> with <a href=\"/tui-na-massage\">Tui Na</a>, and bone-setting if joint restriction is part of the picture. The mix is chosen after assessment, not from a menu.",
+        a: "Usually a combination of <a href=\"/clinical-services/acupuncture\">acupuncture</a> with <a href=\"/clinical-services/tui-na-massage\">Tui Na</a>, and bone-setting if joint restriction is part of the picture. The mix is chosen after assessment, not from a menu.",
       },
       {
         q: "How many sessions might I need?",
@@ -684,7 +684,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "trapped-nerve",
-    href: "/trapped-nerve",
+    href: "/conditions/trapped-nerve",
     label: "Trapped Nerve",
     category: "pain-msk",
     status: "live",
@@ -707,7 +707,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People search for a trapped nerve in the neck, a trapped nerve in the shoulder, or a trapped nerve in the back because that is how the pain presents in daily life — turning to check a blind spot, reaching for a seatbelt, sitting at a desk, or getting out of a chair. The useful clinical question is not the label. It is where the symptoms start, where they travel, and what they do to sleep, work and movement.",
-      "If you want the compression-mechanism explanation, that sits on our <a href=\"/pinched-nerve\">pinched nerve</a> page. Here the focus is what to do next: a structured consultation at <a href=\"/reading-clinic\">Reading</a> or <a href=\"/wimbledon-clinic\">Wimbledon</a>, and treatment only where it is appropriate. Neck-and-shoulder presentations are often assessed alongside <a href=\"/neck-pain\">neck pain</a> and <a href=\"/shoulder-pain\">shoulder pain</a>.",
+      "If you want the compression-mechanism explanation, that sits on our <a href=\"/conditions/pinched-nerve\">pinched nerve</a> page. Here the focus is what to do next: a structured consultation at <a href=\"/reading-clinic\">Reading</a> or <a href=\"/wimbledon-clinic\">Wimbledon</a>, and treatment only where it is appropriate. Neck-and-shoulder presentations are often assessed alongside <a href=\"/conditions/neck-pain\">neck pain</a> and <a href=\"/conditions/shoulder-pain\">shoulder pain</a>.",
     ],
     symptoms: [
       "Pain starting in the neck and travelling into the shoulder, arm or hand",
@@ -723,26 +723,26 @@ export const conditions: Condition[] = [
       },
       {
         title: "Shoulder-girdle tightness",
-        body: "The muscles around the scapula and upper ribs can irritate nearby nerves and refer pain into the arm. This is not the same problem as a <a href=\"/frozen-shoulder\">frozen shoulder</a>, where the joint itself is restricted both ways.",
+        body: "The muscles around the scapula and upper ribs can irritate nearby nerves and refer pain into the arm. This is not the same problem as a <a href=\"/conditions/frozen-shoulder\">frozen shoulder</a>, where the joint itself is restricted both ways.",
       },
       {
         title: "Lower-back radiation",
-        body: "When symptoms travel from the back into a leg, we assess whether this is muscular, joint-related, disc-related or true <a href=\"/sciatica-treatment\">sciatica</a>. The next step is the same: history and examination, not a label from a search.",
+        body: "When symptoms travel from the back into a leg, we assess whether this is muscular, joint-related, disc-related or true <a href=\"/conditions/sciatica-treatment\">sciatica</a>. The next step is the same: history and examination, not a label from a search.",
       },
     ],
     treatments: [
       {
-        href: "/acupuncture",
+        href: "/clinical-services/acupuncture",
         label: "Acupuncture",
         why: "Selected after mapping where symptoms start and travel. Used to ease pain signalling and muscle guarding along that path — not as a one-size needle recipe.",
       },
       {
-        href: "/tui-na-massage",
+        href: "/clinical-services/tui-na-massage",
         label: "Tui Na",
         why: "Hands-on work for the neck, shoulder girdle or lumbar tissues that are holding the pattern, especially where desk or driving load has become entrenched.",
       },
       {
-        href: "/cupping",
+        href: "/clinical-services/cupping",
         label: "Cupping",
         why: "Often added for upper-back and shoulder-girdle tightness when muscular stasis is part of a neck or shoulder presentation.",
       },
@@ -792,7 +792,7 @@ export const conditions: Condition[] = [
       },
       {
         q: "Is a trapped nerve the same as a pinched nerve?",
-        a: "Often people mean the same thing. We keep two pages because the questions differ: this one is about radiating symptoms in the neck, shoulder or back and what to do next; <a href=\"/pinched-nerve\">pinched nerve treatment</a> explains compression, tingling and numbness in more mechanistic terms.",
+        a: "Often people mean the same thing. We keep two pages because the questions differ: this one is about radiating symptoms in the neck, shoulder or back and what to do next; <a href=\"/conditions/pinched-nerve\">pinched nerve treatment</a> explains compression, tingling and numbness in more mechanistic terms.",
       },
       {
         q: "Can a trapped nerve in the shoulder cause arm or hand tingling?",
@@ -818,7 +818,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "neck-pain",
-    href: "/neck-pain",
+    href: "/conditions/neck-pain",
     label: "Neck Pain",
     category: "pain-msk",
     status: "live",
@@ -840,7 +840,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Neck pain ranges from a stiff neck after sleep to a chronic ache that builds through the working day. Many people also feel it across the shoulders or into the upper back. Muscular neck pain, postural loading and joint stiffness often overlap — which is why a single stretch or heat pack is not always enough.",
-      "We commonly combine <a href=\"/acupuncture\">acupuncture</a> with <a href=\"/tui-na-massage\">Tui Na</a>. Where nerve-type symptoms travel into an arm, we also consider a <a href=\"/pinched-nerve\">pinched nerve</a> or <a href=\"/trapped-nerve\">trapped nerve</a> picture. Local shoulder joint pain is covered on our <a href=\"/shoulder-pain\">shoulder pain</a> page.",
+      "We commonly combine <a href=\"/clinical-services/acupuncture\">acupuncture</a> with <a href=\"/clinical-services/tui-na-massage\">Tui Na</a>. Where nerve-type symptoms travel into an arm, we also consider a <a href=\"/conditions/pinched-nerve\">pinched nerve</a> or <a href=\"/conditions/trapped-nerve\">trapped nerve</a> picture. Local shoulder joint pain is covered on our <a href=\"/conditions/shoulder-pain\">shoulder pain</a> page.",
     ],
     symptoms: [
       "Stiffness when turning to look over a shoulder",
@@ -860,22 +860,22 @@ export const conditions: Condition[] = [
       },
       {
         title: "Referral into the shoulder or arm",
-        body: "When symptoms travel, the neck may be the source even if the shoulder feels like the problem. We distinguish this from rotator-cuff pain and from <a href=\"/frozen-shoulder\">frozen shoulder</a> at consultation.",
+        body: "When symptoms travel, the neck may be the source even if the shoulder feels like the problem. We distinguish this from rotator-cuff pain and from <a href=\"/conditions/frozen-shoulder\">frozen shoulder</a> at consultation.",
       },
     ],
     treatments: [
       {
-        href: "/acupuncture",
+        href: "/clinical-services/acupuncture",
         label: "Acupuncture",
         why: "Used to ease local muscle guarding and pain signalling in the cervical and upper-back region, with distal points added after assessment.",
       },
       {
-        href: "/tui-na-massage",
+        href: "/clinical-services/tui-na-massage",
         label: "Tui Na",
         why: "Manual mobilisation of the neck, scapula and upper thoracic tissues — particularly useful where desk posture has become entrenched.",
       },
       {
-        href: "/gua-sha",
+        href: "/clinical-services/gua-sha",
         label: "Gua Sha",
         why: "Often used for stubborn neck and shoulder stasis when scraping techniques are appropriate for the tissue picture that day.",
       },
@@ -925,15 +925,15 @@ export const conditions: Condition[] = [
       },
       {
         q: "Is this just a stiff neck, or something in the shoulder?",
-        a: "They often travel together. If lifting the arm is the main problem, see <a href=\"/shoulder-pain\">shoulder pain</a>. If turning the head is the main problem, the neck is usually the starting point. We examine both.",
+        a: "They often travel together. If lifting the arm is the main problem, see <a href=\"/conditions/shoulder-pain\">shoulder pain</a>. If turning the head is the main problem, the neck is usually the starting point. We examine both.",
       },
       {
         q: "Can neck pain cause tingling in the arm?",
-        a: "It can. That does not automatically mean a trapped nerve, but it is a reason to assess the cervical spine rather than only massaging the sore shoulder. See our pages on <a href=\"/trapped-nerve\">trapped nerve</a> and <a href=\"/pinched-nerve\">pinched nerve</a> if that is your main search.",
+        a: "It can. That does not automatically mean a trapped nerve, but it is a reason to assess the cervical spine rather than only massaging the sore shoulder. See our pages on <a href=\"/conditions/trapped-nerve\">trapped nerve</a> and <a href=\"/conditions/pinched-nerve\">pinched nerve</a> if that is your main search.",
       },
       {
         q: "How is neck pain treated besides acupuncture?",
-        a: "<a href=\"/tui-na-massage\">Tui Na</a> and, where suitable, <a href=\"/gua-sha\">Gua Sha</a> are commonly used for neck and shoulder tension. Bone-setting is only considered if joint restriction is part of the picture after assessment.",
+        a: "<a href=\"/clinical-services/tui-na-massage\">Tui Na</a> and, where suitable, <a href=\"/clinical-services/gua-sha\">Gua Sha</a> are commonly used for neck and shoulder tension. Bone-setting is only considered if joint restriction is part of the picture after assessment.",
       },
       {
         q: "How many sessions might I need?",
@@ -951,7 +951,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "herniated-disc",
-    href: "/herniated-disc",
+    href: "/conditions/herniated-disc",
     label: "Herniated Disc",
     category: "pain-msk",
     status: "live",
@@ -973,8 +973,8 @@ export const conditions: Condition[] = [
     sectionImage: "/images/acupuncture-needles-back.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
-      "A herniated disc — often called a slipped disc in the UK — is when disc material bulges or leaks enough to irritate nearby tissue, sometimes including a nerve root. Many people first notice it as disc-related back pain; others notice leg pain and look up <a href=\"/sciatica-treatment\">sciatica</a>.",
-      "Acupuncture does not physically repair, replace or “move” a spinal disc. What we may support is pain, muscle spasm and how comfortably you can move while medical advice and, where needed, imaging remain in the picture. Related searches such as <a href=\"/back-pain\">back pain</a> and <a href=\"/pinched-nerve\">pinched nerve</a> are often the same clinical visit from a different starting phrase.",
+      "A herniated disc — often called a slipped disc in the UK — is when disc material bulges or leaks enough to irritate nearby tissue, sometimes including a nerve root. Many people first notice it as disc-related back pain; others notice leg pain and look up <a href=\"/conditions/sciatica-treatment\">sciatica</a>.",
+      "Acupuncture does not physically repair, replace or “move” a spinal disc. What we may support is pain, muscle spasm and how comfortably you can move while medical advice and, where needed, imaging remain in the picture. Related searches such as <a href=\"/conditions/back-pain\">back pain</a> and <a href=\"/conditions/pinched-nerve\">pinched nerve</a> are often the same clinical visit from a different starting phrase.",
     ],
     symptoms: [
       "Lower-back pain that started after bending, lifting or a long drive",
@@ -999,17 +999,17 @@ export const conditions: Condition[] = [
     ],
     treatments: [
       {
-        href: "/acupuncture",
+        href: "/clinical-services/acupuncture",
         label: "Acupuncture",
         why: "Used to modulate pain and local muscle spasm around the affected lumbar segment. It is adjunctive care, not a procedure that repairs disc tissue.",
       },
       {
-        href: "/tui-na-massage",
+        href: "/clinical-services/tui-na-massage",
         label: "Tui Na",
         why: "Graded manual work for lumbar and gluteal guarding once the acute picture allows it. Forceful “putting the disc back” is not the aim.",
       },
       {
-        href: "/bone-setting",
+        href: "/clinical-services/bone-setting",
         label: "Bone Setting",
         why: "Considered only after assessment, and usually once acute inflammation has settled, if joint restriction is feeding the presentation.",
       },
@@ -1063,7 +1063,7 @@ export const conditions: Condition[] = [
       },
       {
         q: "I have sciatica and a disc bulge on MRI — which page applies?",
-        a: "Often both are relevant. If the dominant symptom is pain down the leg, start with <a href=\"/sciatica-treatment\">sciatica</a>. If the dominant story is the disc report and back pain, this page is the better fit. We assess the same body either way.",
+        a: "Often both are relevant. If the dominant symptom is pain down the leg, start with <a href=\"/conditions/sciatica-treatment\">sciatica</a>. If the dominant story is the disc report and back pain, this page is the better fit. We assess the same body either way.",
       },
       {
         q: "Will you try to put the disc back in place?",
@@ -1085,7 +1085,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "piriformis-syndrome",
-    href: "/piriformis-syndrome",
+    href: "/conditions/piriformis-syndrome",
     label: "Piriformis Syndrome",
     category: "pain-msk",
     status: "live",
@@ -1107,8 +1107,8 @@ export const conditions: Condition[] = [
     sectionImage: "/images/acupuncture-needles-back.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
-      "The piriformis is a small muscle deep in the buttock. When it is tight or irritated, it can aggravate the sciatic nerve that runs beneath (and in some people, through) the muscle. The result can be piriformis pain, buttock pain, and pain down the leg that looks and feels like <a href=\"/sciatica-treatment\">sciatica</a>.",
-      "That overlap is exactly why self-diagnosis from symptoms is unreliable. True nerve-root sciatica, <a href=\"/back-pain\">back pain</a>, and <a href=\"/hip-pain\">hip pain</a> can all occupy the same neighbourhood. We examine rather than assume the piriformis is the culprit.",
+      "The piriformis is a small muscle deep in the buttock. When it is tight or irritated, it can aggravate the sciatic nerve that runs beneath (and in some people, through) the muscle. The result can be piriformis pain, buttock pain, and pain down the leg that looks and feels like <a href=\"/conditions/sciatica-treatment\">sciatica</a>.",
+      "That overlap is exactly why self-diagnosis from symptoms is unreliable. True nerve-root sciatica, <a href=\"/conditions/back-pain\">back pain</a>, and <a href=\"/conditions/hip-pain\">hip pain</a> can all occupy the same neighbourhood. We examine rather than assume the piriformis is the culprit.",
     ],
     symptoms: [
       "A deep ache in one buttock, sometimes described as sitting on a tennis ball",
@@ -1133,17 +1133,17 @@ export const conditions: Condition[] = [
     ],
     treatments: [
       {
-        href: "/acupuncture",
+        href: "/clinical-services/acupuncture",
         label: "Acupuncture",
         why: "Local and distal points may be used to ease pain and muscle guarding in the gluteal region after the source picture is clearer.",
       },
       {
-        href: "/tui-na-massage",
+        href: "/clinical-services/tui-na-massage",
         label: "Tui Na",
         why: "Manual work around the hip and buttock, graded carefully — this is not aggressive deep pressure as a default.",
       },
       {
-        href: "/bone-setting",
+        href: "/clinical-services/bone-setting",
         label: "Bone Setting",
         why: "Considered if pelvic or lumbar joint restriction is feeding the buttock and leg symptoms.",
       },
@@ -1189,7 +1189,7 @@ export const conditions: Condition[] = [
     faqs: [
       {
         q: "Is piriformis syndrome the same as sciatica?",
-        a: "They can feel similar — pain in the buttock and down the leg. Sciatica often starts with a spinal nerve root; piriformis-related pain is generated more locally in the buttock. Plenty of people have a mixed picture. That is why we assess rather than treating a search term. See our <a href=\"/sciatica-treatment\">sciatica treatment</a> page if the spinal story is stronger.",
+        a: "They can feel similar — pain in the buttock and down the leg. Sciatica often starts with a spinal nerve root; piriformis-related pain is generated more locally in the buttock. Plenty of people have a mixed picture. That is why we assess rather than treating a search term. See our <a href=\"/conditions/sciatica-treatment\">sciatica treatment</a> page if the spinal story is stronger.",
       },
       {
         q: "Can acupuncture help piriformis syndrome?",
@@ -1219,7 +1219,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "knee-pain",
-    href: "/knee-pain",
+    href: "/conditions/knee-pain",
     label: "Knee Pain",
     category: "pain-msk",
     status: "live",
@@ -1241,7 +1241,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People look for knee pain treatment without surgery because they want to keep walking, working and training. That is a reasonable aim — and it is not the same as saying acupuncture can replace an operation when an orthopaedic surgeon has already judged surgery to be necessary. Suitability is assessed in clinic, alongside whatever NHS or specialist advice you already have.",
-      "We see overuse-related discomfort, longer-standing stiffness, and sports-related knees as part of <a href=\"/sports-injuries\">sports injury</a> care. Pain around the knee can also be influenced by the <a href=\"/hip-pain\">hip</a> or <a href=\"/back-pain\">back</a>, which is why we look at how you walk, not only at the sore joint.",
+      "We see overuse-related discomfort, longer-standing stiffness, and sports-related knees as part of <a href=\"/conditions/sports-injuries\">sports injury</a> care. Pain around the knee can also be influenced by the <a href=\"/conditions/hip-pain\">hip</a> or <a href=\"/conditions/back-pain\">back</a>, which is why we look at how you walk, not only at the sore joint.",
     ],
     symptoms: [
       "Pain when walking, going downstairs, or standing up from a chair",
@@ -1266,17 +1266,17 @@ export const conditions: Condition[] = [
     ],
     treatments: [
       {
-        href: "/acupuncture",
+        href: "/clinical-services/acupuncture",
         label: "Acupuncture",
         why: "Local and distal points may be used to support pain relief and ease guarding around the joint after assessment.",
       },
       {
-        href: "/tui-na-massage",
+        href: "/clinical-services/tui-na-massage",
         label: "Tui Na",
         why: "Graded manual work for the soft tissue around the knee and the muscles that control it, without forcing a locked or acutely swollen joint.",
       },
       {
-        href: "/moxibustion",
+        href: "/clinical-services/moxibustion",
         label: "Moxibustion",
         why: "Sometimes added for chronic, cold-sensitive knee stiffness where warming methods fit the TCM pattern.",
       },
@@ -1352,7 +1352,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "hip-pain",
-    href: "/hip-pain",
+    href: "/conditions/hip-pain",
     label: "Hip Pain",
     category: "pain-msk",
     status: "live",
@@ -1374,7 +1374,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Hip pain when walking, stiffness after sitting, or an ache in the buttock and hip can have several sources: the hip joint itself, the lumbar spine, the sacroiliac region, or muscles such as the piriformis. Searching the symptom is useful. Naming the structure from a webpage is not.",
-      "We therefore treat hip presentations as a differential, not a single protocol. Related pages include <a href=\"/back-pain\">back pain</a>, <a href=\"/sciatica-treatment\">sciatica</a>, <a href=\"/piriformis-syndrome\">piriformis syndrome</a> and <a href=\"/knee-pain\">knee pain</a> — because those are the neighbourhoods this symptom lives in.",
+      "We therefore treat hip presentations as a differential, not a single protocol. Related pages include <a href=\"/conditions/back-pain\">back pain</a>, <a href=\"/conditions/sciatica-treatment\">sciatica</a>, <a href=\"/conditions/piriformis-syndrome\">piriformis syndrome</a> and <a href=\"/conditions/knee-pain\">knee pain</a> — because those are the neighbourhoods this symptom lives in.",
     ],
     symptoms: [
       "Pain in the side of the hip, groin, or deep in the buttock",
@@ -1399,17 +1399,17 @@ export const conditions: Condition[] = [
     ],
     treatments: [
       {
-        href: "/acupuncture",
+        href: "/clinical-services/acupuncture",
         label: "Acupuncture",
         why: "Point selection follows whether the picture is more joint, muscle, or referred from the lumbar region — decided after assessment.",
       },
       {
-        href: "/tui-na-massage",
+        href: "/clinical-services/tui-na-massage",
         label: "Tui Na",
         why: "Manual therapy for the hip girdle, gluteal tissues and lumbar-pelvic region where tightness is maintaining the pain.",
       },
       {
-        href: "/bone-setting",
+        href: "/clinical-services/bone-setting",
         label: "Bone Setting",
         why: "Used when pelvic or lumbar joint restriction is part of the picture, not as a routine “hip crack”.",
       },
@@ -1463,7 +1463,7 @@ export const conditions: Condition[] = [
       },
       {
         q: "Is this sciatica or hip pain?",
-        a: "If the pain shoots down the leg from the back or buttock, read our <a href=\"/sciatica-treatment\">sciatica</a> and <a href=\"/piriformis-syndrome\">piriformis</a> pages as well. Groin pain with rotation is more often a local hip question. We distinguish this in the room, not from a form.",
+        a: "If the pain shoots down the leg from the back or buttock, read our <a href=\"/conditions/sciatica-treatment\">sciatica</a> and <a href=\"/conditions/piriformis-syndrome\">piriformis</a> pages as well. Groin pain with rotation is more often a local hip question. We distinguish this in the room, not from a form.",
       },
       {
         q: "Can hip pain cause knee pain?",
@@ -1487,7 +1487,7 @@ export const conditions: Condition[] = [
   // ── Pain & MSK — listed (pages to follow) ─────────────
   {
     slug: "headaches-migraines",
-    href: "/conditions#pain-msk",
+    href: "/conditions/headaches-migraines",
     label: "Headaches & Migraines",
     category: "pain-msk",
     status: "listed",
@@ -1498,7 +1498,7 @@ export const conditions: Condition[] = [
   // ── Women's health ────────────────────────────────────
   {
     slug: "fertility-support",
-    href: "/fertility-support",
+    href: "/conditions/fertility-support",
     label: "Fertility Support",
     category: "womens-health",
     status: "live",
@@ -1546,12 +1546,12 @@ export const conditions: Condition[] = [
     ],
     treatments: [
       {
-        href: "/acupuncture",
+        href: "/clinical-services/acupuncture",
         label: "Acupuncture",
         why: "Fine, single-use needles selected to your pattern. Electroacupuncture may be added where clinically appropriate.",
       },
       {
-        href: "/herbal-consultation",
+        href: "/clinical-services/herbal-consultation",
         label: "Chinese Herbal Medicine",
         why: "Concentrated granules from certified Hong Kong suppliers, prescribed only after consultation and compliant with UK regulatory standards.",
       },
@@ -1598,7 +1598,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "menstrual-pain",
-    href: "/conditions#womens-health",
+    href: "/conditions/menstrual-pain",
     label: "Menstrual Pain",
     category: "womens-health",
     status: "listed",
@@ -1607,7 +1607,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "postnatal-recovery",
-    href: "/conditions#womens-health",
+    href: "/conditions/postnatal-recovery",
     label: "Postnatal Recovery",
     category: "womens-health",
     status: "listed",
@@ -1618,7 +1618,7 @@ export const conditions: Condition[] = [
   // ── Internal, skin & sleep ────────────────────────────
   {
     slug: "anxiety-sleep",
-    href: "/conditions#internal",
+    href: "/conditions/anxiety-sleep",
     label: "Anxiety & Sleep",
     category: "internal",
     status: "listed",
@@ -1627,7 +1627,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "digestive-health",
-    href: "/conditions#internal",
+    href: "/conditions/digestive-health",
     label: "Digestive Health",
     category: "internal",
     status: "listed",
@@ -1636,7 +1636,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "skin-conditions",
-    href: "/conditions#internal",
+    href: "/conditions/skin-conditions",
     label: "Skin Conditions",
     category: "internal",
     status: "listed",
@@ -1645,7 +1645,7 @@ export const conditions: Condition[] = [
   },
   {
     slug: "fatigue",
-    href: "/conditions#internal",
+    href: "/conditions/fatigue",
     label: "Fatigue",
     category: "internal",
     status: "listed",
