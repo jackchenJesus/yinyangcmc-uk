@@ -32,23 +32,21 @@ import { conditionCategories, conditionsInCategory } from "../data/conditions";
             <div class="mega-cols">
               {conditionCategories.map((cat) => {
                 const items = conditionsInCategory(cat.id);
-                const split = cat.id === "pain-msk" && items.length > 8;
-                const mid = Math.ceil(items.length / 2);
+                const colCount = cat.id === "pain-msk" && items.length > 16 ? 3 : cat.id === "pain-msk" && items.length > 8 ? 2 : 1;
+                const chunk = Math.ceil(items.length / colCount);
+                const columns = Array.from({ length: colCount }, (_, i) => items.slice(i * chunk, (i + 1) * chunk));
                 return (
-                  <div class={split ? "mega-col mega-col-wide" : "mega-col"}>
+                  <div class={colCount > 1 ? "mega-col mega-col-wide" : "mega-col"}>
                     <a class="mega-col-label" href={`/conditions#${cat.id}`}>{cat.short}</a>
-                    {split ? (
-                      <div class="mega-split">
-                        <div class="mega-subcol">
-                          {items.slice(0, mid).map((i) => (
+                    {colCount > 1 ? (
+                      <div class={`mega-split mega-split-${colCount}`}>
+                        {columns.map((col) => (
+                          <div class="mega-subcol">
+                            {col.map((i) => (
                             <a href={i.status === "live" ? i.href : `/conditions#${i.category}`} role="menuitem">{i.label}</a>
-                          ))}
-                        </div>
-                        <div class="mega-subcol">
-                          {items.slice(mid).map((i) => (
-                            <a href={i.status === "live" ? i.href : `/conditions#${i.category}`} role="menuitem">{i.label}</a>
-                          ))}
-                        </div>
+                            ))}
+                          </div>
+                        ))}
                       </div>
                     ) : (
                       items.map((i) => (

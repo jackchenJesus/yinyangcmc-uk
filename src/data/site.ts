@@ -103,6 +103,16 @@ export const reviews = {
   ],
 };
 
+export const footerConditions = [
+  { href: "/conditions/back-pain", label: "Back Pain" },
+  { href: "/conditions/sciatica-treatment", label: "Sciatica" },
+  { href: "/conditions/neck-pain", label: "Neck Pain" },
+  { href: "/conditions/shoulder-pain", label: "Shoulder Pain" },
+  { href: "/conditions/knee-pain", label: "Knee Pain" },
+  { href: "/conditions/hip-pain", label: "Hip Pain" },
+  { href: "/conditions/migraine", label: "Migraine" },
+];
+
 export const homeConditions = [
   { href: "/conditions/back-pain", label: "Back Pain" },
   { href: "/conditions/sciatica-treatment", label: "Sciatica" },
@@ -111,7 +121,8 @@ export const homeConditions = [
   { href: "/conditions/neck-pain", label: "Neck Pain" },
   { href: "/conditions/sports-injuries", label: "Sports Injuries" },
   { href: "/conditions/fertility-support", label: "Fertility Support" },
-  { href: "/conditions#pain-msk", label: "Headaches & Migraines" },
+  { href: "/conditions/headaches", label: "Headaches" },
+  { href: "/conditions/migraine", label: "Migraine" },
 ];
 
 export const homeServices = [

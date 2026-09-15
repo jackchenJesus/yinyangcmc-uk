@@ -109,10 +109,14 @@ async function handleContact(request: Request) {
   return json({ ok: true });
 }
 
+const CANON_HOST = "yinyangcmc.uk";
+
 const PAGE_REDIRECTS: Record<string, string> = {
   "/professional-services": "/clinical-services",
   "/other-treatment": "/clinical-services",
+  "/services": "/clinical-services",
   "/acupuncture": "/clinical-services/acupuncture",
+  "/copy-of-acupuncture": "/clinical-services/acupuncture",
   "/tui-na-massage": "/clinical-services/tui-na-massage",
   "/bone-setting": "/clinical-services/bone-setting",
   "/herbal-consultation": "/clinical-services/herbal-consultation",
@@ -134,9 +138,40 @@ const PAGE_REDIRECTS: Record<string, string> = {
   "/knee-pain": "/conditions/knee-pain",
   "/hip-pain": "/conditions/hip-pain",
   "/fertility-support": "/conditions/fertility-support",
+  "/headaches-migraines": "/conditions/headaches",
+  "/arthritis": "/conditions/arthritis",
+  "/joint-pain": "/conditions/joint-pain",
+  "/migraine": "/conditions/migraine",
+  "/headaches": "/conditions/headaches",
+  "/plantar-fasciitis": "/conditions/plantar-fasciitis",
+  "/carpal-tunnel-syndrome": "/conditions/carpal-tunnel-syndrome",
+  "/trigeminal-neuralgia": "/conditions/trigeminal-neuralgia",
+  "/achilles-tendinitis": "/conditions/achilles-tendinitis",
+  "/postherpetic-neuralgia": "/conditions/postherpetic-neuralgia",
+  "/tennis-elbow": "/conditions/tennis-elbow",
+  "/golfers-elbow": "/conditions/golfers-elbow",
+  "/wrist-pain": "/conditions/wrist-pain",
+  "/ankle-pain": "/conditions/ankle-pain",
+  "/foot-pain": "/conditions/foot-pain",
+  "/elbow-pain": "/conditions/elbow-pain",
+  "/menstrual-pain": "/conditions",
+  "/postnatal-recovery": "/conditions",
+  "/anxiety-sleep": "/conditions",
+  "/digestive-health": "/conditions",
+  "/skin-conditions": "/conditions",
+  "/fatigue": "/conditions",
   "/reading-clinic": "/locations/reading-clinic",
   "/wimbledon-clinic": "/locations/wimbledon-clinic",
+  "/blog": "/",
+  "/insights-and-advice-from-our-expert-doctors": "/",
+  "/insights-from-our-doctors-at-yin-yang-uk": "/",
+  "/home": "/",
+  "/about": "/our-practitioners",
 };
+
+function isLocalHost(hostname: string) {
+  return hostname === "localhost" || hostname === "127.0.0.1";
+}
 
 function normalizePath(pathname: string) {
   if (pathname.length > 1 && pathname.endsWith("/")) {
@@ -145,17 +180,33 @@ function normalizePath(pathname: string) {
   return pathname;
 }
 
+function canonicalUrl(request: Request): URL {
+  const url = new URL(request.url);
+  const path = normalizePath(url.pathname);
+  const dest = PAGE_REDIRECTS[path] ?? path;
+  const target = new URL(request.url);
+  if (!isLocalHost(url.hostname)) {
+    target.protocol = "https:";
+    target.hostname = CANON_HOST;
+    target.port = "";
+  }
+  target.pathname = dest;
+  target.search = url.search;
+  target.hash = "";
+  return target;
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
     if (url.pathname === "/api/contact") {
       return handleContact(request);
     }
-    const dest = PAGE_REDIRECTS[normalizePath(url.pathname)];
-    if (dest) {
-      const target = new URL(dest, url.origin);
-      target.search = url.search;
-      return Response.redirect(target, 301);
+    if (request.method === "GET" || request.method === "HEAD") {
+      const target = canonicalUrl(request);
+      if (target.href !== new URL(request.url).href) {
+        return Response.redirect(target.href, 301);
+      }
     }
     return env.ASSETS.fetch(request);
   },

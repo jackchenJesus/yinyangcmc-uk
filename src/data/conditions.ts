@@ -1,3 +1,5 @@
+import { expansionConditions } from "./conditions-expansion";
+
 export const conditionCategories = [
   { id: "pain-msk", label: "Pain & Musculoskeletal", short: "Pain & MSK" },
   { id: "womens-health", label: "Women's Health", short: "Women's Health" },
@@ -331,7 +333,7 @@ export const conditions: Condition[] = [
         body: "Recurrent, weaker shoulder with slower recovery — more common in longer-standing or age-related presentations.",
       },
     ],
-    related: ["frozen-shoulder", "neck-pain", "trapped-nerve"],
+    related: ["frozen-shoulder", "neck-pain", "tennis-elbow"],
     faqs: [
       {
         q: "Is this frozen shoulder or a rotator cuff problem?",
@@ -526,7 +528,7 @@ export const conditions: Condition[] = [
         body: "Repeated niggles, slower tissue repair, and injuries that return at the same load — more common in longer-standing overuse.",
       },
     ],
-    related: ["knee-pain", "hip-pain", "back-pain"],
+    related: ["knee-pain", "tennis-elbow", "plantar-fasciitis"],
     faqs: [
       {
         q: "Can I still train while having treatment?",
@@ -627,7 +629,7 @@ export const conditions: Condition[] = [
         body: "Recurrent, fatiguing spinal and nerve symptoms in longer-standing cases. Treatment addresses both the local pathway and systemic depletion.",
       },
     ],
-    related: ["trapped-nerve", "herniated-disc", "neck-pain"],
+    related: ["trapped-nerve", "carpal-tunnel-syndrome", "neck-pain"],
     expect: [
       {
         title: "Compression picture",
@@ -761,7 +763,7 @@ export const conditions: Condition[] = [
         body: "A more fixed, stabbing path of pain after a specific incident — reaching, lifting or a sudden turn.",
       },
     ],
-    related: ["pinched-nerve", "neck-pain", "shoulder-pain"],
+    related: ["pinched-nerve", "carpal-tunnel-syndrome", "shoulder-pain"],
     expect: [
       {
         title: "Map the path",
@@ -894,7 +896,7 @@ export const conditions: Condition[] = [
         body: "Tension that tracks stress, sleep and a tight jaw or shoulders — the neck is part of a wider holding pattern.",
       },
     ],
-    related: ["shoulder-pain", "trapped-nerve", "pinched-nerve"],
+    related: ["shoulder-pain", "headaches", "migraine"],
     expect: [
       {
         title: "Neck and shoulder together",
@@ -1295,7 +1297,7 @@ export const conditions: Condition[] = [
         body: "Longer-standing knee weakness and slower recovery — treated as a local and constitutional picture.",
       },
     ],
-    related: ["sports-injuries", "hip-pain", "back-pain"],
+    related: ["sports-injuries", "hip-pain", "arthritis"],
     expect: [
       {
         title: "What the knee is doing",
@@ -1428,7 +1430,7 @@ export const conditions: Condition[] = [
         body: "Recurrent hip stiffness with slower recovery, often alongside knee or lumbar complaints.",
       },
     ],
-    related: ["piriformis-syndrome", "back-pain", "knee-pain"],
+    related: ["piriformis-syndrome", "arthritis", "knee-pain"],
     expect: [
       {
         title: "Where is the pain really from?",
@@ -1484,16 +1486,7 @@ export const conditions: Condition[] = [
     ],
   },
 
-  // ── Pain & MSK — listed (pages to follow) ─────────────
-  {
-    slug: "headaches-migraines",
-    href: "/conditions#pain-msk",
-    label: "Headaches & Migraines",
-    category: "pain-msk",
-    status: "listed",
-    summary:
-      "Tension-type headache and migraine presentations, including neck-driven patterns. Enquire if this is your main concern.",
-  },
+  ...expansionConditions,
 
   // ── Women's health ────────────────────────────────────
   {

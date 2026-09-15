@@ -1,6 +1,5 @@
 ---
-import { site } from "../data/site";
-import { liveConditions } from "../data/conditions";
+import { site, footerConditions } from "../data/site";
 ---
 <footer class="site-footer">
   <div class="wrap">
@@ -37,10 +36,11 @@ import { liveConditions } from "../data/conditions";
       <div>
         <h5>Conditions</h5>
         <nav class="foot-links" aria-label="Footer conditions">
-          {liveConditions.map((c) => (
+          <a href="/conditions">Conditions we treat</a>
+          {footerConditions.map((c) => (
             <a href={c.href}>{c.label}</a>
           ))}
-          <a href="/conditions">All Conditions</a>
+          <a href="/conditions">View All Conditions</a>
         </nav>
       </div>
 
