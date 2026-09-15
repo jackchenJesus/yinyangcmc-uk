@@ -19,7 +19,9 @@ const {
   ogTitle,
   ogDescription,
 } = Astro.props;
-const canonicalUrl = canonical ?? Astro.url.href;
+const siteOrigin = Astro.site ?? new URL("https://yinyangcmc.uk");
+const defaultPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+const canonicalUrl = canonical ?? new URL(defaultPath, siteOrigin).href;
 const shareTitle = ogTitle ?? title;
 const shareDescription = ogDescription ?? description;
 const shareImage = ogImage

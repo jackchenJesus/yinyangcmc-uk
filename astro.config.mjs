@@ -10,11 +10,7 @@ export default defineConfig({
       filter: (page) => {
         if (page.includes("/404")) return false;
         const path = new URL(page).pathname.replace(/\/$/, "") || "/";
-        return ![
-          "/blog",
-          "/insights-and-advice-from-our-expert-doctors",
-          "/insights-from-our-doctors-at-yin-yang-uk",
-        ].includes(path);
+        return path !== "/404";
       },
     }),
   ],
