@@ -146,6 +146,29 @@ export const conditions: Condition[] = [
       },
     ],
     related: ["sciatica-treatment", "herniated-disc", "pinched-nerve"],
+    expect: [
+      {
+        title: "History and examination",
+        body: "We map where the pain sits, what sitting, standing or lifting does to it, and how long it has been present. Bring any imaging or GP letters if you have them — useful, not required.",
+      },
+      {
+        title: "Plan, then treatment",
+        body: "Your practitioner explains which structures seem relevant and which modalities they propose. Treatment often begins in the same session where it is appropriate.",
+      },
+      {
+        title: "Review the response",
+        body: "Change is reviewed visit by visit. We do not prescribe a fixed package in advance, and we will say if medical imaging or a GP review is the safer next step.",
+      },
+    ],
+    safety: {
+      intro: "Chinese medicine is not a substitute for urgent NHS or emergency care. Seek medical assessment promptly if you notice:",
+      items: [
+        "New bladder or bowel change with back or leg pain",
+        "Saddle numbness or rapidly worsening leg weakness",
+        "Symptoms after a major fall or accident",
+        "Unexplained fever, night sweats or unplanned weight loss with back pain",
+      ],
+    },
     faqs: [
       {
         q: "How many sessions will I need for back pain?",
@@ -677,6 +700,29 @@ export const conditions: Condition[] = [
       },
     ],
     related: ["knee-pain", "tennis-elbow", "plantar-fasciitis"],
+    expect: [
+      {
+        title: "How the injury happened, what you still do",
+        body: "We take the training and recovery history — what you can still load, what you have already tried, and what you need to return to. Bring any scan or physio letters if you have them.",
+      },
+      {
+        title: "Plan, then treatment",
+        body: "Your practitioner explains which tissues seem relevant and which modalities they propose. Treatment often begins in the same session where it is appropriate.",
+      },
+      {
+        title: "Review the response",
+        body: "Change is reviewed against your training week. We do not prescribe a fixed package, and we will say if sports-medicine, imaging or a GP review is the safer next step.",
+      },
+    ],
+    safety: {
+      intro: "Chinese medicine is not a substitute for urgent NHS, A&E or sports-medicine assessment. Seek medical attention promptly if you notice:",
+      items: [
+        "Inability to weight-bear after a fall, twist or impact",
+        "A joint that looks deformed, or swelling that is rapidly worsening",
+        "A suspected fracture, dislocation, or complete tendon rupture",
+        "Head injury, loss of consciousness, or unexplained fever with the injury",
+      ],
+    },
     faqs: [
       {
         q: "Can I still train while having treatment?",
