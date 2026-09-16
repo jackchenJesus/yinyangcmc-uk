@@ -6,6 +6,11 @@ const ins = {
   a: "We are recognised by AXA Health, Vitality, Aviva and WPA. Cover depends on your policy and usually relates to eligible acupuncture. See <a href=\"/pricing-and-insurance\">Pricing &amp; Insurance</a>.",
 };
 
+const clinics = {
+  q: "Is treatment available in Reading and Wimbledon?",
+  a: "Yes. <a href=\"/locations/reading-clinic\">Reading</a> midweek and <a href=\"/locations/wimbledon-clinic\">Wimbledon</a> on Saturday. No GP referral is required to book.",
+};
+
 export const expansionConditions: LiveCondition[] = [
   {
     slug: "arthritis",
@@ -15,13 +20,14 @@ export const expansionConditions: LiveCondition[] = [
     status: "live",
     summary:
       "Osteoarthritis and other medically diagnosed joint arthritis — acupuncture and Tui Na as complementary care, not a replacement for rheumatology when that is needed.",
-    title: "Acupuncture for Arthritis in Reading & Wimbledon | Yin Yang CMC",
+    title: "Arthritis Pain & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture and manual therapy for medically diagnosed arthritis at our Reading and Wimbledon clinics. Complementary care after assessment — not a substitute for specialist rheumatology.",
-    ogTitle: "Acupuncture for Arthritis | Reading & Wimbledon",
+      "Acupuncture for medically diagnosed arthritis in Reading and Wimbledon. Complementary care for pain and stiffness — not a substitute for rheumatology.",
+    ogTitle: "Arthritis Pain & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Stiff, weather-sensitive joints with a medical arthritis diagnosis. We may support symptoms with acupuncture and Tui Na after assessment.",
     h1: "Acupuncture for Arthritis in Reading & Wimbledon",
+    treatmentsHeading: "Acupuncture and Tui Na for arthritis",
     eyebrow: "Conditions · Arthritis",
     lede: "Arthritis is a medical diagnosis, not a vague ache. Where it is already confirmed, acupuncture may be used as part of complementary care for pain and stiffness — alongside, not instead of, your GP or rheumatology advice.",
     image: "/images/generated/arthritis-patient-hero.webp",
@@ -30,7 +36,7 @@ export const expansionConditions: LiveCondition[] = [
     sectionImage: "/images/acupuncture-needles-back.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
-      "People search for acupuncture for arthritis when morning stiffness, weather-sensitive joints or reduced grip start to shrink what they can do. Osteoarthritis of the knee, hip, hands or spine is the picture we see most often. Inflammatory types such as rheumatoid arthritis belong under medical supervision; we do not diagnose them from a webpage.",
+      "People search for <a href=\"/clinical-services/acupuncture\">acupuncture</a> for arthritis when morning stiffness, weather-sensitive joints or reduced grip start to shrink what they can do. Osteoarthritis of the knee, hip, hands or spine is the picture we see most often. Inflammatory types such as rheumatoid arthritis belong under medical supervision; we do not diagnose them from a webpage.",
       "Treatment here is complementary. We look at how the joint is moving, which neighbouring joints are compensating, and whether <a href=\"/conditions/joint-pain\">joint pain</a> is local or part of a wider pattern. Related pages include <a href=\"/conditions/knee-pain\">knee pain</a>, <a href=\"/conditions/hip-pain\">hip pain</a> and <a href=\"/conditions/shoulder-pain\">shoulder pain</a>.",
     ],
     symptoms: [
@@ -126,10 +132,7 @@ export const expansionConditions: LiveCondition[] = [
         q: "Will I still need my usual painkillers?",
         a: "That is a conversation with your GP or pharmacist. We do not advise stopping prescribed medicine.",
       },
-      {
-        q: "Is treatment available in Reading and Wimbledon?",
-        a: "Yes. <a href=\"/locations/reading-clinic\">Reading</a> midweek and <a href=\"/locations/wimbledon-clinic\">Wimbledon</a> on Saturday. No GP referral is required to book.",
-      },
+      clinics,
       ins,
     ],
   },
@@ -141,13 +144,14 @@ export const expansionConditions: LiveCondition[] = [
     status: "live",
     summary:
       "Aches and stiffness in one or several joints when the label is still unclear — assessed against local strain, referral and any existing medical diagnosis.",
-    title: "Acupuncture for Joint Pain in Reading & Wimbledon | Yin Yang CMC",
+    title: "Joint Pain Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture for joint pain, stiffness and reduced movement in Reading and Wimbledon. We assess whether the source is local, referred, or already diagnosed as arthritis.",
-    ogTitle: "Acupuncture for Joint Pain | Reading & Wimbledon",
+      "Joint pain treatment with acupuncture in Reading and Wimbledon. We assess whether it is local, referred, or already named as arthritis.",
+    ogTitle: "Joint Pain Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Sore joints without a single tidy label. Assessment first, then acupuncture and manual therapy if appropriate.",
     h1: "Acupuncture for Joint Pain in Reading & Wimbledon",
+    treatmentsHeading: "Acupuncture and TCM for joint pain",
     eyebrow: "Conditions · Joint Pain",
     lede: "Joint pain is a symptom, not a diagnosis. We assess whether it is local strain, referred from elsewhere, or already named as arthritis — then decide whether acupuncture is a reasonable next step.",
     image: "/images/generated/joint-pain-patient-hero.webp",
@@ -157,7 +161,7 @@ export const expansionConditions: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People look for joint pain treatment when a knee, wrist, ankle or several joints ache without a neat explanation. The sore joint is a starting point. It is not automatically <a href=\"/conditions/arthritis\">arthritis</a>, a sports injury, or a trapped nerve.",
-      "We therefore treat joint pain as a differential. Dedicated pages already cover <a href=\"/conditions/knee-pain\">knee</a>, <a href=\"/conditions/hip-pain\">hip</a>, <a href=\"/conditions/wrist-pain\">wrist</a>, <a href=\"/conditions/ankle-pain\">ankle</a> and <a href=\"/conditions/elbow-pain\">elbow</a> presentations. This page is for the wider question: several joints, an unclear source, or pain that moves.",
+      "We therefore treat joint pain as a differential. Dedicated pages already cover <a href=\"/conditions/knee-pain\">knee</a>, <a href=\"/conditions/hip-pain\">hip</a>, <a href=\"/conditions/wrist-pain\">wrist</a>, <a href=\"/conditions/ankle-pain\">ankle</a> and <a href=\"/conditions/elbow-pain\">elbow</a> presentations. This page is for the wider question: several joints, an unclear source, or pain that moves. If the picture is mechanical, <a href=\"/clinical-services/acupuncture\">acupuncture</a> may be combined with Tui Na or bone-setting after assessment.",
     ],
     symptoms: [
       "Aching or stiffness in one or more joints after use",
@@ -252,6 +256,7 @@ export const expansionConditions: LiveCondition[] = [
         q: "Do you treat several joints in one session?",
         a: "Often the main driver is treated first. Neighbouring joints are included when they are clearly part of the same chain.",
       },
+      clinics,
       ins,
     ],
     ctaHeading: "Ready to have the joint picture assessed?",
@@ -264,13 +269,14 @@ export const expansionConditions: LiveCondition[] = [
     status: "live",
     summary:
       "Migraine with or without aura — complementary acupuncture after medical assessment of red flags, distinct from everyday tension headache.",
-    title: "Acupuncture for Migraine in Reading & Wimbledon | Yin Yang CMC",
+    title: "Migraine Care & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture for migraine in Reading and Wimbledon. Complementary care for people who already recognise migraine, including neck-driven and hormonal patterns — not a replacement for medical assessment of new or changing attacks.",
-    ogTitle: "Acupuncture for Migraine | Reading & Wimbledon",
+      "Acupuncture for migraine in Reading and Wimbledon. Complementary care between attacks — not for a first, worst or suddenly different headache.",
+    ogTitle: "Migraine Care & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Pulsing head pain, light sensitivity or aura. We may support migraine care with acupuncture after assessment.",
     h1: "Acupuncture for Migraine in Reading & Wimbledon",
+    treatmentsHeading: "Acupuncture and TCM for migraine",
     eyebrow: "Conditions · Migraine",
     lede: "Migraine is more than a bad headache. If you already recognise pulsing pain, photophobia or aura, acupuncture may be used as complementary care — after medical red flags have been considered.",
     image: "/images/generated/migraine-patient-hero.webp",
@@ -279,7 +285,7 @@ export const expansionConditions: LiveCondition[] = [
     sectionImage: "/images/acupuncture-needles-back.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
-      "People search for acupuncture for migraine when attacks interrupt work, sleep or family life, or when they want a non-drug option alongside whatever their GP has already advised. Migraine often includes nausea, light or sound sensitivity, and sometimes visual aura. Everyday tension-type pain is covered separately on our <a href=\"/conditions/headaches\">headaches</a> page.",
+      "People search for <a href=\"/clinical-services/acupuncture\">acupuncture</a> for migraine when attacks interrupt work, sleep or family life, or when they want a non-drug option alongside whatever their GP has already advised. Migraine often includes nausea, light or sound sensitivity, and sometimes visual aura. Everyday tension-type pain is covered separately on our <a href=\"/conditions/headaches\">headaches</a> page.",
       "Neck stiffness, hormonal change and sleep disruption commonly sit in the same picture. We also look at <a href=\"/conditions/neck-pain\">neck pain</a> when the cervical region is clearly involved. A first, worst, or suddenly different headache needs urgent medical assessment, not a clinic booking.",
     ],
     symptoms: [
@@ -375,6 +381,7 @@ export const expansionConditions: LiveCondition[] = [
         q: "Do I stop my migraine medication?",
         a: "No — that is a decision with your GP or neurologist. Acupuncture is complementary.",
       },
+      clinics,
       ins,
     ],
   },
@@ -386,13 +393,14 @@ export const expansionConditions: LiveCondition[] = [
     status: "live",
     summary:
       "Tension-type and neck-driven headaches — acupuncture and Tui Na after red-flag screening, distinct from migraine.",
-    title: "Acupuncture for Headaches in Reading & Wimbledon | Yin Yang CMC",
+    title: "Headache Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture for tension-type and neck-related headaches in Reading and Wimbledon. Assessment first; migraine has its own page. New or severe headaches need medical care.",
-    ogTitle: "Acupuncture for Headaches | Reading & Wimbledon",
+      "Acupuncture for tension-type and neck-related headaches in Reading and Wimbledon. Migraine has its own page. New or severe headaches need medical care.",
+    ogTitle: "Headache Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Band-like pressure or neck-driven headache after desk work. Complementary acupuncture after assessment.",
     h1: "Acupuncture for Headaches in Reading & Wimbledon",
+    treatmentsHeading: "Acupuncture and Tui Na for headaches",
     eyebrow: "Conditions · Headaches",
     lede: "Most headaches we see are tension-type or neck-driven — a tight band, heavy occiput, or pain that starts in the shoulders. Migraine is a different pattern and has its own page.",
     image: "/images/generated/headaches-patient-hero.webp",
@@ -402,7 +410,7 @@ export const expansionConditions: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People look for headache treatment when a dull pressure sits across the forehead, temples or base of the skull after screens, driving or poor sleep. That is often a tension-type or cervicogenic picture. Pulsing one-sided attacks with aura belong on our <a href=\"/conditions/migraine\">migraine</a> page.",
-      "We assess the <a href=\"/conditions/neck-pain\">neck</a> and <a href=\"/conditions/shoulder-pain\">shoulders</a> because those tissues so often feed the headache. A first, worst, or suddenly different headache is a medical question first.",
+      "We assess the <a href=\"/conditions/neck-pain\">neck</a> and <a href=\"/conditions/shoulder-pain\">shoulders</a> because those tissues so often feed the headache. <a href=\"/clinical-services/acupuncture\">Acupuncture</a> is commonly combined with Tui Na after that assessment. A first, worst, or suddenly different headache is a medical question first.",
     ],
     symptoms: [
       "A tight band around the head, worse later in the day",
@@ -497,6 +505,7 @@ export const expansionConditions: LiveCondition[] = [
         q: "Do I need a GP referral?",
         a: "Not for longer-standing tension-type pain. New or changing headaches should be discussed with a GP first.",
       },
+      clinics,
       ins,
     ],
   },
@@ -508,13 +517,14 @@ export const expansionConditions: LiveCondition[] = [
     status: "live",
     summary:
       "First-step heel pain from plantar fascia irritation — acupuncture and Tui Na as complementary care alongside sensible load advice.",
-    title: "Acupuncture for Plantar Fasciitis in Reading & Wimbledon | Yin Yang CMC",
+    title: "Plantar Fasciitis Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture for plantar fasciitis and first-step heel pain in Reading and Wimbledon. Complementary care after assessment — not a guaranteed cure of the fascia.",
-    ogTitle: "Acupuncture for Plantar Fasciitis | Reading & Wimbledon",
+      "Acupuncture for plantar fasciitis and first-step heel pain in Reading and Wimbledon. Complementary care after assessment.",
+    ogTitle: "Plantar Fasciitis Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Sharp heel pain on the first steps of the morning. We may support plantar fascia irritation with acupuncture and manual therapy.",
     h1: "Acupuncture for Plantar Fasciitis in Reading & Wimbledon",
+    treatmentsHeading: "Acupuncture and Tui Na for plantar fasciitis",
     eyebrow: "Conditions · Plantar Fasciitis",
     lede: "The classic picture is a sharp sting under the heel on the first steps of the morning. Acupuncture may be used as complementary care for that irritation — not as a promise that the fascia will ‘reset’ on a timetable.",
     image: "/images/generated/plantar-fasciitis-patient-hero.webp",
@@ -524,7 +534,7 @@ export const expansionConditions: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Plantar fasciitis is irritation of the thick band of tissue under the foot that supports the arch. People describe first-step pain, then a duller ache after they have been on their feet. It is not the same as every <a href=\"/conditions/foot-pain\">foot pain</a>, nor automatically an <a href=\"/conditions/achilles-tendinitis\">Achilles</a> problem — though those pages sit next door.",
-      "Load matters: new trainers, a jump in walking or running, long days on hard floors. We also look at the <a href=\"/conditions/ankle-pain\">ankle</a> and <a href=\"/conditions/knee-pain\">knee</a> because the chain changes how the fascia is loaded.",
+      "Load matters: new trainers, a jump in walking or running, long days on hard floors. We also look at the <a href=\"/conditions/ankle-pain\">ankle</a> and <a href=\"/conditions/knee-pain\">knee</a> because the chain changes how the fascia is loaded. Complementary <a href=\"/clinical-services/acupuncture\">acupuncture</a> may be used with Tui Na once heel pain has been distinguished from neighbouring foot problems.",
     ],
     symptoms: [
       "Sharp pain under the heel with the first steps after rest",
@@ -619,6 +629,7 @@ export const expansionConditions: LiveCondition[] = [
         q: "Is this the same as general foot pain?",
         a: "Not always. Use <a href=\"/conditions/foot-pain\">foot pain</a> if the ache is broader, or <a href=\"/conditions/achilles-tendinitis\">Achilles tendinitis</a> if the pain sits above the heel.",
       },
+      clinics,
       ins,
     ],
   },
@@ -630,13 +641,14 @@ export const expansionConditions: LiveCondition[] = [
     status: "live",
     summary:
       "Night-time tingling in the thumb, index and middle fingers — complementary acupuncture after assessment, not a bypass of nerve tests when those are needed.",
-    title: "Acupuncture for Carpal Tunnel Syndrome in Reading & Wimbledon | Yin Yang CMC",
+    title: "Carpal Tunnel Symptoms & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture for carpal tunnel symptoms in Reading and Wimbledon. Night tingling, wrist ache and desk-related hand symptoms assessed against neck and nerve compression.",
-    ogTitle: "Acupuncture for Carpal Tunnel | Reading & Wimbledon",
+      "Acupuncture for carpal tunnel symptoms in Reading and Wimbledon. Night tingling and desk-related hand symptoms assessed against the neck.",
+    ogTitle: "Carpal Tunnel Symptoms & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Tingling in the thumb and first fingers, often at night. Complementary acupuncture after assessment.",
     h1: "Acupuncture for Carpal Tunnel Syndrome in Reading & Wimbledon",
+    treatmentsHeading: "Acupuncture and TCM for carpal tunnel symptoms",
     eyebrow: "Conditions · Carpal Tunnel Syndrome",
     lede: "Carpal tunnel symptoms are typically tingling or numbness in the thumb, index and middle fingers, often worse at night. Acupuncture may be used as complementary care — not as a substitute for nerve tests or surgery when those are indicated.",
     image: "/images/generated/carpal-tunnel-patient-hero.webp",
@@ -646,7 +658,7 @@ export const expansionConditions: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "The median nerve can be irritated as it passes through the carpal tunnel at the wrist. People shake the hand at night, drop objects, or notice pins and needles when cycling or typing. That is not automatically every <a href=\"/conditions/wrist-pain\">wrist pain</a>, and it is not automatically a <a href=\"/conditions/trapped-nerve\">trapped nerve</a> in the neck — though we check both.",
-      "Neck-driven symptoms can mimic this. We also look at <a href=\"/conditions/neck-pain\">neck pain</a> and <a href=\"/conditions/pinched-nerve\">pinched nerve</a> pages because the neighbourhood matters.",
+      "Neck-driven symptoms can mimic this. We also look at <a href=\"/conditions/neck-pain\">neck pain</a> and <a href=\"/conditions/pinched-nerve\">pinched nerve</a> pages because the neighbourhood matters. Complementary <a href=\"/clinical-services/acupuncture\">acupuncture</a> may be used for night tingling and forearm tightness after that assessment.",
     ],
     symptoms: [
       "Tingling in the thumb, index and middle fingers, often at night",
@@ -741,6 +753,7 @@ export const expansionConditions: LiveCondition[] = [
         q: "Do I need a GP referral?",
         a: "No to book. Bring any existing letters. If wasting or severe weakness is present, medical review comes first.",
       },
+      clinics,
       ins,
     ],
   },

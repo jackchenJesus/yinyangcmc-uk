@@ -986,6 +986,12 @@ p  { margin: 0 0 1em; }
 .more-link::after { content: "→"; transition: transform var(--tx); }
 .more-link:hover { color: var(--navy); }
 .more-link:hover::after { transform: translateX(3px); }
+.more-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.15rem;
+  margin-top: 0.85rem;
+}
 
 /* ─── PRACTITIONER CARDS ─────────────────────────────── */
 .prac-card {
@@ -1815,12 +1821,14 @@ p  { margin: 0 0 1em; }
 }
 .cond-crumbs a:hover { color: var(--gold); }
 .cond-crumbs [aria-current="page"] { color: var(--gold); }
-.cond-copy a {
+.cond-copy a,
+.journey-step a {
   color: var(--teal);
   font-weight: 600;
   text-decoration: none;
 }
-.cond-copy a:hover { text-decoration: underline; }
+.cond-copy a:hover,
+.journey-step a:hover { text-decoration: underline; }
 .cond-sym-label {
   margin: 1.35rem 0 0;
   font-size: 0.76rem;

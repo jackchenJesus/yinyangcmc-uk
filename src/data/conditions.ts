@@ -40,6 +40,12 @@ export type LiveCondition = {
   imageAlt?: string;
   ogTitle?: string;
   ogDescription?: string;
+  introHeading?: string;
+  causesHeading?: string;
+  treatmentsHeading?: string;
+  expectHeading?: string;
+  heroSecondaryLabel?: string;
+  heroSecondaryHref?: string;
   expect?: { title: string; body: string }[];
   safety?: { intro: string; items: string[] };
   ctaHeading?: string;
@@ -66,12 +72,18 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "Mechanical, inflammatory and chronic lower-back pain — acupuncture, Tui Na and bone-setting as part of musculoskeletal care, not painkillers alone.",
-    title: "Back Pain Treatment Wimbledon & Reading | Yin Yang CMC",
+    title: "Back Pain Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture, Tui Na and bone-setting for back pain in Wimbledon and Reading. British Acupuncture Council registered. No GP referral needed.",
-    h1: "Back Pain Treatment in Wimbledon & Reading",
+      "Back pain treatment with acupuncture in Reading and Wimbledon. Assessment first for mechanical, nerve-related and longer-standing flare-ups.",
+    ogTitle: "Back Pain Treatment & Acupuncture | Reading & Wimbledon",
+    ogDescription:
+      "Acupuncture and manual therapy for back pain at our Reading and Wimbledon clinics. Assessment first — not a fixed package.",
+    introHeading: "Back pain, stiffness and what we assess",
+    treatmentsHeading: "Acupuncture, Tui Na and bone-setting for back pain",
+    ctaHeading: "Ready to book back pain treatment?",
+    h1: "Acupuncture for Back Pain in Reading & Wimbledon",
     eyebrow: "Conditions · Back Pain",
-    lede: "Painkillers manage the sensation. We assess the musculoskeletal picture — then provide acupuncture and manual therapy for back pain, tailored to your presentation.",
+    lede: "Painkillers manage the sensation. We assess the musculoskeletal picture, then use acupuncture and manual therapy for back pain at our Reading and Wimbledon clinics — tailored to your presentation.",
     image: "/images/back-assessment-treatment.webp",
     imageAlt: "Practitioner assessing a patient's back in clinic",
     heroImage: "/images/generated/back-pain-patient-hero.webp",
@@ -79,7 +91,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Back pain is one of the most common reasons people in the UK reduce activity, take time off work, or live with daily discomfort that gradually wears them down. It is a symptom with many drivers — not a single diagnosis.",
-      "Whether the pain sits in the lower back, mid-spine, or radiates into the hips, our practitioners combine classical TCM diagnosis with modern musculoskeletal assessment. Treatment is typically a combination of acupuncture, Tui Na and bone-setting, calibrated to your presentation — not a fixed package. If pain travels into a leg, we also assess for <a href=\"/conditions/sciatica-treatment\">sciatica</a>, a <a href=\"/conditions/herniated-disc\">herniated disc</a>, or a <a href=\"/conditions/pinched-nerve\">pinched nerve</a>. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
+      "Whether the pain sits in the lower back, mid-spine, or radiates into the hips, our practitioners combine classical TCM diagnosis with modern musculoskeletal assessment. Treatment is typically a combination of <a href=\"/clinical-services/acupuncture\">acupuncture</a>, <a href=\"/clinical-services/tui-na-massage\">Tui Na</a> and <a href=\"/clinical-services/bone-setting\">bone-setting</a>, calibrated to your presentation — not a fixed package. Appointments are at our <a href=\"/locations/reading-clinic\">Reading</a> and <a href=\"/locations/wimbledon-clinic\">Wimbledon</a> clinics. If pain travels into a leg, we also assess for <a href=\"/conditions/sciatica-treatment\">sciatica</a>, a <a href=\"/conditions/herniated-disc\">herniated disc</a>, or a <a href=\"/conditions/pinched-nerve\">pinched nerve</a>. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
     ],
     symptoms: [
       "Aching or stiffness that worsens with sitting or standing",
@@ -141,7 +153,7 @@ export const conditions: Condition[] = [
       },
       {
         q: "Is acupuncture useful for back pain?",
-        a: "Acupuncture is widely used as part of care for musculoskeletal back pain. It is not a replacement for emergency or surgical assessment where those are indicated. Your practitioner will be clear about what is appropriate for your presentation.",
+        a: "<a href=\"/clinical-services/acupuncture\">Acupuncture</a> is widely used as part of care for musculoskeletal back pain. It is not a replacement for emergency or surgical assessment where those are indicated. Your practitioner will be clear about what is appropriate for your presentation.",
       },
       {
         q: "Do you treat older or post-surgical patients?",
@@ -150,6 +162,10 @@ export const conditions: Condition[] = [
       {
         q: "Can I use health insurance?",
         a: "We are recognised by AXA Health, Vitality, Aviva and WPA. Coverage varies by policy — confirm with your insurer before the first visit.",
+      },
+      {
+        q: "Do you treat back pain in Reading and Wimbledon?",
+        a: "Yes. Appointments are at our <a href=\"/locations/reading-clinic\">Reading clinic</a> midweek and <a href=\"/locations/wimbledon-clinic\">Wimbledon clinic</a> on Saturday. WhatsApp to book — no GP referral needed.",
       },
     ],
   },
@@ -161,20 +177,31 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "Nerve-root and piriformis-related sciatica — sharp, burning or electric pain down the leg — acupuncture and manual therapy for the symptoms and the surrounding musculoskeletal picture.",
-    title: "Sciatica Treatment Wimbledon & Reading | Yin Yang CMC",
+    title: "Sciatica Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Sciatica treatment in Wimbledon and Reading. Acupuncture, Tui Na and bone-setting for nerve compression and radiating leg pain. No GP referral needed.",
-    h1: "Sciatica Treatment in Wimbledon & Reading",
+      "Sciatica treatment with acupuncture in Reading and Wimbledon. Assessment for sciatic nerve pain radiating down the leg. No GP referral needed.",
+    ogTitle: "Sciatica Treatment & Acupuncture | Reading & Wimbledon",
+    ogDescription:
+      "Sciatica treatment at Yin Yang CMC — assessment first, then acupuncture and manual therapy where appropriate. Reading midweek, Wimbledon Saturday.",
+    ctaHeading: "Ready to book sciatica treatment?",
+    introHeading: "Sciatica, sciatic nerve pain and pain down the leg",
+    causesHeading: "What can cause sciatica or pain radiating down the leg",
+    treatmentsHeading: "Acupuncture and TCM for sciatica",
+    expectHeading: "What a Yin Yang CMC appointment involves",
+    heroSecondaryLabel: "Contact the clinic",
+    heroSecondaryHref: "/contact",
+    h1: "Acupuncture for Sciatica in Reading & Wimbledon",
     eyebrow: "Conditions · Sciatica",
-    lede: "Sciatica is not just back pain. It is nerve pain travelling from the lower back through the buttock and down the leg. We provide acupuncture and traditional Chinese medicine approaches for sciatica symptoms.",
+    lede: "Sciatica is sciatic nerve pain — often felt as lower-back pain radiating down the leg. At our Reading and Wimbledon clinics we assess the likely source, then use acupuncture and traditional Chinese medicine as part of care. Suitability is decided at consultation.",
     image: "/images/sciatica-nerve-illustration.webp",
     imageAlt: "Illustration of sciatic nerve pain with manual therapy and herbal medicine",
     heroImage: "/images/generated/sciatica-patient-hero.webp",
     sectionImage: "/images/acupuncture-needles-back.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
-      "Sciatica describes pain from compression or irritation of the sciatic nerve — the longest nerve in the body, running from the lumbar spine through the buttock and down each leg to the foot. When compressed, pain signals can fire anywhere along that path.",
-      "People often describe this as a <a href=\"/conditions/trapped-nerve\">trapped nerve</a> or <a href=\"/conditions/pinched-nerve\">pinched nerve</a>. Treatment depends on which structure is irritating the nerve — <a href=\"/conditions/herniated-disc\">disc</a>, canal, facet, or <a href=\"/conditions/piriformis-syndrome\">piriformis</a> — and on the TCM pattern maintaining the presentation. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
+      "Sciatica describes pain from irritation or compression of the sciatic nerve — running from the lower back through the buttock and down the leg, sometimes to the calf or foot. It is often felt as sciatic nerve pain, or as lower-back pain that travels down the leg. Sitting, standing up, coughing or walking can all stir it.",
+      "The useful question is not the search term. It is which structure is irritating the nerve — a <a href=\"/conditions/herniated-disc\">herniated disc</a>, the <a href=\"/conditions/piriformis-syndrome\">piriformis</a>, or a <a href=\"/conditions/pinched-nerve\">pinched</a> / <a href=\"/conditions/trapped-nerve\">trapped nerve</a> picture — and what that means for movement, sleep and work. New bladder or bowel change, saddle numbness, or rapidly worsening leg weakness needs urgent NHS or emergency assessment first.",
+      "Where treatment is appropriate, we typically combine <a href=\"/clinical-services/acupuncture\">acupuncture</a> with <a href=\"/clinical-services/tui-na-massage\">Tui Na</a>, and <a href=\"/clinical-services/bone-setting\">bone-setting</a> if joint restriction is part of the picture. The mix is chosen after assessment at our <a href=\"/locations/reading-clinic\">Reading</a> or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a> clinic — not from a fixed sciatica package. Fees and insurer recognition are on <a href=\"/pricing-and-insurance\">Pricing &amp; Insurance</a>.",
     ],
     symptoms: [
       "Sharp, electric or burning pain down one leg",
@@ -234,22 +261,53 @@ export const conditions: Condition[] = [
       },
     ],
     related: ["back-pain", "piriformis-syndrome", "herniated-disc"],
+    expect: [
+      {
+        title: "History and examination",
+        body: "We map where the pain starts, where it travels, and what sitting, standing or coughing does to it. Bring any MRI or GP letters if you have them — useful, not required.",
+      },
+      {
+        title: "Plan, then treatment",
+        body: "Your practitioner explains which structures seem relevant and which modalities they propose. Treatment often begins in the same session where it is appropriate.",
+      },
+      {
+        title: "Review the response",
+        body: "Change is reviewed visit by visit. We do not prescribe a fixed package in advance, and we will say if medical imaging or a GP review is the safer next step.",
+      },
+    ],
+    safety: {
+      intro: "Chinese medicine is not a substitute for urgent NHS or emergency care. Seek medical assessment promptly if you notice:",
+      items: [
+        "New bladder or bowel change with back or leg pain",
+        "Saddle numbness or rapidly worsening leg weakness",
+        "Symptoms after a major fall or accident",
+        "Unexplained fever, night sweats or unplanned weight loss with back pain",
+      ],
+    },
     faqs: [
       {
         q: "How do I know if it is sciatica or ordinary back pain?",
-        a: "Pain that stays in the back or hip is more often muscular or joint-related. True sciatica follows the nerve path — frequently past the knee into the calf or foot, sometimes with numbness or tingling. We assess both presentations at the first appointment.",
+        a: "Pain that stays in the back or hip is more often muscular or joint-related. Sciatic nerve pain follows the nerve path — frequently past the knee into the calf or foot, sometimes with numbness or tingling. Lower-back pain radiating down the leg is assessed at the first appointment; we do not treat a search term.",
       },
       {
-        q: "How many sessions will I need?",
-        a: "Many patients notice change within 4–6 sessions. Acute cases can respond faster. Chronic or disc-related presentations are reviewed over a longer course. We reassess after every session.",
+        q: "Can acupuncture help sciatica?",
+        a: "Acupuncture is widely used as part of care for sciatica and sciatic nerve pain. It may help with pain signalling and muscle guarding around the affected pathway. It is not a replacement for emergency, surgical or specialist assessment where those are indicated. Suitability is decided at consultation — see our <a href=\"/clinical-services/acupuncture\">acupuncture</a> page.",
+      },
+      {
+        q: "How many sessions might I need?",
+        a: "Acute presentations sometimes change within a few visits. Longer-standing or disc-related sciatica is typically reviewed over a longer course. Your practitioner will give a realistic timeline at the first appointment and adjust it according to your response. We do not promise a set number of sessions.",
       },
       {
         q: "Can I have treatment if I already have an MRI?",
         a: "Yes. Bring any imaging you have — it is useful but not required. TCM assessment adds a pattern-based layer imaging does not show, and helps shape the treatment plan.",
       },
       {
-        q: "Do you treat sciatica at both clinics?",
-        a: "Yes. Reading (Mon / Wed / Fri) and Wimbledon (Saturday). Same practitioners and protocol at both.",
+        q: "Do you treat sciatica in Reading and Wimbledon?",
+        a: "Yes. Sciatica treatment is available at our <a href=\"/locations/reading-clinic\">Reading clinic</a> (Monday, Wednesday and Friday) and <a href=\"/locations/wimbledon-clinic\">Wimbledon clinic</a> (Saturday). Same practitioners at both. WhatsApp to book — no GP referral needed.",
+      },
+      {
+        q: "Can I claim through health insurance?",
+        a: "We are recognised by AXA Health, Vitality, Aviva and WPA. Cover depends on your policy and usually relates to eligible acupuncture treatment. Confirm with your insurer before the first visit — details are on our <a href=\"/pricing-and-insurance\">Pricing &amp; Insurance</a> page.",
       },
     ],
   },
@@ -261,24 +319,35 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "Rotator cuff strain, impingement and postural shoulder pain — identified at source before treatment, including pain referred from the neck.",
-    title: "Shoulder Pain Treatment Wimbledon & Reading | Yin Yang CMC",
+    title: "Shoulder Pain Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Shoulder pain treatment in Wimbledon and Reading. Acupuncture, Tui Na, bone-setting and cupping for rotator cuff, impingement and postural strain.",
-    h1: "Shoulder Pain Treatment in Wimbledon & Reading",
+      "Shoulder pain treatment with acupuncture in Reading and Wimbledon — rotator cuff strain, pain when lifting the arm, and neck-referred ache.",
+    ogTitle: "Shoulder Pain Treatment & Acupuncture | Reading & Wimbledon",
+    ogDescription:
+      "Assessment for rotator cuff, shoulder-blade and neck-referred shoulder pain, then acupuncture and manual therapy where appropriate.",
+    ctaHeading: "Ready to book shoulder pain treatment?",
+    introHeading: "Shoulder pain, rotator cuff strain and referred pain",
+    causesHeading: "Why the shoulder hurts when you lift the arm",
+    treatmentsHeading: "Acupuncture and TCM for shoulder pain",
+    expectHeading: "What a Yin Yang CMC appointment involves",
+    heroSecondaryLabel: "Contact the clinic",
+    heroSecondaryHref: "/contact",
+    h1: "Acupuncture for Shoulder Pain in Reading & Wimbledon",
     eyebrow: "Conditions · Shoulder Pain",
-    lede: "Pain lifting the arm, reaching overhead, or lying on that side is rarely 'just stiffness'. We identify whether the source is the cuff, the joint, or the neck — then treat that.",
+    lede: "Pain when lifting the arm, aching around the shoulder blade, or stiffness after desk work is rarely “just a tight shoulder”. We assess whether the picture is rotator cuff strain, referred neck pain, or something else — then use acupuncture and manual therapy where that picture fits.",
     image: "/images/shoulder-pain-symptom.webp",
     imageAlt: "Woman holding her shoulder, with the joint highlighted to show pain",
     heroImage: "/images/generated/shoulder-pain-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
-    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
+    sectionImage: "/images/shoulder-pain-symptom.webp",
+    sectionImageAlt: "Woman holding her shoulder, with the joint highlighted to show pain",
     intro: [
-      "The shoulder is the most mobile joint in the body — held by the rotator cuff, tendons and ligaments rather than a deep bony socket. That mobility makes it prone to strain, inflammation and restriction from posture, overuse, sport and gym training.",
-      "Shoulder pain can also be referred from the <a href=\"/conditions/neck-pain\">neck</a>, or signal <a href=\"/conditions/frozen-shoulder\">frozen shoulder</a> or impingement. A <a href=\"/conditions/trapped-nerve\">trapped nerve</a> in the neck can be felt across the shoulder. Identifying the likely source is essential before treatment begins. Painkillers manage discomfort; they do not address how the joint is moving.",
+      "The shoulder is held more by the rotator cuff, tendons and ligaments than by a deep bony socket. That mobility makes it prone to strain, inflammation and restriction from posture, overuse, sport and gym training. Pain when lifting the arm, an ache around the shoulder blade, or stiffness after desk work is a symptom — not yet a diagnosis.",
+      "Shoulder pain can also be referred from the <a href=\"/conditions/neck-pain\">neck</a>, or signal <a href=\"/conditions/frozen-shoulder\">frozen shoulder</a> or impingement. A <a href=\"/conditions/trapped-nerve\">trapped nerve</a> in the neck can be felt across the shoulder or under the blade. Identifying the likely source is the first job. Painkillers manage discomfort; they do not address how the joint is moving.",
+      "Where treatment is appropriate, we typically combine <a href=\"/clinical-services/acupuncture\">acupuncture</a> with <a href=\"/clinical-services/tui-na-massage\">Tui Na</a>, and <a href=\"/clinical-services/bone-setting\">bone-setting</a> if joint or scapular restriction is part of the picture. Appointments are at <a href=\"/locations/reading-clinic\">Reading</a> or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a>. Suitability is decided at consultation — not from a webpage. See <a href=\"/pricing-and-insurance\">Pricing &amp; Insurance</a> for fees.",
     ],
     symptoms: [
       "Sharp pain when lifting the arm or reaching overhead",
-      "Aching across the shoulder and upper back",
+      "Aching across the shoulder, shoulder blade or upper back",
       "Pain that wakes you when lying on that side",
       "Stiff, restricted movement or catching on certain angles",
       "Neck and shoulder pain together",
@@ -286,7 +355,7 @@ export const conditions: Condition[] = [
     causes: [
       {
         title: "Rotator cuff strain & tendinopathy",
-        body: "Strain or tearing of the tendons that stabilise the shoulder. Common after lifting, sport, or repetitive overhead movement.",
+        body: "Strain or irritation of the tendons that stabilise the shoulder — often described as rotator cuff pain or shoulder tendinitis. Common after lifting, sport, or repetitive overhead movement.",
       },
       {
         title: "Shoulder impingement",
@@ -333,23 +402,54 @@ export const conditions: Condition[] = [
         body: "Recurrent, weaker shoulder with slower recovery — more common in longer-standing or age-related presentations.",
       },
     ],
-    related: ["frozen-shoulder", "neck-pain", "tennis-elbow"],
+    related: ["frozen-shoulder", "neck-pain", "trapped-nerve"],
+    expect: [
+      {
+        title: "Where it hurts, what you cannot do",
+        body: "We look at lifting, reaching, lying on that side, and whether the neck or shoulder blade is involved. Bring any scan or physio letters if you have them.",
+      },
+      {
+        title: "Plan, then treatment",
+        body: "Your practitioner explains whether the picture looks more like rotator cuff strain, impingement, referred neck pain or <a href=\"/conditions/frozen-shoulder\">frozen shoulder</a>, and which modalities they propose.",
+      },
+      {
+        title: "Review the response",
+        body: "Change is reviewed visit by visit. We do not prescribe a fixed package, and we will say if a GP or imaging review is the safer next step.",
+      },
+    ],
+    safety: {
+      intro: "Chinese medicine is not a substitute for urgent NHS or emergency care. Seek medical assessment promptly if you notice:",
+      items: [
+        "Sudden inability to lift the arm after a fall or wrenching injury",
+        "A visibly deformed joint, or pain with fever after recent surgery",
+        "New arm weakness, or numbness spreading into the hand",
+        "Unexplained swelling, redness or night pain that is getting rapidly worse",
+      ],
+    },
     faqs: [
       {
         q: "Is this frozen shoulder or a rotator cuff problem?",
-        a: "With a rotator cuff injury, someone else can usually still lift your arm (passive movement is preserved). With frozen shoulder, the joint is restricted in both active and passive movement. We distinguish this at consultation — the treatment plan is not the same.",
+        a: "With rotator cuff pain, someone else can usually still lift your arm (passive movement is often preserved). With <a href=\"/conditions/frozen-shoulder\">frozen shoulder</a>, the joint is restricted in both active and passive movement. We distinguish this at consultation — the treatment plan is not the same.",
       },
       {
-        q: "How many sessions will I need?",
-        a: "Many patients notice improvement within 4–6 sessions. Acute strain often responds faster. Frozen shoulder follows a longer timeline. We reassess after every visit.",
+        q: "Can acupuncture help shoulder pain?",
+        a: "Acupuncture is widely used as part of care for musculoskeletal shoulder pain, including rotator cuff strain and postural loading. It may help with pain signalling and muscle guarding. It is not a replacement for orthopaedic assessment where that is indicated. Suitability is decided at consultation — see our <a href=\"/clinical-services/acupuncture\">acupuncture</a> page.",
+      },
+      {
+        q: "The pain is more in my shoulder blade — does that still count?",
+        a: "Yes, that is a common presentation. Pain under or around the shoulder blade may be local muscle and scapular load, or referred from the <a href=\"/conditions/neck-pain\">neck</a>. We assess both rather than treating the sore spot in isolation.",
+      },
+      {
+        q: "Do you treat neck and shoulder pain together?",
+        a: "Yes. If the pain travels with neck stiffness, or a <a href=\"/conditions/trapped-nerve\">trapped nerve</a> picture is possible, we assess the cervical spine as a source rather than treating the shoulder alone.",
       },
       {
         q: "Can I continue going to the gym?",
         a: "Often yes, with modification. Your practitioner will advise which movements to pause and which to keep so the tendon or joint can settle without full deconditioning.",
       },
       {
-        q: "Do you treat neck-related shoulder pain?",
-        a: "Yes. If the pain travels with neck stiffness, we assess the cervical spine as a possible source rather than treating the shoulder in isolation.",
+        q: "Do you treat shoulder pain in Reading and Wimbledon?",
+        a: "Yes. Appointments are at our <a href=\"/locations/reading-clinic\">Reading clinic</a> midweek and <a href=\"/locations/wimbledon-clinic\">Wimbledon clinic</a> on Saturday. WhatsApp to book — no GP referral needed. Fees are on <a href=\"/pricing-and-insurance\">Pricing &amp; Insurance</a>.",
       },
     ],
   },
@@ -361,20 +461,31 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "Adhesive capsulitis — progressive pain then stiffness. Acupuncture, Tui Na and bone-setting for frozen shoulder symptoms across a course that can otherwise last many months.",
-    title: "Frozen Shoulder Treatment Wimbledon & Reading | Yin Yang CMC",
+    title: "Frozen Shoulder Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Frozen shoulder (adhesive capsulitis) treatment in Wimbledon and Reading. Acupuncture, Tui Na and bone-setting for pain and restricted movement.",
-    h1: "Frozen Shoulder Treatment in Wimbledon & Reading",
+      "Frozen shoulder (adhesive capsulitis) care with acupuncture in Reading and Wimbledon. Pain and restricted movement after assessment — no set timeline.",
+    ogTitle: "Frozen Shoulder Treatment & Acupuncture | Reading & Wimbledon",
+    ogDescription:
+      "Assessment-led frozen shoulder treatment with acupuncture and manual therapy. Reading midweek, Wimbledon Saturday.",
+    ctaHeading: "Ready to book frozen shoulder treatment?",
+    introHeading: "What frozen shoulder feels like",
+    causesHeading: "Why the shoulder can lock",
+    treatmentsHeading: "Acupuncture and manual therapy for frozen shoulder",
+    expectHeading: "What a Yin Yang CMC appointment involves",
+    heroSecondaryLabel: "Contact the clinic",
+    heroSecondaryHref: "/contact",
+    h1: "Acupuncture for Frozen Shoulder in Reading & Wimbledon",
     eyebrow: "Conditions · Frozen Shoulder",
-    lede: "The joint locks gradually — first with sharp pain, then with stiffness that makes lifting, reaching and sleeping difficult. We treat both the inflammation and the adhesion.",
+    lede: "Frozen shoulder treatment starts with the stage you are in — painful freezing, a locked joint, or slow thawing. We use acupuncture and manual therapy to support pain and usable range. There is no guaranteed timeline.",
     image: "/images/shoulder-pain-holding-shoulder.webp",
     imageAlt: "Woman holding her left shoulder, with a highlight showing pain",
     heroImage: "/images/generated/frozen-shoulder-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
-    sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
+    sectionImage: "/images/shoulder-pain-holding-shoulder.webp",
+    sectionImageAlt: "Woman holding her left shoulder, with a highlight showing pain",
     intro: [
-      "Frozen shoulder — adhesive capsulitis — occurs when the joint capsule becomes inflamed, then thickens and tightens. Range of motion is restricted in all directions. Most patients cannot lift the arm, reach behind the back, or dress without pain. It is a different picture from ordinary <a href=\"/conditions/shoulder-pain\">shoulder pain</a> or stiffness that mainly sits in the <a href=\"/conditions/neck-pain\">neck</a>.",
-      "Night pain that disrupts sleep is a hallmark. Without treatment, the natural course can take 18 months to 3 years. Early care is aimed at supporting usable range sooner. Painkillers manage symptoms; they do not restore range of motion on their own.",
+      "Frozen shoulder — adhesive capsulitis — occurs when the joint capsule becomes inflamed, then thickens and tightens. Range of motion is restricted in all directions. Most people cannot lift the arm, reach behind the back, or dress without pain. Night pain that disrupts sleep is a hallmark. It is a different picture from ordinary <a href=\"/conditions/shoulder-pain\">shoulder pain</a> or stiffness that mainly sits in the <a href=\"/conditions/neck-pain\">neck</a>.",
+      "Without treatment, the natural course is often long — commonly described in months to years, with residual stiffness in some people. Painkillers manage symptoms; they do not restore range of motion on their own. Early care is aimed at supporting usable range sooner, not at promising a shorter course.",
+      "Where treatment is appropriate, we typically combine <a href=\"/clinical-services/acupuncture\">acupuncture</a> with <a href=\"/clinical-services/tui-na-massage\">Tui Na</a>, and <a href=\"/clinical-services/bone-setting\">bone-setting</a> once inflammation has settled enough for mobilisation. Appointments are at <a href=\"/locations/reading-clinic\">Reading</a> or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a>. Suitability is decided at consultation. See <a href=\"/pricing-and-insurance\">Pricing &amp; Insurance</a> for fees.",
     ],
     symptoms: [
       "Pain when lifting the arm",
@@ -394,7 +505,7 @@ export const conditions: Condition[] = [
       },
       {
         title: "Systemic risk",
-        body: "Diabetic patients are 2–4× more likely to develop frozen shoulder. Thyroid disorders also increase risk.",
+        body: "Diabetes is a recognised risk factor for frozen shoulder. Thyroid disorders are also associated with a higher risk. We take this history at consultation; it does not on its own decide the treatment plan.",
       },
     ],
     treatments: [
@@ -434,22 +545,53 @@ export const conditions: Condition[] = [
       },
     ],
     related: ["shoulder-pain", "neck-pain", "sports-injuries"],
+    expect: [
+      {
+        title: "Which stage, which restriction",
+        body: "We look at pain versus stiffness, active and passive range, and what dressing, reaching and sleep currently look like. Bring any scan or specialist letters if you have them.",
+      },
+      {
+        title: "Plan, then treatment",
+        body: "Your practitioner explains whether this looks like frozen shoulder rather than rotator cuff pain, and which modalities they propose for the stage you are in.",
+      },
+      {
+        title: "Review the response",
+        body: "Frozen shoulder is reviewed over a course, not a single visit. We do not prescribe a fixed package, and we will say if a GP or orthopaedic review is the safer next step.",
+      },
+    ],
+    safety: {
+      intro: "Chinese medicine is not a substitute for urgent NHS or emergency care. Seek medical assessment promptly if you notice:",
+      items: [
+        "Sudden inability to move the arm after a fall or dislocation",
+        "A hot, swollen joint, or pain with fever",
+        "New arm weakness or numbness spreading into the hand",
+        "Unexplained weight loss or night pain that is getting rapidly worse",
+      ],
+    },
     faqs: [
       {
         q: "Which stage of frozen shoulder am I in?",
-        a: "Freezing (2–9 months): pain rising, movement shrinking week by week. Frozen (4–12 months): pain may plateau but stiffness is worst. Thawing (6–24 months): movement gradually returns. Treatment emphasis changes at each stage — we assess this at the first visit.",
+        a: "Freezing: pain rising, movement shrinking week by week. Frozen: pain may plateau but stiffness is worst. Thawing: movement gradually returns. Treatment emphasis changes at each stage — we assess this at the first visit rather than assigning a stage from a webpage.",
       },
       {
         q: "How is frozen shoulder different from rotator cuff injury?",
-        a: "A rotator cuff injury usually still allows passive movement — someone else can lift your arm. With frozen shoulder the joint is locked both ways. That distinction changes the treatment plan.",
+        a: "A rotator cuff injury usually still allows passive movement — someone else can lift your arm. With frozen shoulder the joint is locked both ways. That distinction changes the treatment plan. See also our <a href=\"/conditions/shoulder-pain\">shoulder pain</a> page.",
+      },
+      {
+        q: "What does frozen shoulder treatment involve here?",
+        a: "Usually a combination of <a href=\"/clinical-services/acupuncture\">acupuncture</a> with <a href=\"/clinical-services/tui-na-massage\">Tui Na</a>, and bone-setting if joint mobilisation is appropriate for the stage. The mix is chosen after assessment. We do not claim to shorten every case to a set number of weeks.",
       },
       {
         q: "Will it resolve on its own?",
-        a: "It can, but the natural course is often 18 months to 3 years, and residual stiffness is common. Treatment is aimed at supporting usable range sooner across that course.",
+        a: "It can, but the natural course is often long, and residual stiffness is common. Treatment is aimed at supporting usable range sooner across that course — not at guaranteeing a shorter recovery.",
+      },
+      {
+        q: "Do you treat frozen shoulder in Reading and Wimbledon?",
+        a: "Yes. Appointments are at our <a href=\"/locations/reading-clinic\">Reading clinic</a> midweek and <a href=\"/locations/wimbledon-clinic\">Wimbledon clinic</a> on Saturday. WhatsApp to book — no GP referral needed.",
       },
       {
         q: "Can I claim through health insurance?",
-        a: "We are recognised by AXA Health, Vitality, Aviva and WPA. Check your policy terms before booking.",
+        a: "We are recognised by AXA Health, Vitality, Aviva and WPA. Cover depends on your policy and usually relates to eligible acupuncture. Check your policy terms before booking — details are on <a href=\"/pricing-and-insurance\">Pricing &amp; Insurance</a>.",
       },
     ],
   },
@@ -461,12 +603,18 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "Acute strain, overuse and lingering sports injuries — acupuncture, Tui Na and bone-setting as an adjunct to training, not a replacement for sports medicine.",
-    title: "Sports Injury Treatment Wimbledon & Reading | Yin Yang CMC",
+    title: "Sports Injury Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Sports injury treatment in Wimbledon and Reading. Acupuncture, Tui Na and bone-setting for strains, overuse injuries and stalled recovery. No GP referral needed.",
-    h1: "Sports Injury Treatment in Wimbledon & Reading",
+      "Sports injury treatment with acupuncture in Reading and Wimbledon. Strains, overuse injuries and stalled recovery after assessment.",
+    ogTitle: "Sports Injury Treatment & Acupuncture | Reading & Wimbledon",
+    ogDescription:
+      "Acupuncture and manual therapy for sports strains, overuse injuries and stalled recovery at our Reading and Wimbledon clinics.",
+    introHeading: "Sports injuries, overuse and stalled recovery",
+    treatmentsHeading: "Acupuncture, Tui Na and bone-setting for sports injuries",
+    ctaHeading: "Ready to book sports injury treatment?",
+    h1: "Acupuncture for Sports Injuries in Reading & Wimbledon",
     eyebrow: "Conditions · Sports Injuries",
-    lede: "You trained. Now the knee catches on the stairs, the shoulder pulls overhead, or the lower back seizes after a run. We treat the tissue and the compensation pattern — not only the sore spot.",
+    lede: "You trained. Now the knee catches on the stairs, the shoulder pulls overhead, or the lower back seizes after a run. We use acupuncture and manual therapy for the tissue and the compensation pattern — not only the sore spot.",
     image: "/images/knee-assessment-clinic.webp",
     imageAlt: "Practitioner examining a patient's knee in clinic",
     heroImage: "/images/sports-injuries-hero.webp",
@@ -474,7 +622,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Sports injuries range from acute trauma to cumulative overuse. Rest and anti-inflammatories often settle symptoms without restoring full biomechanical function. That gap is where TCM is used as a parallel clinical system — tissue care, pain modulation and joint mobility — not as a replacement for sports medicine or imaging where those are needed.",
-      "Plans are built around your sport, training volume and recovery window. <a href=\"/conditions/knee-pain\">Knee pain</a>, <a href=\"/conditions/hip-pain\">hip pain</a> and <a href=\"/conditions/back-pain\">lower-back pain</a> are assessed as part of the same chain, not as isolated sore spots.",
+      "Plans are built around your sport, training volume and recovery window. We typically combine <a href=\"/clinical-services/acupuncture\">acupuncture</a> with <a href=\"/clinical-services/tui-na-massage\">Tui Na</a>, and <a href=\"/clinical-services/bone-setting\">bone-setting</a> if joint restriction is feeding compensation. Appointments are at <a href=\"/locations/reading-clinic\">Reading</a> or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a>. <a href=\"/conditions/knee-pain\">Knee pain</a>, <a href=\"/conditions/hip-pain\">hip pain</a> and <a href=\"/conditions/back-pain\">lower-back pain</a> are assessed as part of the same chain, not as isolated sore spots.",
     ],
     symptoms: [
       "Muscle strain or ligament sprain that is slow to settle",
@@ -546,6 +694,10 @@ export const conditions: Condition[] = [
         q: "Do you only treat competitive athletes?",
         a: "No. Club tennis, parkrun, gym training and weekend cycling are the majority of the caseload. The clinical approach is the same: assessment first, then a targeted treatment plan.",
       },
+      {
+        q: "Do you treat sports injuries in Reading and Wimbledon?",
+        a: "Yes. Book at our <a href=\"/locations/reading-clinic\">Reading clinic</a> midweek or <a href=\"/locations/wimbledon-clinic\">Wimbledon clinic</a> on Saturday. Bring any MRI, ultrasound or X-ray reports if you have them.",
+      },
     ],
   },
 
@@ -558,14 +710,16 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "Nerve compression in the neck, shoulder or back — pain, tingling or numbness assessed before acupuncture and manual therapy.",
-    title: "Pinched Nerve Treatment in Reading & Wimbledon | Yin Yang CMC",
+    title: "Pinched Nerve Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture and Chinese medicine for pinched nerve pain in Reading and Wimbledon. Assessment for nerve compression in the neck, shoulder or back. No GP referral needed.",
-    ogTitle: "Pinched Nerve Treatment | Reading & Wimbledon",
+      "Pinched nerve treatment with acupuncture in Reading and Wimbledon. Assessment for compression in the neck, shoulder or back — suitability decided at consultation.",
+    ogTitle: "Pinched Nerve Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Assessment and acupuncture-led care for pinched nerve symptoms — pain, tingling or numbness from nerve compression. Suitability decided at consultation.",
     ctaHeading: "Ready to book pinched nerve treatment?",
-    h1: "Pinched Nerve Treatment in Reading & Wimbledon",
+    introHeading: "Pinched nerve pain, tingling and compression",
+    treatmentsHeading: "Acupuncture and TCM for a pinched nerve",
+    h1: "Acupuncture for Pinched Nerve in Reading & Wimbledon",
     eyebrow: "Conditions · Pinched Nerve",
     lede: "A pinched nerve is a compression problem — pain, tingling or numbness where a nerve is under pressure. We assess the likely site, then use acupuncture and manual therapy as part of care. Suitability is decided at consultation.",
     image: "/images/sciatica-nerve-illustration.webp",
@@ -576,6 +730,7 @@ export const conditions: Condition[] = [
     intro: [
       "“Pinched nerve” describes irritation or compression of a nerve — often in the neck, shoulder girdle or lower back. The nerve itself is not always the only structure involved: nearby joints, discs and tight muscle can all reduce the space a nerve has to move.",
       "Typical symptoms include pain, tingling, numbness or a radiating ache along the nerve’s path. This page cannot tell you which structure is responsible. In the UK the same picture is often called a <a href=\"/conditions/trapped-nerve\">trapped nerve</a>; we keep that page for location-led questions (neck, shoulder or back) and this one for compression and treatment options. Disc-related back pain is covered separately under <a href=\"/conditions/herniated-disc\">herniated disc</a>.",
+      "Where treatment is appropriate, we typically combine <a href=\"/clinical-services/acupuncture\">acupuncture</a> with <a href=\"/clinical-services/tui-na-massage\">Tui Na</a>, and bone-setting if joint restriction is part of the picture. The mix is chosen after assessment at our <a href=\"/locations/reading-clinic\">Reading</a> or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a> clinic — not from a fixed package.",
     ],
     symptoms: [
       "Sharp, burning or aching pain in the neck, shoulder or back",
@@ -692,16 +847,18 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "UK term for radiating neck, shoulder or back nerve pain — assessment first, then acupuncture and Tui Na if appropriate.",
-    title: "Trapped Nerve in the Neck, Shoulder or Back | Yin Yang CMC",
+    title: "Trapped Nerve Treatment & Acupuncture | Neck, Shoulder or Back",
     description:
-      "Treatment for a trapped nerve in the neck, shoulder or back at our Reading and Wimbledon clinics. Acupuncture and Tui Na after assessment. No GP referral needed.",
-    ogTitle: "Trapped Nerve Treatment | Neck, Shoulder or Back",
+      "Acupuncture for a trapped nerve in the neck, shoulder or back. Reading and Wimbledon clinics. Assessment first, then treatment only where appropriate.",
+    ogTitle: "Trapped Nerve Treatment & Acupuncture | Neck, Shoulder or Back",
     ogDescription:
       "If pain shoots from the neck, shoulder or back into an arm or leg, the next step is assessment. Book at Reading or Wimbledon — no GP referral needed.",
     ctaHeading: "Ready to book for a trapped nerve?",
-    h1: "Treatment for a Trapped Nerve",
+    introHeading: "A trapped nerve in the neck, shoulder or back",
+    treatmentsHeading: "Acupuncture, Tui Na and cupping for a trapped nerve",
+    h1: "Acupuncture for a Trapped Nerve in Reading & Wimbledon",
     eyebrow: "Conditions · Trapped Nerve",
-    lede: "In the UK, “trapped nerve” usually means pain that shoots from the neck, shoulder or back into the arm or leg. The next step is assessment — not guessing the structure from a webpage.",
+    lede: "In the UK, “trapped nerve” usually means pain that shoots from the neck, shoulder or back into the arm or leg. The next step is assessment — then acupuncture and manual therapy only where they are appropriate.",
     image: "/images/shoulder-pain-symptom.webp",
     imageAlt: "Woman holding her shoulder, with the joint highlighted to show pain",
     heroImage: "/images/generated/trapped-nerve-patient-hero.webp",
@@ -709,7 +866,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People search for a trapped nerve in the neck, a trapped nerve in the shoulder, or a trapped nerve in the back because that is how the pain presents in daily life — turning to check a blind spot, reaching for a seatbelt, sitting at a desk, or getting out of a chair. The useful clinical question is not the label. It is where the symptoms start, where they travel, and what they do to sleep, work and movement.",
-      "If you want the compression-mechanism explanation, that sits on our <a href=\"/conditions/pinched-nerve\">pinched nerve</a> page. Here the focus is what to do next: a structured consultation at <a href=\"/locations/reading-clinic\">Reading</a> or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a>, and treatment only where it is appropriate. Neck-and-shoulder presentations are often assessed alongside <a href=\"/conditions/neck-pain\">neck pain</a> and <a href=\"/conditions/shoulder-pain\">shoulder pain</a>.",
+      "If you want the compression-mechanism explanation, that sits on our <a href=\"/conditions/pinched-nerve\">pinched nerve</a> page. Here the focus is what to do next: a structured consultation at <a href=\"/locations/reading-clinic\">Reading</a> or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a>, then <a href=\"/clinical-services/acupuncture\">acupuncture</a> and <a href=\"/clinical-services/tui-na-massage\">Tui Na</a> only where they are appropriate. Neck-and-shoulder presentations are often assessed alongside <a href=\"/conditions/neck-pain\">neck pain</a> and <a href=\"/conditions/shoulder-pain\">shoulder pain</a>.",
     ],
     symptoms: [
       "Pain starting in the neck and travelling into the shoulder, arm or hand",
@@ -826,15 +983,17 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "Cervical stiffness, desk-related neck pain and pain referring into the shoulder or arm — acupuncture, Tui Na and Gua Sha after assessment.",
-    title: "Neck Pain Treatment Reading & Wimbledon | Yin Yang CMC",
+    title: "Neck Pain Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture, Tui Na and Gua Sha for neck pain, stiffness and neck-and-shoulder tension in Reading and Wimbledon. British Acupuncture Council registered.",
-    ogTitle: "Neck Pain Treatment | Reading & Wimbledon",
+      "Neck pain treatment with acupuncture in Reading and Wimbledon. Desk stiffness and pain into the shoulder assessed together. No GP referral needed.",
+    ogTitle: "Neck Pain Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Stiff neck, desk tension or pain into the shoulder. Assessed and treated with acupuncture and manual therapy at our two UK clinics.",
-    h1: "Neck Pain Treatment — Reading & Wimbledon",
+    introHeading: "Neck pain, stiffness and neck-and-shoulder tension",
+    treatmentsHeading: "Acupuncture, Tui Na and Gua Sha for neck pain",
+    h1: "Acupuncture for Neck Pain in Reading & Wimbledon",
     eyebrow: "Conditions · Neck Pain",
-    lede: "Stiff neck, desk tension, or pain that spreads into the shoulder is common — and often mixed. We assess the neck and the shoulder girdle together, then treat accordingly.",
+    lede: "Stiff neck, desk tension, or pain that spreads into the shoulder is common — and often mixed. We assess the neck and the shoulder girdle together, then use acupuncture and manual therapy accordingly.",
     image: "/images/tui-na-massage-treatment.webp",
     imageAlt: "Practitioner using Tui Na manual therapy on a patient’s upper back",
     heroImage: "/images/generated/neck-pain-patient-hero.webp",
@@ -842,7 +1001,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Neck pain ranges from a stiff neck after sleep to a chronic ache that builds through the working day. Many people also feel it across the shoulders or into the upper back. Muscular neck pain, postural loading and joint stiffness often overlap — which is why a single stretch or heat pack is not always enough.",
-      "We commonly combine <a href=\"/clinical-services/acupuncture\">acupuncture</a> with <a href=\"/clinical-services/tui-na-massage\">Tui Na</a>. Where nerve-type symptoms travel into an arm, we also consider a <a href=\"/conditions/pinched-nerve\">pinched nerve</a> or <a href=\"/conditions/trapped-nerve\">trapped nerve</a> picture. Local shoulder joint pain is covered on our <a href=\"/conditions/shoulder-pain\">shoulder pain</a> page.",
+      "We commonly combine <a href=\"/clinical-services/acupuncture\">acupuncture</a> with <a href=\"/clinical-services/tui-na-massage\">Tui Na</a> at our <a href=\"/locations/reading-clinic\">Reading</a> and <a href=\"/locations/wimbledon-clinic\">Wimbledon</a> clinics. Where nerve-type symptoms travel into an arm, we also consider a <a href=\"/conditions/pinched-nerve\">pinched nerve</a> or <a href=\"/conditions/trapped-nerve\">trapped nerve</a> picture. Local shoulder joint pain is covered on our <a href=\"/conditions/shoulder-pain\">shoulder pain</a> page.",
     ],
     symptoms: [
       "Stiffness when turning to look over a shoulder",
@@ -959,16 +1118,18 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "Slipped disc and disc-related back pain — acupuncture and manual therapy for symptoms, not a claim to physically repair the disc.",
-    title: "Herniated Disc & Slipped Disc Treatment | Yin Yang CMC",
+    title: "Slipped Disc Pain & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture and Chinese medicine for herniated disc and slipped disc symptoms in Reading and Wimbledon. Care for disc-related back pain and sciatica-type symptoms after assessment.",
-    ogTitle: "Slipped Disc & Herniated Disc Treatment | Yin Yang CMC",
+      "Acupuncture for herniated and slipped disc symptoms in Reading and Wimbledon. Care for disc-related back pain — not a claim to repair the disc.",
+    ogTitle: "Slipped Disc Pain & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "UK patients often say slipped disc. We treat the pain and movement limitation — we do not claim to put a disc back in place.",
     ctaHeading: "Ready to book slipped disc treatment?",
-    h1: "Herniated Disc and Slipped Disc Treatment",
+    introHeading: "Herniated disc, slipped disc and disc-related back pain",
+    treatmentsHeading: "Acupuncture and TCM for disc-related back pain",
+    h1: "Acupuncture for Herniated Disc in Reading & Wimbledon",
     eyebrow: "Conditions · Herniated Disc",
-    lede: "“Slipped disc” is the name most people in the UK use. It does not mean the disc has slid out of the spine. We treat the pain, muscle guarding and movement limitation — we do not claim to put a disc back in place.",
+    lede: "“Slipped disc” is the name most people in the UK use. It does not mean the disc has slid out of the spine. We may use acupuncture for the pain, muscle guarding and movement limitation — we do not claim to put a disc back in place.",
     image: "/images/manual-therapy-side-lying.webp",
     imageAlt: "Practitioner treating the lower back with the patient in a side-lying position",
     heroImage: "/images/generated/herniated-disc-patient-hero.webp",
@@ -976,7 +1137,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "A herniated disc — often called a slipped disc in the UK — is when disc material bulges or leaks enough to irritate nearby tissue, sometimes including a nerve root. Many people first notice it as disc-related back pain; others notice leg pain and look up <a href=\"/conditions/sciatica-treatment\">sciatica</a>.",
-      "Acupuncture does not physically repair, replace or “move” a spinal disc. What we may support is pain, muscle spasm and how comfortably you can move while medical advice and, where needed, imaging remain in the picture. Related searches such as <a href=\"/conditions/back-pain\">back pain</a> and <a href=\"/conditions/pinched-nerve\">pinched nerve</a> are often the same clinical visit from a different starting phrase.",
+      "<a href=\"/clinical-services/acupuncture\">Acupuncture</a> does not physically repair, replace or “move” a spinal disc. What we may support is pain, muscle spasm and how comfortably you can move while medical advice and, where needed, imaging remain in the picture. Related searches such as <a href=\"/conditions/back-pain\">back pain</a> and <a href=\"/conditions/pinched-nerve\">pinched nerve</a> are often the same clinical visit from a different starting phrase. Appointments are at <a href=\"/locations/reading-clinic\">Reading</a> or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a>.",
     ],
     symptoms: [
       "Lower-back pain that started after bending, lifting or a long drive",
@@ -1093,14 +1254,16 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "Deep buttock pain and pain down the leg that can resemble sciatica — assessed before acupuncture and Tui Na, not labelled from a webpage.",
-    title: "Piriformis Syndrome Treatment | Reading & Wimbledon | Yin Yang CMC",
+    title: "Piriformis Pain Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture and Tui Na for piriformis-related buttock pain and leg pain in Reading and Wimbledon. Symptoms can resemble sciatica — we assess rather than guess.",
-    ogTitle: "Piriformis Syndrome Treatment | Reading & Wimbledon",
+      "Acupuncture for piriformis-related buttock pain and leg pain in Reading and Wimbledon. It can resemble sciatica — we assess rather than guess.",
+    ogTitle: "Piriformis Pain Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Buttock pain or pain down the leg is not always spinal sciatica. We assess piriformis-related symptoms before treating.",
     ctaHeading: "Ready to book piriformis treatment?",
-    h1: "Piriformis Syndrome Treatment",
+    introHeading: "Piriformis pain, buttock pain and pain down the leg",
+    treatmentsHeading: "Acupuncture and Tui Na for piriformis-related pain",
+    h1: "Acupuncture for Piriformis Syndrome in Reading & Wimbledon",
     eyebrow: "Conditions · Piriformis Syndrome",
     lede: "Deep buttock pain that travels down the leg is often labelled sciatica. Sometimes the piriformis muscle is the irritant. Assessment is what distinguishes the two — a webpage cannot.",
     image: "/images/back-assessment-treatment.webp",
@@ -1110,7 +1273,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "The piriformis is a small muscle deep in the buttock. When it is tight or irritated, it can aggravate the sciatic nerve that runs beneath (and in some people, through) the muscle. The result can be piriformis pain, buttock pain, and pain down the leg that looks and feels like <a href=\"/conditions/sciatica-treatment\">sciatica</a>.",
-      "That overlap is exactly why self-diagnosis from symptoms is unreliable. True nerve-root sciatica, <a href=\"/conditions/back-pain\">back pain</a>, and <a href=\"/conditions/hip-pain\">hip pain</a> can all occupy the same neighbourhood. We examine rather than assume the piriformis is the culprit.",
+      "That overlap is exactly why self-diagnosis from symptoms is unreliable. True nerve-root sciatica, <a href=\"/conditions/back-pain\">back pain</a>, and <a href=\"/conditions/hip-pain\">hip pain</a> can all occupy the same neighbourhood. We examine rather than assume the piriformis is the culprit. Where the picture fits, we typically combine <a href=\"/clinical-services/acupuncture\">acupuncture</a> with <a href=\"/clinical-services/tui-na-massage\">Tui Na</a> at <a href=\"/locations/reading-clinic\">Reading</a> or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a>.",
     ],
     symptoms: [
       "A deep ache in one buttock, sometimes described as sitting on a tennis ball",
@@ -1211,7 +1374,7 @@ export const conditions: Condition[] = [
       },
       {
         q: "Do you treat this at Reading and Wimbledon?",
-        a: "Yes. Book either clinic via WhatsApp. No GP referral is required, but bring any existing letters or scans.",
+        a: "Yes. Book either clinic via WhatsApp — <a href=\"/locations/reading-clinic\">Reading</a> midweek or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a> on Saturday. No GP referral is required, but bring any existing letters or scans.",
       },
       {
         q: "Can I claim through health insurance?",
@@ -1227,13 +1390,15 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "Knee pain, stiffness and pain when walking — acupuncture and Tui Na as part of musculoskeletal care, not a stand-in for surgery when surgery is needed.",
-    title: "Acupuncture for Knee Pain | Reading & Wimbledon | Yin Yang CMC",
+    title: "Knee Pain Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture and Tui Na for knee pain, stiffness and pain when walking at our Reading and Wimbledon clinics. Not a replacement for surgery when surgery is indicated.",
-    ogTitle: "Knee Pain Treatment | Acupuncture in Reading & Wimbledon",
+      "Knee pain treatment with acupuncture in Reading and Wimbledon. Stiffness when walking assessed in clinic — not a stand-in for surgery when that is needed.",
+    ogTitle: "Knee Pain Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Chronic knee pain or stiffness when walking. We may support symptoms with acupuncture and manual therapy after assessment.",
-    h1: "Knee Pain Treatment in Reading & Wimbledon",
+    introHeading: "Knee pain, stiffness and pain when walking",
+    treatmentsHeading: "Acupuncture and Tui Na for knee pain",
+    h1: "Acupuncture for Knee Pain in Reading & Wimbledon",
     eyebrow: "Conditions · Knee Pain",
     lede: "Knee pain when walking, stiffness after sitting, or a chronic ache in the joint. We may support symptoms with acupuncture and manual therapy. Significant injury, locking or a hot swollen knee needs medical assessment first.",
     image: "/images/knee-assessment-clinic.webp",
@@ -1242,7 +1407,7 @@ export const conditions: Condition[] = [
     sectionImage: "/images/acupuncture-needles-back.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
-      "People look for knee pain treatment without surgery because they want to keep walking, working and training. That is a reasonable aim — and it is not the same as saying acupuncture can replace an operation when an orthopaedic surgeon has already judged surgery to be necessary. Suitability is assessed in clinic, alongside whatever NHS or specialist advice you already have.",
+      "People look for knee pain treatment without surgery because they want to keep walking, working and training. That is a reasonable aim — and it is not the same as saying <a href=\"/clinical-services/acupuncture\">acupuncture</a> can replace an operation when an orthopaedic surgeon has already judged surgery to be necessary. Suitability is assessed in clinic at <a href=\"/locations/reading-clinic\">Reading</a> or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a>, alongside whatever NHS or specialist advice you already have.",
       "We see overuse-related discomfort, longer-standing stiffness, and sports-related knees as part of <a href=\"/conditions/sports-injuries\">sports injury</a> care. Pain around the knee can also be influenced by the <a href=\"/conditions/hip-pain\">hip</a> or <a href=\"/conditions/back-pain\">back</a>, which is why we look at how you walk, not only at the sore joint.",
     ],
     symptoms: [
@@ -1360,15 +1525,17 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "Hip pain, stiffness and pain when walking — assessed against back, buttock and knee sources, then treated with acupuncture and manual therapy if appropriate.",
-    title: "Hip Pain Treatment | Chinese Medicine Reading & Wimbledon",
+    title: "Hip Pain Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture and manual therapy for hip pain, stiffness and pain when walking. Hip, buttock and leg symptoms are assessed together at our Reading and Wimbledon clinics.",
-    ogTitle: "Hip Pain Treatment | Reading & Wimbledon",
+      "Hip pain treatment with acupuncture in Reading and Wimbledon. Groin, outer-hip and buttock symptoms assessed against back and knee sources.",
+    ogTitle: "Hip Pain Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Pain around the hip is not always the hip joint. We assess back, buttock and knee contributions before treating.",
-    h1: "Hip Pain Treatment in Reading & Wimbledon",
+    introHeading: "Hip pain, stiffness and pain when walking",
+    treatmentsHeading: "Acupuncture and TCM for hip pain",
+    h1: "Acupuncture for Hip Pain in Reading & Wimbledon",
     eyebrow: "Conditions · Hip Pain",
-    lede: "Pain around the hip is not always the hip joint. It can come from the back, the buttock, or further down the chain. We assess before we treat.",
+    lede: "Pain around the hip is not always the hip joint. It can come from the back, the buttock, or further down the chain. We assess before we treat, then use acupuncture and manual therapy where the picture fits.",
     image: "/images/bone-setting-treatment.webp",
     imageAlt: "Practitioner using manual therapy on a patient's back and shoulder",
     heroImage: "/images/generated/hip-pain-patient-hero.webp",
@@ -1376,7 +1543,7 @@ export const conditions: Condition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Hip pain when walking, stiffness after sitting, or an ache in the buttock and hip can have several sources: the hip joint itself, the lumbar spine, the sacroiliac region, or muscles such as the piriformis. Searching the symptom is useful. Naming the structure from a webpage is not.",
-      "We therefore treat hip presentations as a differential, not a single protocol. Related pages include <a href=\"/conditions/back-pain\">back pain</a>, <a href=\"/conditions/sciatica-treatment\">sciatica</a>, <a href=\"/conditions/piriformis-syndrome\">piriformis syndrome</a> and <a href=\"/conditions/knee-pain\">knee pain</a> — because those are the neighbourhoods this symptom lives in.",
+      "We therefore treat hip presentations as a differential, not a single protocol. Related pages include <a href=\"/conditions/back-pain\">back pain</a>, <a href=\"/conditions/sciatica-treatment\">sciatica</a>, <a href=\"/conditions/piriformis-syndrome\">piriformis syndrome</a> and <a href=\"/conditions/knee-pain\">knee pain</a> — because those are the neighbourhoods this symptom lives in. Where treatment is appropriate, we typically use <a href=\"/clinical-services/acupuncture\">acupuncture</a> with <a href=\"/clinical-services/tui-na-massage\">Tui Na</a>, and bone-setting if pelvic or lumbar restriction is part of the picture, at <a href=\"/locations/reading-clinic\">Reading</a> or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a>.",
     ],
     symptoms: [
       "Pain in the side of the hip, groin, or deep in the buttock",
@@ -1497,10 +1664,10 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "Acupuncture and herbal medicine as an adjunct around fertility and IVF cycles — assessed individually, not as a package.",
-    title: "Acupuncture for Fertility | TCM Fertility Support Reading & Wimbledon",
+    title: "Acupuncture & TCM for Fertility | Reading & Wimbledon",
     description:
-      "Acupuncture and Traditional Chinese Medicine for fertility in Reading and Wimbledon. A clinic guide to assessment, herbal medicine, IVF adjunct care and what to expect. No GP referral needed.",
-    ogTitle: "Acupuncture & TCM for Fertility | Yin Yang CMC",
+      "Acupuncture and Chinese herbal medicine for fertility in Reading and Wimbledon. Assessment-led adjunct care, including around IVF — not a fertility-clinic replacement.",
+    ogTitle: "Acupuncture & TCM for Fertility | Reading & Wimbledon",
     ogDescription:
       "A guide from our clinic: how we assess fertility, prescribe herbal medicine and acupuncture, and support patients trying naturally or alongside IVF.",
     ctaHeading: "We look forward to supporting you on your journey",

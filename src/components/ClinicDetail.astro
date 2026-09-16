@@ -45,7 +45,7 @@ const faqItems = [
   },
   {
     q: "What conditions can be treated at your clinics?",
-    a: "Both clinics see musculoskeletal pain, sports injuries, sciatica, women's health (including fertility and postnatal recovery), anxiety, sleep disorders, and dermatological presentations such as eczema. Message us via WhatsApp before booking if you are unsure whether your condition is suitable.",
+    a: "Both clinics see musculoskeletal pain, sports injuries, <a href=\"/conditions/sciatica-treatment\">sciatica</a>, <a href=\"/conditions/shoulder-pain\">shoulder pain</a>, women's health (including fertility and postnatal recovery), anxiety, sleep disorders, and dermatological presentations such as eczema. Message us via WhatsApp before booking if you are unsure whether your condition is suitable.",
   },
   {
     q: "Do you accept health insurance?",
@@ -101,7 +101,7 @@ const conditions = liveConditions.map((c) => ({ label: c.label, href: c.href }))
       <p class="eyebrow">Visit the clinic</p>
       <h2>{clinicName}</h2>
       <p>{intro}</p>
-      <p>{localNote}</p>
+      <p class="cond-copy" set:html={localNote} />
       <div class="loc-body" style="padding:0;margin-top:1.4rem">
         <div class="loc-row"><strong>Address</strong><span>{address}</span></div>
         <div class="loc-row"><strong>Hours</strong><span>{hours}</span></div>

@@ -5,6 +5,11 @@ const ins = {
   a: "We are recognised by AXA Health, Vitality, Aviva and WPA. Cover depends on your policy and usually relates to eligible acupuncture. See <a href=\"/pricing-and-insurance\">Pricing &amp; Insurance</a>.",
 };
 
+const clinics = {
+  q: "Is treatment available in Reading and Wimbledon?",
+  a: "Yes. <a href=\"/locations/reading-clinic\">Reading</a> midweek and <a href=\"/locations/wimbledon-clinic\">Wimbledon</a> on Saturday. No GP referral is required to book.",
+};
+
 export const expansionConditionsB: LiveCondition[] = [
   {
     slug: "trigeminal-neuralgia",
@@ -14,13 +19,14 @@ export const expansionConditionsB: LiveCondition[] = [
     status: "live",
     summary:
       "Brief, electric facial pain in a trigeminal distribution — complementary acupuncture only after medical diagnosis and red-flag screening.",
-    title: "Acupuncture for Trigeminal Neuralgia in Reading & Wimbledon | Yin Yang CMC",
+    title: "Trigeminal Neuralgia & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture as complementary care for medically recognised trigeminal neuralgia in Reading and Wimbledon. Electric facial pain needs proper medical assessment first.",
-    ogTitle: "Acupuncture for Trigeminal Neuralgia | Reading & Wimbledon",
+      "Acupuncture as complementary care for medically recognised trigeminal neuralgia in Reading and Wimbledon. Electric facial pain needs medical assessment first.",
+    ogTitle: "Trigeminal Neuralgia & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Brief, shock-like facial pain. Complementary acupuncture after medical assessment — not a first-line diagnosis from this page.",
     h1: "Acupuncture for Trigeminal Neuralgia in Reading & Wimbledon",
+    treatmentsHeading: "Complementary acupuncture for trigeminal neuralgia",
     eyebrow: "Conditions · Trigeminal Neuralgia",
     lede: "Trigeminal neuralgia is typically a brief, electric, one-sided facial pain triggered by light touch, chewing or cold air. Acupuncture, if used, is complementary after the condition has been medically considered — not a substitute for neurology.",
     image: "/images/generated/trigeminal-neuralgia-patient-hero.webp",
@@ -30,7 +36,7 @@ export const expansionConditionsB: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People describe a lightning-like jolt in the cheek, jaw or forehead that lasts seconds. Triggers can be washing the face, speaking or a breeze. That is a different picture from sinus ache or ordinary <a href=\"/conditions/headaches\">headache</a>.",
-      "Because serious causes of facial pain exist, we expect a GP or neurology opinion to already be in play, or we will advise you to obtain one. Complementary work may also consider <a href=\"/conditions/neck-pain\">neck</a> tension and, in a different nerve story, <a href=\"/conditions/postherpetic-neuralgia\">postherpetic neuralgia</a>.",
+      "Because serious causes of facial pain exist, we expect a GP or neurology opinion to already be in play, or we will advise you to obtain one. Complementary <a href=\"/clinical-services/acupuncture\">acupuncture</a> is only considered after that medical filter. Related pages include <a href=\"/conditions/neck-pain\">neck</a> tension and, in a different nerve story, <a href=\"/conditions/postherpetic-neuralgia\">postherpetic neuralgia</a>.",
     ],
     symptoms: [
       "Sudden, electric, one-sided facial pain lasting seconds",
@@ -121,6 +127,7 @@ export const expansionConditionsB: LiveCondition[] = [
         q: "Is this the same as shingles pain?",
         a: "No. Lasting pain after shingles is <a href=\"/conditions/postherpetic-neuralgia\">postherpetic neuralgia</a>. The nerve stories differ.",
       },
+      clinics,
       ins,
     ],
   },
@@ -132,13 +139,14 @@ export const expansionConditionsB: LiveCondition[] = [
     status: "live",
     summary:
       "Pain and stiffness in the Achilles tendon after running or walking — complementary acupuncture and Tui Na, with medical review for a suspected tear.",
-    title: "Acupuncture for Achilles Tendinitis in Reading & Wimbledon | Yin Yang CMC",
+    title: "Achilles Pain Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture for Achilles tendon pain in Reading and Wimbledon. Stiffness after running or walking assessed as complementary care — a sudden pop needs urgent medical assessment.",
-    ogTitle: "Acupuncture for Achilles Tendinitis | Reading & Wimbledon",
+      "Acupuncture for Achilles tendon pain in Reading and Wimbledon. Stiffness after running or walking — a sudden pop needs urgent medical assessment.",
+    ogTitle: "Achilles Pain Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Morning Achilles stiffness or pain after a run. Complementary acupuncture and calf work after assessment.",
     h1: "Acupuncture for Achilles Tendinitis in Reading & Wimbledon",
+    treatmentsHeading: "Acupuncture and Tui Na for Achilles tendinitis",
     eyebrow: "Conditions · Achilles Tendinitis",
     lede: "Achilles pain usually sits above the heel, stiff first thing, then warmer after a few steps. Acupuncture may support the tendon and calf — a sudden snap or inability to push off is a medical emergency, not a clinic booking.",
     image: "/images/generated/achilles-tendinitis-patient-hero.webp",
@@ -148,7 +156,7 @@ export const expansionConditionsB: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "The Achilles tendon takes the calf into the heel bone. Tendinopathy is overload of that tendon, common in running, racket sports and a sudden return to walking. It is not <a href=\"/conditions/plantar-fasciitis\">plantar fasciitis</a> (under the heel) and not every <a href=\"/conditions/ankle-pain\">ankle pain</a>.",
-      "We look at calf load, previous sprains and whether <a href=\"/conditions/sports-injuries\">sports injury</a> care is the wider frame.",
+      "We look at calf load, previous sprains and whether <a href=\"/conditions/sports-injuries\">sports injury</a> care is the wider frame. Complementary <a href=\"/clinical-services/acupuncture\">acupuncture</a> may support the tendon and calf after that assessment — a sudden snap or inability to push off is a medical emergency, not a clinic booking.",
     ],
     symptoms: [
       "Stiffness in the tendon on the first steps of the day",
@@ -239,6 +247,7 @@ export const expansionConditionsB: LiveCondition[] = [
         q: "Is the pain under my heel the Achilles?",
         a: "Under the heel is more often <a href=\"/conditions/plantar-fasciitis\">plantar fasciitis</a>. The Achilles sits above the heel bone.",
       },
+      clinics,
       ins,
     ],
   },
@@ -250,13 +259,14 @@ export const expansionConditionsB: LiveCondition[] = [
     status: "live",
     summary:
       "Lingering nerve pain after shingles — complementary acupuncture after the acute rash has been medically managed.",
-    title: "Acupuncture for Postherpetic Neuralgia in Reading & Wimbledon | Yin Yang CMC",
+    title: "Post-Shingles Nerve Pain & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture as complementary care for nerve pain after shingles in Reading and Wimbledon. Acute shingles needs medical treatment first.",
-    ogTitle: "Acupuncture for Postherpetic Neuralgia | Reading & Wimbledon",
+      "Acupuncture for nerve pain after shingles in Reading and Wimbledon. Complementary care once the rash has healed. Acute shingles needs medical treatment first.",
+    ogTitle: "Post-Shingles Nerve Pain & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Burning or shooting pain after a shingles rash has healed. Complementary acupuncture after medical care of the acute episode.",
     h1: "Acupuncture for Postherpetic Neuralgia in Reading & Wimbledon",
+    treatmentsHeading: "Complementary acupuncture for postherpetic neuralgia",
     eyebrow: "Conditions · Postherpetic Neuralgia",
     lede: "After shingles, some people are left with burning, shooting or oversensitive skin where the rash was. Acupuncture may be used as complementary care once the acute infection has been medically managed.",
     image: "/images/generated/postherpetic-neuralgia-patient-hero.webp",
@@ -266,7 +276,7 @@ export const expansionConditionsB: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Postherpetic neuralgia is pain that continues after the shingles rash has crusted and healed. Clothing can feel unbearable; sleep is often broken. This is a nerve-pain story, not ordinary muscle ache, and not the same as <a href=\"/conditions/trigeminal-neuralgia\">trigeminal neuralgia</a> unless the face was involved.",
-      "Acute shingles (new blistering rash, especially near the eye) needs a GP or urgent care, often with antiviral medicine. We do not treat active infection as a first contact. Related nerve pages include <a href=\"/conditions/pinched-nerve\">pinched nerve</a>.",
+      "Acute shingles (new blistering rash, especially near the eye) needs a GP or urgent care, often with antiviral medicine. We do not treat active infection as a first contact. Complementary <a href=\"/clinical-services/acupuncture\">acupuncture</a> may be considered once the rash has healed. Related nerve pages include <a href=\"/conditions/pinched-nerve\">pinched nerve</a>.",
     ],
     symptoms: [
       "Burning, shooting or stabbing pain in the old rash territory",
@@ -357,6 +367,7 @@ export const expansionConditionsB: LiveCondition[] = [
         q: "Is this the same as a pinched nerve?",
         a: "The pain can feel similar, but the history of shingles is the clue. See also <a href=\"/conditions/pinched-nerve\">pinched nerve</a> if there was no rash.",
       },
+      clinics,
       ins,
     ],
   },
@@ -368,13 +379,14 @@ export const expansionConditionsB: LiveCondition[] = [
     status: "live",
     summary:
       "Lateral elbow pain from gripping and lifting — complementary acupuncture and Tui Na, whether or not you play tennis.",
-    title: "Acupuncture for Tennis Elbow in Reading & Wimbledon | Yin Yang CMC",
+    title: "Tennis Elbow Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture for tennis elbow (lateral epicondylalgia) in Reading and Wimbledon. Outer-elbow pain from gripping, typing or racket sports — complementary care after assessment.",
-    ogTitle: "Acupuncture for Tennis Elbow | Reading & Wimbledon",
+      "Acupuncture for tennis elbow in Reading and Wimbledon. Outer-elbow pain from gripping, typing or racket sports — complementary care after assessment.",
+    ogTitle: "Tennis Elbow Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Pain on the outside of the elbow when gripping or lifting. Complementary acupuncture after assessment.",
     h1: "Acupuncture for Tennis Elbow in Reading & Wimbledon",
+    treatmentsHeading: "Acupuncture and Tui Na for tennis elbow",
     eyebrow: "Conditions · Tennis Elbow",
     lede: "Tennis elbow is pain on the outside of the elbow, usually from gripping, lifting or racket work — most people we see do not play tennis. Acupuncture may support the tendon and forearm, without a promised recovery week-count.",
     image: "/images/generated/tennis-elbow-patient-hero.webp",
@@ -384,7 +396,7 @@ export const expansionConditionsB: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Lateral epicondylalgia is irritation of the forearm extensor tendons where they meet the outer elbow. Pain picking up a kettle, typing, or shaking hands is typical. Inner-elbow pain is <a href=\"/conditions/golfers-elbow\">golfer's elbow</a>. Broader joint ache sits on <a href=\"/conditions/elbow-pain\">elbow pain</a>.",
-      "The <a href=\"/conditions/wrist-pain\">wrist</a> and <a href=\"/conditions/shoulder-pain\">shoulder</a> often share the load. We look at the chain, not only the sore bump on the elbow.",
+      "The <a href=\"/conditions/wrist-pain\">wrist</a> and <a href=\"/conditions/shoulder-pain\">shoulder</a> often share the load. We look at the chain, not only the sore bump on the elbow. Complementary <a href=\"/clinical-services/acupuncture\">acupuncture</a> may be used with Tui Na after that assessment.",
     ],
     symptoms: [
       "Pain on the bony point on the outside of the elbow",
@@ -475,6 +487,7 @@ export const expansionConditionsB: LiveCondition[] = [
         q: "What if the pain is on the inside of the elbow?",
         a: "That is more likely <a href=\"/conditions/golfers-elbow\">golfer's elbow</a>.",
       },
+      clinics,
       ins,
     ],
   },
@@ -486,13 +499,14 @@ export const expansionConditionsB: LiveCondition[] = [
     status: "live",
     summary:
       "Medial elbow pain from gripping and wrist flexion — complementary acupuncture, whether or not you play golf.",
-    title: "Acupuncture for Golfer's Elbow in Reading & Wimbledon | Yin Yang CMC",
+    title: "Golfer's Elbow Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture for golfer's elbow (medial epicondylalgia) in Reading and Wimbledon. Inner-elbow pain from gripping or wrist flexion — complementary care after assessment.",
-    ogTitle: "Acupuncture for Golfer's Elbow | Reading & Wimbledon",
+      "Acupuncture for golfer's elbow in Reading and Wimbledon. Inner-elbow pain from gripping or wrist flexion — complementary care after assessment.",
+    ogTitle: "Golfer's Elbow Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Pain on the inside of the elbow when gripping or carrying. Complementary acupuncture after assessment.",
     h1: "Acupuncture for Golfer's Elbow in Reading & Wimbledon",
+    treatmentsHeading: "Acupuncture and Tui Na for golfer's elbow",
     eyebrow: "Conditions · Golfer's Elbow",
     lede: "Golfer's elbow is pain on the inside of the elbow, usually from gripping, carrying or wrist flexion. Most patients are not golfers. Acupuncture may support the tendon — it does not promise a return-to-sport date.",
     image: "/images/generated/golfers-elbow-patient-hero.webp",
@@ -502,7 +516,7 @@ export const expansionConditionsB: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Medial epicondylalgia irritates the wrist-flexor tendons at the inner elbow. Pain carrying shopping, using a screwdriver, or the golf follow-through is typical. Outer-elbow pain is <a href=\"/conditions/tennis-elbow\">tennis elbow</a>.",
-      "We also check <a href=\"/conditions/wrist-pain\">wrist</a> and <a href=\"/conditions/elbow-pain\">elbow</a> more broadly, and whether the <a href=\"/conditions/neck-pain\">neck</a> is referring.",
+      "We also check <a href=\"/conditions/wrist-pain\">wrist</a> and <a href=\"/conditions/elbow-pain\">elbow</a> more broadly, and whether the <a href=\"/conditions/neck-pain\">neck</a> is referring. Complementary <a href=\"/clinical-services/acupuncture\">acupuncture</a> may support the inner-elbow tendon after that assessment.",
     ],
     symptoms: [
       "Pain on the bony point on the inside of the elbow",
@@ -593,6 +607,7 @@ export const expansionConditionsB: LiveCondition[] = [
         q: "How is this different from tennis elbow?",
         a: "Location: inside versus outside of the elbow. See <a href=\"/conditions/tennis-elbow\">tennis elbow</a> if the outer bump is the problem.",
       },
+      clinics,
       ins,
     ],
   },
@@ -604,13 +619,14 @@ export const expansionConditionsB: LiveCondition[] = [
     status: "live",
     summary:
       "Wrist ache, click or load pain from desk work, sport or strain — assessed against carpal tunnel, elbow and neck sources.",
-    title: "Acupuncture for Wrist Pain in Reading & Wimbledon | Yin Yang CMC",
+    title: "Wrist Pain Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture for wrist pain in Reading and Wimbledon. Desk, sport and strain presentations assessed against carpal tunnel, elbow and neck — complementary care after assessment.",
-    ogTitle: "Acupuncture for Wrist Pain | Reading & Wimbledon",
+      "Wrist pain treatment with acupuncture in Reading and Wimbledon. Desk, sport and strain presentations assessed against carpal tunnel, elbow and neck.",
+    ogTitle: "Wrist Pain Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "A sore, clicking or tired wrist after typing or lifting. Complementary acupuncture after assessment.",
     h1: "Acupuncture for Wrist Pain in Reading & Wimbledon",
+    treatmentsHeading: "Acupuncture and TCM for wrist pain",
     eyebrow: "Conditions · Wrist Pain",
     lede: "Wrist pain is a location, not a diagnosis. It may be tendon load, joint irritation, or nerve tingling. We assess before treating, and we will not needle a hot, recently fractured wrist.",
     image: "/images/generated/wrist-pain-patient-hero.webp",
@@ -620,7 +636,7 @@ export const expansionConditionsB: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People book for wrist pain after typing, weights, a twist, or months of a dull ache at the base of the thumb. Night tingling in the first fingers belongs more with <a href=\"/conditions/carpal-tunnel-syndrome\">carpal tunnel syndrome</a>. Outer-elbow pain with gripping may be <a href=\"/conditions/tennis-elbow\">tennis elbow</a>.",
-      "The <a href=\"/conditions/neck-pain\">neck</a> and <a href=\"/conditions/elbow-pain\">elbow</a> can both refer into the wrist. We look at the chain.",
+      "The <a href=\"/conditions/neck-pain\">neck</a> and <a href=\"/conditions/elbow-pain\">elbow</a> can both refer into the wrist. We look at the chain. Complementary <a href=\"/clinical-services/acupuncture\">acupuncture</a> may be used after we have ruled out a hot, recently fractured wrist.",
     ],
     symptoms: [
       "Ache at the base of the thumb or across the wrist crease",
@@ -711,6 +727,7 @@ export const expansionConditionsB: LiveCondition[] = [
         q: "Clinic reviews mention De Quervain’s — do you see that?",
         a: "Thumb-side wrist pain after lifting or postnatal load is a presentation we see. We still assess rather than label from a review quote.",
       },
+      clinics,
       ins,
     ],
   },
@@ -722,13 +739,14 @@ export const expansionConditionsB: LiveCondition[] = [
     status: "live",
     summary:
       "Ankle ache, stiffness or old-sprain irritability — complementary acupuncture and Tui Na, with urgent care for a suspected fracture or complete tear.",
-    title: "Acupuncture for Ankle Pain in Reading & Wimbledon | Yin Yang CMC",
+    title: "Ankle Pain Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture for ankle pain in Reading and Wimbledon. Old sprains, stiffness and load pain assessed as complementary care — acute injuries with inability to weight-bear need medical assessment.",
-    ogTitle: "Acupuncture for Ankle Pain | Reading & Wimbledon",
+      "Ankle pain treatment with acupuncture in Reading and Wimbledon. Old sprains and load stiffness — an ankle you cannot stand on needs medical assessment first.",
+    ogTitle: "Ankle Pain Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "A stiff or repeatedly rolling ankle after an old sprain. Complementary acupuncture after assessment.",
     h1: "Acupuncture for Ankle Pain in Reading & Wimbledon",
+    treatmentsHeading: "Acupuncture and Tui Na for ankle pain",
     eyebrow: "Conditions · Ankle Pain",
     lede: "Ankle pain is often an old sprain that never quite settled, or stiffness after a change in walking or training. Acupuncture may support the joint and the tendons around it — a swollen ankle you cannot stand on needs medical assessment first.",
     image: "/images/generated/ankle-pain-patient-hero.webp",
@@ -738,7 +756,7 @@ export const expansionConditionsB: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "The ankle is a mortise joint with ligaments that are easy to sprain and slow to trust again. People describe rolling on a kerb, stiffness in the morning, or pain on stairs. <a href=\"/conditions/achilles-tendinitis\">Achilles</a> pain sits above the heel; <a href=\"/conditions/plantar-fasciitis\">plantar fasciitis</a> under it; broader aches sit on <a href=\"/conditions/foot-pain\">foot pain</a>.",
-      "We also look at the <a href=\"/conditions/knee-pain\">knee</a> because a cautious ankle changes how you walk.",
+      "We also look at the <a href=\"/conditions/knee-pain\">knee</a> because a cautious ankle changes how you walk. Complementary <a href=\"/clinical-services/acupuncture\">acupuncture</a> may support the joint and surrounding tendons once you can weight-bear and the acute swelling has been medically considered.",
     ],
     symptoms: [
       "Pain on the outside of the ankle after an old roll",
@@ -829,6 +847,7 @@ export const expansionConditionsB: LiveCondition[] = [
         q: "Is bone-setting used on ankles?",
         a: "Sometimes, when a settled joint is restricted. Not on a fresh injury.",
       },
+      clinics,
       ins,
     ],
   },
@@ -840,13 +859,14 @@ export const expansionConditionsB: LiveCondition[] = [
     status: "live",
     summary:
       "Aches in the forefoot, midfoot or arch when the label is still open — assessed against plantar fascia, Achilles and ankle sources.",
-    title: "Acupuncture for Foot Pain in Reading & Wimbledon | Yin Yang CMC",
+    title: "Foot Pain Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture for foot pain in Reading and Wimbledon. Arch, forefoot and general foot ache assessed against plantar fasciitis, Achilles and ankle problems.",
-    ogTitle: "Acupuncture for Foot Pain | Reading & Wimbledon",
+      "Foot pain treatment with acupuncture in Reading and Wimbledon. Arch and forefoot ache assessed against plantar fasciitis, Achilles and ankle problems.",
+    ogTitle: "Foot Pain Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Tired, aching feet after standing or walking. Complementary acupuncture after assessment.",
     h1: "Acupuncture for Foot Pain in Reading & Wimbledon",
+    treatmentsHeading: "Acupuncture and TCM for foot pain",
     eyebrow: "Conditions · Foot Pain",
     lede: "Foot pain is a map, not a single condition. The heel, arch, ball of the foot and ankle each have different usual stories. We locate the pain first, then decide whether acupuncture is appropriate.",
     image: "/images/generated/foot-pain-patient-hero.webp",
@@ -856,7 +876,7 @@ export const expansionConditionsB: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People search for foot pain treatment when the whole foot feels cooked after a shift, or when a particular patch under the ball of the foot has become sharp. First-step heel pain is usually <a href=\"/conditions/plantar-fasciitis\">plantar fasciitis</a>. Pain above the heel is often <a href=\"/conditions/achilles-tendinitis\">Achilles tendinitis</a>. The joint above is <a href=\"/conditions/ankle-pain\">ankle pain</a>.",
-      "Diabetes, circulation problems and unhealing sores are medical issues. We do not treat those as a simple musculoskeletal page.",
+      "Diabetes, circulation problems and unhealing sores are medical issues. We do not treat those as a simple musculoskeletal page. Where the picture is mechanical, complementary <a href=\"/clinical-services/acupuncture\">acupuncture</a> may be used after assessment.",
     ],
     symptoms: [
       "Ache in the arch after standing",
@@ -947,6 +967,7 @@ export const expansionConditionsB: LiveCondition[] = [
         q: "Do you treat bunions?",
         a: "We may support associated aches. We do not offer bunion surgery or a structural correction claim.",
       },
+      clinics,
       ins,
     ],
   },
@@ -958,13 +979,14 @@ export const expansionConditionsB: LiveCondition[] = [
     status: "live",
     summary:
       "Elbow ache that is not yet clearly tennis or golfer's elbow — assessed against tendon, joint, neck and wrist sources.",
-    title: "Acupuncture for Elbow Pain in Reading & Wimbledon | Yin Yang CMC",
+    title: "Elbow Pain Treatment & Acupuncture | Reading & Wimbledon",
     description:
-      "Acupuncture for elbow pain in Reading and Wimbledon. Outer, inner and joint presentations assessed against tennis elbow, golfer's elbow, wrist and shoulder.",
-    ogTitle: "Acupuncture for Elbow Pain | Reading & Wimbledon",
+      "Elbow pain treatment with acupuncture in Reading and Wimbledon. Assessed against tennis elbow, golfer's elbow, wrist and shoulder.",
+    ogTitle: "Elbow Pain Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "A sore elbow that does not sit neatly on one bony point. Complementary acupuncture after assessment.",
     h1: "Acupuncture for Elbow Pain in Reading & Wimbledon",
+    treatmentsHeading: "Acupuncture and TCM for elbow pain",
     eyebrow: "Conditions · Elbow Pain",
     lede: "Elbow pain is a location. It may be tennis elbow, golfer's elbow, the joint itself, or referred from the neck. We sort that before treating.",
     image: "/images/generated/elbow-pain-patient-hero.webp",
@@ -974,7 +996,7 @@ export const expansionConditionsB: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "If you can put one finger on the outer bump, read <a href=\"/conditions/tennis-elbow\">tennis elbow</a>. If the inner bump is the problem, read <a href=\"/conditions/golfers-elbow\">golfer's elbow</a>. This page is for pain that fills the whole joint, travels, or is still being sorted.",
-      "The <a href=\"/conditions/wrist-pain\">wrist</a> and <a href=\"/conditions/shoulder-pain\">shoulder</a> frequently share the load. A <a href=\"/conditions/trapped-nerve\">trapped nerve</a> in the neck can be felt in the arm and elbow.",
+      "The <a href=\"/conditions/wrist-pain\">wrist</a> and <a href=\"/conditions/shoulder-pain\">shoulder</a> frequently share the load. A <a href=\"/conditions/trapped-nerve\">trapped nerve</a> in the neck can be felt in the arm and elbow. Complementary <a href=\"/clinical-services/acupuncture\">acupuncture</a> may be used once we know whether the problem is local, referred, or a named tennis- or golfer's-elbow picture.",
     ],
     symptoms: [
       "A general ache through the elbow rather than one sharp point",
@@ -1065,6 +1087,7 @@ export const expansionConditionsB: LiveCondition[] = [
         q: "Can neck problems cause elbow pain?",
         a: "Yes. See <a href=\"/conditions/trapped-nerve\">trapped nerve</a> and <a href=\"/conditions/neck-pain\">neck pain</a> if symptoms travel or include tingling.",
       },
+      clinics,
       ins,
     ],
   },

@@ -37,10 +37,15 @@ const schema = {
     },
     {
       "@type": "WebPage",
-      name: condition.title,
+      name: condition.h1,
+      headline: condition.h1,
       description: condition.description,
       url: pageUrl,
       isPartOf: { "@type": "WebSite", name: site.name, url: siteUrl },
+      about: {
+        "@type": "MedicalCondition",
+        name: condition.label,
+      },
     },
     {
       "@type": "FAQPage",
@@ -80,7 +85,7 @@ const schema = {
     <p class="lede">{condition.lede}</p>
     <div class="actions" style="margin-top:1.2rem">
       <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
-      <a class="btn btn-ghost" href="/conditions">All Conditions</a>
+      <a class="btn btn-ghost" href={condition.heroSecondaryHref ?? "/conditions"}>{condition.heroSecondaryLabel ?? "All Conditions"}</a>
     </div>
     <div class="hero-trust-row">
       <span><span class="htc">✓</span> Reading &amp; Wimbledon</span>
@@ -96,7 +101,7 @@ const schema = {
     <div class="grid-2-al" style="gap:4rem">
       <div class="cond-copy">
         <p class="eyebrow">The condition</p>
-        <h2>What we are treating</h2>
+        <h2>{condition.introHeading ?? "What we are treating"}</h2>
         {condition.intro.map((p) => <p set:html={p} />)}
         <p class="cond-sym-label">Does this sound familiar?</p>
         <ul class="pseo-check">
@@ -123,7 +128,7 @@ const schema = {
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Causes</p>
-      <h2>What is usually driving it</h2>
+      <h2>{condition.causesHeading ?? "What is usually driving it"}</h2>
       <p>The label is not the diagnosis. These are the patterns we see most often — your assessment decides which applies.</p>
     </div>
     <div class="grid-3">
@@ -141,7 +146,7 @@ const schema = {
   <div class="wrap">
     <div class="section-head" style="max-width:52ch">
       <p class="eyebrow eyebrow-dark">Related treatments</p>
-      <h2>How we treat {condition.label.toLowerCase()}</h2>
+      <h2>{condition.treatmentsHeading ?? `How we treat ${condition.label.toLowerCase()}`}</h2>
       <p style="color:rgba(240,234,226,0.75)">
         Modalities are combined according to your clinical picture — not offered as a fixed add-on list.
       </p>
@@ -186,7 +191,7 @@ const schema = {
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Your first visit</p>
-        <h2>What to expect</h2>
+        <h2>{condition.expectHeading ?? "What to expect"}</h2>
         <p>The path is the same at <a href="/locations/reading-clinic">Reading</a> and <a href="/locations/wimbledon-clinic">Wimbledon</a> — assessment first, then a plan you can follow.</p>
       </div>
       <div class="journey-grid">
@@ -194,7 +199,7 @@ const schema = {
           <div class="journey-step">
             <div class="j-num">{String(i + 1).padStart(2, "0")}</div>
             <h3>{step.title}</h3>
-            <p>{step.body}</p>
+            <p set:html={step.body} />
           </div>
         ))}
       </div>
@@ -253,7 +258,7 @@ const schema = {
         <a href="/pricing-and-insurance">Pricing &amp; insurance</a>
       </nav>
     </div>
-    <FAQAccordion items={condition.faqs} />
+    <FAQAccordion items={condition.faqs} includeSchema={false} />
   </div>
 </section>
 

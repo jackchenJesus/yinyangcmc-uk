@@ -108,9 +108,9 @@ export const footerConditions = [
   { href: "/conditions/sciatica-treatment", label: "Sciatica" },
   { href: "/conditions/neck-pain", label: "Neck Pain" },
   { href: "/conditions/shoulder-pain", label: "Shoulder Pain" },
+  { href: "/conditions/frozen-shoulder", label: "Frozen Shoulder" },
   { href: "/conditions/knee-pain", label: "Knee Pain" },
   { href: "/conditions/hip-pain", label: "Hip Pain" },
-  { href: "/conditions/migraine", label: "Migraine" },
 ];
 
 export const homeConditions = [

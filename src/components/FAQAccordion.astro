@@ -5,28 +5,29 @@ interface FAQItem {
 }
 interface Props {
   items: FAQItem[];
+  includeSchema?: boolean;
 }
-const { items } = Astro.props;
+const { items, includeSchema = true } = Astro.props;
 ---
-<div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+<div class="faq-list" itemscope={includeSchema ? true : undefined} itemtype={includeSchema ? "https://schema.org/FAQPage" : undefined}>
   {items.map(({ q, a }) => (
     <details
       class="faq-item"
-      itemscope
-      itemprop="mainEntity"
-      itemtype="https://schema.org/Question"
+      itemscope={includeSchema ? true : undefined}
+      itemprop={includeSchema ? "mainEntity" : undefined}
+      itemtype={includeSchema ? "https://schema.org/Question" : undefined}
     >
       <summary>
-        <span itemprop="name">{q}</span>
+        <span itemprop={includeSchema ? "name" : undefined}>{q}</span>
         <em class="faq-chevron" aria-hidden="true">+</em>
       </summary>
       <div
         class="faq-answer"
-        itemscope
-        itemprop="acceptedAnswer"
-        itemtype="https://schema.org/Answer"
+        itemscope={includeSchema ? true : undefined}
+        itemprop={includeSchema ? "acceptedAnswer" : undefined}
+        itemtype={includeSchema ? "https://schema.org/Answer" : undefined}
       >
-        <p itemprop="text" set:html={a} />
+        <p itemprop={includeSchema ? "text" : undefined} set:html={a} />
       </div>
     </details>
   ))}
