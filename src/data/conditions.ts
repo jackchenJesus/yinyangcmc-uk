@@ -14,6 +14,35 @@ export type ConditionTreatment = {
   why: string;
 };
 
+/** Opt-in section order for condition pages; default layout unchanged when omitted. */
+export type ConditionSectionId =
+  | "hero"
+  | "intro-with-symptoms"
+  | "intro"
+  | "symptoms"
+  | "causes"
+  | "treatments"
+  | "patterns"
+  | "expect"
+  | "safety"
+  | "clinic"
+  | "related"
+  | "faq"
+  | "cta";
+
+export const defaultConditionSectionOrder: ConditionSectionId[] = [
+  "hero",
+  "intro-with-symptoms",
+  "causes",
+  "treatments",
+  "patterns",
+  "expect",
+  "safety",
+  "related",
+  "faq",
+  "cta",
+];
+
 export type LiveCondition = {
   slug: string;
   href: string;
@@ -49,6 +78,12 @@ export type LiveCondition = {
   expect?: { title: string; body: string }[];
   safety?: { intro: string; items: string[] };
   ctaHeading?: string;
+  /** Prefilled WhatsApp enquiry (page CTAs only; sitewide float unchanged). */
+  whatsappMessage?: string;
+  heroPrimaryLabel?: string;
+  /** Short availability line shown under the hero CTA (HTML allowed for clinic links). */
+  heroAvailabilityHtml?: string;
+  sectionOrder?: ConditionSectionId[];
 };
 
 export type ListedCondition = {
@@ -213,6 +248,25 @@ export const conditions: Condition[] = [
     expectHeading: "What a Yin Yang CMC appointment involves",
     heroSecondaryLabel: "Contact the clinic",
     heroSecondaryHref: "/contact",
+    heroPrimaryLabel: "WhatsApp the Clinic",
+    heroAvailabilityHtml:
+      '<a href="/locations/reading-clinic">Reading</a> — Monday, Wednesday &amp; Friday<br /><a href="/locations/wimbledon-clinic">Wimbledon</a> — Saturday',
+    whatsappMessage:
+      "Hi, I'd like to enquire about a consultation for sciatica. I'm interested in the Reading / Wimbledon clinic. Could you let me know the available appointments?",
+    sectionOrder: [
+      "hero",
+      "expect",
+      "treatments",
+      "symptoms",
+      "safety",
+      "clinic",
+      "intro",
+      "causes",
+      "related",
+      "patterns",
+      "faq",
+      "cta",
+    ],
     h1: "Acupuncture for Sciatica in Reading & Wimbledon",
     eyebrow: "Conditions · Sciatica",
     lede: "Sciatica is sciatic nerve pain — often felt as lower-back pain radiating down the leg. At our Reading and Wimbledon clinics we assess the likely source, then use acupuncture and traditional Chinese medicine as part of care. Suitability is decided at consultation.",
@@ -355,6 +409,25 @@ export const conditions: Condition[] = [
     expectHeading: "What a Yin Yang CMC appointment involves",
     heroSecondaryLabel: "Contact the clinic",
     heroSecondaryHref: "/contact",
+    heroPrimaryLabel: "WhatsApp the Clinic",
+    heroAvailabilityHtml:
+      '<a href="/locations/reading-clinic">Reading</a> — Monday, Wednesday &amp; Friday<br /><a href="/locations/wimbledon-clinic">Wimbledon</a> — Saturday',
+    whatsappMessage:
+      "Hi, I'd like to enquire about a consultation for shoulder pain. I'm interested in the Reading / Wimbledon clinic. Could you let me know the available appointments?",
+    sectionOrder: [
+      "hero",
+      "expect",
+      "treatments",
+      "symptoms",
+      "clinic",
+      "safety",
+      "intro",
+      "causes",
+      "related",
+      "patterns",
+      "faq",
+      "cta",
+    ],
     h1: "Acupuncture for Shoulder Pain in Reading & Wimbledon",
     eyebrow: "Conditions · Shoulder Pain",
     lede: "Pain when lifting the arm, aching around the shoulder blade, or stiffness after desk work is rarely “just a tight shoulder”. We assess whether the picture is rotator cuff strain, referred neck pain, or something else — then use acupuncture and manual therapy where that picture fits.",
@@ -378,7 +451,11 @@ export const conditions: Condition[] = [
     causes: [
       {
         title: "Rotator cuff strain & tendinopathy",
-        body: "Strain or irritation of the tendons that stabilise the shoulder — often described as rotator cuff pain or shoulder tendinitis. Common after lifting, sport, or repetitive overhead movement.",
+        body: "Strain or irritation of the tendons that stabilise the shoulder — often described as rotator cuff pain. Common after lifting, sport, or repetitive overhead movement.",
+      },
+      {
+        title: "Shoulder tendonitis & tendinopathy",
+        body: "Tendon irritation around the shoulder — sometimes called shoulder tendonitis or tendinopathy — can contribute to pain. Symptoms may feel worse when lifting or moving the arm, but shoulder pain has several possible causes. Assessment is needed before treatment recommendations; what we suggest depends on what we find at consultation.",
       },
       {
         title: "Shoulder impingement",

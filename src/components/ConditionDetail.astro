@@ -2,7 +2,12 @@
 import FAQAccordion from "./FAQAccordion.astro";
 import CTASection from "./CTASection.astro";
 import { site } from "../data/site";
-import { getConditionBySlug, type LiveCondition } from "../data/conditions";
+import {
+  defaultConditionSectionOrder,
+  getConditionBySlug,
+  type ConditionSectionId,
+  type LiveCondition,
+} from "../data/conditions";
 
 interface Props {
   condition: LiveCondition;
@@ -15,6 +20,14 @@ const pageUrl = new URL(condition.href, siteUrl).href;
 const related = condition.related
   .map((slug) => getConditionBySlug(slug))
   .filter((c): c is NonNullable<typeof c> => Boolean(c));
+
+const whatsappHref = condition.whatsappMessage
+  ? `${site.whatsapp}?text=${encodeURIComponent(condition.whatsappMessage)}`
+  : site.whatsapp;
+
+const heroPrimaryLabel = condition.heroPrimaryLabel ?? "Book a Consultation";
+const sectionOrder: ConditionSectionId[] =
+  condition.sectionOrder ?? defaultConditionSectionOrder;
 
 const stripHtml = (value: string) =>
   value
@@ -62,209 +75,345 @@ const schema = {
 };
 ---
 
-<section class="page-hero" style="min-height:62vh;display:grid;place-items:center">
-  <img
-    class="page-hero-bg"
-    src={condition.heroImage ?? condition.image}
-    alt=""
-    width="1536"
-    height="1024"
-    loading="eager"
-    fetchpriority="high"
-  />
-  <div class="wrap" style="padding:5rem 0 3.5rem">
-    <nav class="cond-crumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span aria-hidden="true">/</span>
-      <a href="/conditions">Conditions</a>
-      <span aria-hidden="true">/</span>
-      <span aria-current="page">{condition.label}</span>
-    </nav>
-    <p class="eyebrow">{condition.eyebrow}</p>
-    <h1>{condition.h1}</h1>
-    <p class="lede">{condition.lede}</p>
-    <div class="actions" style="margin-top:1.2rem">
-      <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
-      <a class="btn btn-ghost" href={condition.heroSecondaryHref ?? "/conditions"}>{condition.heroSecondaryLabel ?? "All Conditions"}</a>
-    </div>
-    <div class="hero-trust-row">
-      <span><span class="htc">✓</span> Reading &amp; Wimbledon</span>
-      <span><span class="htc">✓</span> BAcC registered</span>
-      <span><span class="htc">✓</span> No GP referral</span>
-      <span><span class="htc">✓</span> English &amp; Cantonese</span>
-    </div>
-  </div>
-</section>
+{
+  sectionOrder.map((sectionId) => (
+    <>
+      {sectionId === "hero" && (
+        <section class="page-hero" style="min-height:62vh;display:grid;place-items:center">
+          <img
+            class="page-hero-bg"
+            src={condition.heroImage ?? condition.image}
+            alt=""
+            width="1536"
+            height="1024"
+            loading="eager"
+            fetchpriority="high"
+          />
+          <div class="wrap" style="padding:5rem 0 3.5rem">
+            <nav class="cond-crumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span aria-hidden="true">/</span>
+              <a href="/conditions">Conditions</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">{condition.label}</span>
+            </nav>
+            <p class="eyebrow">{condition.eyebrow}</p>
+            <h1>{condition.h1}</h1>
+            <p class="lede">{condition.lede}</p>
+            <div class="actions" style="margin-top:1.2rem">
+              <a class="btn btn-gold" href={whatsappHref} target="_blank" rel="noreferrer">
+                {heroPrimaryLabel}
+              </a>
+              <a class="btn btn-ghost" href={condition.heroSecondaryHref ?? "/conditions"}>
+                {condition.heroSecondaryLabel ?? "All Conditions"}
+              </a>
+            </div>
+            {condition.heroAvailabilityHtml && (
+              <p class="hero-clinic-days" set:html={condition.heroAvailabilityHtml} />
+            )}
+            <div class="hero-trust-row">
+              <span><span class="htc">✓</span> Reading &amp; Wimbledon</span>
+              <span><span class="htc">✓</span> BAcC registered</span>
+              <span><span class="htc">✓</span> No GP referral</span>
+              <span><span class="htc">✓</span> English &amp; Cantonese</span>
+            </div>
+          </div>
+        </section>
+      )}
 
-<section class="section-soft">
-  <div class="wrap">
-    <div class="grid-2-al" style="gap:4rem">
-      <div class="cond-copy">
-        <p class="eyebrow">The condition</p>
-        <h2>{condition.introHeading ?? "What we are treating"}</h2>
-        {condition.intro.map((p) => <p set:html={p} />)}
-        <p class="cond-sym-label">Does this sound familiar?</p>
-        <ul class="pseo-check">
-          {condition.symptoms.map((s) => (
-            <li>{s}</li>
-          ))}
-        </ul>
-      </div>
-      <div class="img-wrap">
-        <img
-          class="rounded-photo cond-photo"
-          src={condition.sectionImage ?? condition.image}
-          alt={condition.sectionImageAlt ?? condition.imageAlt ?? condition.label}
-          width="800"
-          height="533"
-          loading="lazy"
+      {sectionId === "intro-with-symptoms" && (
+        <section class="section-soft">
+          <div class="wrap">
+            <div class="grid-2-al" style="gap:4rem">
+              <div class="cond-copy">
+                <p class="eyebrow">The condition</p>
+                <h2>{condition.introHeading ?? "What we are treating"}</h2>
+                {condition.intro.map((p) => <p set:html={p} />)}
+                <p class="cond-sym-label">Does this sound familiar?</p>
+                <ul class="pseo-check">
+                  {condition.symptoms.map((s) => (
+                    <li>{s}</li>
+                  ))}
+                </ul>
+              </div>
+              <div class="img-wrap">
+                <img
+                  class="rounded-photo cond-photo"
+                  src={condition.sectionImage ?? condition.image}
+                  alt={condition.sectionImageAlt ?? condition.imageAlt ?? condition.label}
+                  width="800"
+                  height="533"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {sectionId === "intro" && (
+        <section class="section-soft">
+          <div class="wrap">
+            <div class="grid-2-al" style="gap:4rem">
+              <div class="cond-copy">
+                <p class="eyebrow">The condition</p>
+                <h2>{condition.introHeading ?? "What we are treating"}</h2>
+                {condition.intro.map((p) => <p set:html={p} />)}
+              </div>
+              <div class="img-wrap">
+                <img
+                  class="rounded-photo cond-photo"
+                  src={condition.sectionImage ?? condition.image}
+                  alt={condition.sectionImageAlt ?? condition.imageAlt ?? condition.label}
+                  width="800"
+                  height="533"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {sectionId === "symptoms" && (
+        <section class="section-soft">
+          <div class="wrap cond-copy" style="max-width:52rem">
+            <p class="eyebrow">Symptoms</p>
+            <h2>Does this sound familiar?</h2>
+            <ul class="pseo-check">
+              {condition.symptoms.map((s) => (
+                <li>{s}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {sectionId === "causes" && (
+        <section class="section">
+          <div class="wrap">
+            <div class="section-head">
+              <p class="eyebrow">Causes</p>
+              <h2>{condition.causesHeading ?? "What is usually driving it"}</h2>
+              <p>
+                The label is not the diagnosis. These are the patterns we see most often — your assessment
+                decides which applies.
+              </p>
+            </div>
+            <div class="grid-3">
+              {condition.causes.map((cause) => (
+                <article class="pseo-card cond-copy">
+                  <h3>{cause.title}</h3>
+                  <p set:html={cause.body} />
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {sectionId === "treatments" && (
+        <section class="section-dark">
+          <div class="wrap">
+            <div class="section-head" style="max-width:52ch">
+              <p class="eyebrow eyebrow-dark">Related treatments</p>
+              <h2>{condition.treatmentsHeading ?? `How we treat ${condition.label.toLowerCase()}`}</h2>
+              <p style="color:rgba(240,234,226,0.75)">
+                Modalities are combined according to your clinical picture — not offered as a fixed add-on list.
+              </p>
+            </div>
+            <div class="pseo-tx-grid">
+              {condition.treatments.map((t, i) => (
+                <a class="pseo-tx" href={t.href}>
+                  <span class="pseo-tx-num">{String(i + 1).padStart(2, "0")}</span>
+                  <h3>{t.label}</h3>
+                  <p>{t.why}</p>
+                  <span class="spec-link">Explore {t.label}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {sectionId === "patterns" && (
+        <section class="section-soft">
+          <div class="wrap">
+            <div class="grid-2-lg" style="gap:5rem">
+              <div>
+                <p class="eyebrow">TCM diagnosis</p>
+                <h2>The pattern behind the pain</h2>
+                <p>
+                  Western imaging shows structure. TCM adds why recovery has stalled. These patterns are not
+                  mutually exclusive — many chronic cases present with a combination.
+                </p>
+              </div>
+              <div class="pseo-pattern-list">
+                {condition.patterns.map((p) => (
+                  <div class="pseo-pattern">
+                    <h3>{p.title}</h3>
+                    <p>{p.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {sectionId === "expect" && condition.expect && condition.expect.length > 0 && (
+        <section class="section">
+          <div class="wrap">
+            <div class="section-head">
+              <p class="eyebrow">Your first visit</p>
+              <h2>{condition.expectHeading ?? "What to expect"}</h2>
+              <p>
+                The path is the same at <a href="/locations/reading-clinic">Reading</a> and{" "}
+                <a href="/locations/wimbledon-clinic">Wimbledon</a> — assessment first, then a plan you can follow.
+              </p>
+            </div>
+            <div class="journey-grid">
+              {condition.expect.map((step, i) => (
+                <div class="journey-step">
+                  <div class="j-num">{String(i + 1).padStart(2, "0")}</div>
+                  <h3>{step.title}</h3>
+                  <p set:html={step.body} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {sectionId === "safety" && condition.safety && (
+        <section class="section-soft">
+          <div class="wrap cond-safety">
+            <p class="eyebrow">Safety</p>
+            <h2>When to seek medical attention</h2>
+            <p>{condition.safety.intro}</p>
+            <ul class="pseo-check">
+              {condition.safety.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {sectionId === "clinic" && (
+        <section class="section">
+          <div class="wrap cond-clinic-block">
+            <p class="eyebrow">Clinics</p>
+            <h2>Reading &amp; Wimbledon</h2>
+            <p class="muted" style="max-width:48ch">
+              Same practitioners at both locations. Message us on WhatsApp with your preferred clinic and
+              availability — no GP referral needed.
+            </p>
+            <div class="cond-clinic-grid">
+              <div class="pseo-card cond-copy">
+                <h3><a href="/locations/reading-clinic">Reading clinic</a></h3>
+                <p>Monday, Wednesday &amp; Friday</p>
+                <p class="muted" style="font-size:0.9rem;margin-top:0.5rem">
+                  Reading Health Centre, 61 Castle Street
+                </p>
+              </div>
+              <div class="pseo-card cond-copy">
+                <h3><a href="/locations/wimbledon-clinic">Wimbledon clinic</a></h3>
+                <p>Saturday</p>
+                <p class="muted" style="font-size:0.9rem;margin-top:0.5rem">
+                  2 Saint Mark&apos;s Place, Wimbledon SW19
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {sectionId === "related" && related.length > 0 && (
+        <section class="section">
+          <div class="wrap">
+            <div class="section-head">
+              <p class="eyebrow">Related conditions</p>
+              <h2>Often assessed alongside</h2>
+            </div>
+            <div class="grid-3">
+              {related.map((c) => (
+                <a class="pseo-card pseo-card-link" href={c.href}>
+                  <h3>{c.label}</h3>
+                  <p>{c.summary}</p>
+                  <span class="spec-link">Read more</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {sectionId === "faq" && (
+        <section class="section-soft">
+          <div class="wrap grid-2-lg" style="gap:5rem">
+            <div>
+              <p class="eyebrow">Common questions</p>
+              <h2>{condition.label} — what patients ask</h2>
+              <p class="muted">Same-week appointments at Reading and Wimbledon. No GP referral needed.</p>
+              <div class="actions" style="margin-top:1.5rem">
+                <a class="btn btn-gold" href={whatsappHref} target="_blank" rel="noreferrer">
+                  WhatsApp {site.phoneDisplay}
+                </a>
+              </div>
+              <nav class="cond-book-links" aria-label="Booking options">
+                <a href="/locations/reading-clinic">Reading clinic</a>
+                <a href="/locations/wimbledon-clinic">Wimbledon clinic</a>
+                <a href="/contact">Contact</a>
+                <a href="/pricing-and-insurance">Pricing &amp; insurance</a>
+              </nav>
+            </div>
+            <FAQAccordion items={condition.faqs} includeSchema={false} />
+          </div>
+        </section>
+      )}
+
+      {sectionId === "cta" && (
+        <CTASection
+          heading={condition.ctaHeading ?? `Ready to address ${condition.label.toLowerCase()}?`}
+          sub="Book an initial consultation at our Wimbledon or Reading clinic — same-week appointments available."
+          primaryHref={whatsappHref}
+          primaryLabel={condition.whatsappMessage ? "WhatsApp the Clinic" : undefined}
         />
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Causes</p>
-      <h2>{condition.causesHeading ?? "What is usually driving it"}</h2>
-      <p>The label is not the diagnosis. These are the patterns we see most often — your assessment decides which applies.</p>
-    </div>
-    <div class="grid-3">
-      {condition.causes.map((cause) => (
-        <article class="pseo-card cond-copy">
-          <h3>{cause.title}</h3>
-          <p set:html={cause.body} />
-        </article>
-      ))}
-    </div>
-  </div>
-</section>
-
-<section class="section-dark">
-  <div class="wrap">
-    <div class="section-head" style="max-width:52ch">
-      <p class="eyebrow eyebrow-dark">Related treatments</p>
-      <h2>{condition.treatmentsHeading ?? `How we treat ${condition.label.toLowerCase()}`}</h2>
-      <p style="color:rgba(240,234,226,0.75)">
-        Modalities are combined according to your clinical picture — not offered as a fixed add-on list.
-      </p>
-    </div>
-    <div class="pseo-tx-grid">
-      {condition.treatments.map((t, i) => (
-        <a class="pseo-tx" href={t.href}>
-          <span class="pseo-tx-num">{String(i + 1).padStart(2, "0")}</span>
-          <h3>{t.label}</h3>
-          <p>{t.why}</p>
-          <span class="spec-link">Explore {t.label}</span>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
-
-<section class="section-soft">
-  <div class="wrap">
-    <div class="grid-2-lg" style="gap:5rem">
-      <div>
-        <p class="eyebrow">TCM diagnosis</p>
-        <h2>The pattern behind the pain</h2>
-        <p>
-          Western imaging shows structure. TCM adds why recovery has stalled. These patterns are not mutually exclusive — many chronic cases present with a combination.
-        </p>
-      </div>
-      <div class="pseo-pattern-list">
-        {condition.patterns.map((p) => (
-          <div class="pseo-pattern">
-            <h3>{p.title}</h3>
-            <p>{p.body}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
-
-{condition.expect && condition.expect.length > 0 && (
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Your first visit</p>
-        <h2>{condition.expectHeading ?? "What to expect"}</h2>
-        <p>The path is the same at <a href="/locations/reading-clinic">Reading</a> and <a href="/locations/wimbledon-clinic">Wimbledon</a> — assessment first, then a plan you can follow.</p>
-      </div>
-      <div class="journey-grid">
-        {condition.expect.map((step, i) => (
-          <div class="journey-step">
-            <div class="j-num">{String(i + 1).padStart(2, "0")}</div>
-            <h3>{step.title}</h3>
-            <p set:html={step.body} />
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-)}
-
-{condition.safety && (
-  <section class="section-soft">
-    <div class="wrap cond-safety">
-      <p class="eyebrow">Safety</p>
-      <h2>When to seek medical attention</h2>
-      <p>{condition.safety.intro}</p>
-      <ul class="pseo-check">
-        {condition.safety.items.map((item) => (
-          <li>{item}</li>
-        ))}
-      </ul>
-    </div>
-  </section>
-)}
-
-{related.length > 0 && (
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Related conditions</p>
-        <h2>Often assessed alongside</h2>
-      </div>
-      <div class="grid-3">
-        {related.map((c) => (
-          <a class="pseo-card pseo-card-link" href={c.href}>
-            <h3>{c.label}</h3>
-            <p>{c.summary}</p>
-            <span class="spec-link">Read more</span>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-)}
-
-<section class="section-soft">
-  <div class="wrap grid-2-lg" style="gap:5rem">
-    <div>
-      <p class="eyebrow">Common questions</p>
-      <h2>{condition.label} — what patients ask</h2>
-      <p class="muted">Same-week appointments at Reading and Wimbledon. No GP referral needed.</p>
-      <div class="actions" style="margin-top:1.5rem">
-        <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp {site.phoneDisplay}</a>
-      </div>
-      <nav class="cond-book-links" aria-label="Booking options">
-        <a href="/locations/reading-clinic">Reading clinic</a>
-        <a href="/locations/wimbledon-clinic">Wimbledon clinic</a>
-        <a href="/contact">Contact</a>
-        <a href="/pricing-and-insurance">Pricing &amp; insurance</a>
-      </nav>
-    </div>
-    <FAQAccordion items={condition.faqs} includeSchema={false} />
-  </div>
-</section>
-
-<CTASection
-  heading={condition.ctaHeading ?? `Ready to address ${condition.label.toLowerCase()}?`}
-  sub="Book an initial consultation at our Wimbledon or Reading clinic — same-week appointments available."
-/>
+      )}
+    </>
+  ))
+}
 
 <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+<style>
+  .hero-clinic-days {
+    margin: 0.85rem 0 0;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.82);
+    max-width: 28rem;
+  }
+  .hero-clinic-days a {
+    color: var(--gold);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .hero-clinic-days a:hover {
+    text-decoration: underline;
+  }
+  .cond-clinic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  .cond-clinic-block h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .cond-clinic-block h3 a:hover {
+    color: var(--teal);
+  }
+</style>
