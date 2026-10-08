@@ -7,7 +7,16 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "astro build && wrangler deploy"
+    "deploy": "astro build && wrangler deploy",
+    "gsc:verify": "node scripts/gsc.mjs verify",
+    "gsc:auth": "node scripts/gsc.mjs auth",
+    "gsc:sitemap": "node scripts/gsc.mjs sitemap",
+    "gsc:inspect": "node scripts/gsc.mjs inspect",
+    "gsc:check-new": "node scripts/gsc.mjs check-new",
+    "gsc:index": "node scripts/gsc.mjs sitemap",
+    "gsc:notify": "node scripts/gsc.mjs notify",
+    "reviews:sync": "node scripts/reviews-sync.mjs",
+    "reviews:check": "node scripts/reviews-sync.mjs --check"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

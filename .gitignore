@@ -9,3 +9,14 @@ _*.json
 _img-log.txt
 .DS_Store
 *.log
+.env
+.env.local
+.env.*.local
+secrets/
+**/gsc-token.json
+**/gsc-oauth-client.json
+**/gsc-service-account.json
+**/gbp-oauth-token.json
+**/gbp-oauth-client.json
+*-service-account*.json
+google-credentials.json
