@@ -1872,7 +1872,7 @@ export const conditions: Condition[] = [
         body: "Fixed, clotty or painful cycles, or a history that suggests stagnation. Often combined with another pattern rather than standing alone.",
       },
     ],
-    related: ["menstrual-pain", "postnatal-recovery"],
+    related: ["menopause", "menstrual-pain", "postnatal-recovery"],
     expect: [
       {
         title: "Initial health assessment",
@@ -1895,6 +1895,159 @@ export const conditions: Condition[] = [
       {
         q: "Do I need Chinese herbal medicine as well as acupuncture?",
         a: "Not automatically. After assessment, the practitioner explains whether herbal medicine, acupuncture, or a combination is recommended.",
+      },
+    ],
+  },
+  {
+    slug: "menopause",
+    href: "/conditions/menopause",
+    label: "Menopause",
+    category: "womens-health",
+    status: "live",
+    summary:
+      "Perimenopause and menopause symptoms — hot flushes, sleep disruption, mood change and joint ache — assessed with acupuncture and herbal medicine where indicated.",
+    title: "Menopause & Perimenopause Acupuncture | Reading & Wimbledon",
+    description:
+      "Acupuncture and Chinese herbal medicine for perimenopause and menopause in Reading and Wimbledon. Assessment-led care for flushes, sleep, mood and aches — not HRT replacement.",
+    ogTitle: "Menopause & Perimenopause Acupuncture | Reading & Wimbledon",
+    ogDescription:
+      "How we assess perimenopause and menopause with TCM — flushes, insomnia, anxiety and stiffness — with acupuncture and herbs at our Reading and Wimbledon clinics.",
+    ctaHeading: "Ready to discuss menopause support?",
+    h1: "Acupuncture & TCM for Menopause in Reading & Wimbledon",
+    eyebrow: "Women's Health · Menopause",
+    lede:
+      "Perimenopause and menopause are hormonal transitions — not a single symptom list. We assess your pattern first, then tailor acupuncture and, where appropriate, herbal medicine.",
+    image: "/images/generated/clinic-consultation.webp",
+    imageAlt: "Consultation at Yin Yang CMC",
+    heroImage: "/images/generated/clinic-consultation.webp",
+    sectionImage: "/images/generated/chinese-medicine-pulse-assessment.webp",
+    sectionImageAlt:
+      "Practitioner taking a patient's pulse during a Traditional Chinese Medicine consultation",
+    introHeading: "Perimenopause, menopause and what we assess",
+    treatmentsHeading: "Acupuncture and herbal medicine for menopause",
+    whatsappMessage:
+      "Hi — I'd like to enquire about acupuncture / TCM for perimenopause or menopause symptoms. ",
+    intro: [
+      "People seek help when cycles become unpredictable, sleep breaks down, or hot flushes and night sweats start to dominate the week. Joint stiffness, low mood, brain fog and anxiety often arrive in the same chapter — especially in perimenopause, when hormones are shifting month to month.",
+      "Western menopause care may include HRT, lifestyle change or specialist review. Traditional Chinese Medicine does not replace that pathway. We use <a href=\"/clinical-services/acupuncture\">acupuncture</a> and, where clinically appropriate, <a href=\"/clinical-services/herbal-consultation\">Chinese herbal medicine</a> to support the symptoms and constitutional pattern in front of us — assessed individually, not as a fixed menopause package.",
+    ],
+    symptoms: [
+      "Hot flushes or night sweats, often with disturbed sleep",
+      "Irregular, heavy or skipped periods in perimenopause",
+      "Low mood, irritability or anxiety alongside hormonal change",
+      "Joint aches, stiffness or feeling suddenly ‘older’ in the body",
+      "Brain fog, fatigue or poor recovery from stress",
+    ],
+    causes: [
+      {
+        title: "Hormonal transition",
+        body:
+          "Declining oestrogen and progesterone drive many vasomotor and sleep symptoms. We take a full gynaecological and general history — including any HRT or specialist care you are already under.",
+      },
+      {
+        title: "Sleep and nervous-system load",
+        body:
+          "Broken sleep and a racing mind lower tolerance for flushes and mood swings. Stress, caregiving and work pressure are part of the picture, not background noise.",
+      },
+      {
+        title: "Musculoskeletal change",
+        body:
+          "Menopause-related joint ache and stiffness are common reasons people book musculoskeletal care. We link that back to your wider hormonal and constitutional assessment.",
+      },
+    ],
+    treatments: [
+      {
+        href: "/clinical-services/acupuncture",
+        label: "Acupuncture",
+        why:
+          "Fine, single-use needles selected to your pattern. Treatment frequency is discussed at consultation — often weekly at first, then spaced as symptoms settle.",
+      },
+      {
+        href: "/clinical-services/herbal-consultation",
+        label: "Chinese Herbal Medicine",
+        why:
+          "Concentrated granules prescribed after pulse and tongue diagnosis, when internal regulation is the right tool alongside or instead of acupuncture.",
+      },
+    ],
+    patterns: [
+      {
+        title: "Kidney Yin Deficiency 腎陰虛",
+        body:
+          "Flushes with dryness, night sweats, restless sleep and a sense of inner heat — often the dominant perimenopause pattern in TCM discussion.",
+      },
+      {
+        title: "Kidney Yang Deficiency 腎陽虛",
+        body:
+          "Cold limbs, oedema, marked fatigue and low back ache with a depleted, ‘cooled down’ constitution.",
+      },
+      {
+        title: "Liver Qi Stagnation 肝氣鬱結",
+        body:
+          "Mood swings, chest tightness, irritability and headaches that track stress and irregular cycles.",
+      },
+      {
+        title: "Heart & Kidney Disharmony 心腎不交",
+        body:
+          "Insomnia with palpitations, anxiety or vivid dreaming — common when sleep and flushes overlap.",
+      },
+    ],
+    related: ["fertility-support", "menstrual-pain", "anxiety-sleep"],
+    expect: [
+      {
+        title: "History and medications",
+        body:
+          "We ask about cycle changes, HRT, contraception, thyroid and other conditions, plus sleep, mood and joint symptoms — and any bleeding that needs a GP review first.",
+      },
+      {
+        title: "Pulse and tongue diagnosis",
+        body:
+          "In-clinic TCM assessment identifies the pattern behind your symptoms so treatment is not generic ‘menopause acupuncture’.",
+      },
+      {
+        title: "Clear plan",
+        body:
+          "You leave with an explanation in plain language: acupuncture, herbs or both; suggested visit frequency; and when to stay in touch with your GP or menopause clinic.",
+      },
+    ],
+    safety: {
+      intro: "Complementary care waits until urgent or gynaecological red flags are addressed. Seek prompt medical assessment if you notice:",
+      items: [
+        "Bleeding after menopause, or bleeding that is suddenly much heavier than usual",
+        "Postmenopausal bleeding on HRT — follow your prescriber’s advice and GP review",
+        "Severe depression, self-harm thoughts or inability to function — contact NHS 111 or urgent care",
+        "Unexplained weight loss, fever or pelvic pain that is new and persistent",
+      ],
+    },
+    faqs: [
+      {
+        q: "Can acupuncture help menopause symptoms?",
+        a:
+          "Many patients use <a href=\"/clinical-services/acupuncture\">acupuncture</a> for hot flushes, sleep disruption and musculoskeletal symptoms during perimenopause and menopause. Evidence and response vary by person; we assess whether it is appropriate for your presentation and do not promise a cure.",
+      },
+      {
+        q: "Do you prescribe HRT or replace my menopause clinic?",
+        a:
+          "No. HRT and specialist menopause care sit with your GP or menopause service. TCM is complementary — herbs and acupuncture are prescribed only within our scope after consultation.",
+      },
+      {
+        q: "Can I use Chinese herbs alongside HRT?",
+        a:
+          "Sometimes, after a full medication and history review. We need to know what you already take — including HRT, blood thinners and thyroid medication — before prescribing granules.",
+      },
+      {
+        q: "Who will I see for menopause support?",
+        a:
+          "Chui Ying Li (Andrea) leads women's health across both UK clinics. Consultations are available in English, Cantonese and Mandarin at Reading and Wimbledon.",
+      },
+      {
+        q: "Is treatment available in Reading and Wimbledon?",
+        a:
+          "Yes. <a href=\"/locations/reading-clinic\">Reading</a> midweek and <a href=\"/locations/wimbledon-clinic\">Wimbledon</a> on Saturday. WhatsApp to book — no GP referral needed.",
+      },
+      {
+        q: "Can I claim through health insurance?",
+        a:
+          "We are recognised by AXA Health, Vitality, Aviva and WPA. Cover depends on your policy and usually relates to eligible acupuncture. See <a href=\"/pricing-and-insurance\">Pricing &amp; Insurance</a>.",
       },
     ],
   },
