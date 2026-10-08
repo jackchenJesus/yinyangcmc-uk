@@ -16,8 +16,8 @@ const LOGO_Q = 90;
 const jobs = [
   { from: "webbanner-eQwGJSc8Re6udP6z.jpg", to: "acupuncture-back-treatment.webp", kind: "photo", maxW: 1920 },
   { from: "img_6058-eVlfhKuykGV6M98J.jpg", to: "reading-clinic-treatment-room.webp", kind: "photo", maxW: 1600 },
-  { from: "ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg", to: "reading-clinic-interior.webp", kind: "photo", maxW: 1600 },
-  { from: "screenshot-2025-12-05-at-10.17.22-1VPeecyL0rBlKQh4.jpg", to: "wimbledon-clinic-interior.webp", kind: "photo", maxW: 1600 },
+  { from: "ed61151b-8db1-40a1-9f0f-4d9fee7567c5_edi-B2yhs2iysFxKirqN.jpg", to: "wimbledon-clinic-interior.webp", kind: "photo", maxW: 1600 },
+  { from: "reading-clinic-interior.png", to: "reading-clinic-interior.webp", kind: "photo", maxW: 1600 },
   { from: "e--ae-a-_edited-XhbCA7G3Oou0Mlsq.jpg", to: "shing-hui-practitioner.webp", kind: "photo", maxW: 800 },
   { from: "aeeppsc-c-e-a-_edited_edited-a6uAksf7EtvBGWTM.jpg", to: "chui-ying-li-practitioner.webp", kind: "photo", maxW: 800 },
   { from: "adobestock_88537046-low-My8DbSswqH0l0J9t.jpg", to: "acupuncture-abdomen-treatment.webp", kind: "photo", maxW: 1400 },
