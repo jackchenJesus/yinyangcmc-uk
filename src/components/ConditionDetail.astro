@@ -29,6 +29,9 @@ const heroPrimaryLabel = condition.heroPrimaryLabel ?? "Book a Consultation";
 const sectionOrder: ConditionSectionId[] =
   condition.sectionOrder ?? defaultConditionSectionOrder;
 
+const defaultPatternsIntro =
+  "Western imaging shows structure. TCM adds why recovery has stalled. These patterns are not mutually exclusive — many chronic cases present with a combination.";
+
 const stripHtml = (value: string) =>
   value
     .replace(/<[^>]+>/g, "")
@@ -196,8 +199,8 @@ const schema = {
               <p class="eyebrow">Causes</p>
               <h2>{condition.causesHeading ?? "What is usually driving it"}</h2>
               <p>
-                The label is not the diagnosis. These are the patterns we see most often — your assessment
-                decides which applies.
+                {condition.causesIntro ??
+                  "The label is not the diagnosis. These are the patterns we see most often — your assessment decides which applies."}
               </p>
             </div>
             <div class="grid-3">
@@ -241,12 +244,9 @@ const schema = {
           <div class="wrap">
             <div class="grid-2-lg" style="gap:5rem">
               <div>
-                <p class="eyebrow">TCM diagnosis</p>
-                <h2>The pattern behind the pain</h2>
-                <p>
-                  Western imaging shows structure. TCM adds why recovery has stalled. These patterns are not
-                  mutually exclusive — many chronic cases present with a combination.
-                </p>
+                <p class="eyebrow">{condition.patternsEyebrow ?? "TCM diagnosis"}</p>
+                <h2>{condition.patternsHeading ?? "The pattern behind the pain"}</h2>
+                <p set:html={condition.patternsIntro ?? defaultPatternsIntro} />
               </div>
               <div class="pseo-pattern-list">
                 {condition.patterns.map((p) => (
@@ -255,6 +255,47 @@ const schema = {
                     <p>{p.body}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {sectionId === "evidence" && condition.evidence && (
+        <section class="section">
+          <div class="wrap cond-copy" style="max-width:52rem">
+            <p class="eyebrow">Evidence &amp; NHS context</p>
+            <h2>{condition.evidence.heading}</h2>
+            {condition.evidence.paragraphs.map((p) => <p set:html={p} />)}
+          </div>
+        </section>
+      )}
+
+      {sectionId === "practitioner" && condition.practitioner && (
+        <section class="section-soft">
+          <div class="wrap">
+            <div class="grid-2-al" style="gap:4rem;align-items:center">
+              <div class="img-wrap">
+                <img
+                  class="rounded-photo cond-photo"
+                  src={condition.practitioner.image}
+                  alt={condition.practitioner.imageAlt}
+                  width="800"
+                  height="882"
+                  loading="lazy"
+                />
+              </div>
+              <div class="cond-copy">
+                <p class="eyebrow">Your practitioner</p>
+                <h2>{condition.practitioner.heading ?? "Who leads women's health care"}</h2>
+                <p>
+                  <strong>{condition.practitioner.name}</strong> — {condition.practitioner.role}
+                </p>
+                {condition.practitioner.paragraphs.map((p) => <p set:html={p} />)}
+                <p class="muted" style="font-size:0.9rem">{condition.practitioner.regs}</p>
+                <p style="margin-top:1rem">
+                  <a class="more-link" href={condition.practitioner.profileHref}>View practitioner profile</a>
+                </p>
               </div>
             </div>
           </div>
