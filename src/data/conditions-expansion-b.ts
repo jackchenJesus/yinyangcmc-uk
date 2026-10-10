@@ -385,6 +385,31 @@ export const expansionConditionsB: LiveCondition[] = [
     ogTitle: "Tennis Elbow Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "Pain on the outside of the elbow when gripping or lifting. Complementary acupuncture after assessment.",
+    ctaHeading: "Ready to book tennis elbow treatment?",
+    introHeading: "Tennis elbow, lateral epicondylalgia and outer-elbow pain",
+    causesHeading: "Why the outside of the elbow hurts when you grip",
+    expectHeading: "What a Yin Yang CMC appointment involves",
+    heroSecondaryLabel: "Contact the clinic",
+    heroSecondaryHref: "/contact",
+    heroPrimaryLabel: "WhatsApp the Clinic",
+    heroAvailabilityHtml:
+      '<a href="/locations/reading-clinic">Reading</a> — Monday, Wednesday &amp; Friday<br /><a href="/locations/wimbledon-clinic">Wimbledon</a> — Saturday',
+    whatsappMessage:
+      "Hi, I'd like to enquire about a consultation for tennis elbow. I'm interested in the Reading / Wimbledon clinic. Could you let me know the available appointments?",
+    sectionOrder: [
+      "hero",
+      "expect",
+      "treatments",
+      "symptoms",
+      "clinic",
+      "safety",
+      "intro",
+      "causes",
+      "related",
+      "patterns",
+      "faq",
+      "cta",
+    ],
     h1: "Acupuncture for Tennis Elbow in Reading & Wimbledon",
     treatmentsHeading: "Acupuncture and Tui Na for tennis elbow",
     eyebrow: "Conditions · Tennis Elbow",
@@ -396,7 +421,7 @@ export const expansionConditionsB: LiveCondition[] = [
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Lateral epicondylalgia is irritation of the forearm extensor tendons where they meet the outer elbow. Pain picking up a kettle, typing, or shaking hands is typical. Inner-elbow pain is <a href=\"/conditions/golfers-elbow\">golfer's elbow</a>. Broader joint ache sits on <a href=\"/conditions/elbow-pain\">elbow pain</a>.",
-      "The <a href=\"/conditions/wrist-pain\">wrist</a> and <a href=\"/conditions/shoulder-pain\">shoulder</a> often share the load. We look at the chain, not only the sore bump on the elbow. Complementary <a href=\"/clinical-services/acupuncture\">acupuncture</a> may be used with Tui Na after that assessment.",
+      "The <a href=\"/conditions/wrist-pain\">wrist</a> and <a href=\"/conditions/shoulder-pain\">shoulder</a> often share the load — and racket or gym loads are often assessed as part of <a href=\"/conditions/sports-injuries\">sports injury</a> care. We look at the chain, not only the sore bump on the elbow. Where treatment is appropriate, we typically combine <a href=\"/clinical-services/acupuncture\">acupuncture</a> with <a href=\"/clinical-services/tui-na-massage\">Tui Na</a> after assessment at <a href=\"/locations/reading-clinic\">Reading</a> or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a>. Fees are on <a href=\"/pricing-and-insurance\">Pricing &amp; Insurance</a>.",
     ],
     symptoms: [
       "Pain on the bony point on the outside of the elbow",
@@ -487,7 +512,10 @@ export const expansionConditionsB: LiveCondition[] = [
         q: "What if the pain is on the inside of the elbow?",
         a: "That is more likely <a href=\"/conditions/golfers-elbow\">golfer's elbow</a>.",
       },
-      clinics,
+      {
+        q: "Do you treat tennis elbow in Reading and Wimbledon?",
+        a: "Yes. Appointments are at our <a href=\"/locations/reading-clinic\">Reading clinic</a> (Monday, Wednesday and Friday) and <a href=\"/locations/wimbledon-clinic\">Wimbledon clinic</a> (Saturday). WhatsApp to book — no GP referral needed.",
+      },
       ins,
     ],
   },
