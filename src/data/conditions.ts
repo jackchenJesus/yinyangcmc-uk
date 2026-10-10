@@ -1009,10 +1009,10 @@ export const conditions: Condition[] = [
     status: "live",
     summary:
       "UK term for radiating neck, shoulder or back nerve pain — assessment first, then acupuncture and Tui Na if appropriate.",
-    title: "Trapped Nerve Treatment & Acupuncture | Neck, Shoulder or Back",
+    title: "Trapped Nerve Treatment & Acupuncture | Reading & Wimbledon",
     description:
       "Acupuncture for a trapped nerve in the neck, shoulder or back. Reading and Wimbledon clinics. Assessment first, then treatment only where appropriate.",
-    ogTitle: "Trapped Nerve Treatment & Acupuncture | Neck, Shoulder or Back",
+    ogTitle: "Trapped Nerve Treatment & Acupuncture | Reading & Wimbledon",
     ogDescription:
       "If pain shoots from the neck, shoulder or back into an arm or leg, the next step is assessment. Book at Reading or Wimbledon — no GP referral needed.",
     ctaHeading: "Ready to book for a trapped nerve?",

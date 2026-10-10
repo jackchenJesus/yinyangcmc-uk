@@ -6,6 +6,10 @@ import { site } from "../../data/site";
 
 const pageUrl = "https://yinyangcmc.uk/conditions/fertility-support";
 
+const fertilityWhatsappMessage =
+  "Hi — I'd like to enquire about fertility support (acupuncture / TCM) at your Reading or Wimbledon clinic. Could you share availability for an initial consultation?";
+const fertilityWhatsappHref = `${site.whatsapp}?text=${encodeURIComponent(fertilityWhatsappMessage)}`;
+
 const faqItems = [
   {
     q: "Can acupuncture and TCM be used alongside IVF?",
@@ -105,7 +109,7 @@ const schema = {
     </div>
 
     <div class="actions" style="margin-top:0">
-      <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
+      <a class="btn btn-gold" href={fertilityWhatsappHref} target="_blank" rel="noreferrer">Book a Consultation</a>
       <a class="btn btn-ghost" href="/our-practitioners">Meet Our Practitioners</a>
     </div>
 
@@ -159,7 +163,7 @@ const schema = {
         </ul>
 
         <div class="actions" style="margin-top:1.8rem">
-          <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
+          <a class="btn btn-gold" href={fertilityWhatsappHref} target="_blank" rel="noreferrer">Book a Consultation</a>
           <a class="btn btn-outline" href="/clinical-services/herbal-consultation">Herbal Consultation</a>
         </div>
       </div>
@@ -231,7 +235,7 @@ const schema = {
     </div>
 
     <p style="margin-top:2.5rem;text-align:center">
-      <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book Your First Consultation</a>
+      <a class="btn btn-gold" href={fertilityWhatsappHref} target="_blank" rel="noreferrer">Book Your First Consultation</a>
     </p>
   </div>
 </section>
@@ -315,7 +319,7 @@ const schema = {
           <p style="font-family:var(--serif);font-size:1.02rem;font-style:italic;color:#f0ece2;line-height:1.6;margin:0">
             "We understand that seeking help for fertility can feel overwhelming. We are here to support you every step of the way."
           </p>
-          <a class="btn btn-gold btn-sm" href={site.whatsapp} target="_blank" rel="noreferrer" style="margin-top:0.9rem">WhatsApp Us Now</a>
+          <a class="btn btn-gold btn-sm" href={fertilityWhatsappHref} target="_blank" rel="noreferrer" style="margin-top:0.9rem">WhatsApp Us Now</a>
         </div>
       </div>
 
@@ -468,7 +472,7 @@ const schema = {
           <div class="loc-row"><strong>Transport</strong><span>Reading Station — Elizabeth Line &amp; GWR</span></div>
           <div class="loc-actions">
             <a class="btn btn-outline btn-sm" href="/locations/reading-clinic">Clinic Details</a>
-            <a class="btn btn-gold btn-sm" href={site.whatsapp} target="_blank" rel="noreferrer">Book via WhatsApp</a>
+            <a class="btn btn-gold btn-sm" href={fertilityWhatsappHref} target="_blank" rel="noreferrer">Book via WhatsApp</a>
           </div>
         </div>
       </div>
@@ -487,7 +491,7 @@ const schema = {
           <div class="loc-row"><strong>Transport</strong><span>Wimbledon Station — District Line &amp; National Rail</span></div>
           <div class="loc-actions">
             <a class="btn btn-outline btn-sm" href="/locations/wimbledon-clinic">Clinic Details</a>
-            <a class="btn btn-gold btn-sm" href={site.whatsapp} target="_blank" rel="noreferrer">Book via WhatsApp</a>
+            <a class="btn btn-gold btn-sm" href={fertilityWhatsappHref} target="_blank" rel="noreferrer">Book via WhatsApp</a>
           </div>
         </div>
       </div>
@@ -511,7 +515,7 @@ const schema = {
           treatments, herbal medicines, or what to expect, please do not hesitate to get in touch.
         </p>
         <div class="actions" style="margin-top:1.5rem">
-          <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Ask Us Directly</a>
+          <a class="btn btn-gold" href={fertilityWhatsappHref} target="_blank" rel="noreferrer">Ask Us Directly</a>
         </div>
         <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
           <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Related services:</p>
@@ -534,6 +538,7 @@ const schema = {
 <CTASection
   heading="We look forward to supporting you on your journey"
   sub="Same-week appointments at Reading and Wimbledon. Complete the health questionnaire before you arrive so we can make the most of your consultation."
+  primaryHref={fertilityWhatsappHref}
 />
 
 <script type="application/ld+json" set:html={JSON.stringify(schema)} />
