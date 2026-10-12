@@ -142,7 +142,7 @@ export const conditions: Condition[] = [
     image: "/images/back-assessment-treatment.webp",
     imageAlt: "Practitioner assessing a patient's back in clinic",
     heroImage: "/images/generated/back-pain-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Back pain is one of the most common reasons people in the UK reduce activity, take time off work, or live with daily discomfort that gradually wears them down. It is a symptom with many drivers — not a single diagnosis.",
@@ -293,7 +293,7 @@ export const conditions: Condition[] = [
     image: "/images/sciatica-nerve-illustration.webp",
     imageAlt: "Illustration of sciatic nerve pain with manual therapy and herbal medicine",
     heroImage: "/images/generated/sciatica-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Sciatica describes pain from irritation or compression of the sciatic nerve — running from the lower back through the buttock and down the leg, sometimes to the calf or foot. It is often felt as sciatic nerve pain, or as lower-back pain that travels down the leg. Sitting, standing up, coughing or walking can all stir it.",
@@ -756,8 +756,8 @@ export const conditions: Condition[] = [
     lede: "You trained. Now the knee catches on the stairs, the shoulder pulls overhead, or the lower back seizes after a run. We use acupuncture and manual therapy for the tissue and the compensation pattern — not only the sore spot.",
     image: "/images/knee-assessment-clinic.webp",
     imageAlt: "Practitioner examining a patient's knee in clinic",
-    heroImage: "/images/sports-injuries-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    heroImage: "/images/generated/sports-injuries-patient-hero.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Sports injuries range from acute trauma to cumulative overuse. Rest and anti-inflammatories often settle symptoms without restoring full biomechanical function. That gap is where TCM is used as a parallel clinical system — tissue care, pain modulation and joint mobility — not as a replacement for sports medicine or imaging where those are needed.",
@@ -887,7 +887,7 @@ export const conditions: Condition[] = [
     image: "/images/sciatica-nerve-illustration.webp",
     imageAlt: "Illustration of sciatic nerve pain with manual therapy and herbal medicine",
     heroImage: "/images/generated/pinched-nerve-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "“Pinched nerve” describes irritation or compression of a nerve — often in the neck, shoulder girdle or lower back. The nerve itself is not always the only structure involved: nearby joints, discs and tight muscle can all reduce the space a nerve has to move.",
@@ -1024,7 +1024,7 @@ export const conditions: Condition[] = [
     image: "/images/shoulder-pain-symptom.webp",
     imageAlt: "Woman holding her shoulder, with the joint highlighted to show pain",
     heroImage: "/images/generated/trapped-nerve-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People search for a trapped nerve in the neck, a trapped nerve in the shoulder, or a trapped nerve in the back because that is how the pain presents in daily life — turning to check a blind spot, reaching for a seatbelt, sitting at a desk, or getting out of a chair. The useful clinical question is not the label. It is where the symptoms start, where they travel, and what they do to sleep, work and movement.",
@@ -1159,7 +1159,7 @@ export const conditions: Condition[] = [
     image: "/images/tui-na-massage-treatment.webp",
     imageAlt: "Practitioner using Tui Na manual therapy on a patient’s upper back",
     heroImage: "/images/generated/neck-pain-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Neck pain ranges from a stiff neck after sleep to a chronic ache that builds through the working day. Many people also feel it across the shoulders or into the upper back. Muscular neck pain, postural loading and joint stiffness often overlap — which is why a single stretch or heat pack is not always enough.",
@@ -1295,7 +1295,7 @@ export const conditions: Condition[] = [
     image: "/images/manual-therapy-side-lying.webp",
     imageAlt: "Practitioner treating the lower back with the patient in a side-lying position",
     heroImage: "/images/generated/herniated-disc-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "A herniated disc — often called a slipped disc in the UK — is when disc material bulges or leaks enough to irritate nearby tissue, sometimes including a nerve root. Many people first notice it as disc-related back pain; others notice leg pain and look up <a href=\"/conditions/sciatica-treatment\">sciatica</a>.",
@@ -1431,7 +1431,7 @@ export const conditions: Condition[] = [
     image: "/images/back-assessment-treatment.webp",
     imageAlt: "Practitioner assessing a patient's back in clinic",
     heroImage: "/images/generated/piriformis-syndrome-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "The piriformis is a small muscle deep in the buttock. When it is tight or irritated, it can aggravate the sciatic nerve that runs beneath (and in some people, through) the muscle. The result can be piriformis pain, buttock pain, and pain down the leg that looks and feels like <a href=\"/conditions/sciatica-treatment\">sciatica</a>.",
@@ -1566,7 +1566,7 @@ export const conditions: Condition[] = [
     image: "/images/knee-assessment-clinic.webp",
     imageAlt: "Practitioner examining a patient's knee in clinic",
     heroImage: "/images/generated/knee-pain-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People look for knee pain treatment without surgery because they want to keep walking, working and training. That is a reasonable aim — and it is not the same as saying <a href=\"/clinical-services/acupuncture\">acupuncture</a> can replace an operation when an orthopaedic surgeon has already judged surgery to be necessary. Suitability is assessed in clinic at <a href=\"/locations/reading-clinic\">Reading</a> or <a href=\"/locations/wimbledon-clinic\">Wimbledon</a>, alongside whatever NHS or specialist advice you already have.",
@@ -1701,7 +1701,7 @@ export const conditions: Condition[] = [
     image: "/images/bone-setting-treatment.webp",
     imageAlt: "Practitioner using manual therapy on a patient's back and shoulder",
     heroImage: "/images/generated/hip-pain-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Hip pain when walking, stiffness after sitting, or an ache in the buttock and hip can have several sources: the hip joint itself, the lumbar spine, the sacroiliac region, or muscles such as the piriformis. Searching the symptom is useful. Naming the structure from a webpage is not.",

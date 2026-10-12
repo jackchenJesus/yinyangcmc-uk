@@ -33,7 +33,7 @@ export const expansionConditions: LiveCondition[] = [
     image: "/images/generated/arthritis-patient-hero.webp",
     imageAlt: "Person holding arthritic knuckles during a quiet moment at home",
     heroImage: "/images/generated/arthritis-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People search for <a href=\"/clinical-services/acupuncture\">acupuncture</a> for arthritis when morning stiffness, weather-sensitive joints or reduced grip start to shrink what they can do. Osteoarthritis of the knee, hip, hands or spine is the picture we see most often. Inflammatory types such as rheumatoid arthritis belong under medical supervision; we do not diagnose them from a webpage.",
@@ -157,7 +157,7 @@ export const expansionConditions: LiveCondition[] = [
     image: "/images/generated/joint-pain-patient-hero.webp",
     imageAlt: "Person sitting on a treatment couch with a hand on a stiff knee",
     heroImage: "/images/generated/joint-pain-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People look for joint pain treatment when a knee, wrist, ankle or several joints ache without a neat explanation. The sore joint is a starting point. It is not automatically <a href=\"/conditions/arthritis\">arthritis</a>, a sports injury, or a trapped nerve.",
@@ -282,7 +282,7 @@ export const expansionConditions: LiveCondition[] = [
     image: "/images/generated/migraine-patient-hero.webp",
     imageAlt: "Person sitting in low light with fingers at the temple during a migraine",
     heroImage: "/images/generated/migraine-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People search for <a href=\"/clinical-services/acupuncture\">acupuncture</a> for migraine when attacks interrupt work, sleep or family life, or when they want a non-drug option alongside whatever their GP has already advised. Migraine often includes nausea, light or sound sensitivity, and sometimes visual aura. Everyday tension-type pain is covered separately on our <a href=\"/conditions/headaches\">headaches</a> page.",
@@ -406,7 +406,7 @@ export const expansionConditions: LiveCondition[] = [
     image: "/images/generated/headaches-patient-hero.webp",
     imageAlt: "Office worker rubbing the back of the neck at a desk",
     heroImage: "/images/generated/headaches-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People look for headache treatment when a dull pressure sits across the forehead, temples or base of the skull after screens, driving or poor sleep. That is often a tension-type or cervicogenic picture. Pulsing one-sided attacks with aura belong on our <a href=\"/conditions/migraine\">migraine</a> page.",
@@ -530,7 +530,7 @@ export const expansionConditions: LiveCondition[] = [
     image: "/images/generated/plantar-fasciitis-patient-hero.webp",
     imageAlt: "Person holding the underside of the heel and arch",
     heroImage: "/images/generated/plantar-fasciitis-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Plantar fasciitis is irritation of the thick band of tissue under the foot that supports the arch. People describe first-step pain, then a duller ache after they have been on their feet. It is not the same as every <a href=\"/conditions/foot-pain\">foot pain</a>, nor automatically an <a href=\"/conditions/achilles-tendinitis\">Achilles</a> problem — though those pages sit next door.",
@@ -654,7 +654,7 @@ export const expansionConditions: LiveCondition[] = [
     image: "/images/generated/carpal-tunnel-patient-hero.webp",
     imageAlt: "Person holding a tingling wrist while working at a laptop",
     heroImage: "/images/generated/carpal-tunnel-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "The median nerve can be irritated as it passes through the carpal tunnel at the wrist. People shake the hand at night, drop objects, or notice pins and needles when cycling or typing. That is not automatically every <a href=\"/conditions/wrist-pain\">wrist pain</a>, and it is not automatically a <a href=\"/conditions/trapped-nerve\">trapped nerve</a> in the neck — though we check both.",

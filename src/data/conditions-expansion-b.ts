@@ -32,7 +32,7 @@ export const expansionConditionsB: LiveCondition[] = [
     image: "/images/generated/trigeminal-neuralgia-patient-hero.webp",
     imageAlt: "Person cautiously touching the side of the face",
     heroImage: "/images/generated/trigeminal-neuralgia-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People describe a lightning-like jolt in the cheek, jaw or forehead that lasts seconds. Triggers can be washing the face, speaking or a breeze. That is a different picture from sinus ache or ordinary <a href=\"/conditions/headaches\">headache</a>.",
@@ -152,7 +152,7 @@ export const expansionConditionsB: LiveCondition[] = [
     image: "/images/generated/achilles-tendinitis-patient-hero.webp",
     imageAlt: "Runner sitting on a bench holding the Achilles tendon",
     heroImage: "/images/generated/achilles-tendinitis-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "The Achilles tendon takes the calf into the heel bone. Tendinopathy is overload of that tendon, common in running, racket sports and a sudden return to walking. It is not <a href=\"/conditions/plantar-fasciitis\">plantar fasciitis</a> (under the heel) and not every <a href=\"/conditions/ankle-pain\">ankle pain</a>.",
@@ -272,7 +272,7 @@ export const expansionConditionsB: LiveCondition[] = [
     image: "/images/generated/postherpetic-neuralgia-patient-hero.webp",
     imageAlt: "Person sitting on a sofa with a hand over the side of the ribs",
     heroImage: "/images/generated/postherpetic-neuralgia-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Postherpetic neuralgia is pain that continues after the shingles rash has crusted and healed. Clothing can feel unbearable; sleep is often broken. This is a nerve-pain story, not ordinary muscle ache, and not the same as <a href=\"/conditions/trigeminal-neuralgia\">trigeminal neuralgia</a> unless the face was involved.",
@@ -417,7 +417,7 @@ export const expansionConditionsB: LiveCondition[] = [
     image: "/images/generated/tennis-elbow-patient-hero.webp",
     imageAlt: "Person holding the outer elbow with a tennis racket nearby",
     heroImage: "/images/generated/tennis-elbow-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Lateral epicondylalgia is irritation of the forearm extensor tendons where they meet the outer elbow. Pain picking up a kettle, typing, or shaking hands is typical. Inner-elbow pain is <a href=\"/conditions/golfers-elbow\">golfer's elbow</a>. Broader joint ache sits on <a href=\"/conditions/elbow-pain\">elbow pain</a>.",
@@ -540,7 +540,7 @@ export const expansionConditionsB: LiveCondition[] = [
     image: "/images/generated/golfers-elbow-patient-hero.webp",
     imageAlt: "Person pressing the inner elbow",
     heroImage: "/images/generated/golfers-elbow-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "Medial epicondylalgia irritates the wrist-flexor tendons at the inner elbow. Pain carrying shopping, using a screwdriver, or the golf follow-through is typical. Outer-elbow pain is <a href=\"/conditions/tennis-elbow\">tennis elbow</a>.",
@@ -660,7 +660,7 @@ export const expansionConditionsB: LiveCondition[] = [
     image: "/images/generated/wrist-pain-patient-hero.webp",
     imageAlt: "Person supporting a painful wrist with the other hand",
     heroImage: "/images/generated/wrist-pain-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People book for wrist pain after typing, weights, a twist, or months of a dull ache at the base of the thumb. Night tingling in the first fingers belongs more with <a href=\"/conditions/carpal-tunnel-syndrome\">carpal tunnel syndrome</a>. Outer-elbow pain with gripping may be <a href=\"/conditions/tennis-elbow\">tennis elbow</a>.",
@@ -780,7 +780,7 @@ export const expansionConditionsB: LiveCondition[] = [
     image: "/images/generated/ankle-pain-patient-hero.webp",
     imageAlt: "Person sitting with hands around a sore ankle",
     heroImage: "/images/generated/ankle-pain-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "The ankle is a mortise joint with ligaments that are easy to sprain and slow to trust again. People describe rolling on a kerb, stiffness in the morning, or pain on stairs. <a href=\"/conditions/achilles-tendinitis\">Achilles</a> pain sits above the heel; <a href=\"/conditions/plantar-fasciitis\">plantar fasciitis</a> under it; broader aches sit on <a href=\"/conditions/foot-pain\">foot pain</a>.",
@@ -900,7 +900,7 @@ export const expansionConditionsB: LiveCondition[] = [
     image: "/images/generated/foot-pain-patient-hero.webp",
     imageAlt: "Person standing with weight off one foot, hand toward the midfoot",
     heroImage: "/images/generated/foot-pain-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "People search for foot pain treatment when the whole foot feels cooked after a shift, or when a particular patch under the ball of the foot has become sharp. First-step heel pain is usually <a href=\"/conditions/plantar-fasciitis\">plantar fasciitis</a>. Pain above the heel is often <a href=\"/conditions/achilles-tendinitis\">Achilles tendinitis</a>. The joint above is <a href=\"/conditions/ankle-pain\">ankle pain</a>.",
@@ -1020,7 +1020,7 @@ export const expansionConditionsB: LiveCondition[] = [
     image: "/images/generated/elbow-pain-patient-hero.webp",
     imageAlt: "Person holding the whole elbow joint in a kitchen",
     heroImage: "/images/generated/elbow-pain-patient-hero.webp",
-    sectionImage: "/images/acupuncture-needles-back.webp",
+    sectionImage: "/images/acupuncture-back-treatment.webp",
     sectionImageAlt: "Close-up of acupuncture needles being placed on a patient's back during treatment",
     intro: [
       "If you can put one finger on the outer bump, read <a href=\"/conditions/tennis-elbow\">tennis elbow</a>. If the inner bump is the problem, read <a href=\"/conditions/golfers-elbow\">golfer's elbow</a>. This page is for pain that fills the whole joint, travels, or is still being sorted.",
