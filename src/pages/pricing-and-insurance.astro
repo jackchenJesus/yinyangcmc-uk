@@ -5,20 +5,24 @@ import { site } from "../data/site";
 
 const faqItems = [
   {
-    q: "Is the £10 consultation fee separate from treatment?",
-    a: "Yes. The consultation covers your TCM assessment and diagnosis. If treatment follows in the same session, the relevant treatment fee applies in addition.",
+    q: "How do consultation fees work?",
+    a: "Your first consultation is £20. Follow-up internal medicine consultations are £10 each. Follow-up consultations for acupuncture or integrated pain management carry no separate consultation fee — you pay the treatment fee only.",
   },
   {
     q: "Does a GP referral affect my insurance claim?",
     a: "Some private insurers require a GP referral before authorising complementary therapy claims. Check your policy terms — we can provide any clinical documentation your insurer requires.",
   },
   {
-    q: "Are herbal granules included?",
-    a: "Herbal granules are charged per day of prescription, separate from consultation and treatment fees.",
+    q: "Are herbal granules included in the consultation fee?",
+    a: "No. Herbal granules are £10 per day of prescription, billed separately from consultation fees. A 30-day granule package is £270 (consultation fees are not included in that price).",
   },
   {
-    q: "What does the 20% first-treatment discount apply to?",
-    a: "The first-treatment discount is applied at booking to your first treatment.",
+    q: "What payment methods do you accept?",
+    a: "We accept cash and bank transfer. Ask us for bank details when you book if you plan to pay by transfer.",
+  },
+  {
+    q: "What is included in integrated pain management?",
+    a: "Integrated pain management treatment (£120 per session) includes all clinically indicated modalities in that visit — such as acupuncture, bone setting and manipulation, acupressure, cupping and Tui Na massage — as determined by your practitioner.",
   },
   {
     q: "Do I need to tell you I am using insurance?",
@@ -52,8 +56,8 @@ const insurers = [
       <p class="eyebrow">Pricing &amp; Insurance · Reading &amp; Wimbledon</p>
       <h1>Transparent fees.<br />No surprises.</h1>
       <p class="lede">
-        General TCM consultation from £10. Acupuncture £60. Integrated Treatment £120.
-        Recognised by AXA Health, Vitality, Aviva and WPA. Cover depends on your policy.
+        First consultation £20. Acupuncture £60 per session. Integrated pain management £120 per session.
+        Session packages available. Recognised by AXA Health, Vitality, Aviva and WPA — cover depends on your policy.
       </p>
       <div class="actions">
         <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book a Consultation</a>
@@ -86,54 +90,82 @@ const insurers = [
   <div class="wrap">
     <div class="section-head pi-fees-head">
       <p class="eyebrow">Fees</p>
-      <h2>Our treatment fees</h2>
-      <p>Clear session prices for acupuncture and integrated Chinese medicine at our Reading and Wimbledon clinics. No hidden charges at checkout.</p>
+      <h2>Price list</h2>
+      <p>Clear fees for consultations, treatments and packages at our Reading and Wimbledon clinics. Treatment is always tailored to your assessment.</p>
     </div>
 
-    <p class="pi-offer-banner">
-      <span class="pi-offer-kicker">New patients</span>
-      <span class="pi-offer-copy">20% off your first treatment</span>
-      <span class="pi-offer-note">Applied at booking</span>
+    <div class="pi-fee-sections">
+      <article class="pi-fee-block">
+        <h3>Consultation fees</h3>
+        <ul class="pi-fee-rows">
+          <li>
+            <span class="pi-fee-label">First consultation</span>
+            <span class="pi-fee-amount">£20</span>
+          </li>
+          <li>
+            <span class="pi-fee-label">Subsequent internal medicine consultations</span>
+            <span class="pi-fee-amount">£10 <span class="pi-fee-unit">each</span></span>
+          </li>
+          <li>
+            <span class="pi-fee-label">Subsequent acupuncture / integrated pain management consultations</span>
+            <span class="pi-fee-amount pi-fee-free">Free</span>
+            <span class="pi-fee-hint">No consultation fee — treatment fee only</span>
+          </li>
+        </ul>
+      </article>
+
+      <article class="pi-fee-block">
+        <h3>Treatment fees</h3>
+        <ul class="pi-fee-rows">
+          <li>
+            <span class="pi-fee-label">Herbal granules</span>
+            <span class="pi-fee-amount">£10 <span class="pi-fee-unit">/ day</span></span>
+          </li>
+          <li>
+            <span class="pi-fee-label">Acupuncture</span>
+            <span class="pi-fee-amount">£60 <span class="pi-fee-unit">/ session</span></span>
+          </li>
+          <li class="pi-fee-row-featured">
+            <div class="pi-fee-row-main">
+              <span class="pi-fee-label">Integrated pain management treatment</span>
+              <span class="pi-fee-amount">£120 <span class="pi-fee-unit">/ session</span></span>
+            </div>
+            <p class="pi-fee-detail">
+              Includes all clinically indicated modalities in that session — acupuncture, bone setting &amp; manipulation, acupressure, cupping and Tui Na massage.
+            </p>
+          </li>
+        </ul>
+      </article>
+
+      <article class="pi-fee-block">
+        <h3>Package deals</h3>
+        <ul class="pi-fee-rows">
+          <li>
+            <span class="pi-fee-label">Herbal granules — 30 days</span>
+            <span class="pi-fee-amount">£270</span>
+            <span class="pi-fee-hint">Consultation fee not included</span>
+          </li>
+          <li class="pi-fee-row-group">
+            <span class="pi-fee-label">Acupuncture</span>
+            <ul class="pi-fee-subrows">
+              <li><span>5 sessions</span><span class="pi-fee-amount">£285</span></li>
+              <li><span>10 sessions</span><span class="pi-fee-amount">£540</span></li>
+            </ul>
+          </li>
+          <li class="pi-fee-row-group">
+            <span class="pi-fee-label">Integrated pain management</span>
+            <ul class="pi-fee-subrows">
+              <li><span>5 sessions</span><span class="pi-fee-amount">£570</span></li>
+              <li><span>10 sessions</span><span class="pi-fee-amount">£1,080</span></li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+    </div>
+
+    <p class="pi-payment">
+      <strong>Payment methods:</strong> Cash or bank transfer are both accepted.
     </p>
-
-    <div class="pi-price-grid">
-      <article class="pi-price-card">
-        <span class="pi-price-icon" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" />
-            <rect x="9" y="3" width="6" height="4" rx="1" />
-            <path d="M9 12h6M9 16h4" />
-          </svg>
-        </span>
-        <h3>General TCM Consultation</h3>
-        <p class="pi-price-val">£10</p>
-        <p class="pi-price-desc">Initial assessment &amp; diagnosis</p>
-      </article>
-
-      <article class="pi-price-card">
-        <span class="pi-price-icon" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="3.2" />
-            <path d="M12 4v3.2M12 16.8V20M4 12h3.2M16.8 12H20" />
-            <path d="m7.1 7.1 2.2 2.2M14.7 14.7l2.2 2.2M16.9 7.1l-2.2 2.2M9.3 14.7l-2.2 2.2" />
-          </svg>
-        </span>
-        <h3>Acupuncture</h3>
-        <p class="pi-price-val">£60</p>
-        <p class="pi-price-desc">Per treatment session</p>
-      </article>
-
-      <article class="pi-price-card is-featured">
-        <span class="pi-price-icon" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3v18M8 7h8M6 12h12M8 17h8" />
-          </svg>
-        </span>
-        <h3>Integrated Treatment</h3>
-        <p class="pi-price-val">£120</p>
-        <p class="pi-price-desc">All techniques as clinically indicated</p>
-      </article>
-    </div>
   </div>
 </section>
 
@@ -315,7 +347,6 @@ const insurers = [
   <div class="wrap container-narrow">
     <p class="eyebrow" style="color:var(--gold)">Book your appointment</p>
     <h2>Ready to book your first session?</h2>
-    <p class="pi-cta-offer">20% off your first treatment</p>
     <p>Available at <strong>Reading Clinic</strong> · <strong>Wimbledon Clinic</strong></p>
     <div class="actions actions-c">
       <a class="btn btn-gold" href={site.whatsapp} target="_blank" rel="noreferrer">Book on WhatsApp</a>
@@ -399,104 +430,131 @@ const insurers = [
   .pi-fees-head,
   .pi-insure-head { max-width: 58ch; }
 
-  /* First-treatment offer — understated clinic banner */
-  .pi-offer-banner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.45rem 1rem;
-    margin: 0 0 1.75rem;
-    padding: 0.95rem 1.25rem;
-    background: var(--cream);
-    border: 1px solid rgba(192, 152, 90, 0.28);
-    border-radius: var(--r-md);
-  }
-  .pi-offer-kicker {
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gold);
-  }
-  .pi-offer-copy {
-    font-family: var(--serif);
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--navy);
-    line-height: 1.2;
-  }
-  .pi-offer-note {
-    margin-left: auto;
-    font-size: 0.82rem;
-    color: var(--muted);
-  }
-
-  /* Pricing cards — clinic fees, not SaaS tables */
-  .pi-price-grid {
+  /* Price list blocks */
+  .pi-fee-sections {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.15rem;
   }
-  .pi-price-card {
-    position: relative;
+  .pi-fee-block {
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: var(--r-lg);
     box-shadow: var(--sh-xs);
-    padding: 2rem 1.6rem 1.85rem;
-    display: flex;
-    flex-direction: column;
+    padding: 1.5rem 1.55rem 1.45rem;
     min-width: 0;
-    overflow: hidden;
   }
-  .pi-price-card.is-featured {
-    border-color: rgba(192, 152, 90, 0.42);
-    box-shadow: var(--sh-sm);
-    background: #fffdf8;
-  }
-  .pi-price-card.is-featured::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--gold);
-    border-radius: var(--r-lg) var(--r-lg) 0 0;
-  }
-  .pi-price-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: var(--r-md);
-    background: var(--cream);
-    color: var(--gold);
-    display: grid;
-    place-items: center;
-    margin-bottom: 1.15rem;
-  }
-  .pi-price-card h3 {
-    font-family: var(--sans);
-    font-size: 0.82rem;
+  .pi-fee-block h3 {
+    font-size: 1.05rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: var(--muted);
-    margin: 0 0 0.7rem;
+    color: var(--gold);
+    margin: 0 0 1rem;
   }
-  .pi-price-val {
+  .pi-fee-rows {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+  }
+  .pi-fee-rows > li {
+    margin: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.35rem 1.25rem;
+    align-items: baseline;
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--border);
+    font-size: 0.95rem;
+  }
+  .pi-fee-rows > li:first-child { border-top: none; padding-top: 0; }
+  .pi-fee-label {
+    color: var(--navy);
+    font-weight: 600;
+    line-height: 1.45;
+  }
+  .pi-fee-amount {
     font-family: var(--serif);
-    font-size: clamp(2.4rem, 4vw, 3.1rem);
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--navy);
-    line-height: 1;
-    margin: 0 0 0.7rem;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    white-space: nowrap;
   }
-  .pi-price-desc {
-    margin: 0;
-    font-size: 0.95rem;
+  .pi-fee-unit {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 600;
     color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+  .pi-fee-free {
+    color: var(--gold);
+    font-style: italic;
+  }
+  .pi-fee-hint {
+    grid-column: 1 / -1;
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.45;
+    margin-top: -0.15rem;
+  }
+  .pi-fee-row-featured {
+    grid-template-columns: 1fr;
+    background: #fffdf8;
+    margin: 0 -1.55rem;
+    padding: 1rem 1.55rem !important;
+    border-top-color: rgba(192, 152, 90, 0.28);
+    border-bottom: 1px solid rgba(192, 152, 90, 0.28);
+  }
+  .pi-fee-row-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: baseline;
+  }
+  .pi-fee-detail {
+    margin: 0.55rem 0 0;
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.55;
+    max-width: 62ch;
+  }
+  .pi-fee-row-group {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+  .pi-fee-subrows {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.35rem;
+  }
+  .pi-fee-subrows li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+    padding-left: 0.35rem;
+  }
+  .pi-fee-subrows .pi-fee-amount {
+    font-size: 1.05rem;
+  }
+  .pi-payment {
+    margin: 1.5rem 0 0;
+    padding: 1rem 1.2rem;
+    background: var(--cream);
+    border-radius: var(--r-md);
+    font-size: 0.95rem;
+    color: var(--navy);
     line-height: 1.5;
   }
+  .pi-payment strong { font-weight: 700; }
 
   /* Insurer logo row */
   .pi-insurers {
@@ -728,13 +786,6 @@ const insurers = [
   }
 
   .pi-cta { text-align: center; }
-  .pi-cta-offer {
-    font-family: var(--serif);
-    font-size: 1.25rem;
-    font-style: italic;
-    color: var(--gold-lt);
-    margin: 0 auto 0.35rem;
-  }
   .pi-cta p { margin-bottom: 0.4rem; }
   .pi-cta .actions { margin-top: 1.6rem; }
 
@@ -747,11 +798,9 @@ const insurers = [
       gap: 1.75rem;
     }
     .pi-hero-visual img { height: 240px; }
-    .pi-price-grid,
     .pi-steps { grid-template-columns: 1fr; }
     .pi-codes { grid-template-columns: 1fr 1fr; }
     .pi-help { flex-direction: column; align-items: flex-start; }
-    .pi-offer-note { margin-left: 0; }
   }
 
   @media (max-width: 640px) {
@@ -773,10 +822,12 @@ const insurers = [
     .pi-prov-card { grid-template-columns: 72px 1fr; gap: 0.9rem; padding: 1.15rem 1.1rem 1.2rem; }
     .pi-prov-card img { width: 72px; height: 72px; }
     .pi-reg-list > div { grid-template-columns: 6.4rem minmax(0, 1fr); }
-    .pi-price-card { padding: 1.55rem 1.3rem 1.45rem; }
+    .pi-fee-block { padding: 1.25rem 1.15rem 1.15rem; }
+    .pi-fee-row-featured { margin: 0 -1.15rem; padding: 1rem 1.15rem !important; }
+    .pi-fee-row-main { grid-template-columns: 1fr; gap: 0.35rem; }
+    .pi-fee-amount { text-align: left; }
     .pi-hero-visual img { height: 200px; }
     .pi-hero-panel-names { font-size: 0.8rem; }
-    .pi-offer-banner { padding: 0.85rem 1rem; }
   }
 </style>
 
