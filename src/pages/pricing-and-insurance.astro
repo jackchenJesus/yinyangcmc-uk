@@ -473,6 +473,7 @@ const insurers = [
     color: var(--navy);
     font-weight: 600;
     line-height: 1.45;
+    min-width: 0;
   }
   .pi-fee-amount {
     font-family: var(--serif);
@@ -501,8 +502,10 @@ const insurers = [
     line-height: 1.45;
     margin-top: -0.15rem;
   }
-  .pi-fee-row-featured {
+  /* Must beat `.pi-fee-rows > li` (higher specificity) or detail sits in column 2 on mobile */
+  .pi-fee-rows > li.pi-fee-row-featured {
     grid-template-columns: 1fr;
+    align-items: start;
     background: #fffdf8;
     margin: 0 -1.55rem;
     padding: 1rem 1.55rem !important;
@@ -516,14 +519,16 @@ const insurers = [
     align-items: baseline;
   }
   .pi-fee-detail {
+    grid-column: 1 / -1;
     margin: 0.55rem 0 0;
     font-size: 0.88rem;
     color: var(--muted);
     line-height: 1.55;
     max-width: 62ch;
   }
-  .pi-fee-row-group {
+  .pi-fee-rows > li.pi-fee-row-group {
     grid-template-columns: 1fr;
+    align-items: start;
     gap: 0.65rem;
   }
   .pi-fee-subrows {
@@ -823,7 +828,7 @@ const insurers = [
     .pi-prov-card img { width: 72px; height: 72px; }
     .pi-reg-list > div { grid-template-columns: 6.4rem minmax(0, 1fr); }
     .pi-fee-block { padding: 1.25rem 1.15rem 1.15rem; }
-    .pi-fee-row-featured { margin: 0 -1.15rem; padding: 1rem 1.15rem !important; }
+    .pi-fee-rows > li.pi-fee-row-featured { margin: 0 -1.15rem; padding: 1rem 1.15rem !important; }
     .pi-fee-row-main { grid-template-columns: 1fr; gap: 0.35rem; }
     .pi-fee-amount { text-align: left; }
     .pi-hero-visual img { height: 200px; }
