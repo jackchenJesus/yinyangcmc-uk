@@ -1,0 +1,4 @@
+{
+  "name": "Yin Yang CMC UK",
+  "install": "npm ci"
+}
