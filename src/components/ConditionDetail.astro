@@ -146,7 +146,8 @@ const schema = {
                   alt={condition.sectionImageAlt ?? condition.imageAlt ?? condition.label}
                   width="800"
                   height="533"
-                  loading="lazy"
+                  loading="eager"
+                  decoding="async"
                 />
               </div>
             </div>
